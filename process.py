@@ -4,8 +4,8 @@ from PIL import Image
 from torchvision import transforms
 
 # --- CONFIG ---
-INPUT_DIR  = "unprocessed-unhealthy"
-OUTPUT_DIR = "processed-unhealthy"
+INPUT_DIR  = "unprocessed-healthy"
+OUTPUT_DIR = "processed-healthy"
 TARGET_SIZE = 512  # final size (square)
 
 # make sure output directory exists
