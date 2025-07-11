@@ -4,10 +4,11 @@ from PIL import Image
 from torchvision import transforms
 
 # --- CONFIG ---
-INPUT_DIR  = "original/unprocessed-unhealthy"
-OUTPUT_DIR = "dataset/processed-unhealthy"
+INPUT_DIR  = "original/new-unprocessed-healthy"
+OUTPUT_DIR = "dataset/processed-healthy"
 TARGET_SIZE = 512  # final size (square)
-prefix = "Unhealthy"
+prefix = "Healthy"
+buffer = 46
 
 # make sure output directory exists
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -57,12 +58,12 @@ for idx, fname in enumerate(files):
     img_proc = pipeline(img)
 
     # build new filename, zero-padded 3 digits
-    new_name = f"{prefix}-{idx:03d}.png"
+    new_name = f"{prefix}-{(idx+buffer):03d}.png"
     out_path = os.path.join(OUTPUT_DIR, new_name)
 
     # save as PNG
     img_proc.save(out_path, format="PNG")
 
-    print(f"[{idx+1:03d}/{len(files):03d}] → {new_name}")
+    print(f"[{(idx+buffer)+1:03d}/{len(files):03d}] → {new_name}")
 
 print("Done! All images are processed and saved to", OUTPUT_DIR)
