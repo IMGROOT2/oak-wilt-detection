@@ -4,11 +4,11 @@ from PIL import Image
 from torchvision import transforms
 
 # --- CONFIG ---
-INPUT_DIR  = "original/new-unprocessed-healthy"
-OUTPUT_DIR = "dataset/processed-healthy"
+INPUT_DIR  = "original/unprocessed-unhealthy"
+OUTPUT_DIR = "dataset/processed-unhealthy"
 TARGET_SIZE = 512  # final size (square)
 prefix = "Healthy"
-buffer = 46
+buffer = 0
 
 # make sure output directory exists
 os.makedirs(OUTPUT_DIR, exist_ok=True)
