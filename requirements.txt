@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+geopandas
+folium
+contextily
+plotly
+imageio
+pillow
+seaborn

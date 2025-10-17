@@ -1,5 +1,8 @@
-# Oak Wilt Detection System
+# oak wilt detection
 
-made by ruhan and varun
+isef project
 
-woo hoo!
+data: CSV files, original and cleaned
+notebooks: Jupyter notebooks for data cleaning and analysis
+scripts: Python scripts for visualization and modeling
+visualizations: Generated maps and visual outputs

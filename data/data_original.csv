@@ -1,0 +1,2092 @@
+Inspection_ID (unique),MORTALITY_CENTER_ID,INSPECTION_DATE,INSPECTION_DECADE,INSPECTION_YEAR,SPECIES,LATITUDE,LONGITUDE,LANDOWNER_TYPE,OAK_WILT_CONFIRMED,SYMPTOM_VEINAL_NECROSIS,SYMPTOM_MORTALITY_PATTERN
+1,,5758,8/24/86,1980s,1986,Live Oak,30.318636,-97.766907,Unknown,Yes,<Null>,<Null>
+2,,5723,3/11/87,1980s,1987,Live Oak,30.263226,-97.804992,Unknown,Yes,Yes,<Null>
+3,,5782,3/17/88,1980s,1988,Live Oak,30.247574,-97.759786,Unknown,Yes,<Null>,<Null>
+4,,5807,5/6/88,1980s,1988,Live Oak,30.229521,-97.859917,Unknown,Yes,Yes,<Null>
+5,,5689,12/6/88,1980s,1988,Live Oak,30.388368,-97.687027,Unknown,Yes,Yes,<Null>
+6,,5800,5/30/89,1980s,1989,Live Oak,30.242403,-97.826803,Unknown,Yes,Yes,Yes
+7,,5769,7/6/89,1980s,1989,Live Oak,30.356619,-97.767053,Unknown,Yes,<Null>,<Null>
+8,,5673,9/14/89,1980s,1989,Live Oak,30.417547,-97.726229,Unknown,Undetermined,<Null>,Yes
+9,,5776,9/21/89,1980s,1989,Live Oak,30.251062,-97.785271,Unknown,Yes,Yes,<Null>
+10,,5769,9/30/89,1980s,1989,Red Oak,30.359609,-97.768752,Unknown,Yes,<Null>,<Null>
+11,,5755,10/11/89,1980s,1989,Live Oak,30.296323,-97.777386,Unknown,Yes,Yes,<Null>
+12,,14556,10/24/89,1980s,1989,Live Oak,30.199125,-97.818824,Unknown,Yes,Yes,<Null>
+13,,16767,10/24/89,1980s,1989,Live Oak,30.36022,-97.767088,Unknown,Yes,Yes,<Null>
+14,,5702,11/8/89,1980s,1989,Live Oak,30.249734,-97.74457,Unknown,Yes,Yes,<Null>
+15,,5668,11/13/89,1980s,1989,Live Oak,30.420997,-97.728185,Unknown,Yes,<Null>,<Null>
+16,,16675,12/1/89,1980s,1989,Live Oak,30.198129,-97.794111,Unknown,Yes,Yes,<Null>
+17,,5769,1/30/90,1990s,1990,Live Oak,30.360663,-97.767651,Unknown,Yes,Yes,<Null>
+18,,16777,5/31/90,1990s,1990,<Null>,30.282356,-97.783975,Unknown,Yes,<Null>,<Null>
+19,,5769,6/1/90,1990s,1990,Live Oak,30.359687,-97.769041,Unknown,Yes,<Null>,<Null>
+20,,16800,6/1/90,1990s,1990,Live Oak,30.43336,-97.805773,Unknown,Yes,<Null>,Yes
+21,,16851,6/1/90,1990s,1990,Live Oak,30.367083,-97.759882,Unknown,Yes,<Null>,<Null>
+22,,5752,6/4/90,1990s,1990,Live Oak,30.279285,-97.75389,Unknown,Yes,<Null>,<Null>
+23,,5784,6/6/90,1990s,1990,Live Oak,30.220251,-97.780899,Unknown,Yes,Yes,Yes
+24,,5804,6/13/90,1990s,1990,Live Oak,30.241765,-97.852763,Unknown,Yes,<Null>,<Null>
+25,,5804,6/13/90,1990s,1990,Live Oak,30.237438,-97.847758,Unknown,Yes,Yes,<Null>
+26,,5755,6/19/90,1990s,1990,Live Oak,30.295916,-97.777216,Unknown,Yes,<Null>,<Null>
+27,,5812,8/7/90,1990s,1990,Live Oak,30.211279,-97.848848,Unknown,Yes,Yes,Yes
+28,,5668,8/13/90,1990s,1990,Live Oak,30.426266,-97.730005,Unknown,Yes,Yes,Yes
+29,,5668,8/14/90,1990s,1990,Live Oak,30.421556,-97.731233,Unknown,Yes,<Null>,Yes
+30,,5783,8/15/90,1990s,1990,"Live Oak, Red Oak",30.238888,-97.776942,Unknown,Yes,Yes,Yes
+31,,5807,8/16/90,1990s,1990,Live Oak,30.221477,-97.854102,Unknown,Yes,Yes,<Null>
+32,,5807,8/16/90,1990s,1990,Live Oak,30.221477,-97.854102,Unknown,Yes,Yes,<Null>
+33,,5807,8/16/90,1990s,1990,Live Oak,30.221477,-97.854102,Unknown,Yes,Yes,<Null>
+34,,5802,8/17/90,1990s,1990,"Live Oak, Red Oak",30.244774,-97.822709,Unknown,Undetermined,<Null>,<Null>
+35,,5755,8/23/90,1990s,1990,Live Oak,30.296925,-97.777057,Unknown,Yes,Yes,<Null>
+36,,5724,9/6/90,1990s,1990,"Live Oak, Red Oak",30.268769,-97.797401,Unknown,Yes,Yes,Yes
+37,,5727,9/6/90,1990s,1990,Red Oak,30.252413,-97.795309,Unknown,Undetermined,<Null>,<Null>
+38,,5771,9/6/90,1990s,1990,Live Oak,30.298606,-97.754742,Unknown,Yes,Yes,<Null>
+39,,16684,9/6/90,1990s,1990,Red Oak,30.218154,-97.86572,Unknown,Yes,<Null>,<Null>
+40,,16759,9/17/90,1990s,1990,Live Oak,30.286011,-97.771258,Unknown,Yes,Yes,Yes
+41,,5759,9/18/90,1990s,1990,Live Oak,30.326907,-97.768713,Unknown,Yes,Yes,<Null>
+42,,16759,9/18/90,1990s,1990,"Live Oak, Red Oak",30.288435,-97.769809,Unknown,Yes,Yes,Yes
+43,,5673,9/19/90,1990s,1990,Live Oak,30.417872,-97.726829,Unknown,Undetermined,<Null>,Yes
+44,,5755,9/19/90,1990s,1990,Live Oak,30.296262,-97.777261,Unknown,Yes,Yes,<Null>
+45,,5743,9/24/90,1990s,1990,Live Oak,30.25139,-97.787795,Unknown,Undetermined,<Null>,Yes
+46,,5800,9/24/90,1990s,1990,Live Oak,30.23873,-97.831648,Unknown,Undetermined,<Null>,Yes
+47,,5804,9/24/90,1990s,1990,Live Oak,30.240484,-97.851692,Unknown,Yes,Yes,<Null>
+48,,5807,9/24/90,1990s,1990,Live Oak,30.228672,-97.859242,Unknown,Yes,<Null>,<Null>
+49,,5807,9/24/90,1990s,1990,Live Oak,30.22814,-97.858749,Unknown,Yes,<Null>,<Null>
+50,,5807,9/24/90,1990s,1990,"Live Oak, Blackjack Oak",30.232742,-97.857668,Unknown,Yes,Yes,Yes
+51,,5794,10/4/90,1990s,1990,Live Oak,30.194902,-97.814012,Unknown,Yes,<Null>,<Null>
+52,,14522,10/4/90,1990s,1990,Live Oak,30.221886,-97.880401,Unknown,Yes,Yes,<Null>
+53,,16738,10/4/90,1990s,1990,Live Oak,30.179348,-97.815455,Unknown,Yes,<Null>,<Null>
+54,,16784,10/4/90,1990s,1990,Live Oak,30.395187,-97.692901,Unknown,Yes,<Null>,<Null>
+55,,5892,10/15/90,1990s,1990,Live Oak,30.228201,-97.789379,Unknown,Yes,Yes,<Null>
+56,,16767,10/18/90,1990s,1990,Live Oak,30.362231,-97.768665,Unknown,Yes,<Null>,<Null>
+57,,5769,10/19/90,1990s,1990,Live Oak,30.360877,-97.770517,Unknown,Yes,<Null>,Yes
+58,,5752,4/24/91,1990s,1991,Live Oak,30.278675,-97.772884,Unknown,Yes,Yes,Yes
+59,,5776,4/26/91,1990s,1991,Live Oak,30.244816,-97.786653,Unknown,Yes,<Null>,<Null>
+60,,5788,4/26/91,1990s,1991,"Live Oak, Red Oak",30.212701,-97.801524,Public,Undetermined,<Null>,Yes
+61,,5800,4/26/91,1990s,1991,Blackjack Oak,30.241228,-97.826044,Unknown,Undetermined,<Null>,Yes
+62,,6281,4/26/91,1990s,1991,Live Oak,30.201804,-97.856952,Unknown,Undetermined,<Null>,Yes
+63,,5758,4/30/91,1990s,1991,"Live Oak, Red Oak",30.325817,-97.765242,Unknown,Undetermined,<Null>,<Null>
+64,,5771,4/30/91,1990s,1991,Red Oak,30.298655,-97.772003,Unknown,Undetermined,<Null>,<Null>
+65,,5800,4/30/91,1990s,1991,Blackjack Oak,30.241228,-97.826044,Unknown,Undetermined,<Null>,Yes
+66,,16809,5/2/91,1990s,1991,Live Oak,30.276327,-97.823208,Unknown,Yes,Yes,Yes
+67,,16826,5/2/91,1990s,1991,Live Oak,30.430543,-97.768265,Unknown,Yes,Yes,<Null>
+68,,5668,5/6/91,1990s,1991,Live Oak,30.423776,-97.730549,Unknown,Yes,Yes,Yes
+69,,5691,5/6/91,1990s,1991,Red Oak,30.370134,-97.663814,Unknown,Undetermined,<Null>,<Null>
+70,,14526,5/13/91,1990s,1991,Live Oak,30.192818,-97.889371,Unknown,Yes,Yes,Yes
+71,,5748,5/14/91,1990s,1991,Live Oak,30.256451,-97.756599,Unknown,Yes,Yes,<Null>
+72,,16819,5/23/91,1990s,1991,"Live Oak, Red Oak",30.388279,-97.683422,Unknown,Yes,<Null>,<Null>
+73,,5760,6/4/91,1990s,1991,Live Oak,30.328623,-97.764556,Unknown,Undetermined,<Null>,Yes
+74,,5752,6/6/91,1990s,1991,"Live Oak, Red Oak",30.28496,-97.766562,Unknown,Yes,<Null>,Yes
+75,,5673,6/7/91,1990s,1991,Live Oak,30.417606,-97.726447,Unknown,Yes,<Null>,<Null>
+76,,5673,6/7/91,1990s,1991,Live Oak,30.417727,-97.72658,Unknown,Yes,<Null>,<Null>
+77,,5673,6/7/91,1990s,1991,Live Oak,30.418,-97.72677,Unknown,Yes,<Null>,<Null>
+78,,5771,6/7/91,1990s,1991,Live Oak,30.302609,-97.77325,Unknown,Yes,Yes,<Null>
+79,,5800,6/7/91,1990s,1991,Red Oak,30.254275,-97.837854,Unknown,Undetermined,<Null>,<Null>
+80,,5734,7/31/91,1990s,1991,Live Oak,30.181431,-97.826723,Unknown,Yes,Yes,Yes
+81,,5734,7/31/91,1990s,1991,Live Oak,30.181431,-97.826723,Unknown,Yes,Yes,Yes
+82,,5752,7/31/91,1990s,1991,Live Oak,30.27858,-97.773567,Unknown,Yes,Yes,Yes
+83,,5759,8/1/91,1990s,1991,Live Oak,30.327668,-97.769108,Unknown,Yes,<Null>,Yes
+84,,5670,8/6/91,1990s,1991,Live Oak,30.424258,-97.727894,Unknown,Yes,Yes,Yes
+85,,16854,8/6/91,1990s,1991,Red Oak,30.348928,-97.748121,Unknown,Undetermined,<Null>,<Null>
+86,,5771,8/12/91,1990s,1991,"Live Oak, Red Oak",30.293419,-97.748187,Unknown,Undetermined,<Null>,<Null>
+87,,5755,8/14/91,1990s,1991,Shumard Oak,30.296227,-97.777448,Unknown,Yes,<Null>,<Null>
+88,,5769,8/15/91,1990s,1991,Red Oak,30.358078,-97.766171,Unknown,Yes,<Null>,<Null>
+89,,5769,8/15/91,1990s,1991,Live Oak,30.360387,-97.769671,Unknown,Undetermined,<Null>,<Null>
+90,,5769,8/15/91,1990s,1991,"Live Oak, Shumard Oak",30.360464,-97.770649,Unknown,Undetermined,<Null>,<Null>
+91,,5783,8/21/91,1990s,1991,Live Oak,30.231677,-97.784296,Unknown,Yes,Yes,<Null>
+92,,14602,8/23/91,1990s,1991,Live Oak,30.341682,-97.784329,Unknown,Yes,Yes,Yes
+93,,5807,9/12/91,1990s,1991,Live Oak,30.22716,-97.85409,Unknown,Undetermined,<Null>,<Null>
+94,,16675,9/12/91,1990s,1991,Live Oak,30.198129,-97.794111,Unknown,Undetermined,<Null>,Yes
+95,,5758,9/30/91,1990s,1991,Red Oak,30.327731,-97.764413,Unknown,Undetermined,<Null>,<Null>
+96,,5776,12/19/91,1990s,1991,Live Oak,30.242452,-97.777813,Unknown,Yes,Yes,Yes
+97,,5702,12/20/91,1990s,1991,Live Oak,30.280756,-97.738137,Unknown,Yes,Yes,<Null>
+98,,5743,1/23/92,1990s,1992,"Live Oak, Red Oak",30.252667,-97.791031,Unknown,Yes,Yes,<Null>
+99,,5702,2/7/92,1990s,1992,Live Oak,30.250129,-97.744419,Unknown,Yes,Yes,<Null>
+100,,5721,3/12/92,1990s,1992,Live Oak,30.269238,-97.813057,Unknown,Yes,Yes,Yes
+101,,5727,3/19/92,1990s,1992,Red Oak,30.252413,-97.795309,Unknown,Undetermined,<Null>,Yes
+102,,5782,3/19/92,1990s,1992,"Live Oak, Red Oak",30.236707,-97.767178,Unknown,Yes,Yes,Yes
+103,,16872,3/19/92,1990s,1992,Red Oak,30.250987,-97.795533,Unknown,Undetermined,<Null>,<Null>
+104,,5783,4/21/92,1990s,1992,Live Oak,30.230066,-97.77854,Unknown,Yes,Yes,Yes
+105,,5743,4/22/92,1990s,1992,"Live Oak, Red Oak",30.253819,-97.78992,Unknown,Yes,<Null>,<Null>
+106,,5757,4/25/92,1990s,1992,Live Oak,30.324757,-97.773006,Unknown,Yes,Yes,Yes
+107,,16731,5/14/92,1990s,1992,Live Oak,30.280963,-97.739424,Unknown,Yes,Yes,Yes
+108,,16675,5/18/92,1990s,1992,Live Oak,30.197115,-97.794984,Unknown,Yes,Yes,Yes
+109,,5771,6/11/92,1990s,1992,Live Oak,30.304292,-97.7696,Unknown,Yes,Yes,<Null>
+110,,16790,7/2/92,1990s,1992,Live Oak,30.291806,-97.737735,Unknown,Yes,Yes,<Null>
+111,,5802,7/7/92,1990s,1992,Live Oak,30.245026,-97.825219,Unknown,Yes,Yes,<Null>
+112,,5771,8/6/92,1990s,1992,Live Oak,30.302684,-97.779809,Unknown,Yes,Yes,Yes
+113,,5807,8/10/92,1990s,1992,"Live Oak, Blackjack Oak",30.232379,-97.857219,Public,Undetermined,<Null>,Yes
+114,,5723,9/28/92,1990s,1992,Live Oak,30.263944,-97.803986,Unknown,Yes,Yes,<Null>
+115,,14504,9/28/92,1990s,1992,Live Oak,30.170867,-97.794107,Unknown,Yes,Yes,<Null>
+116,,5800,1/16/93,1990s,1993,Live Oak,30.240959,-97.825376,Unknown,Yes,Yes,Yes
+117,,5804,3/3/93,1990s,1993,"Live Oak, Red Oak",30.240077,-97.851985,Public,Yes,Yes,Yes
+118,,5668,3/5/93,1990s,1993,Live Oak,30.424776,-97.730654,Unknown,Yes,Yes,<Null>
+119,,5759,3/5/93,1990s,1993,Live Oak,30.32675,-97.767347,Unknown,Yes,Yes,<Null>
+120,,5731,3/19/93,1990s,1993,Live Oak,30.17931,-97.814398,Unknown,Yes,Yes,<Null>
+121,,5710,5/11/93,1990s,1993,Live Oak,30.43331,-97.772634,Unknown,Yes,Yes,Yes
+122,,5802,5/25/93,1990s,1993,Live Oak,30.245076,-97.825496,Unknown,Yes,Yes,<Null>
+123,,16759,5/25/93,1990s,1993,Live Oak,30.284668,-97.770894,Unknown,Yes,Yes,Yes
+124,,5731,5/26/93,1990s,1993,Live Oak,30.186102,-97.816038,Public,Yes,Yes,<Null>
+125,,5729,6/2/93,1990s,1993,Live Oak,30.178522,-97.808722,Unknown,Yes,Yes,<Null>
+126,,5752,6/21/93,1990s,1993,Red Oak,30.286619,-97.767004,Unknown,Undetermined,<Null>,<Null>
+127,,16753,7/14/93,1990s,1993,Live Oak,30.399887,-97.701874,Unknown,Yes,Yes,<Null>
+128,,16749,7/28/93,1990s,1993,Live Oak,30.417276,-97.740044,Unknown,Yes,Yes,<Null>
+129,,5849,7/29/93,1990s,1993,Live Oak,30.434772,-97.714608,Unknown,Yes,Yes,<Null>
+130,,16786,8/9/93,1990s,1993,Red Oak,30.244713,-97.746176,Unknown,Undetermined,<Null>,Yes
+131,,5771,8/11/93,1990s,1993,Live Oak,30.295556,-97.764408,Unknown,Yes,Yes,<Null>
+132,,5734,8/13/93,1990s,1993,"Live Oak, Red Oak",30.181816,-97.82834,Unknown,Yes,Yes,Yes
+133,,8445,8/16/93,1990s,1993,Live Oak,30.346398,-97.741334,Unknown,Yes,Yes,<Null>
+134,,5820,8/27/93,1990s,1993,Live Oak,30.201421,-97.844142,Unknown,Yes,Yes,<Null>
+135,,5759,9/15/93,1990s,1993,Live Oak,30.329624,-97.765961,Unknown,Undetermined,<Null>,Yes
+136,,5734,9/23/93,1990s,1993,Red Oak,30.18156,-97.825444,Unknown,Undetermined,<Null>,Yes
+137,,5743,9/29/93,1990s,1993,"Live Oak, Red Oak",30.253731,-97.790194,Unknown,Undetermined,<Null>,<Null>
+138,,5781,10/1/93,1990s,1993,Live Oak,30.237365,-97.748879,Unknown,Undetermined,<Null>,Yes
+139,,5758,10/19/93,1990s,1993,Live Oak,30.319394,-97.747279,Unknown,Yes,Yes,<Null>
+140,,16699,10/25/93,1990s,1993,Live Oak,30.332351,-97.762582,Unknown,Yes,Yes,<Null>
+141,,16748,10/25/93,1990s,1993,Live Oak,30.418835,-97.723303,Unknown,Yes,Yes,<Null>
+142,,5769,10/26/93,1990s,1993,Live Oak,30.359296,-97.768883,Unknown,Undetermined,<Null>,<Null>
+143,,5668,12/2/93,1990s,1993,Live Oak,30.423776,-97.730549,Unknown,Yes,Yes,<Null>
+144,,16675,12/15/93,1990s,1993,Live Oak,30.195546,-97.794381,Unknown,Yes,Yes,Yes
+145,,5849,1/6/94,1990s,1994,Live Oak,30.42939,-97.711919,Unknown,Undetermined,<Null>,Yes
+146,,5769,2/8/94,1990s,1994,Live Oak,30.362139,-97.767071,Unknown,Yes,Yes,<Null>
+147,,14532,2/11/94,1990s,1994,Live Oak,30.38546,-97.757074,Unknown,Yes,Yes,Yes
+148,,5788,2/16/94,1990s,1994,Live Oak,30.21428,-97.80125,Unknown,Undetermined,<Null>,Yes
+149,,5788,3/3/94,1990s,1994,Live Oak,30.214378,-97.80208,Unknown,Yes,Yes,<Null>
+150,,5788,3/3/94,1990s,1994,Live Oak,30.214069,-97.802433,Unknown,Yes,Yes,Yes
+151,,5794,3/3/94,1990s,1994,Live Oak,30.194745,-97.814275,Unknown,Yes,Yes,Yes
+152,,5669,3/10/94,1990s,1994,Live Oak,30.422352,-97.735461,Unknown,Yes,Yes,Yes
+153,,16768,3/10/94,1990s,1994,Live Oak,30.366485,-97.761451,Unknown,Yes,Yes,Yes
+154,,5755,3/17/94,1990s,1994,Live Oak,30.296925,-97.777057,Unknown,Yes,Yes,Yes
+155,,5771,3/22/94,1990s,1994,Live Oak,30.297462,-97.772809,Unknown,Yes,Yes,<Null>
+156,,5771,3/23/94,1990s,1994,Live Oak,30.29918,-97.770856,Unknown,Undetermined,<Null>,Yes
+157,,16684,3/30/94,1990s,1994,Live Oak,30.223599,-97.859626,Unknown,Yes,Yes,<Null>
+158,,5776,4/12/94,1990s,1994,Live Oak,30.247474,-97.783428,Unknown,Yes,Yes,<Null>
+159,,5794,4/15/94,1990s,1994,Live Oak,30.194066,-97.814136,Unknown,Undetermined,<Null>,Yes
+160,,5681,4/19/94,1990s,1994,Live Oak,30.411273,-97.677799,Unknown,Yes,Yes,Yes
+161,,16684,4/27/94,1990s,1994,Live Oak,30.222444,-97.85976,Unknown,Yes,Yes,<Null>
+162,,16684,4/27/94,1990s,1994,Live Oak,30.222371,-97.859428,Unknown,Yes,Yes,<Null>
+163,,16684,4/27/94,1990s,1994,Live Oak,30.223633,-97.859641,Unknown,Yes,Yes,<Null>
+164,,5743,4/28/94,1990s,1994,"Live Oak, Red Oak",30.252696,-97.791051,Unknown,Yes,Yes,Yes
+165,,5743,4/28/94,1990s,1994,Live Oak,30.252696,-97.791051,Unknown,Yes,Yes,Yes
+166,,5691,5/3/94,1990s,1994,Red Oak,30.365253,-97.664165,Unknown,Undetermined,<Null>,Yes
+167,,5743,5/3/94,1990s,1994,Live Oak,30.253675,-97.790426,Unknown,Yes,Yes,Yes
+168,,5752,5/24/94,1990s,1994,"Live Oak, Red Oak",30.281203,-97.769328,Unknown,Undetermined,<Null>,Yes
+169,,5755,5/26/94,1990s,1994,Live Oak,30.297815,-97.775913,Unknown,Yes,Yes,<Null>
+170,,5758,5/26/94,1990s,1994,Red Oak,30.326716,-97.764548,Unknown,Undetermined,<Null>,Yes
+171,,5743,6/8/94,1990s,1994,"Live Oak, Red Oak",30.252812,-97.790982,Unknown,Undetermined,<Null>,Yes
+172,,16761,6/8/94,1990s,1994,Live Oak,30.167074,-97.742063,Unknown,Yes,Yes,<Null>
+173,,5735,6/10/94,1990s,1994,Live Oak,30.182346,-97.8497,Unknown,Yes,Yes,<Null>
+174,,5802,6/10/94,1990s,1994,Live Oak,30.2365,-97.811178,Public,Undetermined,<Null>,<Null>
+175,,5802,6/10/94,1990s,1994,Live Oak,30.244679,-97.823359,Unknown,Undetermined,<Null>,<Null>
+176,,14635,6/10/94,1990s,1994,Live Oak,30.176991,-97.812268,Unknown,Yes,Yes,<Null>
+177,,16684,6/10/94,1990s,1994,Live Oak,30.222359,-97.85921,Unknown,Yes,Yes,<Null>
+178,,16684,6/10/94,1990s,1994,Live Oak,30.222444,-97.85976,Unknown,Yes,Yes,<Null>
+179,,16840,6/13/94,1990s,1994,Live Oak,30.394961,-97.767568,Unknown,Yes,Yes,<Null>
+180,,5668,6/20/94,1990s,1994,Live Oak,30.421933,-97.730398,Unknown,Yes,Yes,<Null>
+181,,16675,6/25/94,1990s,1994,Live Oak,30.197359,-97.795504,Unknown,Yes,Yes,<Null>
+182,,5783,7/5/94,1990s,1994,Live Oak,30.232954,-97.781822,Unknown,Yes,Yes,<Null>
+183,,5724,7/20/94,1990s,1994,Live Oak,30.261227,-97.800801,Unknown,Yes,Yes,<Null>
+184,,5724,7/21/94,1990s,1994,Live Oak,30.261877,-97.801011,Unknown,Yes,Yes,Yes
+185,,5681,7/22/94,1990s,1994,Live Oak,30.40614,-97.684303,Unknown,Undetermined,<Null>,Yes
+186,,5724,7/25/94,1990s,1994,Live Oak,30.262186,-97.800893,Unknown,Undetermined,<Null>,Yes
+187,,5755,7/26/94,1990s,1994,Red Oak,30.296175,-97.777805,Unknown,Undetermined,<Null>,Yes
+188,,5668,7/27/94,1990s,1994,Live Oak,30.422039,-97.731584,Unknown,Yes,Yes,<Null>
+189,,5784,8/1/94,1990s,1994,Live Oak,30.221521,-97.782002,Unknown,Yes,Yes,Yes
+190,,5758,8/5/94,1990s,1994,Live Oak,30.327513,-97.765181,Unknown,Yes,Yes,Yes
+191,,5771,8/23/94,1990s,1994,Live Oak,30.300351,-97.775767,Unknown,Yes,Yes,Yes
+192,,16777,8/29/94,1990s,1994,Live Oak,30.282356,-97.783975,Unknown,Undetermined,<Null>,Yes
+193,,5804,8/30/94,1990s,1994,Live Oak,30.237416,-97.847883,Unknown,Yes,Yes,<Null>
+194,,5788,9/6/94,1990s,1994,"Live Oak, Red Oak",30.214118,-97.801137,Unknown,Undetermined,<Null>,Yes
+195,,5668,9/23/94,1990s,1994,Live Oak,30.42038,-97.730316,Unknown,Yes,Yes,<Null>
+196,,5734,10/10/94,1990s,1994,Red Oak,30.18156,-97.825444,Unknown,Undetermined,<Null>,Yes
+197,,5734,10/10/94,1990s,1994,Live Oak,30.183877,-97.82681,Unknown,Yes,Yes,Yes
+198,,5668,11/9/94,1990s,1994,Live Oak,30.426266,-97.730005,Unknown,Yes,Yes,Yes
+199,,5776,11/10/94,1990s,1994,Live Oak,30.247501,-97.786556,Unknown,Undetermined,<Null>,Yes
+200,,5734,11/30/94,1990s,1994,"Live Oak, Red Oak",30.18156,-97.825444,Unknown,Undetermined,<Null>,Yes
+201,,5824,12/8/94,1990s,1994,Live Oak,30.196241,-97.825701,Unknown,Yes,Yes,<Null>
+202,,14589,1/19/95,1990s,1995,Live Oak,30.403691,-97.734405,Unknown,Yes,Yes,<Null>
+203,,5807,2/16/95,1990s,1995,Live Oak,30.224018,-97.85518,Unknown,Undetermined,<Null>,<Null>
+204,,16684,2/22/95,1990s,1995,Live Oak,30.221152,-97.857645,Unknown,Yes,Yes,<Null>
+205,,5689,2/28/95,1990s,1995,Live Oak,30.384383,-97.689703,Unknown,Yes,Yes,Yes
+206,,5670,3/16/95,1990s,1995,Live Oak,30.424131,-97.727298,Unknown,Yes,Yes,Yes
+207,,5769,3/21/95,1990s,1995,Live Oak,30.360483,-97.768574,Unknown,Yes,Yes,<Null>
+208,,5668,4/5/95,1990s,1995,Live Oak,30.42038,-97.730316,Unknown,Yes,Yes,Yes
+209,,5752,4/11/95,1990s,1995,Live Oak,30.279068,-97.770798,Unknown,Yes,Yes,Yes
+210,,16759,4/18/95,1990s,1995,Live Oak,30.28748,-97.770563,Unknown,Undetermined,<Null>,Yes
+211,,5784,4/27/95,1990s,1995,Live Oak,30.220707,-97.781548,Unknown,Undetermined,<Null>,Yes
+212,,5809,5/4/95,1990s,1995,Live Oak,30.225034,-97.869812,Unknown,Undetermined,<Null>,Yes
+213,,5758,5/9/95,1990s,1995,"Live Oak, Red Oak",30.327836,-97.763743,Unknown,Undetermined,<Null>,Yes
+214,,5691,5/12/95,1990s,1995,Live Oak,30.348742,-97.698857,Unknown,Yes,Yes,Yes
+215,,16786,5/12/95,1990s,1995,Red Oak,30.242435,-97.748257,Unknown,Undetermined,<Null>,Yes
+216,,16871,5/16/95,1990s,1995,Live Oak,30.448311,-97.789692,Unknown,Yes,Yes,<Null>
+217,,5702,5/17/95,1990s,1995,Live Oak,30.267294,-97.7265,Unknown,Yes,Yes,<Null>
+218,,5802,5/26/95,1990s,1995,Live Oak,30.237594,-97.807374,Unknown,Yes,Yes,<Null>
+219,,5769,5/30/95,1990s,1995,Various Oaks,30.353969,-97.777175,Unknown,Undetermined,<Null>,Yes
+220,,6201,5/30/95,1990s,1995,Live Oak,30.248632,-97.794205,Unknown,Yes,Yes,<Null>
+221,,5818,5/31/95,1990s,1995,Live Oak,30.204692,-97.846412,Unknown,Yes,Yes,Yes
+222,,5691,6/20/95,1990s,1995,Various Oaks,30.307042,-97.684328,Unknown,Yes,Yes,Yes
+223,,5702,6/20/95,1990s,1995,Live Oak,30.251043,-97.744003,Unknown,Yes,Yes,<Null>
+224,,5776,6/20/95,1990s,1995,Live Oak,30.246242,-97.784659,Unknown,Undetermined,<Null>,<Null>
+225,,16708,6/20/95,1990s,1995,Live Oak,30.391805,-97.763004,Unknown,Yes,Yes,Yes
+226,,16708,6/20/95,1990s,1995,"Live Oak, Red Oak",30.391884,-97.762795,Unknown,Yes,Yes,Yes
+227,,14532,6/21/95,1990s,1995,Live Oak,30.392105,-97.762712,Unknown,Yes,Yes,Yes
+228,,5794,6/26/95,1990s,1995,Live Oak,30.196251,-97.816034,Unknown,Yes,Yes,Yes
+229,,16730,6/27/95,1990s,1995,Live Oak,30.195179,-97.826127,Unknown,Yes,Yes,Yes
+230,,5670,7/17/95,1990s,1995,Live Oak,30.423979,-97.727294,Unknown,Yes,Yes,<Null>
+231,,5769,7/17/95,1990s,1995,Live Oak,30.360442,-97.766529,Unknown,Yes,Yes,<Null>
+232,,5668,7/18/95,1990s,1995,Live Oak,30.42021,-97.730327,Unknown,Yes,Yes,<Null>
+233,,5727,7/18/95,1990s,1995,Live Oak,30.249227,-97.792032,Unknown,Yes,Yes,<Null>
+234,,5727,7/18/95,1990s,1995,Live Oak,30.249379,-97.792226,Unknown,Yes,Yes,<Null>
+235,,14541,7/31/95,1990s,1995,Live Oak,30.20771,-97.879408,Unknown,Yes,Yes,Yes
+236,,14612,8/17/95,1990s,1995,Live Oak,30.413722,-97.740139,Unknown,Yes,Yes,<Null>
+237,,16855,8/25/95,1990s,1995,Live Oak,30.220974,-97.858243,Unknown,Yes,Yes,Yes
+238,,5807,9/9/95,1990s,1995,Live Oak,30.232742,-97.857668,Unknown,Undetermined,<Null>,Yes
+239,,5802,10/5/95,1990s,1995,Live Oak,30.245467,-97.82527,Unknown,Yes,Yes,<Null>
+240,,5802,10/5/95,1990s,1995,Live Oak,30.24549,-97.82557,Unknown,Yes,Yes,<Null>
+241,,5670,10/10/95,1990s,1995,Live Oak,30.425324,-97.72605,Unknown,Yes,Yes,<Null>
+242,,5679,10/20/95,1990s,1995,Live Oaks,30.436125,-97.713905,Unknown,Yes,Yes,<Null>
+243,,5783,10/23/95,1990s,1995,Live Oaks,30.231263,-97.777741,Unknown,Yes,Yes,<Null>
+244,,16767,11/14/95,1990s,1995,Live Oaks,30.360611,-97.76574,Unknown,Yes,Yes,Yes
+245,,14534,11/16/95,1990s,1995,Live Oak,30.210302,-97.816965,Unknown,Yes,Yes,Yes
+246,,5771,12/11/95,1990s,1995,Live Oak,30.293744,-97.751622,Unknown,Yes,Yes,<Null>
+247,,5771,1/16/96,1990s,1996,Live Oaks,30.297017,-97.771585,Unknown,Yes,Yes,Yes
+248,,5668,2/27/96,1990s,1996,Live Oak,30.424927,-97.731285,Unknown,Yes,Yes,<Null>
+249,,8445,2/28/96,1990s,1996,Live Oak,30.346594,-97.756099,Unknown,Yes,Yes,<Null>
+250,,5804,4/1/96,1990s,1996,Live Oak,30.240076,-97.85261,Unknown,Yes,Yes,<Null>
+251,,5759,4/29/96,1990s,1996,Live Oak,30.329354,-97.765769,Unknown,Yes,Yes,<Null>
+252,,5782,5/15/96,1990s,1996,Live Oak,30.236956,-97.766738,Unknown,Yes,Yes,<Null>
+253,,5802,5/15/96,1990s,1996,Live Oak,30.24521,-97.823069,Unknown,Yes,Yes,<Null>
+254,,5668,5/28/96,1990s,1996,Live Oak,30.423043,-97.730475,Unknown,Yes,Yes,Yes
+255,,5734,6/3/96,1990s,1996,Live Oak,30.181649,-97.827169,Unknown,Undetermined,<Null>,Yes
+256,,16675,6/4/96,1990s,1996,Live Oak,30.196449,-97.793056,Unknown,Yes,Yes,<Null>
+257,,5804,6/11/96,1990s,1996,Live Oak,30.240076,-97.85261,Unknown,Yes,<Null>,<Null>
+258,,5742,6/12/96,1990s,1996,Red Oak,30.253954,-97.791063,Unknown,Undetermined,<Null>,<Null>
+259,,16768,6/17/96,1990s,1996,Live Oak,30.366009,-97.760353,Unknown,Undetermined,<Null>,Yes
+260,,6203,6/20/96,1990s,1996,Live Oak,30.205705,-97.859378,Unknown,Yes,Yes,<Null>
+261,,5752,6/26/96,1990s,1996,Live Oak,30.284362,-97.768282,Unknown,Yes,Yes,<Null>
+262,,5776,6/26/96,1990s,1996,Live Oak,30.246242,-97.784659,Unknown,Undetermined,<Null>,<Null>
+263,,16892,7/8/96,1990s,1996,Live Oak,30.221183,-97.854518,Unknown,Undetermined,<Null>,Yes
+264,,14635,7/10/96,1990s,1996,Red Oak,30.176991,-97.812268,Unknown,Undetermined,<Null>,<Null>
+265,,16675,7/15/96,1990s,1996,Live Oak,30.195832,-97.793116,Unknown,Yes,Yes,Yes
+266,,16851,7/19/96,1990s,1996,Live Oak,30.355716,-97.740638,Unknown,Yes,Yes,<Null>
+267,,14623,8/2/96,1990s,1996,Live Oak,30.205706,-97.876031,Unknown,Yes,Yes,<Null>
+268,,5806,8/6/96,1990s,1996,"Live Oak, Red Oak",30.230181,-97.848401,Unknown,Undetermined,<Null>,<Null>
+269,,5782,10/1/96,1990s,1996,Live Oak,30.236252,-97.767405,Unknown,Yes,Yes,<Null>
+270,,5752,10/2/96,1990s,1996,Live Oak,30.284595,-97.770605,Unknown,Yes,<Null>,<Null>
+271,,16675,10/11/96,1990s,1996,Live Oak,30.196252,-97.793354,Unknown,Yes,Yes,<Null>
+272,,14582,10/16/96,1990s,1996,"Live Oak, Blackjack Oak",30.176819,-97.846761,Unknown,Yes,<Null>,<Null>
+273,,16776,10/22/96,1990s,1996,Live Oak,30.31406,-97.770393,Unknown,Yes,Yes,<Null>
+274,,16766,10/24/96,1990s,1996,Live Oak,30.283689,-97.740821,Unknown,Yes,Yes,<Null>
+275,,5804,10/29/96,1990s,1996,Live Oak,30.239826,-97.852801,Unknown,Yes,<Null>,<Null>
+276,,5800,11/14/96,1990s,1996,Live Oak,30.245625,-97.830935,Unknown,Yes,Yes,Yes
+277,,5788,11/20/96,1990s,1996,Live Oak,30.21394,-97.802,Unknown,Undetermined,<Null>,Yes
+278,,5742,12/10/96,1990s,1996,Live Oaks,30.254627,-97.79002,Unknown,Yes,Yes,<Null>
+279,,5800,12/30/96,1990s,1996,Live Oaks,30.24325,-97.829039,Unknown,Yes,Yes,<Null>
+280,,5702,1/21/97,1990s,1997,Live Oaks,30.251448,-97.744303,Unknown,Yes,Yes,<Null>
+281,,5748,1/24/97,1990s,1997,Live Oak,30.254829,-97.756113,Unknown,Yes,Yes,<Null>
+282,,5668,1/28/97,1990s,1997,Live Oaks,30.424605,-97.731145,Unknown,Yes,Yes,<Null>
+283,,5804,2/11/97,1990s,1997,Live Oak,30.239395,-97.852395,Unknown,Yes,<Null>,<Null>
+284,,5829,3/7/97,1990s,1997,Live Oak,30.260516,-97.782706,Unknown,Yes,Yes,<Null>
+285,,5921,3/26/97,1990s,1997,Live Oaks,30.26267,-97.801477,Unknown,Yes,Yes,<Null>
+286,,5771,4/22/97,1990s,1997,Live Oak,30.300541,-97.774011,Unknown,Yes,Yes,<Null>
+287,,5802,4/24/97,1990s,1997,Live Oak,30.245492,-97.825841,Unknown,Yes,Yes,<Null>
+288,,5776,5/5/97,1990s,1997,Live Oak,30.246845,-97.784126,Unknown,Yes,Yes,Yes
+289,,14532,5/12/97,1990s,1997,Live Oak,30.414767,-97.761994,Unknown,Yes,Yes,<Null>
+290,,5734,5/13/97,1990s,1997,Red Oak,30.184067,-97.827206,Unknown,Undetermined,<Null>,<Null>
+291,,5802,5/14/97,1990s,1997,Live Oak,30.237628,-97.806477,Unknown,Yes,Yes,<Null>
+292,,5807,5/14/97,1990s,1997,Live Oak,30.226574,-97.838697,Unknown,Yes,Yes,<Null>
+293,,5768,5/15/97,1990s,1997,Live Oak,30.355162,-97.76305,Unknown,Undetermined,<Null>,<Null>
+294,,14526,5/23/97,1990s,1997,Live Oak,30.185481,-97.896629,Unknown,Yes,<Null>,<Null>
+295,,5806,6/11/97,1990s,1997,Red Oak,30.229624,-97.848617,Unknown,Undetermined,<Null>,<Null>
+296,,14635,6/11/97,1990s,1997,Live Oak,30.181347,-97.811177,Unknown,Yes,Yes,<Null>
+297,,14634,6/19/97,1990s,1997,Live Oak,30.201716,-97.821633,Unknown,Yes,Yes,<Null>
+298,,5800,7/7/97,1990s,1997,Live Oak,30.243746,-97.827094,Unknown,Undetermined,<Null>,Yes
+299,,14634,7/8/97,1990s,1997,Live Oak,30.201333,-97.821615,Unknown,Undetermined,<Null>,Yes
+300,,5668,7/15/97,1990s,1997,Live Oak,30.421132,-97.731725,Unknown,Yes,Yes,<Null>
+301,,5809,7/15/97,1990s,1997,Live Oak,30.226705,-97.863326,Unknown,Yes,Yes,<Null>
+302,,5668,8/7/97,1990s,1997,Live Oak,30.420557,-97.731739,Unknown,Yes,Yes,<Null>
+303,,5748,8/15/97,1990s,1997,Live Oak,30.254973,-97.757666,Unknown,Yes,Yes,<Null>
+304,,5673,9/9/97,1990s,1997,"Live Oak, Red Oak",30.41629,-97.720546,Unknown,Yes,<Null>,<Null>
+305,,5809,9/19/97,1990s,1997,Live Oak,30.230989,-97.867597,Unknown,Yes,Yes,<Null>
+306,,5742,9/25/97,1990s,1997,Live Oak,30.253597,-97.790657,Unknown,Yes,Yes,Yes
+307,,5783,10/15/97,1990s,1997,Live Oak,30.229711,-97.782082,Unknown,Yes,Yes,<Null>
+308,,16776,10/16/97,1990s,1997,Live Oak,30.315221,-97.77118,Unknown,Undetermined,<Null>,Yes
+309,,5800,10/24/97,1990s,1997,Live Oak,30.24324,-97.831768,Unknown,Yes,Yes,Yes
+310,,5804,10/29/97,1990s,1997,Live Oak,30.241257,-97.851259,Unknown,Yes,Yes,<Null>
+311,,5771,12/4/97,1990s,1997,Live Oak,30.299671,-97.771898,Unknown,Yes,Yes,<Null>
+312,,5734,12/17/97,1990s,1997,Red Oak,30.184478,-97.827541,Unknown,Undetermined,<Null>,Yes
+313,,5727,1/15/98,1990s,1998,Live Oak,30.248427,-97.791893,Unknown,Yes,Yes,<Null>
+314,,5734,1/26/98,1990s,1998,Live Oak,30.181816,-97.82834,Unknown,Yes,Yes,<Null>
+315,,5752,2/3/98,1990s,1998,Live Oak,30.285032,-97.770402,Unknown,Yes,Yes,<Null>
+316,,5892,2/9/98,1990s,1998,Live Oak,30.22197,-97.792667,Unknown,Yes,Yes,Yes
+317,,5702,2/17/98,1990s,1998,Live Oak,30.251956,-97.748531,Unknown,Yes,Yes,<Null>
+318,,5778,3/4/98,1990s,1998,"Live Oak, Red Oak",30.193281,-97.805402,Unknown,Yes,Yes,Yes
+319,,5782,3/12/98,1990s,1998,Live Oak,30.238395,-97.765959,Unknown,Yes,Yes,Yes
+320,,5758,3/16/98,1990s,1998,"Live Oak, Red Oak",30.326017,-97.765056,Unknown,Yes,Yes,<Null>
+321,,5806,3/19/98,1990s,1998,Live Oak,30.229999,-97.848078,Unknown,Yes,Yes,<Null>
+322,,5784,4/3/98,1990s,1998,Live Oak,30.219787,-97.780075,Unknown,Yes,Yes,<Null>
+323,,5800,4/16/98,1990s,1998,Live Oak,30.243416,-97.831177,Unknown,Yes,Yes,Yes
+324,,14635,4/16/98,1990s,1998,Red Oak,30.175963,-97.811029,Unknown,Undetermined,<Null>,<Null>
+325,,5668,4/28/98,1990s,1998,Live Oak,30.421538,-97.732205,Unknown,Undetermined,<Null>,Yes
+326,,5892,4/30/98,1990s,1998,Live Oak,30.228246,-97.797228,Unknown,Yes,Yes,Yes
+327,,5734,5/1/98,1990s,1998,Live Oak,30.178954,-97.827757,Unknown,Yes,Yes,<Null>
+328,,5782,5/4/98,1990s,1998,Live Oak,30.237364,-97.766567,Unknown,Yes,Yes,<Null>
+329,,5691,5/5/98,1990s,1998,Red Oak,30.365933,-97.663306,Unknown,Undetermined,<Null>,Yes
+330,,16675,5/5/98,1990s,1998,Live Oak,30.191708,-97.788638,Unknown,Yes,Yes,Yes
+331,,5742,5/7/98,1990s,1998,Red Oak,30.254139,-97.790269,Unknown,Undetermined,<Null>,<Null>
+332,,5776,5/7/98,1990s,1998,Live Oak,30.251721,-97.783325,Unknown,Yes,Yes,<Null>
+333,,16708,5/8/98,1990s,1998,Live Oak,30.391805,-97.763004,Unknown,Yes,Yes,Yes
+334,,14642,5/13/98,1990s,1998,Live Oak,30.194309,-97.875324,Unknown,Yes,Yes,<Null>
+335,,5759,5/18/98,1990s,1998,Live Oak,30.338134,-97.764192,Unknown,Yes,Yes,<Null>
+336,,5769,5/18/98,1990s,1998,Live Oak,30.360896,-97.77229,Unknown,Yes,Yes,<Null>
+337,,5809,5/18/98,1990s,1998,Live Oak,30.22747,-97.865781,Unknown,Yes,<Null>,<Null>
+338,,5784,5/19/98,1990s,1998,Live Oak,30.220765,-97.781898,Unknown,Yes,Yes,<Null>
+339,,14635,5/22/98,1990s,1998,Live Oak,30.181116,-97.809392,Unknown,Yes,Yes,Yes
+340,,5776,5/27/98,1990s,1998,Live Oak,30.247364,-97.78454,Unknown,Yes,Yes,<Null>
+341,,5724,6/5/98,1990s,1998,Live Oak,30.261693,-97.798387,Unknown,Yes,Yes,<Null>
+342,,5804,6/5/98,1990s,1998,Live Oak,30.239395,-97.852395,Unknown,Yes,Yes,<Null>
+343,,5769,6/16/98,1990s,1998,Red Oak,30.361431,-97.770992,Unknown,Undetermined,<Null>,<Null>
+344,,5817,6/19/98,1990s,1998,Live Oak,30.205382,-97.844696,Unknown,Yes,Yes,<Null>
+345,,5735,6/24/98,1990s,1998,Live Oak,30.179107,-97.848186,Unknown,Yes,Yes,<Null>
+346,,5819,6/24/98,1990s,1998,Live Oak,30.203881,-97.843467,Unknown,Yes,<Null>,<Null>
+347,,6281,7/6/98,1990s,1998,Live Oak,30.205204,-97.854986,Unknown,Yes,Yes,<Null>
+348,,5800,7/7/98,1990s,1998,Live Oak,30.246301,-97.83103,Unknown,Undetermined,<Null>,Yes
+349,,14534,7/28/98,1990s,1998,Live Oak,30.202976,-97.815343,Unknown,Undetermined,<Null>,<Null>
+350,,14534,7/28/98,1990s,1998,Live Oak,30.202944,-97.815549,Unknown,Undetermined,<Null>,Yes
+351,,14534,7/28/98,1990s,1998,Live Oak,30.202467,-97.815733,Unknown,Yes,Yes,<Null>
+352,,14534,7/28/98,1990s,1998,Live Oak,30.202945,-97.815745,Unknown,Yes,Yes,<Null>
+353,,5783,8/3/98,1990s,1998,Live Oak,30.231725,-97.784873,Unknown,Undetermined,<Null>,Yes
+354,,5668,8/11/98,1990s,1998,Live Oak,30.424605,-97.731145,Unknown,Undetermined,<Null>,<Null>
+355,,14635,8/24/98,1990s,1998,Live Oak,30.176598,-97.812258,Unknown,Yes,<Null>,Yes
+356,,5734,8/25/98,1990s,1998,Live Oak,30.181391,-97.827336,Unknown,Yes,<Null>,<Null>
+357,,5769,8/27/98,1990s,1998,Live Oaks,30.360009,-97.771419,Unknown,Yes,Yes,<Null>
+358,,5670,8/28/98,1990s,1998,Live Oaks,30.424258,-97.727894,Unknown,Yes,<Null>,<Null>
+359,,5713,8/28/98,1990s,1998,Live Oaks,30.430083,-97.774208,Unknown,Yes,Yes,<Null>
+360,,5784,9/3/98,1990s,1998,Live Oaks,30.221343,-97.781478,Unknown,Yes,<Null>,<Null>
+361,,16811,9/24/98,1990s,1998,Live Oak,30.43719,-97.779421,Unknown,Yes,<Null>,<Null>
+362,,5735,10/12/98,1990s,1998,"Live Oaks, Red Oaks",30.178424,-97.843819,Unknown,Yes,<Null>,<Null>
+363,,5800,10/22/98,1990s,1998,"Live Oak, Pin Oak",30.241598,-97.826542,Unknown,Yes,<Null>,Yes
+364,,5731,10/27/98,1990s,1998,Live Oak,30.181498,-97.81238,Unknown,Yes,Yes,<Null>
+365,,16809,12/2/98,1990s,1998,"Live Oaks, Red Oaks",30.278555,-97.824517,Unknown,Yes,Yes,<Null>
+366,,16675,12/8/98,1990s,1998,Live Oaks,30.199188,-97.793664,Unknown,Yes,<Null>,<Null>
+367,,5788,12/22/98,1990s,1998,Live Oaks,30.215972,-97.806327,Unknown,Yes,<Null>,<Null>
+368,,14642,1/8/99,1990s,1999,Live Oaks,30.19371,-97.874747,Unknown,Yes,Yes,<Null>
+369,,5784,1/11/99,1990s,1999,Live Oaks,30.221702,-97.780572,Unknown,Yes,<Null>,<Null>
+370,,5734,1/15/99,1990s,1999,Live Oak,30.183413,-97.826697,Unknown,Yes,Yes,<Null>
+371,,5802,1/15/99,1990s,1999,Live Oaks,30.244269,-97.823047,Unknown,Yes,<Null>,<Null>
+372,,5782,2/1/99,1990s,1999,Live Oaks,30.237209,-97.76747,Unknown,Yes,Yes,<Null>
+373,,5668,2/4/99,1990s,1999,Live Oaks,30.421483,-97.733159,Unknown,Yes,Yes,<Null>
+374,,5812,2/17/99,1990s,1999,Live Oaks,30.213959,-97.849476,Unknown,Yes,Yes,Yes
+375,,14534,2/17/99,1990s,1999,Live Oak,30.202828,-97.815911,Unknown,Yes,Yes,<Null>
+376,,5892,3/1/99,1990s,1999,Live Oak,30.225568,-97.79147,Unknown,Yes,Yes,<Null>
+377,,14561,3/4/99,1990s,1999,Live Oak,30.264824,-97.805524,Unknown,Yes,Yes,<Null>
+378,,5794,3/10/99,1990s,1999,Live Oaks,30.194897,-97.814457,Unknown,Yes,Yes,<Null>
+379,,16675,3/11/99,1990s,1999,Live Oak,30.197419,-97.795651,Unknown,Yes,Yes,Yes
+380,,5769,3/16/99,1990s,1999,Live Oaks,30.359072,-97.770601,Unknown,Yes,Yes,Yes
+381,,5768,3/24/99,1990s,1999,Live Oaks,30.355163,-97.766316,Unknown,Yes,Yes,<Null>
+382,,5776,3/26/99,1990s,1999,Live Oaks,30.246845,-97.784126,Unknown,Yes,Yes,<Null>
+383,,5800,4/1/99,1990s,1999,Live Oaks,30.251082,-97.830548,Unknown,Undetermined,<Null>,<Null>
+384,,14534,4/2/99,1990s,1999,Live Oaks,30.210624,-97.817258,Unknown,Yes,Yes,Yes
+385,,5769,4/7/99,1990s,1999,Live Oaks,30.360663,-97.767651,Unknown,Yes,<Null>,<Null>
+386,,5809,4/8/99,1990s,1999,Live Oaks,30.227879,-97.865057,Unknown,Yes,Yes,Yes
+387,,14534,4/8/99,1990s,1999,Live Oaks,30.202429,-97.815938,Unknown,Undetermined,<Null>,<Null>
+388,,5758,4/14/99,1990s,1999,"Live Oaks, Red Oaks",30.327515,-97.765681,Unknown,Undetermined,<Null>,<Null>
+389,,14526,4/16/99,1990s,1999,Live Oaks,30.184203,-97.889311,Unknown,Undetermined,<Null>,Yes
+390,,5670,4/21/99,1990s,1999,"Live Oaks, Red Oak",30.42384,-97.726934,Unknown,Yes,Yes,<Null>
+391,,5734,4/21/99,1990s,1999,Red Oak,30.189213,-97.824554,Unknown,Yes,Yes,Yes
+392,,5802,4/28/99,1990s,1999,Live Oaks,30.237594,-97.807374,Unknown,Yes,Yes,<Null>
+393,,5734,5/4/99,1990s,1999,Live Oaks,30.181431,-97.826723,Unknown,Undetermined,<Null>,Yes
+394,,5817,5/4/99,1990s,1999,Live Oaks,30.205765,-97.844496,Unknown,Undetermined,<Null>,Yes
+395,,5802,5/5/99,1990s,1999,Live Oaks,30.245338,-97.826105,Unknown,Yes,Yes,<Null>
+396,,5723,5/7/99,1990s,1999,Red Oaks,30.263485,-97.804546,Unknown,Undetermined,<Null>,Yes
+397,,5759,5/7/99,1990s,1999,"Live Oak, Red Oak",30.329558,-97.769503,Unknown,Yes,Yes,Yes
+398,,5691,5/12/99,1990s,1999,Live Oaks,30.311345,-97.65159,Unknown,Yes,Yes,Yes
+399,,5727,5/12/99,1990s,1999,Live Oaks,30.248466,-97.794869,Unknown,Yes,Yes,<Null>
+400,,5776,5/12/99,1990s,1999,Live Oaks,30.246677,-97.784269,Unknown,Yes,<Null>,<Null>
+401,,14634,5/14/99,1990s,1999,Live Oak,30.2023,-97.822924,Unknown,Yes,Yes,<Null>
+402,,5771,5/21/99,1990s,1999,Red Oak,30.298811,-97.772358,Unknown,Yes,<Null>,<Null>
+403,,5782,5/28/99,1990s,1999,Live Oaks,30.241815,-97.755629,Unknown,Yes,<Null>,<Null>
+404,,5743,6/1/99,1990s,1999,"Live Oak, Red Oak",30.253675,-97.790426,Unknown,Yes,Yes,<Null>
+405,,6281,6/1/99,1990s,1999,Live Oaks,30.204255,-97.854091,Unknown,Yes,<Null>,Yes
+406,,5702,6/2/99,1990s,1999,Live Oak,30.25016,-97.745911,Unknown,Yes,<Null>,<Null>
+407,,5782,6/7/99,1990s,1999,Red Oak,30.237167,-97.767494,Unknown,Yes,<Null>,<Null>
+408,,5668,6/8/99,1990s,1999,Live Oaks,30.421538,-97.732205,Unknown,Yes,<Null>,<Null>
+409,,5809,6/10/99,1990s,1999,Live Oaks,30.226268,-97.863196,Unknown,Yes,Yes,<Null>
+410,,5809,6/10/99,1990s,1999,Live Oaks,30.226245,-97.863722,Unknown,Yes,<Null>,<Null>
+411,,5783,6/11/99,1990s,1999,Live Oaks,30.232233,-97.78125,Unknown,Yes,Yes,Yes
+412,,16851,6/11/99,1990s,1999,Live Oaks,30.373666,-97.743806,Unknown,Undetermined,<Null>,<Null>
+413,,5679,6/17/99,1990s,1999,Live Oaks,30.435152,-97.716397,Unknown,Yes,Yes,Yes
+414,,5769,6/17/99,1990s,1999,Red Oak,30.358747,-97.767849,Unknown,Undetermined,<Null>,<Null>
+415,,5668,6/24/99,1990s,1999,Live Oaks,30.421531,-97.732544,Unknown,Undetermined,<Null>,<Null>
+416,,14541,6/28/99,1990s,1999,Live Oaks,30.207531,-97.880142,Unknown,Yes,Yes,Yes
+417,,5710,6/30/99,1990s,1999,Live Oaks,30.427251,-97.768051,Unknown,Yes,Yes,<Null>
+418,,5768,6/30/99,1990s,1999,Live Oaks,30.355339,-97.766713,Unknown,Yes,<Null>,<Null>
+419,,5782,6/30/99,1990s,1999,Live Oaks,30.23698,-97.767741,Unknown,Yes,<Null>,<Null>
+420,,16837,6/30/99,1990s,1999,Live Oaks,30.437235,-97.780223,Unknown,Yes,Yes,Yes
+421,,5769,7/6/99,1990s,1999,Live Oaks,30.355903,-97.767455,Unknown,Yes,<Null>,<Null>
+422,,5809,7/7/99,1990s,1999,Live Oaks,30.226241,-97.863541,Unknown,Yes,<Null>,<Null>
+423,,5758,7/8/99,1990s,1999,Live Oaks,30.325352,-97.765478,Unknown,Undetermined,<Null>,Yes
+424,,5802,7/21/99,1990s,1999,Live Oaks,30.237628,-97.806477,Unknown,Yes,Yes,Yes
+425,,5782,7/26/99,1990s,1999,Live Oak,30.237005,-97.767727,Unknown,Yes,Yes,<Null>
+426,,5849,7/27/99,1990s,1999,Live Oak,30.432257,-97.717519,Unknown,Yes,Yes,<Null>
+427,,5806,8/2/99,1990s,1999,Live Oaks,30.230181,-97.848401,Unknown,Undetermined,<Null>,Yes
+428,,5804,8/3/99,1990s,1999,Live Oaks,30.239395,-97.852395,Unknown,Undetermined,<Null>,<Null>
+429,,5769,8/4/99,1990s,1999,Live Oaks,30.356279,-97.766031,Unknown,Yes,Yes,<Null>
+430,,5769,8/4/99,1990s,1999,Live Oaks,30.361123,-97.771696,Unknown,Yes,Yes,<Null>
+431,,14641,8/4/99,1990s,1999,Live Oaks,30.237509,-97.806277,Unknown,Yes,Yes,<Null>
+432,,5769,8/5/99,1990s,1999,"Live Oaks, Red Oak",30.354885,-97.767973,Unknown,Yes,Yes,Yes
+433,,5742,8/6/99,1990s,1999,Live Oak,30.254056,-97.792028,Unknown,Yes,<Null>,<Null>
+434,,5702,8/9/99,1990s,1999,Live Oaks,30.251448,-97.744303,Unknown,No,<Null>,<Null>
+435,,5806,8/13/99,1990s,1999,Live Oaks,30.231615,-97.849164,Unknown,Yes,Yes,Yes
+436,,5670,8/17/99,1990s,1999,Live Oaks,30.42384,-97.726934,Unknown,Undetermined,<Null>,Yes
+437,,5727,8/17/99,1990s,1999,Live Oaks,30.248427,-97.791893,Unknown,Yes,Yes,Yes
+438,,5729,8/17/99,1990s,1999,Live Oaks,30.181648,-97.81078,Unknown,Undetermined,<Null>,Yes
+439,,5734,8/23/99,1990s,1999,Live Oak,30.180418,-97.828494,Unknown,Yes,Yes,<Null>
+440,,5809,8/26/99,1990s,1999,Live Oaks,30.227455,-97.864446,Unknown,Yes,Yes,<Null>
+441,,5769,8/27/99,1990s,1999,Live Oaks,30.360115,-97.76788,Unknown,Undetermined,<Null>,Yes
+442,,5758,8/30/99,1990s,1999,Live Oaks,30.319939,-97.750541,Public,Yes,Yes,Yes
+443,,5783,8/31/99,1990s,1999,"Live Oaks, Red Oaks",30.232189,-97.779757,Unknown,Yes,<Null>,<Null>
+444,,5804,9/7/99,1990s,1999,Live Oaks,30.239835,-97.852127,Unknown,Yes,<Null>,Yes
+445,,14549,9/10/99,1990s,1999,Live Oaks,30.490125,-97.76768,Unknown,No,<Null>,<Null>
+446,,14623,9/20/99,1990s,1999,Live Oak,30.204826,-97.876193,Unknown,Undetermined,<Null>,Yes
+447,,14623,9/20/99,1990s,1999,Live Oak,30.208354,-97.867114,Unknown,Undetermined,<Null>,Yes
+448,,5768,10/1/99,1990s,1999,Live Oak,30.355163,-97.766316,Unknown,Undetermined,<Null>,Yes
+449,,16838,11/16/99,1990s,1999,Live Oak,30.427438,-97.77122,Unknown,Undetermined,<Null>,Yes
+450,,5734,11/23/99,1990s,1999,Live Oak,30.182495,-97.825312,Unknown,Yes,Yes,<Null>
+451,,5802,11/30/99,1990s,1999,Live Oak,30.24564,-97.822149,Unknown,Undetermined,<Null>,<Null>
+452,,5768,12/16/99,1990s,1999,Live Oak,30.355439,-97.765538,Unknown,Undetermined,<Null>,<Null>
+453,,16858,1/3/00,2000s,2000,Live Oak,30.345029,-97.750118,Unknown,Yes,Yes,<Null>
+454,,14634,1/12/00,2000s,2000,Live Oak,30.201333,-97.821615,Unknown,Yes,Yes,<Null>
+455,,16705,1/24/00,2000s,2000,Live Oak,30.196203,-97.794913,Unknown,Yes,<Null>,<Null>
+456,,5807,1/26/00,2000s,2000,Live Oak,30.229462,-97.857557,Unknown,Undetermined,<Null>,Yes
+457,,5769,1/28/00,2000s,2000,Live Oak,30.360115,-97.76788,Unknown,Yes,Yes,Yes
+458,,5769,1/28/00,2000s,2000,Live Oak,30.360145,-97.768738,Unknown,Yes,Yes,<Null>
+459,,5809,2/1/00,2000s,2000,Live Oak,30.227423,-97.864936,Unknown,Yes,<Null>,<Null>
+460,,5809,2/14/00,2000s,2000,Live Oak,30.226268,-97.863196,Unknown,Yes,<Null>,<Null>
+461,,5735,2/22/00,2000s,2000,Live Oak,30.178316,-97.843883,Unknown,Yes,<Null>,<Null>
+462,,14522,2/29/00,2000s,2000,Live Oak,30.208175,-97.880415,Unknown,Yes,<Null>,<Null>
+463,,14534,3/2/00,2000s,2000,Live Oak,30.202493,-97.815531,Unknown,Yes,Yes,<Null>
+464,,5668,3/8/00,2000s,2000,Live Oak,30.424927,-97.731285,Unknown,Yes,Yes,<Null>
+465,,14631,3/8/00,2000s,2000,Live Oak,30.209441,-97.881199,Unknown,Yes,Yes,Yes
+466,,14623,3/13/00,2000s,2000,"Live Oak, Blackjack Oak",30.205048,-97.877549,Unknown,Yes,<Null>,<Null>
+467,,5727,3/14/00,2000s,2000,"Live Oak, Red Oak",30.249227,-97.792032,Unknown,Undetermined,<Null>,<Null>
+468,,5807,3/16/00,2000s,2000,Live Oak,30.221477,-97.854102,Unknown,Yes,<Null>,<Null>
+469,,5735,3/21/00,2000s,2000,Live Oak,30.177993,-97.844072,Unknown,Yes,<Null>,<Null>
+470,,5892,3/29/00,2000s,2000,Live Oak,30.220018,-97.789507,Unknown,Yes,Yes,<Null>
+471,,5778,3/31/00,2000s,2000,Live Oak,30.193155,-97.805986,Unknown,Yes,<Null>,<Null>
+472,,5804,4/5/00,2000s,2000,Live Oak,30.242405,-97.852304,Unknown,Yes,<Null>,Yes
+473,,14598,4/10/00,2000s,2000,Live Oak,30.437469,-97.80355,Unknown,Yes,Yes,Yes
+474,,5668,4/12/00,2000s,2000,Live Oak,30.424605,-97.731145,Unknown,Yes,Yes,<Null>
+475,,5804,4/12/00,2000s,2000,Live Oak,30.23895,-97.853547,Unknown,Undetermined,<Null>,Yes
+476,,14522,4/12/00,2000s,2000,"Live Oak, Shumard Oak",30.239059,-97.909244,Unknown,Yes,Yes,<Null>
+477,,5685,4/13/00,2000s,2000,Live Oak,30.38251,-97.67809,Unknown,Yes,Yes,Yes
+478,,5702,4/14/00,2000s,2000,Live Oak,30.2495,-97.746038,Unknown,Yes,Yes,Yes
+479,,5769,4/14/00,2000s,2000,Live Oak,30.363102,-97.770939,Unknown,Yes,Yes,Yes
+480,,5771,4/18/00,2000s,2000,Live Oak,30.303078,-97.773108,Unknown,Yes,Yes,<Null>
+481,,5691,4/20/00,2000s,2000,Shumard Oak,30.36543,-97.665232,Unknown,Undetermined,<Null>,<Null>
+482,,5759,4/20/00,2000s,2000,Live Oak,30.329624,-97.765961,Unknown,Yes,Yes,<Null>
+483,,5691,4/25/00,2000s,2000,Live Oak,30.347765,-97.688002,Unknown,Yes,Yes,<Null>
+484,,5743,4/25/00,2000s,2000,Live Oak,30.250922,-97.791277,Unknown,Yes,Yes,Yes
+485,,5816,4/25/00,2000s,2000,Live Oak,30.214149,-97.838026,Unknown,Yes,Yes,<Null>
+486,,5849,4/26/00,2000s,2000,Live Oak,30.43104,-97.706785,Unknown,Yes,Yes,Yes
+487,,5806,4/27/00,2000s,2000,Live Oak,30.230708,-97.847775,Unknown,Yes,Yes,Yes
+488,,5702,4/28/00,2000s,2000,Live Oak,30.251448,-97.744303,Unknown,Yes,Yes,<Null>
+489,,5734,5/1/00,2000s,2000,Live Oak,30.182003,-97.829847,Unknown,Yes,<Null>,Yes
+490,,5771,5/1/00,2000s,2000,Live Oak,30.296176,-97.769991,Unknown,Yes,Yes,<Null>
+491,,5892,5/1/00,2000s,2000,Live Oak,30.224716,-97.790588,Unknown,Undetermined,<Null>,Yes
+492,,5670,5/2/00,2000s,2000,Live Oak,30.424277,-97.72767,Unknown,Yes,Yes,<Null>
+493,,5807,5/2/00,2000s,2000,Live Oak,30.229462,-97.857557,Unknown,Yes,Yes,<Null>
+494,,5778,5/3/00,2000s,2000,Live Oak,30.193155,-97.805986,Unknown,Yes,Yes,Yes
+495,,14623,5/4/00,2000s,2000,Live Oak,30.211624,-97.86797,Unknown,Yes,<Null>,<Null>
+496,,5710,5/9/00,2000s,2000,Live Oak,30.426242,-97.782955,Unknown,Undetermined,<Null>,<Null>
+497,,5771,5/9/00,2000s,2000,Live Oak,30.303055,-97.770955,Municipal - Parkland,Undetermined,<Null>,Yes
+498,,5771,5/10/00,2000s,2000,Live Oak,30.303547,-97.777869,Unknown,Yes,Yes,<Null>
+499,,5802,5/10/00,2000s,2000,Live Oak,30.236796,-97.807781,Unknown,Yes,Yes,<Null>
+500,,5691,5/11/00,2000s,2000,Shumard Oak,30.368635,-97.665305,Unknown,Undetermined,<Null>,<Null>
+501,,5807,5/16/00,2000s,2000,Live Oak,30.226598,-97.854074,Unknown,Yes,Yes,<Null>
+502,,16688,5/17/00,2000s,2000,Live Oak,30.186832,-97.825466,Unknown,Yes,Yes,<Null>
+503,,5782,5/19/00,2000s,2000,Live Oak,30.23641,-97.767249,Unknown,Yes,Yes,<Null>
+504,,5771,5/22/00,2000s,2000,Live Oak,30.308913,-97.766046,Unknown,Yes,Yes,<Null>
+505,,5689,5/24/00,2000s,2000,Shumard Oak,30.385627,-97.688165,Unknown,Undetermined,<Null>,<Null>
+506,,5819,5/31/00,2000s,2000,Live Oak,30.204229,-97.843708,Unknown,Yes,<Null>,<Null>
+507,,16851,5/31/00,2000s,2000,Live Oak,30.367849,-97.748857,Unknown,Yes,Yes,<Null>
+508,,5804,6/2/00,2000s,2000,Live Oak,30.239269,-97.852929,Unknown,Yes,Yes,<Null>
+509,,14534,6/2/00,2000s,2000,Live Oak,30.202771,-97.816235,Unknown,Yes,Yes,Yes
+510,,5758,6/5/00,2000s,2000,Live Oak,30.327964,-97.765022,Unknown,Undetermined,<Null>,<Null>
+511,,14605,6/7/00,2000s,2000,Live Oak,30.326044,-97.805738,Unknown,Yes,Yes,Yes
+512,,5760,6/8/00,2000s,2000,Live Oak,30.328385,-97.765895,Unknown,Undetermined,<Null>,<Null>
+513,,16730,6/12/00,2000s,2000,Live Oak,30.20013,-97.82982,Unknown,Yes,Yes,<Null>
+514,,16809,6/19/00,2000s,2000,Live Oak,30.277704,-97.82386,Unknown,Yes,Yes,<Null>
+515,,16840,6/20/00,2000s,2000,Live Oak,30.376645,-97.794861,Unknown,Yes,Yes,<Null>
+516,,5691,6/21/00,2000s,2000,Live Oak,30.318591,-97.678796,Unknown,Yes,Yes,<Null>
+517,,5691,6/21/00,2000s,2000,"Live Oak, Shumard Oak",30.366246,-97.66294,Unknown,Yes,<Null>,<Null>
+518,,14623,6/26/00,2000s,2000,Live Oak,30.194627,-97.872395,Unknown,Yes,<Null>,Yes
+519,,5727,6/28/00,2000s,2000,Red Oak,30.248427,-97.791893,Municipal - Parkland,Undetermined,<Null>,<Null>
+520,,14599,6/28/00,2000s,2000,Live Oak,30.443066,-97.809563,Unknown,Yes,Yes,<Null>
+521,,5734,6/29/00,2000s,2000,Live Oak,30.181861,-97.827646,Unknown,Yes,Yes,<Null>
+522,,5691,7/12/00,2000s,2000,Shumard Oak,30.365612,-97.662615,Unknown,Undetermined,<Null>,<Null>
+523,,5817,7/12/00,2000s,2000,Live Oak,30.205854,-97.844392,Unknown,Yes,Yes,<Null>
+524,,5769,7/13/00,2000s,2000,Live Oak,30.364804,-97.763172,Unknown,Undetermined,<Null>,<Null>
+525,,5742,7/17/00,2000s,2000,"Live Oak, Shumard Oak",30.254139,-97.790269,Unknown,Undetermined,<Null>,<Null>
+526,,5802,7/18/00,2000s,2000,Live Oak,30.237672,-97.807562,Unknown,Yes,Yes,Yes
+527,,16844,7/18/00,2000s,2000,Live Oak,30.331265,-97.80537,Unknown,Yes,Yes,<Null>
+528,,5668,7/20/00,2000s,2000,Live Oak,30.41672,-97.731832,Unknown,Yes,Yes,<Null>
+529,,5689,7/20/00,2000s,2000,"Live Oak, Shumard Oak",30.385227,-97.687291,Unknown,Yes,<Null>,Yes
+530,,5743,7/24/00,2000s,2000,Shumard Oak,30.253675,-97.790426,Unknown,Undetermined,<Null>,<Null>
+531,,5788,7/24/00,2000s,2000,Live Oak,30.214444,-97.802329,Unknown,Undetermined,<Null>,<Null>
+532,,14635,7/25/00,2000s,2000,"Live Oak, Shumard Oak",30.177928,-97.810559,Unknown,Undetermined,<Null>,<Null>
+533,,14532,7/28/00,2000s,2000,Live Oak,30.404224,-97.76222,Unknown,Undetermined,<Null>,Yes
+534,,14589,8/3/00,2000s,2000,Live Oak,30.41323,-97.724111,Unknown,Yes,Yes,Yes
+535,,5807,8/4/00,2000s,2000,Live Oak,30.222263,-97.850104,Unknown,Yes,Yes,<Null>
+536,,5691,8/7/00,2000s,2000,Shumard Oak,30.365755,-97.664611,Unknown,Yes,<Null>,Yes
+537,,14599,8/15/00,2000s,2000,Live Oak,30.440341,-97.821082,Unknown,Yes,<Null>,<Null>
+538,,5669,8/16/00,2000s,2000,Live Oak,30.414637,-97.737381,Unknown,Yes,<Null>,<Null>
+539,,14589,8/17/00,2000s,2000,Live Oak,30.414783,-97.726537,Unknown,Yes,Yes,<Null>
+540,,5783,8/21/00,2000s,2000,Live Oak,30.229711,-97.778028,Unknown,Yes,<Null>,<Null>
+541,,5768,8/22/00,2000s,2000,Live Oak,30.355439,-97.765538,Unknown,Yes,Yes,Yes
+542,,16737,8/28/00,2000s,2000,Live Oak,30.257867,-97.786335,Unknown,Yes,Yes,<Null>
+543,,5702,8/31/00,2000s,2000,Live Oak,30.249088,-97.745289,Unknown,Yes,Yes,Yes
+544,,16708,9/1/00,2000s,2000,"Live Oak, Shumard Oak",30.391805,-97.763004,Unknown,Undetermined,<Null>,<Null>
+545,,14534,9/18/00,2000s,2000,Live Oak,30.203366,-97.815321,Unknown,Yes,<Null>,Yes
+546,,14612,9/19/00,2000s,2000,Live Oak,30.4078,-97.740535,Unknown,Undetermined,<Null>,Yes
+547,,16888,9/27/00,2000s,2000,Live Oak,30.38676,-97.711971,Unknown,Yes,<Null>,<Null>
+548,,16684,9/28/00,2000s,2000,Live Oak,30.223832,-97.863533,Unknown,Yes,Yes,<Null>
+549,,5849,10/13/00,2000s,2000,Live Oak,30.435458,-97.706998,Unknown,Yes,Yes,<Null>
+550,,5849,10/13/00,2000s,2000,Live Oak,30.435458,-97.706998,Unknown,Yes,Yes,<Null>
+551,,5849,10/13/00,2000s,2000,Live Oak,30.429604,-97.70422,Unknown,Yes,Yes,Yes
+552,,5702,10/16/00,2000s,2000,Live Oak,30.243906,-97.746679,Unknown,Yes,Yes,<Null>
+553,,5771,11/28/00,2000s,2000,Live Oak,30.303078,-97.773108,Unknown,Yes,Yes,<Null>
+554,,14532,11/30/00,2000s,2000,Shumard Oak,30.405294,-97.76647,Unknown,Undetermined,<Null>,<Null>
+555,,5776,12/6/00,2000s,2000,Live Oak,30.243649,-97.786621,Unknown,Undetermined,<Null>,<Null>
+556,,16791,1/8/01,2000s,2001,Shumard Oak,30.195116,-97.860921,Unknown,Yes,<Null>,Yes
+557,,5691,1/11/01,2000s,2001,"Live Oak, Shumard Oak",30.366246,-97.66294,Unknown,Yes,<Null>,Yes
+558,,14561,1/18/01,2000s,2001,Live Oak,30.269802,-97.811261,Unknown,Yes,Yes,<Null>
+559,,5691,2/1/01,2000s,2001,Live Oak,30.317033,-97.693382,Unknown,Yes,Yes,<Null>
+560,,5702,2/5/01,2000s,2001,Live Oak,30.251766,-97.744169,Unknown,Yes,Yes,<Null>
+561,,14626,2/13/01,2000s,2001,Live Oak,30.201344,-97.819932,Unknown,Yes,Yes,<Null>
+562,,14637,2/16/01,2000s,2001,Live Oak,30.269288,-97.811853,Unknown,Yes,Yes,<Null>
+563,,16840,3/6/01,2000s,2001,"Live Oak, Shumard Oak",30.382169,-97.798025,Unknown,Yes,Yes,<Null>
+564,,16715,3/7/01,2000s,2001,Live Oak,30.257555,-97.755509,Unknown,Yes,Yes,Yes
+565,,16891,3/7/01,2000s,2001,Live Oak,30.434944,-97.765889,Unknown,Yes,Yes,Yes
+566,,14635,3/12/01,2000s,2001,Live Oak,30.179829,-97.809288,Unknown,Yes,Yes,<Null>
+567,,5668,3/20/01,2000s,2001,Live Oak,30.424605,-97.731145,Unknown,Yes,Yes,<Null>
+568,,5670,3/20/01,2000s,2001,Live Oak,30.423668,-97.726875,Unknown,Yes,Yes,Yes
+569,,14031,3/20/01,2000s,2001,Live Oak,30.211368,-97.851289,Unknown,Yes,Yes,<Null>
+570,,5768,3/26/01,2000s,2001,Live Oak,30.355482,-97.766207,Unknown,Yes,Yes,Yes
+571,,16851,3/26/01,2000s,2001,"Live Oak, Shumard Oak",30.362107,-97.758049,Unknown,Yes,Yes,<Null>
+572,,14561,3/29/01,2000s,2001,Live Oak,30.269802,-97.811261,Unknown,Undetermined,<Null>,<Null>
+573,,5807,3/30/01,2000s,2001,Live Oak,30.221756,-97.853604,Unknown,Undetermined,<Null>,<Null>
+574,,5776,4/3/01,2000s,2001,Live Oak,30.250632,-97.78526,Unknown,Yes,Yes,<Null>
+575,,5776,4/4/01,2000s,2001,Live Oak,30.246845,-97.784126,Unknown,Yes,Yes,<Null>
+576,,5849,4/5/01,2000s,2001,Live Oak,30.428941,-97.7049,Unknown,Yes,Yes,Yes
+577,,5892,4/10/01,2000s,2001,Live Oak,30.225633,-97.790157,Unknown,Undetermined,<Null>,Yes
+578,,5668,4/11/01,2000s,2001,Live Oak,30.424095,-97.730571,Unknown,Yes,Yes,<Null>
+579,,5691,4/11/01,2000s,2001,Live Oak,30.33717,-97.70861,Unknown,Yes,Yes,<Null>
+580,,5776,4/12/01,2000s,2001,Live Oak,30.247142,-97.783159,Unknown,Yes,<Null>,<Null>
+581,,16708,4/18/01,2000s,2001,Live Oak,30.392857,-97.762223,Unknown,Yes,Yes,Yes
+582,,5802,4/19/01,2000s,2001,Live Oak,30.245341,-97.824353,Unknown,Undetermined,<Null>,<Null>
+583,,5802,4/19/01,2000s,2001,Live Oak,30.245337,-97.824396,Unknown,Undetermined,<Null>,Yes
+584,,6281,4/20/01,2000s,2001,Live Oak,30.204161,-97.854342,Unknown,Yes,Yes,Yes
+585,,14607,4/20/01,2000s,2001,Live Oak,30.200075,-97.858895,Unknown,Yes,Yes,<Null>
+586,,14637,4/20/01,2000s,2001,Live Oak,30.269288,-97.811853,Unknown,Yes,Yes,Yes
+587,,5731,4/27/01,2000s,2001,Live Oak,30.179445,-97.814366,Unknown,Yes,Yes,Yes
+588,,5734,5/2/01,2000s,2001,Live Oak,30.182033,-97.829271,Unknown,Yes,Yes,Yes
+589,,14029,5/3/01,2000s,2001,Live Oak,30.178372,-97.779509,Unknown,Yes,Yes,Yes
+590,,16851,5/4/01,2000s,2001,Live Oak,30.373464,-97.745683,Unknown,Yes,<Null>,Yes
+591,,5769,5/7/01,2000s,2001,Live Oak,30.369541,-97.771777,Unknown,Yes,Yes,<Null>
+592,,6201,5/7/01,2000s,2001,Live Oak,30.248479,-97.793984,Unknown,Yes,Yes,Yes
+593,,16684,5/7/01,2000s,2001,Live Oak,30.223599,-97.859626,Unknown,Yes,Yes,Yes
+594,,5691,5/9/01,2000s,2001,Live Oak,30.368861,-97.665051,Unknown,Undetermined,<Null>,Yes
+595,,5710,5/9/01,2000s,2001,Live Oak,30.430224,-97.777293,Unknown,Yes,Yes,<Null>
+596,,5691,5/10/01,2000s,2001,Shumard Oak,30.365612,-97.662615,Unknown,Undetermined,<Null>,<Null>
+597,,14581,5/11/01,2000s,2001,Live Oak,30.429717,-97.705863,Unknown,Undetermined,<Null>,Yes
+598,,16888,5/14/01,2000s,2001,Live Oak,30.392371,-97.694687,Unknown,Yes,Yes,<Null>
+599,,5685,5/15/01,2000s,2001,Live Oak,30.38573,-97.684491,Unknown,Yes,Yes,Yes
+600,,5784,5/16/01,2000s,2001,"Live Oak, Blackjack Oak",30.212143,-97.784496,Unknown,Yes,<Null>,<Null>
+601,,14592,5/16/01,2000s,2001,Live Oak,30.209411,-97.887829,Unknown,Yes,Yes,<Null>
+602,,14605,5/16/01,2000s,2001,Live Oak,30.335678,-97.794276,Unknown,Yes,Yes,Yes
+603,,14615,5/16/01,2000s,2001,Live Oak,30.207799,-97.880612,Unknown,Yes,Yes,Yes
+604,,5685,5/17/01,2000s,2001,Live Oak,30.384531,-97.677404,Unknown,Undetermined,<Null>,Yes
+605,,14589,5/22/01,2000s,2001,Live Oak,30.411975,-97.732355,Unknown,Yes,<Null>,<Null>
+606,,5776,5/29/01,2000s,2001,Live Oak,30.246314,-97.784117,Unknown,Yes,<Null>,<Null>
+607,,5752,5/30/01,2000s,2001,Live Oak,30.277756,-97.790401,Unknown,Yes,Yes,<Null>
+608,,5892,6/1/01,2000s,2001,Live Oak,30.220066,-97.794491,Unknown,Yes,Yes,Yes
+609,,5735,6/6/01,2000s,2001,Live Oak,30.178482,-97.843643,Unknown,Yes,Yes,<Null>
+610,,5668,6/11/01,2000s,2001,Live Oak,30.42144,-97.732794,Unknown,Undetermined,<Null>,<Null>
+611,,14641,6/11/01,2000s,2001,Shumard Oak,30.237509,-97.806277,Unknown,Undetermined,<Null>,<Null>
+612,,5685,6/14/01,2000s,2001,Live Oak,30.383725,-97.678485,Unknown,Undetermined,<Null>,Yes
+613,,5892,6/18/01,2000s,2001,Live Oak,30.224804,-97.791328,Unknown,Yes,<Null>,<Null>
+614,,5892,6/18/01,2000s,2001,Live Oak,30.225799,-97.790485,Unknown,Undetermined,<Null>,Yes
+615,,14623,6/18/01,2000s,2001,"Live Oak, Blackjack Oak",30.20499,-97.877395,Unknown,Yes,<Null>,<Null>
+616,,5758,6/22/01,2000s,2001,Live Oak,30.322545,-97.768733,Unknown,Yes,Yes,Yes
+617,,5782,6/22/01,2000s,2001,Shumard Oak,30.243362,-97.755534,Unknown,Yes,<Null>,<Null>
+618,,5771,6/25/01,2000s,2001,Live Oak,30.297579,-97.762052,Unknown,Yes,<Null>,<Null>
+619,,14544,6/25/01,2000s,2001,"Live Oak, Pin Oak",30.226566,-97.865255,Unknown,Yes,<Null>,<Null>
+620,,5689,6/27/01,2000s,2001,Live Oak,30.386451,-97.689935,Unknown,Yes,<Null>,Yes
+621,,5800,6/27/01,2000s,2001,Live Oak,30.237789,-97.830184,Unknown,Undetermined,<Null>,<Null>
+622,,5768,7/9/01,2000s,2001,Live Oak,30.355086,-97.765772,Unknown,Yes,Yes,<Null>
+623,,5727,7/16/01,2000s,2001,Live Oak,30.248463,-97.795156,Unknown,Yes,Yes,Yes
+624,,5804,8/14/01,2000s,2001,Live Oak,30.239292,-97.852934,Unknown,Yes,<Null>,Yes
+625,,14534,8/16/01,2000s,2001,Live Oak,30.202962,-97.816289,Unknown,Yes,Yes,<Null>
+626,,5743,8/28/01,2000s,2001,Live Oak,30.253675,-97.790426,Unknown,Undetermined,<Null>,Yes
+627,,5849,9/4/01,2000s,2001,Live Oak,30.431623,-97.718563,Unknown,Yes,Yes,<Null>
+628,,14541,9/10/01,2000s,2001,Live Oak,30.207326,-97.880636,Unknown,Yes,<Null>,<Null>
+629,,5771,9/21/01,2000s,2001,Live Oak,30.292757,-97.769328,Unknown,Yes,<Null>,<Null>
+630,,5691,9/26/01,2000s,2001,Shumard Oak,30.370134,-97.663814,Unknown,Yes,<Null>,<Null>
+631,,5804,10/6/01,2000s,2001,Live Oak,30.240077,-97.851985,Public,Yes,<Null>,<Null>
+632,,5685,10/15/01,2000s,2001,Live Oak,30.383734,-97.678527,Unknown,Yes,Yes,Yes
+633,,5804,10/18/01,2000s,2001,Live Oak,30.240758,-97.852754,Unknown,Yes,<Null>,<Null>
+634,,5702,11/1/01,2000s,2001,Live Oak,30.248948,-97.745401,Unknown,Yes,<Null>,Yes
+635,,5710,11/1/01,2000s,2001,Live Oak,30.42549,-97.767445,Unknown,Undetermined,<Null>,<Null>
+636,,5668,11/20/01,2000s,2001,Live Oak,30.424605,-97.731145,Unknown,Yes,<Null>,Yes
+637,,5804,11/30/01,2000s,2001,Live Oak,30.237306,-97.84774,Unknown,Yes,<Null>,<Null>
+638,,14623,12/6/01,2000s,2001,Live Oak,30.204741,-97.87527,Unknown,Yes,Yes,Yes
+639,,14631,12/18/01,2000s,2001,Live Oak,30.210881,-97.879802,Unknown,Undetermined,<Null>,Yes
+640,,8445,1/2/02,2000s,2002,Live Oak,30.341581,-97.710809,Unknown,Yes,<Null>,Yes
+641,,5681,1/24/02,2000s,2002,Live Oak,30.414111,-97.681664,Unknown,Yes,Yes,<Null>
+642,,5807,1/29/02,2000s,2002,Live Oak,30.221477,-97.854102,Unknown,Undetermined,<Null>,<Null>
+643,,5771,1/31/02,2000s,2002,Live Oak,30.303653,-97.77247,Unknown,Yes,<Null>,<Null>
+644,,14599,2/6/02,2000s,2002,Live Oak,30.422104,-97.859895,Unknown,Undetermined,<Null>,<Null>
+645,,14641,2/6/02,2000s,2002,Live Oak,30.236185,-97.806372,Unknown,Yes,Yes,<Null>
+646,,5795,2/12/02,2000s,2002,Live Oak,30.19656,-97.816743,Unknown,Yes,Yes,Yes
+647,,5771,2/25/02,2000s,2002,Live Oak,30.303078,-97.773108,Unknown,Undetermined,<Null>,<Null>
+648,,14609,2/25/02,2000s,2002,Live Oak,30.214294,-97.81789,Unknown,Yes,<Null>,Yes
+649,,16730,2/25/02,2000s,2002,Live Oak,30.19412,-97.827667,Unknown,Yes,Yes,<Null>
+650,,5812,2/28/02,2000s,2002,Live Oak,30.212246,-97.851361,Unknown,Yes,Yes,<Null>
+651,,16778,2/28/02,2000s,2002,Live Oak,30.28605,-97.770035,Unknown,Yes,Yes,<Null>
+652,,5824,3/11/02,2000s,2002,Live Oaks,30.196524,-97.825715,Unknown,Yes,Yes,<Null>
+653,,5782,3/14/02,2000s,2002,Live Oaks,30.237364,-97.766567,Unknown,Undetermined,<Null>,<Null>
+654,,5809,3/25/02,2000s,2002,Live Oaks,30.220668,-97.874743,Unknown,Undetermined,<Null>,<Null>
+655,,5685,4/2/02,2000s,2002,"Live Oak, Shumard Oak",30.385356,-97.678609,Unknown,Undetermined,<Null>,Yes
+656,,5691,4/2/02,2000s,2002,Live Oaks,30.308508,-97.698614,Unknown,Yes,Yes,<Null>
+657,,5681,4/3/02,2000s,2002,Live Oak,30.414111,-97.681664,Unknown,Undetermined,<Null>,<Null>
+658,,5691,4/3/02,2000s,2002,"Live Oak, Shumard Oak",30.366246,-97.66294,Unknown,Undetermined,<Null>,Yes
+659,,5783,4/8/02,2000s,2002,Live Oaks,30.229232,-97.778051,Unknown,Yes,Yes,<Null>
+660,,5771,4/9/02,2000s,2002,Live Oak,30.299038,-97.774266,Unknown,Yes,Yes,<Null>
+661,,8445,4/15/02,2000s,2002,Live Oak,30.347642,-97.740263,Unknown,Yes,Yes,<Null>
+662,,16809,4/15/02,2000s,2002,"Live Oaks, Shumard Oak",30.277934,-97.823709,Unknown,Undetermined,<Null>,<Null>
+663,,5743,4/18/02,2000s,2002,Live Oaks,30.250413,-97.790394,Unknown,Yes,Yes,<Null>
+664,,5755,4/22/02,2000s,2002,"Live Oaks, Red Oaks",30.297995,-97.779723,Unknown,Yes,Yes,Yes
+665,,5816,4/22/02,2000s,2002,Live Oaks,30.214573,-97.837236,Unknown,Yes,<Null>,Yes
+666,,14602,4/22/02,2000s,2002,Live Oaks,30.351125,-97.776602,Unknown,Yes,<Null>,<Null>
+667,,5739,4/23/02,2000s,2002,Live Oaks,30.186398,-97.779332,Unknown,Undetermined,<Null>,Yes
+668,,5673,4/25/02,2000s,2002,Live Oaks,30.41832,-97.724894,Unknown,Yes,Yes,Yes
+669,,14610,4/25/02,2000s,2002,Live Oaks,30.222685,-97.733332,Unknown,Yes,Yes,Yes
+670,,5689,4/26/02,2000s,2002,Live Oak,30.385671,-97.690416,Unknown,Undetermined,<Null>,<Null>
+671,,5691,4/30/02,2000s,2002,"Blackjack Oak, Shumard Oak",30.370052,-97.663404,Unknown,Undetermined,<Null>,Yes
+672,,5804,5/9/02,2000s,2002,Live Oaks,30.239688,-97.855017,Unknown,Yes,Yes,Yes
+673,,5809,5/10/02,2000s,2002,Live Oaks,30.24079,-97.889638,Unknown,Yes,Yes,<Null>
+674,,14626,5/14/02,2000s,2002,Live Oaks,30.202047,-97.818674,Unknown,Yes,Yes,Yes
+675,,8445,5/15/02,2000s,2002,Live Oaks,30.345964,-97.763603,Unknown,Yes,<Null>,<Null>
+676,,5735,6/10/02,2000s,2002,Live Oaks,30.181478,-97.854276,Unknown,Yes,Yes,Yes
+677,,5807,6/10/02,2000s,2002,Live Oak,30.230625,-97.858688,Unknown,Yes,Yes,Yes
+678,,5668,6/11/02,2000s,2002,Live Oaks,30.421538,-97.732205,Unknown,Undetermined,<Null>,Yes
+679,,16836,6/13/02,2000s,2002,Live Oak,30.487013,-97.762381,Unknown,Yes,Yes,<Null>
+680,,5784,1/20/05,2000s,2006,<Null>,30.220156,-97.781613,Unknown,Yes,<Null>,<Null>
+681,,5771,5/3/05,2000s,2006,<Null>,30.298699,-97.761618,Unknown,Undetermined,<Null>,<Null>
+682,,14031,6/25/05,2000s,2005,Live Oak,30.210342,-97.850016,Private,Yes,Yes,<Null>
+683,,14031,6/25/05,2000s,2005,Live Oak,30.210203,-97.849975,Private,Yes,Yes,<Null>
+684,,5685,7/13/05,2000s,2006,<Null>,30.382193,-97.678875,Unknown,Undetermined,<Null>,Yes
+685,,5782,2/1/06,2000s,2006,Live Oak,30.238417,-97.766084,Unknown,Yes,<Null>,<Null>
+686,,5710,2/22/06,2000s,2006,"Live Oak, Red Oak",30.419284,-97.767689,Unknown,Yes,<Null>,<Null>
+687,,5702,2/27/06,2000s,2006,Live Oak,30.254566,-97.755582,Unknown,Yes,<Null>,<Null>
+688,,5807,3/2/06,2000s,2006,Live Oaks,30.224802,-97.846839,Unknown,Yes,<Null>,<Null>
+689,,14522,3/13/06,2000s,2006,Live Oaks,30.223226,-97.881348,Unknown,Yes,Yes,<Null>
+690,,16684,3/13/06,2000s,2006,Live Oaks,30.223088,-97.857225,Unknown,Yes,<Null>,Yes
+691,,5734,4/18/06,2000s,2006,Red Oak,30.189001,-97.823293,Unknown,Undetermined,<Null>,Yes
+692,,14029,4/18/06,2000s,2006,"Live Oak, Red Oak",30.178624,-97.779428,Unknown,Yes,<Null>,Yes
+693,,5804,4/24/06,2000s,2006,Live Oaks,30.241926,-97.851964,Unknown,Undetermined,<Null>,Yes
+694,,14495,5/1/06,2000s,2006,Live Oaks,30.242291,-97.734498,Unknown,Yes,<Null>,<Null>
+695,,5710,5/2/06,2000s,2006,Live Oaks,30.426691,-97.769331,Unknown,Yes,Yes,Yes
+696,,5769,5/8/06,2000s,2006,Live Oak,30.360896,-97.77229,Unknown,Undetermined,<Null>,<Null>
+697,,5769,5/12/06,2000s,2006,Live Oak,30.359501,-97.767722,Unknown,Yes,<Null>,<Null>
+698,,5734,5/15/06,2000s,2006,"Live Oak, Red Oak",30.184071,-97.826015,Unknown,Yes,<Null>,Yes
+699,,6281,5/22/06,2000s,2006,Live Oaks,30.203746,-97.854939,Unknown,Yes,Yes,<Null>
+700,,5812,5/25/06,2000s,2006,Live Oaks,30.214988,-97.849243,Unknown,Yes,<Null>,<Null>
+701,,5783,6/6/06,2000s,2006,Live Oaks,30.227917,-97.778699,Unknown,Yes,<Null>,<Null>
+702,,8445,6/6/06,2000s,2006,"Live Oaks, Red Oak",30.346735,-97.758164,Unknown,Yes,<Null>,<Null>
+703,,5734,6/7/06,2000s,2006,"Live Oak, Red Oak",30.184218,-97.826654,Unknown,Yes,Yes,<Null>
+704,,5762,6/7/06,2000s,2006,Live Oaks,30.338777,-97.781487,Unknown,Yes,<Null>,Yes
+705,,5800,6/7/06,2000s,2006,Live Oak,30.243462,-97.832132,Unknown,Yes,Yes,Yes
+706,,5743,6/8/06,2000s,2006,"Live Oak, Red Oak",30.251012,-97.791063,Unknown,Yes,<Null>,Yes
+707,,5807,6/8/06,2000s,2006,Live Oaks,30.223732,-97.851541,Unknown,Yes,<Null>,Yes
+708,,6281,6/12/06,2000s,2006,Live Oak,30.203291,-97.855032,Unknown,Yes,Yes,<Null>
+709,,6281,6/12/06,2000s,2006,Live Oak,30.203086,-97.855098,Unknown,Yes,Yes,<Null>
+710,,5743,6/14/06,2000s,2006,"Live Oaks, Red Oak",30.251044,-97.790763,Unknown,Undetermined,<Null>,Yes
+711,,6281,6/14/06,2000s,2006,Live Oak,30.203375,-97.854809,Unknown,Yes,Yes,<Null>
+712,,6281,6/15/06,2000s,2006,Live Oak,30.204805,-97.855962,Unknown,Yes,Yes,<Null>
+713,,5723,6/19/06,2000s,2006,Live Oak,30.263575,-97.803436,Unknown,Yes,Yes,<Null>
+714,,16684,6/20/06,2000s,2006,Live Oak,30.222778,-97.856673,Unknown,Undetermined,<Null>,Yes
+715,,5800,6/27/06,2000s,2006,Live Oak,30.245471,-97.833348,Unknown,Yes,Yes,Yes
+716,,5669,7/11/06,2000s,2006,Live Oak,30.423123,-97.734415,Unknown,Yes,Yes,Yes
+717,,5819,7/25/06,2000s,2006,Live Oak,30.204521,-97.843027,Unknown,Yes,<Null>,<Null>
+718,,14556,7/25/06,2000s,2006,Live Oaks,30.199854,-97.81953,Unknown,Yes,Yes,<Null>
+719,,5771,8/3/06,2000s,2006,Live Oak,30.30299,-97.770473,Unknown,Yes,Yes,<Null>
+720,,5724,8/16/06,2000s,2006,"Live Oaks, Red Oaks",30.264014,-97.799485,Unknown,Yes,<Null>,<Null>
+721,,5784,8/16/06,2000s,2006,Live Oak,30.221882,-97.783525,Unknown,Undetermined,<Null>,<Null>
+722,,5710,8/30/06,2000s,2006,Live Oak,30.426879,-97.769395,Unknown,Yes,<Null>,<Null>
+723,,16867,9/6/06,2000s,2006,Live Oaks,30.453817,-97.801997,Unknown,Yes,<Null>,<Null>
+724,,5685,9/12/06,2000s,2006,Live Oak,30.381476,-97.682636,Unknown,Yes,<Null>,<Null>
+725,,14504,9/25/06,2000s,2006,Live Oaks,30.167345,-97.791142,Unknown,Yes,<Null>,<Null>
+726,,5743,10/3/06,2000s,2006,"Live Oaks, Red Oaks",30.252815,-97.791132,Unknown,Yes,<Null>,Yes
+727,,5892,10/9/06,2000s,2006,Live Oaks,30.225799,-97.790485,Unknown,Yes,<Null>,<Null>
+728,,16791,10/11/06,2000s,2006,Live Oaks,30.189698,-97.85689,Unknown,Yes,<Null>,<Null>
+729,,5816,10/19/06,2000s,2006,Live Oak,30.221809,-97.839822,Unknown,Yes,<Null>,<Null>
+730,,5829,10/19/06,2000s,2006,Live Oaks,30.252341,-97.780064,Unknown,Yes,<Null>,<Null>
+731,,5691,10/31/06,2000s,2006,Live Oak,30.366246,-97.66294,Unknown,Undetermined,<Null>,<Null>
+732,,5671,11/6/06,2000s,2006,Live Oak,30.422667,-97.723884,Unknown,Undetermined,<Null>,<Null>
+733,,5806,11/6/06,2000s,2006,Live Oak,30.230399,-97.849302,Unknown,Yes,<Null>,<Null>
+734,,14502,11/9/06,2000s,2006,"Live Oak, Red Oak",30.352243,-97.778772,Unknown,Undetermined,<Null>,Yes
+735,,5727,11/27/06,2000s,2006,Live Oaks,30.252647,-97.794037,Unknown,Undetermined,<Null>,<Null>
+736,,14635,11/27/06,2000s,2006,Live Oaks,30.180316,-97.810969,Unknown,Yes,<Null>,Yes
+737,,5817,12/13/06,2000s,2006,Live Oak,30.206388,-97.844415,Unknown,Yes,<Null>,Yes
+738,,14506,12/20/06,2000s,2006,Live Oak,30.42621,-97.72065,Unknown,Yes,<Null>,<Null>
+739,,5702,12/21/06,2000s,2006,Live Oak,30.251375,-97.745483,Unknown,Yes,<Null>,<Null>
+740,,11549,1/3/07,2000s,2007,Live Oak,30.46281,-97.807808,Unknown,Yes,Yes,<Null>
+741,,5776,1/10/07,2000s,2007,Live Oaks,30.246801,-97.783455,Unknown,Undetermined,<Null>,<Null>
+742,,14506,1/24/07,2000s,2007,Live Oak,30.426445,-97.721112,Unknown,Yes,<Null>,<Null>
+743,,16888,1/24/07,2000s,2007,Live Oaks,30.392863,-97.693846,Unknown,Yes,Yes,<Null>
+744,,16889,2/7/07,2000s,2007,Live Oak,30.17642,-97.797745,Unknown,Yes,<Null>,<Null>
+745,,5669,2/12/07,2000s,2007,Live Oak,30.422465,-97.732915,Unknown,Yes,<Null>,<Null>
+746,,16891,2/21/07,2000s,2007,Live Oak,30.435062,-97.759141,Unknown,Yes,Yes,<Null>
+747,,5807,3/5/07,2000s,2007,Live Oak,30.221756,-97.853604,Unknown,Yes,Yes,<Null>
+748,,5689,3/7/07,2000s,2007,Live Oak,30.386324,-97.687739,Unknown,Yes,Yes,<Null>
+749,,5781,3/13/07,2000s,2007,<Null>,30.232075,-97.757183,Unknown,Undetermined,<Null>,<Null>
+750,,5735,3/20/07,2000s,2007,Live Oak,30.180847,-97.844535,Unknown,Yes,<Null>,<Null>
+751,,5710,4/4/07,2000s,2007,Live Oak,30.427735,-97.769155,Unknown,Yes,Yes,<Null>
+752,,5769,4/10/07,2000s,2007,Live Oak,30.357381,-97.765418,Unknown,Yes,Yes,<Null>
+753,,5807,4/10/07,2000s,2007,Live Oak,30.231707,-97.85688,Unknown,Yes,<Null>,<Null>
+754,,5724,4/17/07,2000s,2007,Live Oak,30.263186,-97.798213,Unknown,Yes,Yes,<Null>
+755,,5800,4/24/07,2000s,2007,Live Oak,30.246468,-97.831695,Unknown,Yes,Yes,Yes
+756,,16888,4/24/07,2000s,2007,Live Oak,30.392365,-97.693869,Unknown,Undetermined,<Null>,<Null>
+757,,16684,5/1/07,2000s,2007,Live Oak,30.222062,-97.858447,Private,Yes,Yes,<Null>
+758,,16684,5/1/07,2000s,2007,Live Oak,30.221941,-97.858178,Private,Yes,Yes,<Null>
+759,,5762,5/2/07,2000s,2007,<Null>,30.339118,-97.780701,Private,Yes,<Null>,<Null>
+760,,5702,5/3/07,2000s,2007,Live Oak,30.252631,-97.744283,Unknown,Undetermined,<Null>,<Null>
+761,,5723,5/8/07,2000s,2007,Live Oak,30.263473,-97.805209,Unknown,Yes,Yes,<Null>
+762,,5670,5/15/07,2000s,2007,Live Oak,30.422712,-97.728319,Unknown,Yes,Yes,<Null>
+763,,5768,5/21/07,2000s,2007,"Live Oak, Red Oak",30.354742,-97.765237,Unknown,Yes,<Null>,<Null>
+764,,5769,5/21/07,2000s,2007,Red Oak,30.359814,-97.769374,Unknown,Undetermined,<Null>,<Null>
+765,,5806,5/22/07,2000s,2007,Live Oak,30.23207,-97.847673,Unknown,Yes,<Null>,Yes
+766,,5669,5/24/07,2000s,2007,Live Oak,30.42343,-97.73275,Unknown,Yes,Yes,<Null>
+767,,5670,5/24/07,2000s,2007,Live Oak,30.422836,-97.728286,Unknown,Yes,<Null>,Yes
+768,,5771,5/29/07,2000s,2007,Live Oak,30.29513,-97.73358,Unknown,Yes,Yes,<Null>
+769,,5797,5/29/07,2000s,2007,<Null>,30.195327,-97.811971,Unknown,Yes,<Null>,<Null>
+770,,8445,5/29/07,2000s,2007,Live Oak,30.346114,-97.758078,Unknown,Yes,Yes,<Null>
+771,,5829,5/30/07,2000s,2007,"Live Oak, Red Oak",30.253618,-97.778294,Unknown,Yes,<Null>,<Null>
+772,,5797,5/31/07,2000s,2007,Live Oak,30.195268,-97.811782,Unknown,Yes,<Null>,<Null>
+773,,5669,6/1/07,2000s,2007,Live Oak,30.422867,-97.733879,Private,Yes,<Null>,<Null>
+774,,14526,6/4/07,2000s,2007,Live Oak,30.187106,-97.889962,Unknown,Yes,Yes,<Null>
+775,,5734,6/11/07,2000s,2007,Red Oak,30.1857,-97.827455,Unknown,Yes,<Null>,<Null>
+776,,5829,6/11/07,2000s,2007,Live Oak,30.251868,-97.778558,Unknown,Yes,<Null>,Yes
+777,,14506,6/11/07,2000s,2007,Live Oak,30.426473,-97.719395,Unknown,Yes,<Null>,<Null>
+778,,5727,6/12/07,2000s,2007,Live Oak,30.248589,-97.792456,Unknown,Yes,<Null>,<Null>
+779,,8445,6/12/07,2000s,2007,Live Oak,30.346639,-97.758582,Unknown,Yes,<Null>,<Null>
+780,,14032,6/12/07,2000s,2007,Live Oak,30.201919,-97.860017,Unknown,Yes,<Null>,<Null>
+781,,14522,6/12/07,2000s,2007,Live Oak,30.210485,-97.884843,Unknown,Yes,<Null>,<Null>
+782,,5817,6/13/07,2000s,2007,Live Oak,30.206599,-97.844824,Unknown,Yes,<Null>,<Null>
+783,,5727,6/14/07,2000s,2007,Live Oak,30.249115,-97.792881,Unknown,Yes,Yes,<Null>
+784,,5797,6/14/07,2000s,2007,Live Oak,30.195384,-97.812217,Unknown,Yes,<Null>,<Null>
+785,,14526,6/18/07,2000s,2007,"Live Oak, Red Oak",30.187264,-97.890147,Unknown,Undetermined,<Null>,<Null>
+786,,5685,6/19/07,2000s,2007,"Live Oak, Red Oak",30.387777,-97.681166,Unknown,Yes,<Null>,Yes
+787,,14525,6/19/07,2000s,2007,Live Oak,30.261528,-97.805608,Unknown,Yes,<Null>,<Null>
+788,,5723,6/20/07,2000s,2007,Live Oak,30.262313,-97.804726,Unknown,Yes,<Null>,<Null>
+789,,14506,6/26/07,2000s,2007,Live Oak,30.426673,-97.71881,Unknown,Yes,<Null>,<Null>
+790,,5727,6/27/07,2000s,2007,Red Oak,30.249379,-97.792226,Unknown,Undetermined,<Null>,Yes
+791,,14526,7/2/07,2000s,2007,Live Oak,30.184042,-97.889387,Unknown,Yes,<Null>,<Null>
+792,,5691,7/3/07,2000s,2007,Red Oak,30.366772,-97.66274,Unknown,Undetermined,<Null>,<Null>
+793,,5817,7/9/07,2000s,2007,Live Oak,30.206231,-97.843427,Unknown,Yes,<Null>,<Null>
+794,,5685,7/23/07,2000s,2007,Live Oak,30.381413,-97.678648,Unknown,Yes,<Null>,<Null>
+795,,5723,7/24/07,2000s,2007,Live Oak,30.26139,-97.803514,Unknown,Yes,Yes,<Null>
+796,,5723,7/24/07,2000s,2007,Live Oak,30.263633,-97.805398,Unknown,Yes,Yes,<Null>
+797,,16684,7/25/07,2000s,2007,Live Oak,30.220449,-97.863371,Unknown,Yes,<Null>,<Null>
+798,,14495,7/31/07,2000s,2007,Live Oak,30.241794,-97.734397,Unknown,Yes,<Null>,<Null>
+799,,14506,8/9/07,2000s,2007,Live Oak,30.426743,-97.720914,Unknown,Yes,Yes,<Null>
+800,,5743,8/13/07,2000s,2007,"Live Oak, Red Oak",30.250978,-97.791841,Unknown,Yes,Yes,<Null>
+801,,5743,8/13/07,2000s,2007,"Live Oak, Red Oak",30.251182,-97.79214,Unknown,Yes,Yes,<Null>
+802,,14556,8/14/07,2000s,2007,Live Oak,30.200321,-97.820483,Private,Yes,<Null>,<Null>
+803,,14522,8/15/07,2000s,2007,Live Oak,30.209736,-97.886114,Unknown,Yes,<Null>,<Null>
+804,,16730,8/23/07,2000s,2007,Live Oak,30.19412,-97.827667,Unknown,Undetermined,<Null>,<Null>
+805,,5725,8/28/07,2000s,2007,Live Oak,30.253748,-97.802905,Private,Yes,<Null>,Yes
+806,,5724,9/6/07,2000s,2007,Live Oak,30.2636,-97.799131,Unknown,Undetermined,<Null>,<Null>
+807,,5742,9/6/07,2000s,2007,"Live Oak, Shumard Oak",30.254139,-97.790269,Unknown,Yes,<Null>,Yes
+808,,5802,9/11/07,2000s,2007,Live Oaks,30.237628,-97.806477,Unknown,Yes,<Null>,<Null>
+809,,5778,9/19/07,2000s,2007,"Live Oak, Red Oak",30.194182,-97.804689,Unknown,Yes,<Null>,Yes
+810,,6281,9/19/07,2000s,2007,Live Oak,30.205177,-97.855267,Unknown,Yes,Yes,<Null>
+811,,14526,9/19/07,2000s,2007,Live Oak,30.183841,-97.889363,Unknown,Yes,Yes,<Null>
+812,,5691,9/20/07,2000s,2007,Red Oak,30.366355,-97.66317,Unknown,Undetermined,<Null>,<Null>
+813,,16904,9/20/07,2000s,2007,Live Oak,30.203116,-97.824871,Unknown,Yes,Yes,<Null>
+814,,5817,10/2/07,2000s,2007,Live Oak,30.206642,-97.844922,Unknown,Yes,<Null>,<Null>
+815,,14532,10/15/07,2000s,2007,Live Oak,30.408044,-97.759177,Private,Yes,<Null>,<Null>
+816,,14532,10/15/07,2000s,2007,Live Oak,30.408363,-97.758996,Private,Yes,<Null>,<Null>
+817,,14576,10/17/07,2000s,2007,Live Oak,30.480034,-97.773733,Unknown,Yes,<Null>,<Null>
+818,,5743,10/18/07,2000s,2007,Red Oak,30.251012,-97.791063,Unknown,Undetermined,<Null>,<Null>
+819,,14534,10/23/07,2000s,2007,Live Oak,30.202333,-97.814972,Unknown,Yes,<Null>,<Null>
+820,,5671,10/30/07,2000s,2007,Live Oak,30.422813,-97.723485,Unknown,Yes,Yes,<Null>
+821,,14638,11/28/07,2000s,2007,Live Oak,30.305173,-97.773328,Unknown,Yes,<Null>,<Null>
+822,,5731,12/11/07,2000s,2007,Live Oaks,30.182508,-97.820095,Unknown,Undetermined,<Null>,<Null>
+823,,14538,12/11/07,2000s,2007,Live Oak,30.200323,-97.849773,Unknown,Yes,Yes,Yes
+824,,5819,12/12/07,2000s,2007,Live Oak,30.204467,-97.841676,Unknown,Yes,Yes,<Null>
+825,,14031,1/23/08,2000s,2008,Live Oak,30.210103,-97.850865,Private,Yes,Yes,<Null>
+826,,14031,1/23/08,2000s,2008,Live Oak,30.209947,-97.850843,Private,Yes,Yes,<Null>
+827,,14031,1/23/08,2000s,2008,Live Oak,30.209796,-97.850792,Private,Yes,Yes,<Null>
+828,,14031,1/23/08,2000s,2008,Live Oak,30.209705,-97.850761,Private,Yes,Yes,<Null>
+829,,14534,1/23/08,2000s,2008,Live Oak,30.209247,-97.817465,Unknown,Yes,<Null>,<Null>
+830,,14526,2/6/08,2000s,2008,Live Oak,30.187097,-97.88806,Unknown,Yes,Yes,<Null>
+831,,5800,2/14/08,2000s,2008,Live Oak,30.245287,-97.833473,Unknown,Yes,Yes,Yes
+832,,5806,2/14/08,2000s,2008,Live Oak,30.23277,-97.847155,Unknown,Yes,<Null>,<Null>
+833,,5685,2/18/08,2000s,2008,<Null>,30.384821,-97.678039,Unknown,Undetermined,<Null>,<Null>
+834,,5809,2/20/08,2000s,2008,Live Oak,30.226268,-97.863196,Unknown,Yes,<Null>,<Null>
+835,,5800,2/27/08,2000s,2008,Live Oak,30.246742,-97.831655,Unknown,Yes,<Null>,Yes
+836,,5691,3/27/08,2000s,2008,Red Oak,30.369687,-97.664007,Unknown,Undetermined,<Null>,<Null>
+837,,14534,3/27/08,2000s,2008,Live Oak,30.202333,-97.814972,Unknown,Yes,<Null>,<Null>
+838,,5691,3/31/08,2000s,2008,Red Oak,30.370048,-97.664064,Unknown,Yes,<Null>,<Null>
+839,,5812,3/31/08,2000s,2008,Live Oak,30.212173,-97.849731,Unknown,Yes,<Null>,Yes
+840,,5685,4/1/08,2000s,2008,"Live Oak, Red Oak",30.385386,-97.682621,Unknown,Yes,<Null>,<Null>
+841,,5829,4/2/08,2000s,2008,Live Oak,30.251868,-97.778558,Unknown,Yes,<Null>,<Null>
+842,,5685,4/3/08,2000s,2008,Red Oak,30.387777,-97.681166,Unknown,Undetermined,<Null>,<Null>
+843,,14495,4/7/08,2000s,2008,Live Oak,30.242701,-97.734087,Unknown,Yes,<Null>,Yes
+844,,14495,4/7/08,2000s,2008,Live Oak,30.242722,-97.734442,Unknown,Yes,<Null>,Yes
+845,,8445,4/8/08,2000s,2008,"Live Oak, Red Oak",30.346264,-97.759367,Unknown,Yes,<Null>,<Null>
+846,,5829,4/9/08,2000s,2008,Live Oak,30.251395,-97.779087,Unknown,Yes,<Null>,<Null>
+847,,5735,4/10/08,2000s,2008,Live Oak,30.181008,-97.852301,Unknown,Yes,Yes,Yes
+848,,5817,4/21/08,2000s,2008,Live Oak,30.206969,-97.844649,Unknown,Yes,<Null>,Yes
+849,,14525,4/21/08,2000s,2008,Live Oak,30.261178,-97.8056,Unknown,Yes,<Null>,Yes
+850,,5829,4/22/08,2000s,2008,Live Oak,30.25318,-97.778687,Unknown,Yes,<Null>,Yes
+851,,5727,4/23/08,2000s,2008,Live Oak,30.248463,-97.795156,Unknown,Yes,Yes,<Null>
+852,,5724,4/24/08,2000s,2008,Live Oak,30.262248,-97.799057,Unknown,Yes,<Null>,Yes
+853,,5724,4/24/08,2000s,2008,Red Oak,30.262475,-97.799235,Unknown,Undetermined,<Null>,<Null>
+854,,14541,4/24/08,2000s,2008,Live Oak,30.207811,-97.87936,Unknown,Yes,Yes,Yes
+855,,5806,4/28/08,2000s,2008,Live Oak,30.230072,-97.848998,Unknown,Yes,<Null>,Yes
+856,,5829,4/28/08,2000s,2008,Live Oak,30.252849,-97.779854,Unknown,Yes,<Null>,Yes
+857,,5670,4/30/08,2000s,2008,Live Oak,30.42347,-97.727258,Unknown,Yes,Yes,<Null>
+858,,5731,4/30/08,2000s,2008,Live Oak,30.18062,-97.812128,Unknown,Yes,<Null>,<Null>
+859,,5734,5/1/08,2000s,2008,"Live Oak, Red Oak",30.184982,-97.828591,Unknown,Yes,<Null>,Yes
+860,,14526,5/5/08,2000s,2008,Live Oak,30.184564,-97.885951,Unknown,Yes,Yes,<Null>
+861,,5829,5/8/08,2000s,2008,Live Oak,30.252207,-97.779672,Unknown,Yes,<Null>,<Null>
+862,,5769,5/13/08,2000s,2008,"Live Oak, Red Oak",30.360502,-97.770916,Unknown,Yes,<Null>,<Null>
+863,,14592,5/13/08,2000s,2008,Live Oak,30.203691,-97.8831,Unknown,Yes,<Null>,Yes
+864,,5734,5/14/08,2000s,2008,Red Oak,30.184725,-97.828086,Unknown,Undetermined,<Null>,<Null>
+865,,5807,5/19/08,2000s,2008,Live Oak,30.221006,-97.85052,Unknown,Yes,<Null>,Yes
+866,,5809,5/19/08,2000s,2008,Live Oak,30.226835,-97.864678,Unknown,Yes,Yes,<Null>
+867,,5892,5/21/08,2000s,2008,Live Oak,30.225568,-97.79147,Unknown,Yes,<Null>,<Null>
+868,,5776,5/22/08,2000s,2008,Live Oak,30.249764,-97.786702,Unknown,Undetermined,<Null>,<Null>
+869,,5776,5/22/08,2000s,2008,Live Oak,30.249254,-97.786492,Unknown,Yes,Yes,<Null>
+870,,5776,5/22/08,2000s,2008,Live Oak,30.250043,-97.786474,Unknown,Yes,Yes,<Null>
+871,,5735,5/28/08,2000s,2008,Live Oak,30.179999,-97.848374,Unknown,Yes,Yes,<Null>
+872,,5758,5/29/08,2000s,2008,Live Oak,30.328278,-97.763695,Unknown,Undetermined,<Null>,Yes
+873,,14549,6/1/08,2000s,2008,Live Oak,30.490999,-97.767432,Private,Yes,<Null>,<Null>
+874,,14526,6/2/08,2000s,2008,Live Oak,30.190366,-97.890466,Unknown,Yes,<Null>,<Null>
+875,,14506,6/3/08,2000s,2008,Live Oak,30.426396,-97.718991,Unknown,Yes,Yes,<Null>
+876,,5691,6/12/08,2000s,2008,Live Oak,30.369477,-97.664633,Unknown,Yes,Yes,<Null>
+877,,14549,6/13/08,2000s,2008,Live Oak,30.490697,-97.767302,Private,Yes,<Null>,<Null>
+878,,14549,6/13/08,2000s,2008,Live Oak,30.490836,-97.767358,Private,Yes,<Null>,<Null>
+879,,5803,6/16/08,2000s,2008,Live Oak,30.249854,-97.8292,Unknown,Yes,Yes,<Null>
+880,,5807,6/17/08,2000s,2008,Live Oak,30.246834,-97.876218,Unknown,Yes,Yes,<Null>
+881,,14549,6/17/08,2000s,2008,Live Oak,30.48983,-97.767516,Unknown,Yes,Yes,<Null>
+882,,5702,6/23/08,2000s,2008,Live Oak,30.248132,-97.746,Unknown,Yes,<Null>,<Null>
+883,,5802,7/10/08,2000s,2008,Live Oak,30.249658,-97.824958,Unknown,Yes,<Null>,<Null>
+884,,5724,7/15/08,2000s,2008,Live Oak,30.261911,-97.799549,Unknown,Yes,<Null>,<Null>
+885,,5723,7/28/08,2000s,2008,Live Oak,30.263633,-97.805398,Unknown,Yes,Yes,<Null>
+886,,5723,7/28/08,2000s,2008,Live Oak,30.263844,-97.805089,Unknown,Yes,<Null>,<Null>
+887,,5736,7/28/08,2000s,2008,Live Oak,30.187952,-97.868641,Unknown,Yes,<Null>,<Null>
+888,,5685,8/11/08,2000s,2008,Live Oak,30.38228,-97.677628,Unknown,Undetermined,<Null>,Yes
+889,,5724,8/13/08,2000s,2008,Live Oak,30.26309,-97.799741,Unknown,Yes,<Null>,<Null>
+890,,14642,8/13/08,2000s,2008,Live Oak,30.436877,-97.770603,Unknown,Yes,<Null>,<Null>
+891,,5735,8/14/08,2000s,2008,Live Oak,30.147122,-97.843095,Unknown,Yes,<Null>,Yes
+892,,14556,8/14/08,2000s,2008,Live Oak,30.200165,-97.821229,Unknown,Yes,<Null>,<Null>
+893,,5723,8/20/08,2000s,2008,Live Oak,30.263473,-97.805209,Unknown,Yes,Yes,<Null>
+894,,5681,9/1/08,2000s,2008,Live Oak,30.414706,-97.682487,Private,Yes,<Null>,<Null>
+895,,5681,9/1/08,2000s,2008,Live Oak,30.414546,-97.682054,Private,Yes,<Null>,<Null>
+896,,5800,9/9/08,2000s,2008,"Live Oak, Red Oak",30.244359,-97.826835,Unknown,Yes,Yes,Yes
+897,,14557,9/9/08,2000s,2008,Live Oak,30.211686,-97.883682,Unknown,Yes,Yes,Yes
+898,,14529,9/11/08,2000s,2008,Live Oak,30.209911,-97.885577,Unknown,Yes,<Null>,<Null>
+899,,5669,9/23/08,2000s,2008,Live Oak,30.423499,-97.734681,Unknown,Yes,Yes,<Null>
+900,,5669,9/23/08,2000s,2008,Live Oak,30.422561,-97.734104,Private,Yes,<Null>,<Null>
+901,,5727,10/1/08,2000s,2008,Live Oak,30.248919,-97.792712,Unknown,Yes,<Null>,<Null>
+902,,5807,10/2/08,2000s,2008,Live Oak,30.231575,-97.856627,Unknown,Yes,<Null>,<Null>
+903,,5782,10/7/08,2000s,2008,Live Oak,30.238352,-97.766108,Unknown,Yes,<Null>,<Null>
+904,,14525,11/6/08,2000s,2008,Live Oak,30.261755,-97.806655,Unknown,Yes,<Null>,<Null>
+905,,5782,11/13/08,2000s,2008,Red Oak,30.237364,-97.766567,Unknown,Yes,<Null>,<Null>
+906,,5800,11/13/08,2000s,2008,Live Oak,30.24324,-97.831768,Unknown,Yes,Yes,Yes
+907,,5829,11/17/08,2000s,2008,"Live Oak, Red Oak",30.252449,-97.777723,Unknown,Yes,<Null>,<Null>
+908,,14627,11/18/08,2000s,2008,Live Oak,30.187081,-97.82228,Unknown,Yes,Yes,<Null>
+909,,14561,12/11/08,2000s,2008,Live Oak,30.265187,-97.805837,Unknown,Yes,Yes,<Null>
+910,,14561,12/11/08,2000s,2008,Live Oak,30.265528,-97.806021,Private,Yes,Yes,Yes
+911,,14623,12/11/08,2000s,2008,Live Oak,30.200908,-97.866972,Unknown,Yes,<Null>,<Null>
+912,,5739,12/18/08,2000s,2008,Live Oak,30.183369,-97.77671,Unknown,Yes,<Null>,<Null>
+913,,5807,1/13/09,2000s,2009,Live Oak,30.247009,-97.873595,Unknown,Yes,Yes,<Null>
+914,,14031,2/9/09,2000s,2009,Live Oak,30.210441,-97.850004,Unknown,Yes,<Null>,Yes
+915,,5743,2/17/09,2000s,2009,Live Oak,30.25121,-97.792475,Unknown,Yes,<Null>,Yes
+916,,5778,2/17/09,2000s,2009,"Live Oak, Red Oak",30.194715,-97.804313,Unknown,Yes,<Null>,<Null>
+917,,14549,2/19/09,2000s,2009,Live Oak,30.488673,-97.766437,Unknown,Yes,<Null>,<Null>
+918,,14630,2/23/09,2000s,2009,Live Oak,30.209581,-97.878297,Unknown,Yes,<Null>,Yes
+919,,14522,2/25/09,2000s,2009,Live Oak,30.20894,-97.879007,Unknown,Yes,<Null>,<Null>
+920,,14629,2/25/09,2000s,2009,Live Oak,30.209192,-97.878952,Unknown,Yes,<Null>,<Null>
+921,,5758,3/2/09,2000s,2009,Live Oak,30.327513,-97.765181,Unknown,Undetermined,<Null>,<Null>
+922,,5800,3/3/09,2000s,2009,Live Oak,30.24324,-97.831768,Unknown,Yes,<Null>,Yes
+923,,5769,3/9/09,2000s,2009,Live Oak,30.360115,-97.76788,Unknown,Yes,<Null>,<Null>
+924,,5735,3/10/09,2000s,2009,"Live Oak, Pin Oak",30.178467,-97.852602,Unknown,Yes,<Null>,<Null>
+925,,14592,3/10/09,2000s,2009,Live Oak,30.207778,-97.886425,Unknown,Yes,<Null>,<Null>
+926,,14614,3/16/09,2000s,2009,Live Oak,30.202369,-97.820959,Unknown,Undetermined,<Null>,<Null>
+927,,14626,3/16/09,2000s,2009,Live Oak,30.201817,-97.820197,Unknown,Yes,<Null>,<Null>
+928,,14626,3/16/09,2000s,2009,Live Oak,30.202083,-97.819738,Unknown,Yes,<Null>,<Null>
+929,,14626,3/16/09,2000s,2009,Live Oak,30.202222,-97.820134,Private,Yes,<Null>,<Null>
+930,,5670,3/25/09,2000s,2009,Live Oak,30.421739,-97.725871,Unknown,Yes,<Null>,<Null>
+931,,11549,3/25/09,2000s,2009,Live Oak,30.460601,-97.810349,Unknown,Yes,<Null>,<Null>
+932,,16730,3/25/09,2000s,2009,Live Oak,30.198886,-97.831024,Unknown,Yes,<Null>,<Null>
+933,,14526,3/26/09,2000s,2009,Live Oak,30.185353,-97.89093,Unknown,Yes,<Null>,<Null>
+934,,16684,3/26/09,2000s,2009,Live Oak,30.222363,-97.859322,Unknown,Yes,<Null>,<Null>
+935,,14572,3/30/09,2000s,2009,Live Oak,30.384461,-97.672562,Unknown,Yes,<Null>,<Null>
+936,,5800,4/2/09,2000s,2009,Live Oak,30.244359,-97.826835,Unknown,Yes,<Null>,Yes
+937,,5670,4/8/09,2000s,2009,Live Oak,30.425354,-97.727525,Unknown,Yes,<Null>,<Null>
+938,,14570,4/8/09,2000s,2009,Live Oak,30.421344,-97.725909,Unknown,Yes,<Null>,<Null>
+939,,5734,4/14/09,2000s,2009,"Live Oak, Red Oak",30.180318,-97.829177,Unknown,Yes,<Null>,<Null>
+940,,5769,4/14/09,2000s,2009,Live Oak,30.360849,-97.770798,Unknown,Yes,Yes,<Null>
+941,,16871,4/14/09,2000s,2009,Live Oak,30.439452,-97.789882,Unknown,Yes,<Null>,<Null>
+942,,5727,4/23/09,2000s,2009,"Live Oak, Red Oak",30.252682,-97.793767,Unknown,Undetermined,<Null>,<Null>
+943,,5670,4/28/09,2000s,2009,Live Oak,30.422524,-97.728415,Unknown,Yes,<Null>,<Null>
+944,,14576,4/28/09,2000s,2009,Live Oak,30.486458,-97.765991,Unknown,Yes,<Null>,<Null>
+945,,5691,4/29/09,2000s,2009,"Live Oak, Red Oak, Shumard Oak",30.369051,-97.664404,Unknown,Yes,<Null>,<Null>
+946,,5724,4/29/09,2000s,2009,"Live Oak, Red Oak",30.262475,-97.799235,Unknown,Undetermined,<Null>,<Null>
+947,,16784,4/29/09,2000s,2009,"Live Oak, Red Oak",30.39445,-97.692286,Unknown,Yes,<Null>,<Null>
+948,,14626,5/6/09,2000s,2009,Live Oak,30.201817,-97.820197,Unknown,Yes,<Null>,<Null>
+949,,5691,5/7/09,2000s,2009,Live Oak,30.367282,-97.670046,Unknown,Yes,<Null>,<Null>
+950,,5809,5/7/09,2000s,2009,Live Oak,30.226562,-97.864611,Unknown,Yes,<Null>,<Null>
+951,,5809,5/13/09,2000s,2009,Live Oak,30.226245,-97.863722,Unknown,Yes,<Null>,Yes
+952,,5669,5/18/09,2000s,2009,Live Oak,30.422448,-97.7326,Unknown,Yes,<Null>,<Null>
+953,,5771,5/19/09,2000s,2009,Live Oak,30.303714,-97.770785,Unknown,Yes,<Null>,<Null>
+954,,14534,5/19/09,2000s,2009,Red Oak,30.201752,-97.816042,Unknown,Undetermined,<Null>,<Null>
+955,,14534,5/19/09,2000s,2009,Red Oak,30.201663,-97.815869,Unknown,Undetermined,<Null>,<Null>
+956,,5778,5/21/09,2000s,2009,"Live Oak, Red Oak",30.193068,-97.802442,Unknown,Yes,<Null>,<Null>
+957,,14534,5/21/09,2000s,2009,"Live Oak, Red Oak",30.202333,-97.814972,Unknown,Undetermined,<Null>,<Null>
+958,,14577,5/26/09,2000s,2009,Live Oak,30.219396,-97.8573,Unknown,Yes,Yes,<Null>
+959,,5762,6/2/09,2000s,2009,Live Oak,30.339631,-97.779994,Unknown,Yes,<Null>,<Null>
+960,,5892,6/2/09,2000s,2009,Live Oak,30.225568,-97.79147,Unknown,Undetermined,<Null>,<Null>
+961,,5768,6/4/09,2000s,2009,"Live Oak, Red Oak",30.354233,-97.765332,Unknown,Undetermined,<Null>,<Null>
+962,,5768,6/4/09,2000s,2009,Live Oak,30.354637,-97.764897,Unknown,Yes,<Null>,<Null>
+963,,5806,6/8/09,2000s,2009,"Live Oak, Red Oak",30.232031,-97.84735,Unknown,Undetermined,<Null>,Yes
+964,,14522,6/8/09,2000s,2009,Live Oak,30.209364,-97.88538,Unknown,Yes,<Null>,<Null>
+965,,5669,6/9/09,2000s,2009,Live Oak,30.423376,-97.73251,Unknown,Yes,<Null>,<Null>
+966,,5669,6/9/09,2000s,2009,"Live Oak, Red Oak",30.42343,-97.73275,Unknown,Yes,<Null>,<Null>
+967,,5722,6/11/09,2000s,2009,Live Oak,30.263481,-97.797287,Unknown,Yes,<Null>,<Null>
+968,,5800,6/16/09,2000s,2009,"Live Oak, Red Oak",30.244485,-97.826645,Unknown,Yes,<Null>,Yes
+969,,5782,7/1/09,2000s,2009,Live Oak,30.238252,-97.766876,Unknown,Yes,Yes,<Null>
+970,,5849,7/1/09,2000s,2009,Live Oak,30.429604,-97.70422,Unknown,Yes,<Null>,<Null>
+971,,14542,7/2/09,2000s,2009,"Live Oak, Pin Oak",30.185107,-97.885784,Unknown,Yes,<Null>,<Null>
+972,,14525,7/9/09,2000s,2009,Live Oak,30.262428,-97.806224,Unknown,Yes,<Null>,<Null>
+973,,16684,7/16/09,2000s,2009,Live Oak,30.222287,-97.859015,Unknown,Yes,<Null>,<Null>
+974,,5784,7/21/09,2000s,2009,Live Oak,30.220291,-97.781679,Unknown,Yes,<Null>,<Null>
+975,,14534,7/27/09,2000s,2009,Live Oak,30.202466,-97.81724,Unknown,Yes,<Null>,Yes
+976,,5742,8/24/09,2000s,2009,Red Oak,30.254139,-97.790269,Unknown,Yes,<Null>,<Null>
+977,,5681,8/25/09,2000s,2009,Live Oak,30.414638,-97.682276,Unknown,Yes,<Null>,<Null>
+978,,5800,9/10/09,2000s,2009,"Live Oak, Red Oak",30.244485,-97.826645,Unknown,Undetermined,<Null>,Yes
+979,,5807,9/21/09,2000s,2009,Live Oak,30.221756,-97.853604,Unknown,Yes,<Null>,<Null>
+980,,5804,10/29/09,2000s,2009,Live Oak,30.239548,-97.855172,Unknown,Yes,<Null>,<Null>
+981,,5800,11/2/09,2000s,2009,Live Oak,30.237259,-97.831249,Unknown,Yes,<Null>,Yes
+982,,5702,11/3/09,2000s,2009,Live Oak,30.248192,-97.745589,Unknown,Yes,Yes,<Null>
+983,,5778,11/4/09,2000s,2009,Live Oak,30.192326,-97.802859,Unknown,Yes,Yes,<Null>
+984,,5771,11/10/09,2000s,2009,Live Oak,30.303167,-97.770953,Private,Yes,<Null>,<Null>
+985,,5771,11/10/09,2000s,2009,Live Oak,30.303714,-97.770785,Unknown,Yes,<Null>,<Null>
+986,,5784,11/16/09,2000s,2009,Live Oak,30.220394,-97.781888,Unknown,Undetermined,<Null>,<Null>
+987,,5669,1/11/10,2010s,2010,Live Oak,30.422424,-97.732618,Unknown,Yes,<Null>,<Null>
+988,,5669,1/11/10,2010s,2010,Live Oak,30.422465,-97.732915,Unknown,Yes,Yes,<Null>
+989,,5724,1/19/10,2010s,2010,"Live Oak, Red Oak",30.262248,-97.799057,Unknown,Undetermined,<Null>,<Null>
+990,,14583,1/23/10,2010s,2010,"Live Oak, Red Oak",30.185672,-97.873412,Unknown,Yes,Yes,<Null>
+991,,5735,2/16/10,2010s,2010,Live Oak,30.14327,-97.84956,Unknown,Yes,Yes,<Null>
+992,,5685,2/22/10,2010s,2010,Live Oak,30.384742,-97.677359,Unknown,Yes,<Null>,Yes
+993,,14506,2/22/10,2010s,2010,Live Oak,30.426594,-97.721003,Unknown,Yes,<Null>,<Null>
+994,,5829,2/23/10,2010s,2010,Live Oak,30.252353,-97.780518,Unknown,Yes,Yes,<Null>
+995,,5802,3/2/10,2010s,2010,Live Oak,30.244342,-97.823564,Unknown,Yes,Yes,<Null>
+996,,5702,3/8/10,2010s,2010,<Null>,30.248588,-97.744899,Unknown,Undetermined,<Null>,<Null>
+997,,14583,3/9/10,2010s,2010,"Live Oak, Red Oak",30.185672,-97.873412,Unknown,Undetermined,<Null>,<Null>
+998,,5849,3/10/10,2010s,2010,Live Oak,30.433845,-97.714655,Unknown,Yes,Yes,<Null>
+999,,5760,3/23/10,2010s,2010,"Live Oak, Red Oak",30.328385,-97.765895,Unknown,Undetermined,<Null>,Yes
+1000,,5724,4/13/10,2010s,2010,Red Oak,30.261998,-97.798927,Unknown,Undetermined,<Null>,<Null>
+1001,,5670,4/20/10,2010s,2010,Live Oak,30.42261,-97.728505,Unknown,Yes,<Null>,<Null>
+1002,,5771,4/28/10,2010s,2010,Live Oak,30.30384,-97.77118,Unknown,Yes,<Null>,<Null>
+1003,,5771,5/11/10,2010s,2010,Live Oak,30.303318,-97.770458,Unknown,Yes,<Null>,<Null>
+1004,,5829,5/11/10,2010s,2010,Live Oak,30.252348,-97.780828,Unknown,Yes,<Null>,<Null>
+1005,,5771,5/12/10,2010s,2010,Live Oak,30.301666,-97.775259,Unknown,Yes,<Null>,<Null>
+1006,,5734,5/17/10,2010s,2010,"Live Oak, Red Oak",30.184154,-97.826037,Unknown,Undetermined,<Null>,<Null>
+1007,,5691,5/18/10,2010s,2010,Live Oak,30.367195,-97.669836,Unknown,Yes,<Null>,Yes
+1008,,5783,5/19/10,2010s,2010,Live Oak,30.230739,-97.777698,Unknown,Yes,<Null>,<Null>
+1009,,14538,5/19/10,2010s,2010,Live Oak,30.200733,-97.850262,Unknown,Yes,<Null>,<Null>
+1010,,14570,5/24/10,2010s,2010,Live Oak,30.42151,-97.725961,Unknown,Undetermined,<Null>,<Null>
+1011,,14587,5/25/10,2010s,2010,Live Oak,30.187494,-97.842045,Unknown,Yes,<Null>,<Null>
+1012,,5743,5/27/10,2010s,2010,Live Oak,30.253675,-97.790426,Unknown,Yes,<Null>,<Null>
+1013,,14581,6/1/10,2010s,2010,Live Oak,30.429546,-97.705329,Unknown,Yes,<Null>,Yes
+1014,,5824,6/2/10,2010s,2010,Live Oak,30.195199,-97.826623,Unknown,Yes,<Null>,Yes
+1015,,14588,6/2/10,2010s,2010,Live Oak,30.188815,-97.882109,Unknown,Yes,<Null>,<Null>
+1016,,14588,6/2/10,2010s,2010,Live Oak,30.188321,-97.881856,Unknown,Yes,<Null>,<Null>
+1017,,5762,6/3/10,2010s,2010,Live Oak,30.340446,-97.77897,Unknown,Yes,<Null>,<Null>
+1018,,5743,6/9/10,2010s,2010,<Null>,30.253705,-97.790439,Unknown,Undetermined,<Null>,<Null>
+1019,,5783,6/10/10,2010s,2010,"Live Oak, Red Oak",30.230066,-97.77854,Unknown,Yes,<Null>,<Null>
+1020,,14589,6/14/10,2010s,2010,Live Oak,30.416225,-97.727375,Unknown,Yes,<Null>,<Null>
+1021,,14589,6/14/10,2010s,2010,Live Oak,30.41648,-97.727701,Private,Yes,Yes,<Null>
+1022,,14589,6/14/10,2010s,2010,Live Oak,30.416678,-97.727573,Private,Yes,Yes,<Null>
+1023,,14589,6/15/10,2010s,2010,Live Oak,30.415949,-97.727467,Unknown,Yes,<Null>,<Null>
+1024,,14556,7/12/10,2010s,2010,Live Oak,30.200378,-97.820704,Unknown,Yes,<Null>,Yes
+1025,,14590,7/12/10,2010s,2010,Live Oak,30.185434,-97.884667,Unknown,Yes,<Null>,<Null>
+1026,,5804,7/15/10,2010s,2010,Live Oak,30.244003,-97.849617,Unknown,Yes,<Null>,<Null>
+1027,,14591,7/26/10,2010s,2010,"Live Oak, Red Oak",30.255054,-97.780926,Unknown,Yes,<Null>,Yes
+1028,,14591,7/27/10,2010s,2010,Live Oak,30.254816,-97.781,Unknown,Yes,<Null>,<Null>
+1029,,5771,7/29/10,2010s,2010,"Live Oak, Red Oak",30.301666,-97.775259,Unknown,Yes,<Null>,<Null>
+1030,,5829,7/29/10,2010s,2010,Live Oak,30.25144,-97.780918,Unknown,Yes,<Null>,<Null>
+1031,,5669,8/2/10,2010s,2010,Live Oak,30.422512,-97.732562,Unknown,Undetermined,<Null>,<Null>
+1032,,5794,8/9/10,2010s,2010,Live Oak,30.195119,-97.814789,Unknown,Yes,<Null>,<Null>
+1033,,5807,8/11/10,2010s,2010,Live Oak,30.2322,-97.855937,Unknown,Yes,<Null>,<Null>
+1034,,5817,8/16/10,2010s,2010,Live Oak,30.207397,-97.844378,Unknown,Yes,<Null>,<Null>
+1035,,5734,8/19/10,2010s,2010,Live Oak,30.181649,-97.827169,Unknown,Yes,<Null>,Yes
+1036,,5771,8/19/10,2010s,2010,Live Oak,30.303372,-97.770705,Unknown,Undetermined,<Null>,Yes
+1037,,5669,8/23/10,2010s,2010,Live Oak,30.422955,-97.732509,Unknown,Yes,<Null>,<Null>
+1038,,5760,8/26/10,2010s,2010,"Live Oak, Red Oak",30.328385,-97.765895,Unknown,Undetermined,<Null>,<Null>
+1039,,5768,8/31/10,2010s,2010,Live Oak,30.354637,-97.764897,Unknown,Yes,<Null>,<Null>
+1040,,5768,8/31/10,2010s,2010,"Live Oak, Red Oak",30.354742,-97.765237,Unknown,Yes,<Null>,<Null>
+1041,,5769,8/31/10,2010s,2010,Live Oak,30.360849,-97.770798,Unknown,Undetermined,<Null>,<Null>
+1042,,5734,9/2/10,2010s,2010,Live Oak,30.180519,-97.827773,Unknown,Yes,<Null>,<Null>
+1043,,5723,9/13/10,2010s,2010,"Live Oak, Red Oak",30.263633,-97.805398,Unknown,Undetermined,<Null>,<Null>
+1044,,5797,9/13/10,2010s,2010,Live Oak,30.195831,-97.812162,Unknown,Yes,<Null>,<Null>
+1045,,5803,9/13/10,2010s,2010,Live Oak,30.246031,-97.829595,Unknown,Yes,<Null>,<Null>
+1046,,5710,9/14/10,2010s,2010,Live Oaks,30.426691,-97.769331,Unknown,Yes,Yes,Yes
+1047,,14595,9/28/10,2010s,2010,Live Oak,30.390876,-97.682318,Unknown,Yes,<Null>,<Null>
+1048,,16819,9/28/10,2010s,2010,<Null>,30.390795,-97.682827,Unknown,Undetermined,<Null>,Yes
+1049,,5727,9/30/10,2010s,2010,Live Oak,30.252151,-97.795413,Unknown,Undetermined,<Null>,<Null>
+1050,,14514,10/5/10,2010s,2010,Live Oak,30.426473,-97.719395,Unknown,Yes,<Null>,<Null>
+1051,,14601,10/25/10,2010s,2010,Live Oak,30.284775,-97.827761,Unknown,Yes,<Null>,<Null>
+1052,,14593,10/28/10,2010s,2010,Live Oak,30.427604,-97.715258,Unknown,Yes,<Null>,<Null>
+1053,,5771,10/28/10,2010s,2010,<Null>,30.303468,-97.771338,Unknown,Undetermined,<Null>,Yes
+1054,,5702,11/10/10,2010s,2010,Live Oak,30.248192,-97.745589,Unknown,Yes,<Null>,<Null>
+1055,,5802,11/17/10,2010s,2010,Live Oak,30.24549,-97.82557,Unknown,Undetermined,<Null>,<Null>
+1056,,14594,11/17/10,2010s,2010,Live Oak,30.385845,-97.849846,Unknown,Yes,<Null>,<Null>
+1057,,16814,11/24/10,2010s,2010,Live Oak,30.128891,-97.801545,Unknown,Yes,<Null>,Yes
+1058,,5735,11/29/10,2010s,2010,Live Oak,30.181113,-97.845725,Unknown,Yes,<Null>,<Null>
+1059,,14595,12/22/10,2010s,2010,Live Oak,30.389517,-97.681238,Unknown,Yes,<Null>,<Null>
+1060,,5829,1/4/11,2010s,2011,Live Oak,30.251395,-97.779087,Unknown,Undetermined,<Null>,Yes
+1061,,16753,1/18/11,2010s,2011,Live Oak,30.401885,-97.704013,Unknown,Yes,<Null>,<Null>
+1062,,14638,1/19/11,2010s,2011,Live Oak,30.313881,-97.779288,Public,Yes,<Null>,<Null>
+1063,,14583,1/21/11,2010s,2011,"Live Oak, Red Oak",30.185672,-97.873412,Unknown,Yes,<Null>,<Null>
+1064,,5817,2/15/11,2010s,2011,Live Oak,30.207479,-97.844955,Unknown,Yes,<Null>,<Null>
+1065,,14514,3/31/11,2010s,2011,Live Oak,30.425946,-97.719313,Unknown,Yes,<Null>,<Null>
+1066,,5734,4/5/11,2010s,2011,"Live Oak, Red Oak",30.184071,-97.826015,Unknown,Undetermined,<Null>,Yes
+1067,,14597,4/5/11,2010s,2011,Live Oak,30.261996,-97.802594,Unknown,Undetermined,<Null>,Yes
+1068,,5669,4/7/11,2010s,2011,Live Oak,30.42375,-97.732142,Unknown,Yes,<Null>,<Null>
+1069,,16804,4/7/11,2010s,2011,Live Oak,30.464859,-97.805399,Unknown,Undetermined,<Null>,Yes
+1070,,14596,4/12/11,2010s,2011,Live Oak,30.247969,-97.876082,Unknown,Yes,<Null>,<Null>
+1071,,5807,4/14/11,2010s,2011,Live Oak,30.221477,-97.854102,Unknown,Undetermined,<Null>,<Null>
+1072,,5829,4/14/11,2010s,2011,Live Oak,30.251357,-97.778434,Unknown,Yes,<Null>,<Null>
+1073,,5736,4/18/11,2010s,2011,Live Oak,30.18816,-97.865169,Unknown,Yes,Yes,<Null>
+1074,,16705,4/19/11,2010s,2011,Live Oak,30.196495,-97.795519,Unknown,Yes,<Null>,Yes
+1075,,16888,4/20/11,2010s,2011,Live Oak,30.391852,-97.693636,Unknown,Yes,<Null>,<Null>
+1076,,5806,4/21/11,2010s,2011,Live Oak,30.229749,-97.850096,Unknown,Yes,<Null>,<Null>
+1077,,5829,4/25/11,2010s,2011,Live Oak,30.251309,-97.778046,Public,Yes,<Null>,<Null>
+1078,,5829,4/25/11,2010s,2011,Live Oak,30.251303,-97.778039,Municipal - ROW,Yes,<Null>,<Null>
+1079,,14561,4/26/11,2010s,2011,Live Oak,30.266015,-97.805524,Unknown,Yes,<Null>,<Null>
+1080,,14561,4/26/11,2010s,2011,Live Oak,30.266233,-97.805975,Unknown,Yes,<Null>,<Null>
+1081,,5669,4/27/11,2010s,2011,Live Oak,30.422504,-97.732618,Unknown,Yes,<Null>,<Null>
+1082,,5669,4/27/11,2010s,2011,Live Oak,30.422678,-97.735271,Unknown,Yes,<Null>,Yes
+1083,,14599,4/27/11,2010s,2011,Live Oak,30.451092,-97.806221,Unknown,Yes,<Null>,<Null>
+1084,,5771,5/1/11,2010s,2011,Live Oak,30.304315,-97.769949,Public,Yes,<Null>,<Null>
+1085,,5771,5/1/11,2010s,2011,Live Oak,30.30431,-97.769941,Municipal - ROW,Yes,<Null>,<Null>
+1086,,5797,5/2/11,2010s,2011,"Live Oak, Red Oak",30.19543,-97.811174,Unknown,Yes,<Null>,<Null>
+1087,,14600,5/2/11,2010s,2011,Live Oak,30.208919,-97.85623,Unknown,Yes,<Null>,<Null>
+1088,,5806,5/4/11,2010s,2011,Live Oak,30.230649,-97.850095,Unknown,Yes,<Null>,<Null>
+1089,,5671,5/5/11,2010s,2011,Live Oak,30.421706,-97.72358,Unknown,Yes,<Null>,<Null>
+1090,,5671,5/5/11,2010s,2011,Live Oak,30.421766,-97.723246,Private,Yes,<Null>,<Null>
+1091,,5691,5/5/11,2010s,2011,Live Oak,30.368624,-97.6641,Unknown,Yes,<Null>,<Null>
+1092,,5723,5/9/11,2010s,2011,Red Oak,30.263843,-97.805592,Unknown,Undetermined,<Null>,<Null>
+1093,,5769,5/9/11,2010s,2011,<Null>,30.360414,-97.767341,Unknown,Undetermined,<Null>,<Null>
+1094,,16840,5/10/11,2010s,2011,Live Oak,30.402466,-97.782893,Unknown,Yes,<Null>,<Null>
+1095,,5778,5/11/11,1990s,1997,<Null>,30.1923,-97.802856,Unknown,Undetermined,<Null>,<Null>
+1096,,5800,5/16/11,2010s,2011,Red Oak,30.244359,-97.826835,Unknown,Undetermined,<Null>,Yes
+1097,,14534,5/17/11,2010s,2011,Live Oak,30.201025,-97.814174,Unknown,Undetermined,<Null>,<Null>
+1098,,5691,5/18/11,2010s,2011,Live Oak,30.366229,-97.665845,Unknown,Undetermined,<Null>,<Null>
+1099,,5771,5/19/11,2010s,2011,Live Oak,30.3043,-97.769669,Unknown,Yes,<Null>,<Null>
+1100,,5817,6/2/11,2010s,2011,Live Oak,30.207397,-97.844378,Unknown,Yes,Yes,<Null>
+1101,,5829,6/2/11,2010s,2011,Live Oak,30.251395,-97.779087,Unknown,Undetermined,<Null>,<Null>
+1102,,5829,6/7/11,2010s,2011,Live Oak,30.251754,-97.778212,Unknown,Yes,<Null>,<Null>
+1103,,14549,6/9/11,2010s,2011,Live Oak,30.489505,-97.76831,Unknown,Yes,<Null>,<Null>
+1104,,14603,6/9/11,2010s,2011,Live Oak,30.412709,-97.768272,Unknown,Yes,<Null>,<Null>
+1105,,5758,6/14/11,2010s,2011,Live Oak,30.328399,-97.76408,Unknown,Yes,<Null>,Yes
+1106,,14534,6/14/11,2010s,2011,<Null>,30.202823,-97.813773,Unknown,Undetermined,<Null>,<Null>
+1107,,5818,6/15/11,2010s,2011,Live Oak,30.204414,-97.848531,Unknown,Yes,<Null>,<Null>
+1108,,5760,6/16/11,2010s,2011,"Live Oak, Red Oak",30.328385,-97.765895,Unknown,Undetermined,<Null>,<Null>
+1109,,5691,6/21/11,2010s,2011,Live Oak,30.366102,-97.665974,Unknown,Yes,<Null>,<Null>
+1110,,14532,7/1/11,2010s,2011,Live Oak,30.408669,-97.759445,Private,Yes,<Null>,<Null>
+1111,,16753,7/14/11,2010s,2011,<Null>,30.403031,-97.705014,Unknown,Undetermined,<Null>,<Null>
+1112,,14534,7/18/11,2010s,2011,Live Oak,30.202333,-97.814972,Unknown,Undetermined,<Null>,Yes
+1113,,14561,7/19/11,2010s,2011,Live Oak,30.264793,-97.806596,Unknown,Yes,<Null>,<Null>
+1114,,14595,7/19/11,2010s,2011,Live Oak,30.390876,-97.682318,Unknown,Yes,<Null>,Yes
+1115,,5800,7/20/11,2010s,2011,Red Oak,30.244359,-97.826835,Unknown,Undetermined,<Null>,Yes
+1116,,14599,7/26/11,2010s,2011,Live Oak,30.451159,-97.805679,Unknown,Yes,<Null>,<Null>
+1117,,14602,7/27/11,2010s,2011,Live Oak,30.343218,-97.774838,Unknown,Yes,<Null>,<Null>
+1118,,14532,7/28/11,2010s,2011,Live Oak,30.408775,-97.75971,Unknown,Yes,<Null>,<Null>
+1119,,14552,7/28/11,2010s,2011,Live Oak,30.25015,-97.825353,Unknown,Yes,<Null>,<Null>
+1120,,14552,7/28/11,2010s,2011,Live Oak,30.249946,-97.825314,Unknown,Yes,<Null>,Yes
+1121,,14506,8/2/11,2010s,2011,Live Oak,30.426445,-97.721112,Unknown,Yes,<Null>,<Null>
+1122,,14532,8/9/11,2010s,2011,Live Oak,30.408448,-97.759193,Unknown,Yes,<Null>,<Null>
+1123,,5807,8/15/11,2010s,2011,Live Oak,30.2322,-97.855937,Unknown,Yes,<Null>,Yes
+1124,,14597,8/16/11,2010s,2011,Live Oak,30.262118,-97.803159,Unknown,Yes,<Null>,<Null>
+1125,,14598,8/25/11,2010s,2011,Live Oak,30.450842,-97.804527,Unknown,Yes,<Null>,<Null>
+1126,,5685,9/7/11,2010s,2011,Live Oak,30.383841,-97.678497,Unknown,Yes,<Null>,<Null>
+1127,,14598,9/15/11,2010s,2011,Live Oak,30.450942,-97.804581,Unknown,Yes,<Null>,<Null>
+1128,,5710,9/21/11,2010s,2011,Live Oak,30.427579,-97.768197,Unknown,Yes,<Null>,<Null>
+1129,,14506,9/26/11,2010s,2011,Live Oak,30.426371,-97.721674,Unknown,Yes,<Null>,Yes
+1130,,5710,10/3/11,2010s,2011,Live Oak,30.427961,-97.768361,Unknown,Yes,<Null>,<Null>
+1131,,14598,10/6/11,2010s,2011,Live Oak,30.45069,-97.804891,Private,Yes,<Null>,<Null>
+1132,,14598,10/6/11,2010s,2011,Live Oak,30.450685,-97.804883,Private,Yes,<Null>,<Null>
+1133,,5778,10/11/11,2010s,2011,"Live Oak, Red Oak",30.194715,-97.804313,Unknown,Yes,<Null>,<Null>
+1134,,5710,10/14/11,2010s,2011,Live Oak,30.427841,-97.768278,Private,Yes,<Null>,<Null>
+1135,,5710,10/14/11,2010s,2011,Live Oak,30.427836,-97.76827,Private,Yes,<Null>,<Null>
+1136,,5768,10/17/11,2010s,2011,Live Oak,30.354637,-97.764897,Unknown,Yes,<Null>,Yes
+1137,,5671,10/25/11,2010s,2011,Live Oak,30.421706,-97.72358,Unknown,Yes,<Null>,Yes
+1138,,5829,10/26/11,2010s,2011,Live Oak,30.25144,-97.780918,Unknown,Yes,<Null>,<Null>
+1139,,5685,10/31/11,2010s,2011,Live Oak,30.385049,-97.677987,Unknown,Yes,<Null>,<Null>
+1140,,14032,11/21/11,2010s,2011,Live Oak,30.201846,-97.859363,Unknown,Yes,<Null>,<Null>
+1141,,5669,11/23/11,2010s,2011,Red Oak,30.42343,-97.73275,Unknown,Undetermined,<Null>,<Null>
+1142,,5669,11/29/11,2010s,2011,Live Oak,30.422706,-97.735306,Unknown,Yes,<Null>,Yes
+1143,,14604,12/14/11,2010s,2011,Live Oak,30.244113,-97.844545,Unknown,Yes,<Null>,<Null>
+1144,,14042,12/19/11,2010s,2011,Live Oak,30.173265,-97.824907,Unknown,Yes,<Null>,Yes
+1145,,5702,1/3/12,2010s,2012,Live Oak,30.251027,-97.74513,Unknown,Yes,<Null>,<Null>
+1146,,5670,1/9/12,2010s,2012,<Null>,30.423085,-97.728622,Unknown,Undetermined,<Null>,Yes
+1147,,14623,1/18/12,2010s,2012,Live Oak,30.200908,-97.866972,Unknown,Yes,<Null>,<Null>
+1148,,5669,4/3/12,2010s,2012,Live Oak,30.422597,-97.733299,Unknown,Yes,<Null>,<Null>
+1149,,14589,5/1/12,2010s,2012,Live Oak,30.416313,-97.726721,Unknown,Yes,<Null>,<Null>
+1150,,14514,5/2/12,2010s,2012,Live Oak,30.42551,-97.720036,Unknown,Yes,<Null>,<Null>
+1151,,14599,5/8/12,2010s,2012,"Live Oak, Red Oak",30.451092,-97.806221,Unknown,Undetermined,<Null>,<Null>
+1152,,5781,5/17/12,2010s,2012,Live Oak,30.232332,-97.758355,Unknown,Yes,<Null>,<Null>
+1153,,8445,5/21/12,2010s,2012,Live Oak,30.345773,-97.757513,Unknown,Yes,<Null>,<Null>
+1154,,14029,5/23/12,2010s,2012,Red Oak,30.178624,-97.779428,Unknown,Undetermined,<Null>,<Null>
+1155,,5829,5/31/12,2010s,2012,Red Oak,30.251541,-97.778298,Unknown,Undetermined,<Null>,<Null>
+1156,,5710,6/5/12,2010s,2012,Live Oak,30.428015,-97.767883,Unknown,Yes,<Null>,<Null>
+1157,,5771,6/5/12,2010s,2012,<Null>,30.299089,-97.770536,Unknown,Yes,<Null>,<Null>
+1158,,14522,6/19/12,2010s,2012,Live Oak,30.209508,-97.885876,Unknown,Undetermined,<Null>,<Null>
+1159,,5776,6/20/12,2010s,2012,Live Oak,30.251653,-97.783917,Unknown,Yes,<Null>,<Null>
+1160,,5807,7/5/12,2010s,2012,Live Oak,30.224462,-97.849727,Unknown,Yes,<Null>,<Null>
+1161,,14561,7/9/12,2010s,2012,"Live Oak, Red Oak",30.264615,-97.805956,Unknown,Yes,<Null>,<Null>
+1162,,5723,7/11/12,2010s,2012,"Live Oak, Red Oak",30.261873,-97.803869,Unknown,Yes,<Null>,<Null>
+1163,,5723,7/11/12,2010s,2012,Live Oak,30.262088,-97.803748,Unknown,Yes,<Null>,<Null>
+1164,,8445,7/18/12,2010s,2012,"Live Oaks, Red Oak",30.346735,-97.758164,Unknown,Yes,<Null>,<Null>
+1165,,14538,7/23/12,2010s,2012,Live Oak,30.199898,-97.848833,Unknown,Yes,<Null>,<Null>
+1166,,5762,7/25/12,2010s,2012,Live Oaks,30.338777,-97.781487,Unknown,Yes,<Null>,<Null>
+1167,,14538,8/2/12,2010s,2012,Live Oak,30.199826,-97.849643,Unknown,Yes,<Null>,Yes
+1168,,5804,8/6/12,2010s,2012,Live Oak,30.238912,-97.855579,Unknown,Yes,<Null>,Yes
+1169,,5743,8/8/12,2010s,2012,Live Oak,30.250276,-97.790148,Unknown,Yes,<Null>,<Null>
+1170,,5778,8/21/12,2010s,2012,Live Oak,30.191785,-97.802078,Unknown,Yes,<Null>,<Null>
+1171,,5806,8/27/12,2010s,2012,Live Oak,30.229546,-97.849848,Unknown,Yes,<Null>,<Null>
+1172,,5806,8/27/12,2010s,2012,Live Oak,30.229546,-97.849848,Unknown,Yes,<Null>,<Null>
+1173,,14605,9/12/12,2010s,2012,Live Oak,30.345629,-97.799873,Unknown,Yes,<Null>,<Null>
+1174,,14606,9/25/12,2010s,2012,Live Oak,30.198044,-97.8525,Unknown,Yes,<Null>,<Null>
+1175,,16809,10/3/12,2010s,2012,Live Oak,30.277934,-97.823709,Unknown,Yes,<Null>,<Null>
+1176,,5797,10/8/12,2010s,2012,Live Oak,30.196129,-97.812612,Unknown,Yes,<Null>,<Null>
+1177,,5809,10/15/12,2010s,2012,Live Oak,30.226279,-97.863367,Unknown,Yes,<Null>,<Null>
+1178,,14506,11/5/12,2010s,2012,Live Oak,30.426836,-97.718748,Unknown,Yes,<Null>,<Null>
+1179,,5681,11/20/12,2010s,2012,Live Oak,30.414397,-97.682974,Unknown,Yes,<Null>,<Null>
+1180,,5794,11/28/12,2010s,2012,Live Oak,30.195547,-97.814908,Unknown,Yes,<Null>,<Null>
+1181,,5669,12/5/12,2010s,2012,Live Oak,30.42375,-97.732142,Unknown,Undetermined,<Null>,<Null>
+1182,,5829,12/6/12,2010s,2012,Red Oak,30.251541,-97.778298,Unknown,Undetermined,<Null>,<Null>
+1183,,5685,12/10/12,2010s,2012,<Null>,30.379729,-97.675988,Unknown,Undetermined,<Null>,Yes
+1184,,5702,1/15/13,2010s,2013,Live Oak,30.255099,-97.755698,Unknown,Yes,<Null>,<Null>
+1185,,5735,1/29/13,2010s,2013,Live Oak,30.180847,-97.844535,Unknown,Yes,<Null>,<Null>
+1186,,14032,2/7/13,2010s,2013,Live Oak,30.202297,-97.859407,Unknown,Yes,<Null>,<Null>
+1187,,5829,2/11/13,2010s,2013,Live Oak,30.252291,-97.778482,Unknown,Undetermined,<Null>,<Null>
+1188,,14609,2/12/13,2010s,2013,Live Oak,30.209788,-97.827532,Public,Yes,<Null>,<Null>
+1189,,5723,2/19/13,2010s,2013,Live Oak,30.262088,-97.803748,Unknown,Undetermined,<Null>,<Null>
+1190,,5681,2/21/13,2010s,2013,<Null>,30.414127,-97.682267,Unknown,Undetermined,<Null>,Yes
+1191,,5758,3/20/13,2010s,2013,Live Oak,30.32796,-97.764967,Unknown,Yes,<Null>,<Null>
+1192,,5797,4/8/13,2010s,2013,Live Oak,30.196169,-97.810992,Unknown,Yes,<Null>,<Null>
+1193,,5723,4/9/13,2010s,2013,Red Oak,30.263843,-97.805592,Unknown,Undetermined,<Null>,<Null>
+1194,,5816,4/16/13,2010s,2013,Live Oak,30.214573,-97.837236,Unknown,Yes,<Null>,<Null>
+1195,,5816,4/16/13,2010s,2013,Live Oak,30.215215,-97.837407,Unknown,Yes,<Null>,Yes
+1196,,5723,4/29/13,2010s,2013,Live Oak,30.262088,-97.803748,Unknown,Undetermined,<Null>,<Null>
+1197,,5781,4/29/13,2010s,2013,Live Oak,30.232327,-97.758293,Unknown,Yes,<Null>,Yes
+1198,,5829,4/29/13,2010s,2013,"Live Oak, Red Oak",30.252449,-97.777723,Unknown,Yes,<Null>,<Null>
+1199,,5671,4/30/13,2010s,2013,Live Oak,30.421706,-97.72358,Unknown,Undetermined,<Null>,Yes
+1200,,14610,5/1/13,2010s,2013,Live Oak,30.218388,-97.732435,Unknown,Yes,<Null>,<Null>
+1201,,14610,5/1/13,2010s,2013,Live Oak,30.218189,-97.732809,Private,Yes,<Null>,<Null>
+1202,,14525,5/2/13,2010s,2013,Red Oak,30.262566,-97.806777,Unknown,Yes,<Null>,<Null>
+1203,,14525,5/2/13,2010s,2013,Live Oak,30.262344,-97.80699,Unknown,Undetermined,<Null>,<Null>
+1204,,5710,5/8/13,2010s,2013,Live Oak,30.425559,-97.769417,Unknown,Yes,<Null>,<Null>
+1205,,5734,5/13/13,2010s,2013,"Live Oak, Red Oak",30.184067,-97.827206,Unknown,Yes,<Null>,<Null>
+1206,,14635,5/14/13,2010s,2013,Live Oak,30.178202,-97.80638,Unknown,Yes,<Null>,<Null>
+1207,,14635,5/14/13,2010s,2013,Live Oak,30.178233,-97.805905,Private,Yes,<Null>,<Null>
+1208,,14635,5/14/13,2010s,2013,Live Oak,30.178277,-97.806104,Private,Yes,<Null>,<Null>
+1209,,14611,5/20/13,2010s,2013,Live Oak,30.208538,-97.847214,Unknown,Yes,<Null>,<Null>
+1210,,5734,5/21/13,2010s,2013,"Live Oak, Red Oak",30.18444,-97.827028,Unknown,Yes,<Null>,<Null>
+1211,,5723,5/29/13,2010s,2013,Red Oak,30.264232,-97.804824,Unknown,Undetermined,<Null>,Yes
+1212,,5685,5/30/13,2010s,2013,Live Oak,30.385242,-97.677904,Unknown,Yes,<Null>,<Null>
+1213,,14612,6/10/13,2010s,2013,Live Oak,30.416593,-97.748768,Unknown,Yes,<Null>,<Null>
+1214,,14612,6/10/13,2010s,2013,Live Oak,30.416818,-97.74911,Private,Yes,<Null>,<Null>
+1215,,5800,6/13/13,2010s,2013,Live Oak,30.243007,-97.831394,Unknown,Yes,Yes,Yes
+1216,,5762,6/17/13,2010s,2013,Live Oak,30.339044,-97.779467,Unknown,Yes,<Null>,<Null>
+1217,,5797,6/17/13,2010s,2013,"Live Oak, Red Oak",30.19543,-97.811174,Unknown,Undetermined,<Null>,<Null>
+1218,,5710,6/19/13,2010s,2013,Live Oak,30.426287,-97.769082,Unknown,Undetermined,<Null>,<Null>
+1219,,14526,6/25/13,2010s,2013,Live Oak,30.184055,-97.890358,Unknown,Yes,<Null>,<Null>
+1220,,8445,6/26/13,2010s,2013,Live Oak,30.345641,-97.757916,Unknown,Yes,<Null>,<Null>
+1221,,8445,6/26/13,2010s,2013,Live Oak,30.345467,-97.757624,Unknown,Yes,<Null>,<Null>
+1222,,14525,7/1/13,2010s,2013,Live Oak,30.261204,-97.806681,Private,Yes,<Null>,Yes
+1223,,14592,7/1/13,2010s,2013,Live Oak,30.2071,-97.884447,Private,Yes,Yes,Yes
+1224,,5669,7/8/13,2010s,2013,Live Oak,30.42375,-97.732142,Unknown,Undetermined,<Null>,<Null>
+1225,,5710,7/8/13,2010s,2013,Live Oak,30.427969,-97.768318,Unknown,Undetermined,<Null>,<Null>
+1226,,14532,7/8/13,2010s,2013,Live Oak,30.408873,-97.759957,Unknown,Yes,<Null>,<Null>
+1227,,14532,7/8/13,2010s,2013,Live Oak,30.408775,-97.75971,Unknown,Undetermined,<Null>,<Null>
+1228,,14525,7/9/13,2010s,2013,Live Oak,30.262344,-97.80699,Unknown,Undetermined,<Null>,<Null>
+1229,,14525,7/9/13,2010s,2013,"Live Oak, Red Oak",30.261495,-97.807141,Unknown,Yes,<Null>,<Null>
+1230,,14525,7/9/13,2010s,2013,Live Oak,30.261755,-97.806655,Unknown,Yes,<Null>,<Null>
+1231,,14525,7/9/13,2010s,2013,Live Oak,30.261296,-97.806944,Unknown,Yes,<Null>,<Null>
+1232,,14526,7/9/13,2010s,2013,Live Oak,30.185353,-97.89093,Unknown,Yes,<Null>,<Null>
+1233,,14610,7/18/13,2010s,2013,Live Oak,30.218388,-97.732435,Unknown,Undetermined,<Null>,<Null>
+1234,,5778,8/1/13,2010s,2013,Live Oak,30.192116,-97.802265,Unknown,Yes,<Null>,<Null>
+1235,,5778,8/16/13,2010s,2013,<Null>,30.193015,-97.802487,Unknown,Undetermined,<Null>,<Null>
+1236,,5778,8/21/13,2010s,2013,Live Oak,30.191728,-97.802812,Unknown,Yes,<Null>,<Null>
+1237,,14525,8/21/13,2010s,2013,Live Oak,30.262566,-97.806777,Unknown,Yes,<Null>,Yes
+1238,,16871,9/4/13,2010s,2013,Live Oak,30.447654,-97.7934,Unknown,Yes,<Null>,Yes
+1239,,5759,9/5/13,2010s,2013,Live Oak,30.329354,-97.765769,Unknown,Yes,<Null>,<Null>
+1240,,5710,9/9/13,2010s,2015,<Null>,30.426187,-97.769694,Unknown,Undetermined,<Null>,<Null>
+1241,,5771,9/11/13,2010s,2013,Live Oak,30.304067,-97.771515,Unknown,Undetermined,<Null>,<Null>
+1242,,5771,9/11/13,2010s,2013,Live Oak,30.303516,-97.769215,Unknown,Yes,<Null>,<Null>
+1243,,5669,9/16/13,2010s,2013,Red Oak,30.42343,-97.73275,Unknown,Undetermined,<Null>,<Null>
+1244,,14524,9/17/13,2010s,2013,Live Oak,30.186687,-97.889634,Unknown,Yes,<Null>,<Null>
+1245,,14591,10/1/13,2010s,2013,Live Oak,30.254816,-97.781,Unknown,Yes,<Null>,<Null>
+1246,,14637,10/9/13,2010s,2013,Live Oak,30.262532,-97.808396,Unknown,Yes,<Null>,<Null>
+1247,,14526,10/21/13,2010s,2013,Live Oak,30.183558,-97.890515,Unknown,Yes,<Null>,<Null>
+1248,,14526,10/21/13,2010s,2013,Live Oak,30.183407,-97.890562,Unknown,Undetermined,<Null>,<Null>
+1249,,5710,12/3/13,2010s,2013,Live Oak,30.425559,-97.769417,Unknown,Undetermined,<Null>,Yes
+1250,,5727,12/5/13,2010s,2013,Live Oak,30.25055,-97.793301,Unknown,Undetermined,<Null>,<Null>
+1251,,5771,12/31/13,2010s,2013,Live Oak,30.303793,-97.771435,Public,Yes,<Null>,<Null>
+1252,,5771,12/31/13,2010s,2013,Live Oak,30.303788,-97.771427,Municipal - ROW,Yes,<Null>,<Null>
+1253,,5829,1/29/14,2010s,2014,Live Oak,30.250273,-97.78034,Unknown,Yes,<Null>,<Null>
+1254,,5829,1/29/14,2010s,2014,Live Oak,30.25144,-97.780918,Unknown,Undetermined,<Null>,<Null>
+1255,,5829,2/13/14,2010s,2014,Live Oak,30.250122,-97.780227,Private,Yes,<Null>,<Null>
+1256,,5829,2/13/14,2010s,2014,Live Oak,30.250116,-97.78022,Private,Yes,<Null>,<Null>
+1257,,5829,2/13/14,2010s,2014,Live Oak,30.250204,-97.780151,Private,Yes,<Null>,<Null>
+1258,,5829,3/24/14,2010s,2014,Live Oak,30.252291,-97.778482,Unknown,Yes,<Null>,<Null>
+1259,,16814,4/9/14,2010s,2014,Live Oak,30.149884,-97.807209,Unknown,Yes,Yes,<Null>
+1260,,5829,4/15/14,2010s,2014,Live Oak,30.250273,-97.78034,Unknown,Yes,<Null>,<Null>
+1261,,14534,4/16/14,2010s,2014,Live Oak,30.201281,-97.815163,Unknown,Yes,<Null>,<Null>
+1262,,14598,4/16/14,2010s,2014,Live Oak,30.450942,-97.804581,Unknown,Yes,<Null>,<Null>
+1263,,5743,4/24/14,2010s,2014,Live Oak,30.24979,-97.789077,Unknown,Yes,<Null>,<Null>
+1264,,5829,4/30/14,2010s,2014,Live Oak,30.250109,-97.78079,Unknown,Yes,<Null>,<Null>
+1265,,16814,5/6/14,2010s,2014,Live Oak,30.149884,-97.807209,Unknown,Undetermined,<Null>,<Null>
+1266,,5776,5/15/14,2010s,2014,Live Oak,30.249343,-97.785276,Unknown,Yes,<Null>,<Null>
+1267,,5743,6/2/14,2010s,2014,"Live Oaks, Red Oaks",30.252815,-97.791132,Unknown,Yes,<Null>,<Null>
+1268,,14541,6/4/14,2010s,2014,Live Oak,30.20718,-97.880058,Unknown,Yes,<Null>,<Null>
+1269,,5685,6/10/14,2010s,2014,Live Oak,30.386123,-97.677924,Unknown,Yes,<Null>,<Null>
+1270,,5724,6/12/14,2010s,2014,Red Oak,30.261911,-97.799549,Unknown,Undetermined,<Null>,<Null>
+1271,,5829,6/12/14,2010s,2014,Live Oak,30.25144,-97.780918,Unknown,Yes,<Null>,Yes
+1272,,5685,6/21/14,2010s,2014,Live Oak,30.386032,-97.677578,Public,Yes,<Null>,<Null>
+1273,,5685,6/21/14,2010s,2014,Live Oak,30.386026,-97.677571,Municipal - ROW,Yes,<Null>,<Null>
+1274,,5685,6/21/14,2010s,2014,Live Oak,30.386088,-97.677523,Municipal - ROW,Yes,<Null>,<Null>
+1275,,5800,7/8/14,2010s,2014,Live Oak,30.246549,-97.830778,Unknown,Yes,<Null>,<Null>
+1276,,5816,7/16/14,2010s,2014,Live Oak,30.215526,-97.836555,Unknown,Yes,<Null>,<Null>
+1277,,14599,7/17/14,2010s,2014,Live Oak,30.451729,-97.806754,Unknown,Yes,<Null>,<Null>
+1278,,14561,8/14/14,2010s,2014,Live Oak,30.266474,-97.805342,Public,Yes,<Null>,<Null>
+1279,,14561,8/14/14,2010s,2014,Live Oak,30.266469,-97.805334,Municipal - ROW,Yes,<Null>,<Null>
+1280,,5817,8/19/14,2010s,2014,Live Oak,30.207451,-97.844047,Unknown,Yes,<Null>,<Null>
+1281,,14606,8/19/14,2010s,2014,Live Oak,30.198445,-97.852248,Unknown,Yes,<Null>,<Null>
+1282,,5768,8/26/14,2010s,2014,"Live Oak, Red Oak",30.354742,-97.765237,Unknown,Yes,<Null>,<Null>
+1283,,14614,9/2/14,2010s,2014,Live Oak,30.202802,-97.821332,Unknown,Yes,<Null>,<Null>
+1284,,14614,9/2/14,2010s,2014,Live Oak,30.202943,-97.820794,Private,Yes,<Null>,<Null>
+1285,,14625,9/2/14,2010s,2014,Live Oak,30.196867,-97.899376,Unknown,Undetermined,<Null>,<Null>
+1286,,5771,9/9/14,2010s,2014,Live Oak,30.3043,-97.769669,Unknown,Undetermined,<Null>,<Null>
+1287,,5778,9/11/14,2010s,2014,Live Oak,30.191728,-97.802812,Unknown,Yes,<Null>,<Null>
+1288,,14598,9/16/14,2010s,2014,Live Oak,30.450694,-97.803456,Unknown,Undetermined,<Null>,<Null>
+1289,,14598,9/16/14,2010s,2014,Live Oak,30.450611,-97.803701,Unknown,Undetermined,<Null>,<Null>
+1290,,5669,9/24/14,2010s,2014,Live Oak,30.422402,-97.736174,Unknown,Yes,<Null>,<Null>
+1291,,5734,9/29/14,2010s,2014,"Live Oak, Red Oak",30.18444,-97.827028,Unknown,Yes,<Null>,<Null>
+1292,,8445,10/2/14,2010s,2014,Live Oak,30.345821,-97.758533,Unknown,Yes,<Null>,<Null>
+1293,,5771,10/13/14,2010s,2014,<Null>,30.29907,-97.769291,Unknown,Undetermined,<Null>,<Null>
+1294,,16904,10/23/14,2010s,2014,<Null>,30.204481,-97.825693,Public,Yes,<Null>,<Null>
+1295,,14615,10/28/14,2010s,2014,Live Oak,30.192804,-97.881305,Unknown,Yes,<Null>,<Null>
+1296,,5829,10/30/14,2010s,2014,Red Oak,30.252353,-97.780518,Unknown,Undetermined,<Null>,<Null>
+1297,,5829,11/19/14,2010s,2014,"Live Oak, Red Oak",30.251057,-97.777846,Unknown,Undetermined,<Null>,<Null>
+1298,,5762,1/7/15,2010s,2015,Live Oak,30.339138,-97.779202,Unknown,Yes,<Null>,<Null>
+1299,,5710,1/28/15,2010s,2015,Live Oak,30.425629,-97.770025,Unknown,Yes,<Null>,<Null>
+1300,,5736,1/29/15,2010s,2015,Live Oak,30.187997,-97.868805,Unknown,Yes,<Null>,<Null>
+1301,,14614,2/23/15,2010s,2015,Live Oak,30.186163,-97.821497,Unknown,Yes,<Null>,<Null>
+1302,,5804,3/24/15,2010s,2015,Live Oak,30.238749,-97.855676,Unknown,Yes,<Null>,<Null>
+1303,,14534,3/26/15,2010s,2015,Live Oak,30.200692,-97.814704,Unknown,Yes,<Null>,<Null>
+1304,,5829,3/31/15,2010s,2015,Live Oak,30.250273,-97.78034,Unknown,Undetermined,<Null>,<Null>
+1305,,5685,4/7/15,2010s,2015,Live Oak,30.385049,-97.677987,Unknown,Yes,<Null>,<Null>
+1306,,14589,4/7/15,2010s,2015,Live Oak,30.415765,-97.726942,Unknown,Yes,<Null>,<Null>
+1307,,14534,4/20/15,2010s,2015,Live Oak,30.200865,-97.814994,Unknown,Yes,<Null>,<Null>
+1308,,5685,4/21/15,2010s,2015,Live Oak,30.382461,-97.678082,Unknown,Yes,<Null>,<Null>
+1309,,5817,4/21/15,2010s,2015,Live Oak,30.208412,-97.843429,Unknown,Yes,<Null>,<Null>
+1310,,14534,4/22/15,2010s,2015,Live Oak,30.201467,-97.815536,Unknown,Undetermined,<Null>,<Null>
+1311,,14534,4/22/15,2010s,2015,Red Oak,30.201386,-97.815339,Unknown,Undetermined,<Null>,<Null>
+1312,,14534,4/23/15,2010s,2015,Live Oak,30.20047,-97.81432,Unknown,Yes,<Null>,<Null>
+1313,,5669,4/23/15,2010s,2015,<Null>,30.422538,-97.731908,Unknown,Undetermined,<Null>,Yes
+1314,,5724,4/27/15,2010s,2015,Live Oak,30.261589,-97.79981,Unknown,Yes,<Null>,<Null>
+1315,,16814,4/27/15,2010s,2015,"Live Oak, Red Oak",30.149271,-97.808048,Unknown,Yes,<Null>,Yes
+1316,,14495,4/29/15,2010s,2015,Live Oak,30.24236,-97.735545,Unknown,Yes,<Null>,<Null>
+1317,,14625,4/30/15,2010s,2015,Live Oak,30.196867,-97.899376,Unknown,Yes,<Null>,<Null>
+1318,,5702,5/27/15,2010s,2015,<Null>,30.249499,-97.745975,Unknown,Undetermined,<Null>,<Null>
+1319,,5829,6/2/15,2010s,2015,Live Oak,30.24958,-97.780038,Public,Yes,<Null>,<Null>
+1320,,5829,6/2/15,2010s,2015,Live Oak,30.249575,-97.780031,Municipal - ROW,Yes,<Null>,<Null>
+1321,,14561,6/2/15,2010s,2015,Live Oak,30.266336,-97.804657,Unknown,Yes,<Null>,<Null>
+1322,,5829,6/3/15,2010s,2015,Live Oak,30.24984,-97.780014,Unknown,Yes,<Null>,<Null>
+1323,,5807,6/9/15,2010s,2015,Live Oak,30.230353,-97.855517,Unknown,Yes,<Null>,<Null>
+1324,,14522,6/10/15,2010s,2015,Red Oak,30.208142,-97.880004,Unknown,Yes,<Null>,<Null>
+1325,,5673,6/15/15,2010s,2015,Live Oak,30.416845,-97.726327,Unknown,Yes,<Null>,<Null>
+1326,,5892,6/17/15,2010s,2015,Live Oak,30.224716,-97.790588,Unknown,Yes,<Null>,<Null>
+1327,,14032,6/17/15,2010s,2015,Live Oak,30.201916,-97.85845,Unknown,Undetermined,<Null>,<Null>
+1328,,5771,6/23/15,2010s,2015,<Null>,30.315195,-97.780489,Unknown,Undetermined,<Null>,<Null>
+1329,,14525,7/13/15,2010s,2015,Live Oak,30.262344,-97.80699,Unknown,Undetermined,<Null>,<Null>
+1330,,5685,7/15/15,2010s,2015,Live Oak,30.385049,-97.677987,Unknown,Yes,<Null>,<Null>
+1331,,5829,7/15/15,2010s,2015,<Null>,30.249934,-97.780605,Unknown,Undetermined,<Null>,<Null>
+1332,,14616,7/16/15,2010s,2015,Live Oak,30.158698,-97.851031,Unknown,Yes,<Null>,<Null>
+1333,,5685,7/17/15,2010s,2015,<Null>,30.385919,-97.678042,Unknown,Undetermined,<Null>,<Null>
+1334,,16813,7/22/15,2010s,2015,Live Oak,30.483898,-97.789329,Unknown,Yes,<Null>,<Null>
+1335,,14617,7/22/15,2010s,2015,<Null>,30.485449,-97.788516,Unknown,Undetermined,<Null>,<Null>
+1336,,5829,8/4/15,2010s,2015,Live Oak,30.250273,-97.78034,Unknown,Yes,<Null>,<Null>
+1337,,5735,8/11/15,2010s,2015,<Null>,30.156764,-97.848438,Unknown,Undetermined,<Null>,<Null>
+1338,,5669,8/12/15,2010s,2015,Live Oak,30.422525,-97.731644,Unknown,Yes,<Null>,<Null>
+1339,,5771,8/13/15,2010s,2015,<Null>,30.304055,-97.771496,Unknown,Undetermined,<Null>,<Null>
+1340,,14534,8/19/15,2010s,2015,Live Oak,30.200884,-97.815475,Public,Yes,<Null>,<Null>
+1341,,14534,8/19/15,2010s,2015,Live Oak,30.200879,-97.815468,Municipal - ROW,Yes,<Null>,<Null>
+1342,,14534,8/19/15,2010s,2015,Live Oak,30.200866,-97.815395,Private,Yes,<Null>,<Null>
+1343,,14534,8/20/15,2010s,2015,Live Oak,30.200608,-97.815171,Private,Yes,<Null>,<Null>
+1344,,14534,8/20/15,2010s,2015,Live Oak,30.200728,-97.815568,Private,Yes,<Null>,<Null>
+1345,,14534,8/20/15,2010s,2015,Live Oak,30.200723,-97.815561,Private,Yes,<Null>,<Null>
+1346,,14534,8/20/15,2010s,2015,Live Oak,30.200603,-97.815164,Private,Yes,<Null>,<Null>
+1347,,14635,8/24/15,2010s,2015,Red Oak,30.175963,-97.811029,Unknown,Undetermined,<Null>,<Null>
+1348,,5681,8/26/15,2010s,2015,Live Oak,30.413528,-97.681788,Unknown,Yes,<Null>,<Null>
+1349,,8445,9/2/15,2010s,2015,Live Oak,30.346635,-97.758244,Unknown,Yes,<Null>,<Null>
+1350,,5807,9/9/15,2010s,2015,Live Oak,30.221477,-97.854102,Unknown,Undetermined,<Null>,<Null>
+1351,,5727,9/10/15,2010s,2015,Live Oak,30.25055,-97.793301,Unknown,Yes,<Null>,<Null>
+1352,,5829,9/15/15,2010s,2015,Red Oak,30.252449,-97.777723,Unknown,Undetermined,<Null>,<Null>
+1353,,14625,9/15/15,2010s,2015,Live Oak,30.196867,-97.899376,Unknown,Yes,<Null>,<Null>
+1354,,14635,9/17/15,2010s,2015,Red Oak,30.176387,-97.810916,Unknown,Undetermined,<Null>,<Null>
+1355,,14561,9/23/15,2010s,2015,<Null>,30.265025,-97.806809,Unknown,Undetermined,<Null>,<Null>
+1356,,5758,10/1/15,2010s,2015,<Null>,30.327962,-97.765078,Unknown,Undetermined,<Null>,<Null>
+1357,,5782,10/6/15,2010s,2015,Live Oak,30.238252,-97.766876,Unknown,Undetermined,<Null>,<Null>
+1358,,5758,10/6/15,2010s,2015,<Null>,30.327939,-97.764967,Unknown,Undetermined,<Null>,<Null>
+1359,,5681,10/20/15,2010s,2015,Live Oak,30.41447,-97.683108,Public,Yes,<Null>,<Null>
+1360,,5681,10/20/15,2010s,2015,Live Oak,30.413553,-97.682029,Public,Yes,<Null>,<Null>
+1361,,5681,10/20/15,2010s,2015,Live Oak,30.413379,-97.682093,Public,Yes,<Null>,<Null>
+1362,,5681,10/20/15,2010s,2015,Live Oak,30.413179,-97.6821,Public,Yes,<Null>,<Null>
+1363,,5681,10/20/15,2010s,2015,Live Oak,30.413174,-97.682093,Municipal - ROW,Yes,<Null>,<Null>
+1364,,5681,10/20/15,2010s,2015,Live Oak,30.413115,-97.682098,Municipal - ROW,Yes,<Null>,<Null>
+1365,,5681,10/20/15,2010s,2015,Live Oak,30.413374,-97.682086,Municipal - ROW,Yes,<Null>,<Null>
+1366,,5681,10/20/15,2010s,2015,Live Oak,30.413308,-97.682088,Municipal - ROW,Yes,<Null>,<Null>
+1367,,5681,10/20/15,2010s,2015,Live Oak,30.413547,-97.682021,Municipal - ROW,Yes,<Null>,<Null>
+1368,,5681,10/20/15,2010s,2015,Live Oak,30.414465,-97.6831,Municipal - ROW,Yes,<Null>,<Null>
+1369,,5681,10/20/15,2010s,2015,Live Oak,30.414587,-97.68289,Municipal - ROW,Yes,<Null>,<Null>
+1370,,5681,10/20/15,2010s,2015,Live Oak,30.41438,-97.683167,Municipal - ROW,Yes,<Null>,<Null>
+1371,,5681,10/21/15,2010s,2015,Live Oak,30.413366,-97.681995,Private,Yes,<Null>,<Null>
+1372,,5681,10/21/15,2010s,2015,Live Oak,30.413612,-97.681945,Private,Yes,<Null>,<Null>
+1373,,5681,10/21/15,2010s,2015,Live Oak,30.413578,-97.681963,Private,Yes,<Null>,<Null>
+1374,,5771,10/21/15,2010s,2015,Live Oak,30.303372,-97.770705,Unknown,Yes,<Null>,<Null>
+1375,,5806,10/21/15,2010s,2015,<Null>,30.229657,-97.849637,Unknown,Undetermined,<Null>,<Null>
+1376,,5681,10/26/15,2010s,2015,Live Oak,30.413189,-97.68202,Private,Yes,<Null>,<Null>
+1377,,5681,10/26/15,2010s,2015,Live Oak,30.413139,-97.682035,Private,Yes,<Null>,<Null>
+1378,,5760,10/26/15,2010s,2015,"Live Oak, Red Oak",30.328385,-97.765895,Unknown,Yes,<Null>,<Null>
+1379,,5771,10/26/15,2010s,2015,Live Oak,30.304315,-97.769949,Public,Yes,<Null>,<Null>
+1380,,5771,10/26/15,2010s,2015,Live Oak,30.30431,-97.769941,Municipal - ROW,Yes,<Null>,<Null>
+1381,,16675,11/12/15,2010s,2015,Live Oak,30.197419,-97.795651,Unknown,Yes,<Null>,Yes
+1382,,5794,11/25/15,2010s,2015,Live Oak,30.196124,-97.813177,Unknown,Yes,<Null>,<Null>
+1383,,5892,12/2/15,2010s,2015,Live Oak,30.224716,-97.790588,Unknown,Yes,<Null>,<Null>
+1384,,8445,1/7/16,2010s,2016,"Live Oaks, Red Oak",30.346735,-97.758164,Unknown,Undetermined,<Null>,<Null>
+1385,,5829,1/11/16,2010s,2016,<Null>,30.250087,-97.780384,Unknown,Undetermined,<Null>,<Null>
+1386,,5670,1/20/16,2010s,2016,Live Oak,30.423756,-97.727786,Unknown,Yes,<Null>,<Null>
+1387,,5723,1/25/16,2010s,2016,Live Oak,30.262088,-97.803748,Unknown,Undetermined,<Null>,<Null>
+1388,,5743,1/25/16,2010s,2016,Live Oak,30.250024,-97.789625,Unknown,Yes,<Null>,<Null>
+1389,,14561,1/25/16,2010s,2016,Live Oak,30.266566,-97.805055,Unknown,Yes,<Null>,<Null>
+1390,,5807,2/4/16,2010s,2016,Live Oak,30.227561,-97.857352,Unknown,Yes,<Null>,<Null>
+1391,,5685,2/9/16,2010s,2016,<Null>,30.385681,-97.678403,Public,Yes,<Null>,<Null>
+1392,,5685,2/9/16,2010s,2016,<Null>,30.385676,-97.678395,Municipal - ROW,Yes,<Null>,<Null>
+1393,,5685,2/9/16,2010s,2016,<Null>,30.385621,-97.678245,Private,Yes,<Null>,<Null>
+1394,,14598,2/9/16,2010s,2016,Live Oak,30.450942,-97.804581,Unknown,Yes,<Null>,Yes
+1395,,5685,2/16/16,2010s,2016,<Null>,30.384727,-97.677359,Unknown,Undetermined,<Null>,<Null>
+1396,,5781,2/17/16,2010s,2016,Live Oak,30.232309,-97.758325,Unknown,Yes,<Null>,Yes
+1397,,16675,3/14/16,2010s,2016,<Null>,30.197023,-97.793747,Unknown,Undetermined,<Null>,Yes
+1398,,5668,3/15/16,2010s,2016,Live Oak,30.422575,-97.731297,Unknown,Yes,<Null>,<Null>
+1399,,14534,3/24/16,2010s,2016,Live Oak,30.201828,-97.813472,Unknown,Undetermined,<Null>,<Null>
+1400,,5759,3/28/16,2010s,2016,Live Oak,30.32726,-97.768279,Unknown,Undetermined,<Null>,<Null>
+1401,,14538,3/30/16,2010s,2016,Live Oak,30.19966,-97.848611,Unknown,Yes,<Null>,Yes
+1402,,5673,4/7/16,2010s,2016,Live Oak,30.416493,-97.726092,Unknown,Yes,<Null>,<Null>
+1403,,14589,4/7/16,2010s,2016,Live Oak,30.416896,-97.726975,Unknown,Yes,<Null>,<Null>
+1404,,14589,4/7/16,2010s,2016,Live Oak,30.416724,-97.727049,Unknown,Yes,<Null>,<Null>
+1405,,5724,4/18/16,2010s,2016,Red Oak,30.261712,-97.799343,Unknown,Undetermined,<Null>,<Null>
+1406,,14525,4/18/16,2010s,2016,Live Oak,30.262589,-97.807541,Unknown,Yes,<Null>,<Null>
+1407,,14525,4/18/16,2010s,2016,Live Oak,30.26244,-97.807473,Private,Yes,<Null>,Yes
+1408,,5743,4/20/16,2010s,2016,"Live Oak, Red Oak",30.25217,-97.791786,Unknown,Yes,<Null>,<Null>
+1409,,5681,4/26/16,2010s,2016,Live Oak,30.414251,-97.681639,Unknown,Undetermined,<Null>,<Null>
+1410,,14534,4/26/16,2010s,2016,Live Oak,30.200692,-97.814704,Unknown,Yes,<Null>,Yes
+1411,,5668,5/5/16,2010s,2016,Live Oak,30.422575,-97.731297,Unknown,Yes,<Null>,<Null>
+1412,,5769,5/5/16,2010s,2016,Live Oak,30.360183,-97.772705,Unknown,Yes,<Null>,<Null>
+1413,,5769,5/5/16,2010s,2016,Live Oak,30.360156,-97.7731,Unknown,Yes,<Null>,<Null>
+1414,,14525,5/9/16,2010s,2016,Live Oak,30.262611,-97.807487,Unknown,Yes,<Null>,<Null>
+1415,,14619,5/9/16,2010s,2016,Live Oak,30.233656,-97.850033,Unknown,Yes,<Null>,<Null>
+1416,,5734,5/9/16,2010s,2016,<Null>,30.181418,-97.826706,Unknown,Undetermined,<Null>,<Null>
+1417,,14620,5/10/16,2010s,2016,Live Oak,30.452338,-97.80272,Unknown,Yes,<Null>,<Null>
+1418,,5794,5/11/16,2010s,2016,Live Oak,30.195547,-97.814908,Unknown,Undetermined,<Null>,<Null>
+1419,,5759,5/17/16,2010s,2016,Live Oak,30.327267,-97.768288,Unknown,Yes,<Null>,<Null>
+1420,,8445,5/17/16,2010s,2016,"Live Oak, Red Oak",30.346807,-97.758595,Unknown,Yes,<Null>,<Null>
+1421,,14526,5/18/16,2010s,2016,Live Oak,30.184746,-97.890528,Unknown,Yes,<Null>,<Null>
+1422,,14534,5/18/16,2010s,2016,Live Oak,30.201828,-97.813472,Unknown,Yes,<Null>,<Null>
+1423,,5817,5/31/16,2010s,2016,<Null>,30.206224,-97.84522,Unknown,Undetermined,<Null>,<Null>
+1424,,14611,6/1/16,2010s,2016,<Null>,30.208271,-97.847964,Unknown,Undetermined,<Null>,<Null>
+1425,,5794,6/2/16,2010s,2016,<Null>,30.195152,-97.813346,Unknown,Undetermined,<Null>,<Null>
+1426,,5685,6/3/16,2010s,2016,Live Oak,30.386032,-97.677578,Public,Yes,<Null>,<Null>
+1427,,5685,6/3/16,2010s,2016,Live Oak,30.386199,-97.677451,Public,Yes,<Null>,<Null>
+1428,,5685,6/3/16,2010s,2016,Live Oak,30.386334,-97.677548,Private,Yes,<Null>,<Null>
+1429,,5685,6/3/16,2010s,2016,Live Oak,30.386026,-97.677571,Municipal - ROW,Yes,<Null>,<Null>
+1430,,5685,6/3/16,2010s,2016,Live Oak,30.386329,-97.677541,Private,Yes,<Null>,<Null>
+1431,,5685,6/3/16,2010s,2016,Live Oak,30.386193,-97.677443,Municipal - ROW,Yes,<Null>,<Null>
+1432,,5685,6/3/16,2010s,2016,Live Oak,30.386281,-97.677373,Municipal - ROW,Yes,<Null>,<Null>
+1433,,5685,6/4/16,2010s,2016,Live Oak,30.386088,-97.677523,Municipal - ROW,Yes,<Null>,<Null>
+1434,,5681,6/7/16,2010s,2016,Live Oak,30.414299,-97.681794,Private,Yes,<Null>,<Null>
+1435,,5681,6/7/16,2010s,2016,Live Oak,30.414294,-97.681786,Private,Yes,<Null>,<Null>
+1436,,5781,6/16/16,2010s,2016,<Null>,30.232058,-97.757172,Unknown,Undetermined,<Null>,Yes
+1437,,14526,7/7/16,2010s,2016,Live Oak,30.184042,-97.889387,Unknown,Yes,<Null>,Yes
+1438,,11549,7/11/16,2010s,2016,Live Oak,30.463317,-97.807252,Unknown,Yes,<Null>,<Null>
+1439,,5794,7/12/16,2010s,2016,Live Oak,30.196296,-97.812839,Unknown,Yes,<Null>,<Null>
+1440,,5806,7/12/16,2010s,2016,Live Oak,30.229404,-97.848581,Unknown,Yes,<Null>,<Null>
+1441,,5806,7/14/16,2010s,2016,Live Oak,30.229068,-97.84847,Private,Yes,<Null>,<Null>
+1442,,5806,7/14/16,2010s,2016,Live Oak,30.229063,-97.848462,Private,Yes,<Null>,<Null>
+1443,,5762,7/20/16,2010s,2016,Live Oak,30.340574,-97.778999,Unknown,Yes,<Null>,<Null>
+1444,,14621,7/20/16,2010s,2016,Live Oak,30.189432,-97.8856,Unknown,Yes,<Null>,<Null>
+1445,,5806,7/31/16,2010s,2016,Live Oak,30.229277,-97.848366,Public,Yes,<Null>,<Null>
+1446,,5806,7/31/16,2010s,2016,Live Oak,30.229272,-97.848358,Municipal - ROW,Yes,<Null>,<Null>
+1447,,14592,8/1/16,2010s,2016,Live Oak,30.205522,-97.888086,Public,Yes,<Null>,Yes
+1448,,14623,8/1/16,2010s,2016,Live Oak,30.200908,-97.866972,Unknown,Yes,<Null>,<Null>
+1449,,14623,8/1/16,2010s,2016,Live Oak,30.200528,-97.87075,Private,Yes,<Null>,<Null>
+1450,,5806,8/4/16,2010s,2016,Live Oak,30.229136,-97.848259,Private,Yes,<Null>,<Null>
+1451,,5806,8/4/16,2010s,2016,Live Oak,30.229131,-97.848252,Private,Yes,<Null>,<Null>
+1452,,5806,8/4/16,2010s,2016,Live Oak,30.229067,-97.848426,Private,Yes,<Null>,<Null>
+1453,,14625,8/4/16,2000s,2009,Live Oak,30.198826,-97.903824,Public,Yes,<Null>,Yes
+1454,,16846,8/4/16,2010s,2016,Live Oaks,30.186025,-97.913999,Public,Yes,<Null>,<Null>
+1455,,16847,8/4/16,2010s,2016,Live Oak,30.177675,-97.908939,Private,Yes,<Null>,Yes
+1456,,14526,8/9/16,2010s,2016,Live Oak,30.182932,-97.890716,Private,Yes,<Null>,<Null>
+1457,,14526,8/9/16,2010s,2016,Live Oak,30.182706,-97.891217,Private,Yes,<Null>,<Null>
+1458,,14526,8/9/16,2010s,2016,Live Oak,30.182977,-97.891193,Private,Yes,<Null>,<Null>
+1459,,14589,8/18/16,2010s,2016,Live Oak,30.41652,-97.726616,Unknown,Yes,<Null>,<Null>
+1460,,5743,9/1/16,2010s,2016,Live Oak,30.251914,-97.790551,Private,Yes,<Null>,<Null>
+1461,,5800,10/1/16,2010s,2016,Live Oak,30.244045,-97.826344,Private,Yes,<Null>,Yes
+1462,,5800,10/1/16,2010s,2016,Live Oak,30.243975,-97.826569,Private,Yes,<Null>,Yes
+1463,,5829,10/27/16,2010s,2016,Live Oak,30.249612,-97.780008,Private,Yes,<Null>,<Null>
+1464,,5806,11/15/16,2010s,2016,Live Oak,30.22935,-97.848976,Private,Yes,<Null>,<Null>
+1465,,14619,11/15/16,2010s,2016,Live Oak,30.233811,-97.850399,Private,Yes,<Null>,Yes
+1466,,5806,11/15/16,2010s,2016,Live Oak,30.229855,-97.848875,Private,Yes,<Null>,<Null>
+1467,,5806,11/15/16,2010s,2016,Live Oak,30.229205,-97.84864,Private,Yes,<Null>,<Null>
+1468,,5809,11/15/16,2010s,2016,Live Oak,30.227898,-97.865315,Private,Yes,Yes,<Null>
+1469,,5829,11/21/16,2010s,2016,Live Oak,30.24958,-97.780038,Public,Yes,<Null>,<Null>
+1470,,5829,11/21/16,2010s,2016,Live Oak,30.249575,-97.780031,Municipal - ROW,Yes,<Null>,<Null>
+1471,,14525,11/21/16,2010s,2016,<Null>,30.262031,-97.807158,Unknown,Yes,<Null>,<Null>
+1472,,5813,11/30/16,2010s,2016,Live Oak,30.217347,-97.845687,Private,Yes,Yes,<Null>
+1473,,16684,11/30/16,2010s,2016,Live Oak,30.221754,-97.859296,Private,Yes,Yes,<Null>
+1474,,5829,12/6/16,2010s,2016,Live Oak,30.249496,-97.779861,Public,Yes,<Null>,<Null>
+1475,,14526,12/6/16,2010s,2016,Live Oak,30.182818,-97.891066,Public,Yes,<Null>,<Null>
+1476,,14526,12/6/16,2010s,2016,Live Oak,30.182452,-97.890919,Public,Yes,<Null>,<Null>
+1477,,14526,12/6/16,2010s,2016,Live Oak,30.182545,-97.891024,Private,Yes,<Null>,<Null>
+1478,,14526,12/6/16,2010s,2016,Live Oak,30.182447,-97.890911,Municipal - ROW,Yes,<Null>,<Null>
+1479,,14526,12/6/16,2010s,2016,Live Oak,30.18254,-97.891016,Private,Yes,<Null>,<Null>
+1480,,14526,12/6/16,2010s,2016,Live Oak,30.182813,-97.891058,Municipal - ROW,Yes,<Null>,<Null>
+1481,,14526,12/6/16,2010s,2016,Live Oak,30.182725,-97.891053,Municipal - ROW,Yes,<Null>,<Null>
+1482,,14584,12/19/16,2010s,2016,Live Oak,30.185044,-97.87683,Public,Yes,Yes,<Null>
+1483,,5736,12/20/16,2010s,2016,Live Oak,30.187479,-97.868628,Public,Yes,<Null>,Yes
+1484,,14506,12/20/16,2010s,2016,Live Oak,30.426405,-97.720612,Private,Yes,Yes,Yes
+1485,,14504,12/21/16,2010s,2016,Live Oak,30.165275,-97.79535,Public,Yes,Yes,Yes
+1486,,14504,12/21/16,2010s,2016,Live Oak,30.165303,-97.795336,Unknown,Yes,<Null>,Yes
+1487,,5736,12/21/16,2010s,2016,Live Oak,30.18834,-97.864358,Unknown,Yes,<Null>,Yes
+1488,,5724,12/27/16,2010s,2016,Live Oak,30.262086,-97.800294,Private,Yes,<Null>,<Null>
+1489,,14561,12/29/16,2010s,2016,Live Oak,30.266719,-97.805884,Private,Yes,<Null>,<Null>
+1490,,14561,12/29/16,2010s,2016,Live Oak,30.265094,-97.806346,Private,Yes,Yes,<Null>
+1491,,14525,12/29/16,2010s,2016,Live Oak,30.263098,-97.806153,Unknown,Yes,Yes,<Null>
+1492,,14525,12/29/16,2010s,2016,Live Oak,30.261875,-97.806868,Private,Yes,Yes,<Null>
+1493,,16846,1/9/17,2010s,2017,Live Oak,30.182834,-97.911651,Public,Yes,<Null>,<Null>
+1494,,16846,1/9/17,2010s,2017,Live Oak,30.182829,-97.911644,Municipal - Parkland,Yes,<Null>,<Null>
+1495,,16846,1/9/17,2010s,2017,Live Oak,30.182824,-97.911712,Municipal - Parkland,Yes,<Null>,<Null>
+1496,,16846,1/9/17,2010s,2017,Live Oak,30.182864,-97.911975,Municipal - Parkland,Yes,<Null>,<Null>
+1497,,16846,1/9/17,2010s,2017,Live Oak,30.182836,-97.911965,Municipal - Parkland,Yes,<Null>,<Null>
+1498,,16846,1/9/17,2010s,2017,Live Oak,30.182604,-97.912127,Municipal - Parkland,Yes,<Null>,<Null>
+1499,,16846,1/9/17,2010s,2017,Live Oak,30.182692,-97.91231,Municipal - Parkland,Yes,<Null>,<Null>
+1500,,16846,1/9/17,2010s,2017,Live Oak,30.182049,-97.91217,Municipal - Parkland,Yes,<Null>,<Null>
+1501,,16846,1/9/17,2010s,2017,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1502,,16846,1/9/17,2010s,2017,Live Oak,30.181994,-97.912466,Municipal - Parkland,Yes,<Null>,<Null>
+1503,,16846,1/9/17,2010s,2017,Live Oak,30.181958,-97.91248,Municipal - Parkland,Yes,<Null>,<Null>
+1504,,14538,1/12/17,2010s,2017,Live Oak,30.199507,-97.849987,Private,Yes,Yes,<Null>
+1505,,14538,1/12/17,2010s,2017,Live Oak,30.199291,-97.848937,Unknown,Yes,Yes,<Null>
+1506,,14606,1/12/17,2010s,2017,Live Oak,30.198233,-97.852376,Private,Yes,<Null>,Yes
+1507,,5829,1/12/17,2010s,2017,Live Oak,30.24948,-97.779807,Private,Yes,Yes,Yes
+1508,,14042,1/18/17,2010s,2017,Live Oak,30.173057,-97.825938,Private,Yes,<Null>,<Null>
+1509,,14031,1/23/17,2010s,2017,Live Oak,30.210969,-97.849687,Private,Yes,Yes,<Null>
+1510,,6203,1/23/17,2010s,2017,Live Oak,30.204827,-97.858421,Unknown,Yes,Yes,<Null>
+1511,,14031,1/23/17,2010s,2017,Live Oak,30.209714,-97.851078,Unknown,Yes,Yes,Yes
+1512,,14611,1/23/17,2010s,2017,<Null>,30.208618,-97.846867,Private,Yes,Yes,<Null>
+1513,,5819,1/24/17,2010s,2017,<Null>,30.202627,-97.842309,Unknown,Yes,Yes,<Null>
+1514,,5819,1/24/17,2010s,2017,Live Oak,30.20273,-97.84196,Unknown,Yes,Yes,<Null>
+1515,,5819,1/24/17,2010s,2017,<Null>,30.203998,-97.84353,Unknown,Yes,Yes,<Null>
+1516,,5818,1/24/17,2010s,2017,<Null>,30.20419,-97.846666,Unknown,Yes,Yes,<Null>
+1517,,5817,1/24/17,2010s,2017,<Null>,30.206223,-97.844228,Unknown,Yes,Yes,<Null>
+1518,,5817,1/24/17,2010s,2017,<Null>,30.208258,-97.843898,Unknown,Yes,Yes,<Null>
+1519,,5816,1/25/17,2010s,2017,Live Oak,30.215322,-97.836876,Private,Yes,<Null>,<Null>
+1520,,14587,1/25/17,2010s,2017,Live Oak,30.187361,-97.841963,Private,Yes,Yes,<Null>
+1521,,16730,1/25/17,2010s,2017,Live Oak,30.200408,-97.830033,Private,Yes,<Null>,<Null>
+1522,,16730,1/25/17,2010s,2017,Live Oak,30.200191,-97.830443,Private,Yes,<Null>,<Null>
+1523,,5816,1/25/17,2010s,2017,Live Oak,30.213623,-97.838268,Unknown,Yes,Yes,<Null>
+1524,,5816,1/25/17,2010s,2017,Live Oak,30.214218,-97.83665,Private,Yes,Yes,<Null>
+1525,,14587,1/25/17,2010s,2017,Live Oak,30.187442,-97.842104,Unknown,Yes,Yes,<Null>
+1526,,16730,1/25/17,2010s,2017,Live Oak,30.247921,-97.754922,Unknown,Yes,Yes,<Null>
+1527,,16730,1/25/17,2010s,2017,Live Oak,30.200172,-97.830805,Unknown,Yes,Yes,<Null>
+1528,,16730,1/25/17,2010s,2017,Live Oak,30.200423,-97.8303,Unknown,Yes,Yes,<Null>
+1529,,14614,1/30/17,2010s,2017,Live Oak,30.202964,-97.821204,Private,Yes,<Null>,<Null>
+1530,,14634,1/30/17,2010s,2017,Live Oak,30.201268,-97.82063,Private,Yes,Yes,<Null>
+1531,,14614,1/30/17,2010s,2017,Live Oak,30.202906,-97.820865,Unknown,Yes,Yes,<Null>
+1532,,14625,1/30/17,2010s,2017,Live Oak,30.201659,-97.820812,Unknown,Yes,Yes,<Null>
+1533,,16904,1/30/17,2010s,2017,Live Oak,30.202832,-97.824885,Private,Yes,Yes,<Null>
+1534,,14556,1/30/17,2010s,2017,Live Oak,30.200504,-97.820778,Unknown,Yes,Yes,<Null>
+1535,,14609,1/31/17,2010s,2017,Live Oak,30.209662,-97.827489,Municipal - Parkland,Yes,Yes,Yes
+1536,,5734,1/31/17,2010s,2017,Live Oak,30.184346,-97.826093,Unknown,Yes,Yes,<Null>
+1537,,5794,2/6/17,2010s,2017,<Null>,30.195417,-97.814406,Unknown,Yes,Yes,<Null>
+1538,,5731,2/6/17,2010s,2017,Live Oak,30.181967,-97.819854,Unknown,Yes,Yes,<Null>
+1539,,5731,2/6/17,2010s,2017,Live Oak,30.18198,-97.819514,Private,Yes,<Null>,<Null>
+1540,,5797,2/6/17,2010s,2017,Live Oak,30.194967,-97.812122,Unknown,Yes,Yes,<Null>
+1541,,5797,2/6/17,2010s,2017,Live Oak,30.195277,-97.811513,Unknown,Yes,Yes,<Null>
+1542,,5797,2/6/17,2010s,2017,Live Oak,30.195741,-97.81242,Private,Yes,Yes,<Null>
+1543,,5794,2/6/17,2010s,2017,Live Oak,30.195103,-97.813736,Private,Yes,Yes,<Null>
+1544,,16675,2/7/17,2010s,2017,Live Oak,30.19643,-97.793186,Private,Yes,<Null>,Yes
+1545,,14534,2/7/17,2010s,2017,Live Oak,30.20073,-97.815258,Private,Yes,Yes,Yes
+1546,,14534,2/7/17,2010s,2017,Live Oak,30.201433,-97.815146,Unknown,Yes,Yes,Yes
+1547,,14534,2/7/17,2010s,2017,Live Oak,30.201907,-97.813693,Private,Yes,Yes,<Null>
+1548,,5829,2/7/17,2010s,2017,Live Oak,30.249551,-97.779371,Unknown,Yes,Yes,<Null>
+1549,,5829,2/7/17,2010s,2017,Live Oak,30.249539,-97.779468,Unknown,Yes,Yes,<Null>
+1550,,16675,2/7/17,2010s,2017,Live Oak,30.196998,-97.792705,Private,Yes,Yes,<Null>
+1551,,16675,2/7/17,2010s,2017,Live Oak,30.197588,-97.795663,Unknown,Yes,Yes,<Null>
+1552,,16675,2/7/17,2010s,2017,Live Oak,30.196644,-97.795263,Private,Yes,Yes,Yes
+1553,,16705,2/7/17,2010s,2017,Live Oak,30.195826,-97.795337,Private,Yes,Yes,<Null>
+1554,,5778,2/8/17,2010s,2017,Live Oak,30.19478,-97.804463,Private,Yes,<Null>,<Null>
+1555,,5778,2/8/17,2010s,2017,Live Oak,30.195165,-97.804172,Private,Yes,<Null>,<Null>
+1556,,5778,2/8/17,2010s,2017,Live Oak,30.191082,-97.801447,Private,Yes,<Null>,<Null>
+1557,,5778,2/8/17,2010s,2017,Live Oak,30.191608,-97.803303,Unknown,Yes,Yes,<Null>
+1558,,5778,2/8/17,2010s,2017,Live Oak,30.195604,-97.805498,Private,Yes,Yes,Yes
+1559,,5778,2/8/17,2010s,2017,Live Oak,30.190917,-97.801829,Private,Yes,Yes,<Null>
+1560,,5778,2/8/17,2010s,2017,Live Oak,30.191412,-97.801984,Private,Yes,Yes,<Null>
+1561,,14635,2/9/17,2010s,2017,Live Oak,30.178296,-97.806098,Private,Yes,<Null>,<Null>
+1562,,16676,2/9/17,2010s,2017,<Null>,30.211474,-97.797632,Public,Yes,Yes,<Null>
+1563,,16814,2/13/17,2010s,2017,Live Oak,30.148521,-97.807985,Unknown,Yes,Yes,<Null>
+1564,,16778,2/13/17,2010s,2017,Live Oak,30.289334,-97.779643,Municipal - Parkland,Yes,Yes,<Null>
+1565,,14613,2/14/17,2010s,2017,<Null>,30.197423,-97.8989,Unknown,Undetermined,<Null>,<Null>
+1566,,16676,2/14/17,2010s,2017,Live Oak,30.210921,-97.79951,Municipal - Parkland,Yes,Yes,<Null>
+1567,,5787,2/15/17,2010s,2017,Live Oak,30.21409,-97.79959,Public,Yes,Yes,<Null>
+1568,,5788,2/15/17,2010s,2017,Live Oak,30.213686,-97.80211,Unknown,Yes,Yes,<Null>
+1569,,5788,2/15/17,2010s,2017,Live Oak,30.213913,-97.801809,Unknown,Yes,Yes,<Null>
+1570,,5739,2/16/17,2010s,2017,Live Oak,30.183017,-97.777131,Unknown,Yes,Yes,<Null>
+1571,,5739,2/16/17,2010s,2017,Live Oak,30.182339,-97.776734,Municipal - ROW,Yes,Yes,<Null>
+1572,,14029,2/16/17,2010s,2017,Live Oak,30.178692,-97.779373,Private,Yes,Yes,<Null>
+1573,,14029,2/16/17,2010s,2017,Live Oak,30.179346,-97.780837,Unknown,Yes,Yes,<Null>
+1574,,5784,2/21/17,2010s,2017,Live Oak,30.220532,-97.781351,Private,Yes,<Null>,<Null>
+1575,,5892,2/21/17,2010s,2017,Live Oak,30.22553,-97.790749,Unknown,Yes,Yes,<Null>
+1576,,5784,2/21/17,2010s,2017,Live Oak,30.221361,-97.781689,Unknown,Yes,Yes,<Null>
+1577,,14495,2/22/17,2010s,2017,Live Oaks,30.242324,-97.734478,Unknown,Yes,<Null>,<Null>
+1578,,14495,2/22/17,2010s,2017,Live Oaks,30.242517,-97.734531,Unknown,Yes,<Null>,<Null>
+1579,,14495,2/22/17,2010s,2017,Live Oak,30.241514,-97.734448,Unknown,Yes,Yes,<Null>
+1580,,16778,2/23/17,2010s,2017,Live Oak,30.28919,-97.779826,Municipal - Parkland,Yes,Yes,<Null>
+1581,,16778,2/23/17,2010s,2017,Live Oak,30.289245,-97.780007,Municipal - Parkland,Yes,Yes,<Null>
+1582,,5778,2/23/17,2010s,2017,Live Oak,30.196242,-97.804923,Private,Yes,Yes,Yes
+1583,,14534,2/27/17,2010s,2017,Live Oak,30.202305,-97.812813,Private,Yes,Yes,Yes
+1584,,5702,2/27/17,2010s,2017,Live Oak,30.247974,-97.74564,Private,Yes,Yes,<Null>
+1585,,5783,2/28/17,2010s,2017,Live Oak,30.235507,-97.781787,Unknown,Yes,Yes,<Null>
+1586,,5783,2/28/17,2010s,2017,Live Oak,30.231663,-97.779845,Unknown,Yes,Yes,<Null>
+1587,,16778,3/1/17,2010s,2017,Live Oak,30.289236,-97.779784,Private,Yes,<Null>,<Null>
+1588,,16778,3/1/17,2010s,2017,Live Oak,30.289231,-97.779776,Private,Yes,<Null>,<Null>
+1589,,16778,3/1/17,2010s,2017,Live Oak,30.28925,-97.779984,Private,Yes,<Null>,<Null>
+1590,,5781,3/1/17,2010s,2017,Live Oak,30.231574,-97.758016,Private,Yes,Yes,<Null>
+1591,,5781,3/1/17,2010s,2017,Live Oak,30.232372,-97.756146,Private,Yes,Yes,<Null>
+1592,,5782,3/2/17,2010s,2017,Live Oak,30.237968,-97.767108,Private,Yes,<Null>,<Null>
+1593,,5725,3/7/17,2010s,2017,Live Oak,30.254201,-97.802693,Public,Yes,Yes,<Null>
+1594,,16903,3/9/17,2010s,2017,Live Oak,30.242374,-97.813986,Public,Yes,<Null>,Yes
+1595,,5734,4/6/17,2010s,2017,Red Oak,30.184261,-97.826142,Private,Yes,<Null>,Yes
+1596,,5734,4/6/17,2010s,2017,Red Oak,30.184457,-97.827139,Private,Yes,<Null>,<Null>
+1597,,5755,4/13/17,2010s,2017,Live Oak,30.297054,-97.778459,Private,Yes,<Null>,<Null>
+1598,,5771,4/13/17,2010s,2017,Live Oak,30.304259,-97.769669,Private,Yes,<Null>,<Null>
+1599,,14638,4/13/17,2010s,2017,Live Oak,30.304713,-97.773671,Private,Yes,<Null>,<Null>
+1600,,16819,4/13/17,2010s,2017,Live Oak,30.393265,-97.6864,Private,Yes,<Null>,<Null>
+1601,,5755,4/13/17,2010s,2017,Live Oak,30.296461,-97.778104,Unknown,Yes,Yes,<Null>
+1602,,5771,4/13/17,2010s,2017,Live Oak,30.30141,-97.775201,Unknown,Yes,Yes,<Null>
+1603,,5771,4/13/17,2010s,2017,Live Oak,30.304186,-97.770703,Public - Parkland,Yes,Yes,<Null>
+1604,,5804,4/17/17,2010s,2017,Live Oak,30.240277,-97.8545,Private,Yes,<Null>,<Null>
+1605,,5817,4/24/17,2010s,2017,Live Oak,30.205873,-97.844882,Private,Yes,Yes,Yes
+1606,,6281,4/24/17,2010s,2017,Live Oak,30.204752,-97.856482,Private,Yes,Yes,<Null>
+1607,,14637,4/24/17,2010s,2017,<Null>,30.263348,-97.809761,Private,Yes,Yes,Yes
+1608,,16761,4/25/17,2010s,2017,Live Oak,30.175056,-97.726865,Public,Yes,Yes,<Null>
+1609,,5759,5/3/17,2010s,2017,Live Oak,30.327337,-97.767518,Private,Yes,<Null>,<Null>
+1610,,5759,5/3/17,2010s,2017,Live Oak,30.327229,-97.768239,Private,Yes,<Null>,<Null>
+1611,,5759,5/3/17,2010s,2017,Live Oak,30.327215,-97.768301,Private,Yes,Yes,<Null>
+1612,,5762,5/8/17,2010s,2017,Live Oak,30.341061,-97.779754,Unknown,Yes,Yes,<Null>
+1613,,5762,5/8/17,2010s,2017,Live Oak,30.340583,-97.779479,Unknown,Yes,Yes,<Null>
+1614,,5760,5/8/17,2010s,2017,Live Oak,30.328562,-97.765105,Unknown,Yes,Yes,<Null>
+1615,,14601,5/9/17,2010s,2017,Live Oak,30.284748,-97.827669,Private,Yes,<Null>,<Null>
+1616,,16853,5/9/17,2010s,2017,Live Oak,30.273361,-97.824539,Private,Yes,Yes,<Null>
+1617,,16853,5/9/17,2010s,2017,Live Oak,30.273731,-97.824629,Private,Yes,Yes,<Null>
+1618,,14635,5/9/17,2010s,2017,Live Oak,30.28673,-97.825519,Private,Yes,<Null>,<Null>
+1619,,5685,5/16/17,2010s,2017,Live Oak,30.384469,-97.678429,Private,Yes,<Null>,Yes
+1620,,5685,5/16/17,2010s,2017,Live Oak,30.384648,-97.679202,Private,Yes,<Null>,Yes
+1621,,5685,5/16/17,2010s,2017,Live Oak,30.382495,-97.678021,Private,Yes,<Null>,Yes
+1622,,5691,5/16/17,2010s,2017,Live Oak,30.365697,-97.663125,Private,Yes,Yes,Yes
+1623,,5691,5/16/17,2010s,2017,Live Oak,30.365598,-97.662879,Private,Yes,Yes,Yes
+1624,,5685,5/16/17,2010s,2017,Live Oak,30.382171,-97.678285,Unknown,Yes,<Null>,Yes
+1625,,5685,5/16/17,2010s,2017,Live Oak,30.381331,-97.683103,Unknown,Yes,Yes,<Null>
+1626,,5685,5/16/17,2010s,2017,Live Oak,30.381264,-97.683312,Private,Yes,<Null>,Yes
+1627,,5685,5/16/17,2010s,2017,Live Oak,30.381211,-97.682719,Private,Yes,<Null>,Yes
+1628,,5806,5/17/17,2010s,2017,Live Oak,30.229313,-97.848209,Private,Yes,Yes,<Null>
+1629,,5689,5/23/17,2010s,2017,Live Oak,30.385638,-97.688257,Private,Yes,<Null>,<Null>
+1630,,5689,5/23/17,2010s,2017,Live Oak,30.38421,-97.690241,Private,Yes,<Null>,<Null>
+1631,,5689,5/23/17,2010s,2017,Live Oak,30.384801,-97.690733,Private,Yes,<Null>,<Null>
+1632,,5681,5/24/17,2010s,2017,Live Oak,30.41439,-97.682547,Unknown,Yes,Yes,Yes
+1633,,16888,5/24/17,2010s,2017,Live Oak,30.392179,-97.695253,Private,Yes,Yes,<Null>
+1634,,16784,5/24/17,2010s,2017,Live Oak,30.393736,-97.692193,Unknown,Yes,Yes,<Null>
+1635,,16753,5/24/17,2010s,2017,Live Oak,30.403188,-97.705585,Public,Yes,Yes,<Null>
+1636,,14592,5/24/17,2010s,2017,Live Oak,30.206071,-97.883348,Unknown,Yes,Yes,<Null>
+1637,,8445,5/30/17,2010s,2017,Live Oak,30.346323,-97.757655,Private,Yes,Yes,<Null>
+1638,,8445,5/30/17,2010s,2017,Live Oak,30.346553,-97.757604,Private,Yes,Yes,<Null>
+1639,,8445,5/30/17,2010s,2017,Live Oak,30.346199,-97.757926,Private,Yes,Yes,<Null>
+1640,,8445,5/30/17,2010s,2017,Live Oak,30.346514,-97.758146,Private,Yes,Yes,<Null>
+1641,,8445,5/30/17,2010s,2017,Live Oak,30.345754,-97.75749,Private,Yes,Yes,<Null>
+1642,,8445,5/30/17,2010s,2017,Live Oak,30.34606,-97.757328,Private,Yes,Yes,<Null>
+1643,,8445,5/30/17,2010s,2017,Live Oak,30.347117,-97.758041,Private,Yes,Yes,<Null>
+1644,,8445,5/30/17,2010s,2017,Live Oak,30.347049,-97.758321,Private,Yes,Yes,<Null>
+1645,,14602,5/30/17,2010s,2017,Live Oak,30.341675,-97.774377,Unknown,Yes,Yes,<Null>
+1646,,5806,5/31/17,2010s,2017,Live Oak,30.229354,-97.848149,Private,Yes,Yes,<Null>
+1647,,16851,6/8/17,2010s,2017,Live Oak,30.357449,-97.756698,Unknown,Yes,Yes,<Null>
+1648,,5768,6/8/17,2010s,2017,Live Oak,30.353909,-97.765542,Private,Yes,Yes,<Null>
+1649,,14532,6/12/17,2010s,2017,Live Oak,30.408003,-97.759188,Private,Yes,<Null>,<Null>
+1650,,14532,6/12/17,2010s,2017,Live Oak,30.408386,-97.759043,Private,Yes,<Null>,<Null>
+1651,,14532,6/12/17,2010s,2017,Live Oak,30.408712,-97.759417,Private,Yes,<Null>,<Null>
+1652,,16840,6/12/17,2010s,2017,Live Oak,30.401419,-97.782091,Private,Yes,<Null>,<Null>
+1653,,16840,6/12/17,2010s,2017,Live Oak,30.401217,-97.782298,Unknown,Yes,<Null>,Yes
+1654,,14612,6/12/17,2010s,2017,Live Oak,30.416824,-97.74914,Unknown,Yes,Yes,Yes
+1655,,14620,6/12/17,2010s,2017,Live Oak,30.452065,-97.802782,Private,Yes,Yes,<Null>
+1656,,16676,6/13/17,2010s,2017,Live Oak,30.21083,-97.799626,Public,Yes,<Null>,<Null>
+1657,,16676,6/13/17,2010s,2017,Live Oak,30.210825,-97.799619,Municipal - Parkland,Yes,<Null>,<Null>
+1658,,16676,6/13/17,2010s,2017,Live Oak,30.210839,-97.799299,Municipal - Parkland,Yes,<Null>,<Null>
+1659,,16676,6/13/17,2010s,2017,Live Oak,30.210746,-97.799361,Municipal - Parkland,Yes,<Null>,<Null>
+1660,,16676,6/13/17,2010s,2017,Live Oak,30.210768,-97.799453,Municipal - Parkland,Yes,<Null>,<Null>
+1661,,14605,6/14/17,2010s,2017,Live Oak,30.34504,-97.80468,Private,Yes,<Null>,<Null>
+1662,,16676,6/14/17,2010s,2017,Live Oak,30.210666,-97.799462,Municipal - Parkland,Yes,<Null>,<Null>
+1663,,16676,6/14/17,2010s,2017,Live Oak,30.210748,-97.799508,Municipal - Parkland,Yes,<Null>,<Null>
+1664,,5829,6/14/17,2010s,2017,<Null>,30.249259,-97.779805,Unknown,Yes,<Null>,<Null>
+1665,,14605,6/14/17,2010s,2017,Live Oak,30.345505,-97.803766,Private,Yes,Yes,<Null>
+1666,,16676,6/15/17,2010s,2017,Live Oak,30.210563,-97.799484,Municipal - Parkland,Yes,<Null>,<Null>
+1667,,16676,6/15/17,2010s,2017,Live Oak,30.210513,-97.799573,Municipal - Parkland,Yes,<Null>,<Null>
+1668,,16676,6/15/17,2010s,2017,Live Oak,30.210543,-97.799654,Municipal - Parkland,Yes,<Null>,<Null>
+1669,,16676,6/16/17,2010s,2017,Live Oak,30.210614,-97.799692,Municipal - Parkland,Yes,<Null>,<Null>
+1670,,16676,6/16/17,2010s,2017,Live Oak,30.210535,-97.799724,Municipal - Parkland,Yes,<Null>,<Null>
+1671,,16676,6/16/17,2010s,2017,Live Oak,30.210592,-97.799671,Municipal - Parkland,Yes,<Null>,<Null>
+1672,,16676,6/16/17,2010s,2017,Live Oak,30.21108,-97.799217,Municipal - Parkland,Yes,<Null>,<Null>
+1673,,16698,6/20/17,2010s,2017,Live Oak,30.331571,-97.83302,Private,Yes,<Null>,Yes
+1674,,16676,6/21/17,2010s,2017,Live Oak,30.210944,-97.799534,Municipal - Parkland,Yes,<Null>,<Null>
+1675,,16676,6/21/17,2010s,2017,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1676,,16676,6/21/17,2010s,2017,Live Oak,30.210984,-97.79929,Municipal - Parkland,Yes,<Null>,<Null>
+1677,,5829,6/27/17,2010s,2017,Live Oak,30.250122,-97.780227,Private,Yes,<Null>,<Null>
+1678,,5829,6/27/17,2010s,2017,Live Oak,30.250116,-97.78022,Private,Yes,<Null>,<Null>
+1679,,5829,6/27/17,2010s,2017,Live Oak,30.250204,-97.780151,Private,Yes,<Null>,<Null>
+1680,,16676,6/27/17,2010s,2017,Live Oak,30.210474,-97.799262,Municipal - Parkland,Yes,<Null>,<Null>
+1681,,16676,6/27/17,2010s,2017,Live Oak,30.210453,-97.79918,Municipal - Parkland,Yes,<Null>,<Null>
+1682,,16836,6/27/17,2010s,2017,Live Oak,30.482123,-97.758499,Private,Yes,<Null>,<Null>
+1683,,16750,6/27/17,2010s,2017,Live Oak,30.411635,-97.717366,Unknown,Yes,Yes,Yes
+1684,,16676,6/28/17,2010s,2017,Live Oak,30.211201,-97.799467,Municipal - Parkland,Yes,<Null>,<Null>
+1685,,5829,6/29/17,2010s,2017,Live Oak,30.249399,-97.780549,Public,Yes,<Null>,<Null>
+1686,,5829,6/29/17,2010s,2017,Live Oak,30.249393,-97.780542,Municipal - ROW,Yes,<Null>,<Null>
+1687,,5781,6/30/17,2010s,2017,Live Oak,30.211348,-97.752,Public,Undetermined,<Null>,Yes
+1688,,5781,6/30/17,2010s,2017,Live Oak,30.211208,-97.752061,Public,Undetermined,<Null>,<Null>
+1689,,5781,6/30/17,2010s,2017,Live Oak,30.210964,-97.752268,Public,Undetermined,<Null>,<Null>
+1690,,5781,6/30/17,2010s,2017,Live Oak,30.21073,-97.752395,Public,Undetermined,<Null>,<Null>
+1691,,5829,7/6/17,2010s,2017,Live Oak,30.248703,-97.779841,Public,Yes,<Null>,<Null>
+1692,,5829,7/6/17,2010s,2017,Live Oak,30.248698,-97.779833,Municipal - ROW,Yes,<Null>,<Null>
+1693,,14561,7/6/17,2010s,2017,Live Oak,30.266923,-97.805864,Public,Yes,<Null>,<Null>
+1694,,14561,7/6/17,2010s,2017,Live Oak,30.266918,-97.805857,Municipal - ROW,Yes,<Null>,<Null>
+1695,,14589,7/7/17,2010s,2017,Live Oak,30.416528,-97.726938,Public,Yes,Yes,<Null>
+1696,,14031,7/11/17,2010s,2017,Live Oak,30.208839,-97.85258,Unknown,Yes,Yes,Yes
+1697,,14506,7/13/17,2010s,2017,Live Oak,30.426686,-97.720486,Private,Yes,Yes,<Null>
+1698,,5670,7/17/17,2010s,2017,Live Oak,30.42271,-97.728556,Unknown,Yes,Yes,<Null>
+1699,,5668,7/17/17,2010s,2017,Live Oak,30.422609,-97.728724,Private,Yes,Yes,<Null>
+1700,,5668,7/18/17,2010s,2017,Live Oak,30.422808,-97.731278,Private,Yes,Yes,<Null>
+1701,,5668,7/18/17,2010s,2017,Live Oak,30.421555,-97.732765,Private,Yes,<Null>,Yes
+1702,,5724,7/19/17,2010s,2017,Live Oak,30.266622,-97.792437,Unknown,Yes,Yes,<Null>
+1703,,5669,7/24/17,2010s,2017,Live Oak,30.421975,-97.73286,Private,Yes,<Null>,<Null>
+1704,,5669,7/24/17,2010s,2017,Live Oak,30.422466,-97.732272,Private,Yes,<Null>,<Null>
+1705,,5669,7/24/17,2010s,2017,Live Oak,30.422598,-97.735386,Unknown,Yes,Yes,<Null>
+1706,,5669,7/24/17,2010s,2017,Live Oak,30.422297,-97.73634,Unknown,Yes,<Null>,Yes
+1707,,5817,7/25/17,2010s,2017,Live Oak,30.205676,-97.844938,Unknown,Yes,<Null>,Yes
+1708,,5829,7/27/17,2010s,2017,Live Oak,30.24958,-97.780038,Public,Yes,<Null>,<Null>
+1709,,5829,7/27/17,2010s,2017,Live Oak,30.249575,-97.780031,Municipal - ROW,Yes,<Null>,<Null>
+1710,,5829,8/1/17,2010s,2017,Live Oak,30.249265,-97.780629,Municipal - ROW,Yes,<Null>,<Null>
+1711,,5892,8/1/17,2010s,2017,Live Oak,30.225555,-97.790651,Public,Yes,<Null>,<Null>
+1712,,5892,8/1/17,2010s,2017,Live Oak,30.225549,-97.790644,Municipal - ROW,Yes,<Null>,<Null>
+1713,,5892,8/1/17,2010s,2017,Live Oak,30.225559,-97.790676,Municipal - ROW,Yes,<Null>,<Null>
+1714,,16676,8/9/17,2010s,2017,Live Oak,30.211255,-97.799173,Municipal - Parkland,Yes,<Null>,<Null>
+1715,,16676,8/10/17,2010s,2017,Live Oak,30.211022,-97.799168,Municipal - Parkland,Yes,<Null>,<Null>
+1716,,16676,8/10/17,2010s,2017,Live Oak,30.21088,-97.799108,Municipal - Parkland,Yes,<Null>,<Null>
+1717,,5806,8/22/17,2010s,2017,Live Oak,30.229277,-97.848366,Public,Yes,<Null>,<Null>
+1718,,5806,8/22/17,2010s,2017,Live Oak,30.229272,-97.848358,Municipal - ROW,Yes,<Null>,<Null>
+1719,,14534,8/22/17,2010s,2017,Live Oak,30.203001,-97.812819,Public,Yes,<Null>,<Null>
+1720,,14534,8/22/17,2010s,2017,Live Oak,30.202996,-97.812811,Municipal - ROW,Yes,<Null>,<Null>
+1721,,14561,8/22/17,2010s,2017,Live Oak,30.266271,-97.805603,Public,Yes,<Null>,<Null>
+1722,,14561,8/22/17,2010s,2017,Live Oak,30.266474,-97.805342,Public,Yes,<Null>,<Null>
+1723,,14561,8/22/17,2010s,2017,Live Oak,30.266266,-97.805595,Municipal - ROW,Yes,<Null>,<Null>
+1724,,14561,8/22/17,2010s,2017,Live Oak,30.266469,-97.805334,Municipal - ROW,Yes,<Null>,<Null>
+1725,,14526,8/29/17,2010s,2017,Live Oak,30.183904,-97.890594,Private,Yes,<Null>,<Null>
+1726,,14526,8/29/17,2010s,2017,Live Oak,30.183899,-97.890587,Private,Yes,<Null>,<Null>
+1727,,14526,8/29/17,2010s,2017,Live Oak,30.183953,-97.890569,Private,Yes,<Null>,<Null>
+1728,,16891,8/29/17,2010s,2017,Live Oak,30.434481,-97.75937,Unknown,Yes,Yes,<Null>
+1729,,16811,8/31/17,2010s,2017,Live Oak,30.441689,-97.781086,Unknown,Undetermined,<Null>,Yes
+1730,,5817,9/11/17,2010s,2017,Live Oak,30.207879,-97.843822,Private,Yes,<Null>,Yes
+1731,,16813,9/19/17,2010s,2017,Live Oak,30.479862,-97.805326,Unknown,Yes,Yes,<Null>
+1732,,14522,9/20/17,2010s,2017,Live Oak,30.210914,-97.880507,Private,Yes,Yes,<Null>
+1733,,5727,10/1/17,2010s,2017,Live Oak,30.249659,-97.793187,Private,Yes,<Null>,<Null>
+1734,,5769,10/1/17,2010s,2017,Live Oaks,30.360108,-97.771411,Unknown,Yes,Yes,<Null>
+1735,,5769,10/1/17,2010s,2017,Live Oak,30.360283,-97.772697,Unknown,Undetermined,<Null>,<Null>
+1736,,5769,10/1/17,2010s,2017,Live Oak,30.360255,-97.773092,Unknown,Undetermined,<Null>,<Null>
+1737,,5829,10/1/17,2010s,2017,Live Oak,30.249105,-97.779622,Private,Yes,Yes,<Null>
+1738,,14585,10/1/17,2010s,2017,<Null>,30.251445,-97.809672,Public,Undetermined,<Null>,<Null>
+1739,,11549,10/2/17,2010s,2017,Live Oak,30.463762,-97.807483,Private,Yes,<Null>,Yes
+1740,,11549,10/2/17,2010s,2017,Live Oak,30.461633,-97.807607,Private,Yes,<Null>,Yes
+1741,,11549,10/2/17,2010s,2017,Live Oak,30.460332,-97.808796,Private,Yes,<Null>,Yes
+1742,,11549,10/2/17,2010s,2017,Live Oak,30.461874,-97.809194,Private,Yes,<Null>,Yes
+1743,,11549,10/2/17,2010s,2017,Live Oak,30.463432,-97.80952,Unknown,Yes,Yes,<Null>
+1744,,16867,10/4/17,2010s,2017,Live Oak,30.453765,-97.802158,Private,Yes,<Null>,Yes
+1745,,14620,10/4/17,2010s,2017,Live Oak,30.452048,-97.802806,Private,Yes,Yes,Yes
+1746,,14598,10/9/17,2010s,2017,Live Oak,30.44945,-97.804705,Private,Yes,<Null>,Yes
+1747,,14598,10/9/17,2010s,2017,Live Oak,30.450641,-97.804692,Private,Yes,<Null>,Yes
+1748,,14598,10/9/17,2010s,2017,Live Oak,30.450307,-97.805543,Private,Yes,<Null>,Yes
+1749,,14598,10/9/17,2010s,2017,Live Oak,30.451354,-97.805098,Private,Yes,<Null>,Yes
+1750,,14599,10/9/17,2010s,2017,Live Oak,30.451656,-97.806795,Private,Yes,<Null>,Yes
+1751,,14598,10/9/17,2010s,2017,Live Oak,30.45038,-97.803278,Unknown,Yes,Yes,<Null>
+1752,,14598,10/9/17,2010s,2017,Live Oak,30.45151,-97.804928,Unknown,Yes,Yes,Yes
+1753,,16871,10/12/17,2010s,2017,Live Oak,30.446202,-97.793686,Unknown,Yes,Yes,Yes
+1754,,5681,10/27/17,2010s,2017,Live Oak,30.41447,-97.683108,Public,Yes,<Null>,<Null>
+1755,,5681,10/27/17,2010s,2017,Live Oak,30.413782,-97.682001,Public,Yes,<Null>,<Null>
+1756,,5681,10/27/17,2010s,2017,Live Oak,30.413553,-97.682029,Public,Yes,<Null>,<Null>
+1757,,5681,10/27/17,2010s,2017,Live Oak,30.414185,-97.681811,Public,Yes,<Null>,<Null>
+1758,,5681,10/27/17,2010s,2017,Live Oak,30.413547,-97.682021,Municipal - ROW,Yes,<Null>,<Null>
+1759,,5681,10/27/17,2010s,2017,Live Oak,30.414465,-97.6831,Municipal - ROW,Yes,<Null>,<Null>
+1760,,5681,10/27/17,2010s,2017,Live Oak,30.414587,-97.68289,Municipal - ROW,Yes,<Null>,<Null>
+1761,,5681,10/27/17,2010s,2017,Live Oak,30.41438,-97.683167,Municipal - ROW,Yes,<Null>,<Null>
+1762,,5681,10/27/17,2010s,2017,Live Oak,30.413776,-97.681993,Municipal - ROW,Yes,<Null>,<Null>
+1763,,5681,10/27/17,2010s,2017,Live Oak,30.413742,-97.681982,Municipal - ROW,Yes,<Null>,<Null>
+1764,,5681,10/27/17,2010s,2017,Live Oak,30.414371,-97.682421,Municipal - ROW,Yes,<Null>,<Null>
+1765,,5681,10/27/17,2010s,2017,Live Oak,30.414341,-97.682364,Municipal - ROW,Yes,<Null>,<Null>
+1766,,5681,10/27/17,2010s,2017,Live Oak,30.414556,-97.683037,Municipal - ROW,Yes,<Null>,<Null>
+1767,,5681,10/27/17,2010s,2017,Live Oak,30.41418,-97.681804,Municipal - ROW,Yes,<Null>,<Null>
+1768,,5681,10/30/17,2010s,2017,Live Oak,30.413379,-97.682093,Public,Yes,<Null>,<Null>
+1769,,5681,10/30/17,2010s,2017,Live Oak,30.413179,-97.6821,Public,Yes,<Null>,<Null>
+1770,,5681,10/30/17,2010s,2017,Live Oak,30.413174,-97.682093,Municipal - ROW,Yes,<Null>,<Null>
+1771,,5681,10/30/17,2010s,2017,Live Oak,30.413115,-97.682098,Municipal - ROW,Yes,<Null>,<Null>
+1772,,5681,10/30/17,2010s,2017,Live Oak,30.413374,-97.682086,Municipal - ROW,Yes,<Null>,<Null>
+1773,,5681,10/30/17,2010s,2017,Live Oak,30.413308,-97.682088,Municipal - ROW,Yes,<Null>,<Null>
+1774,,5771,11/13/17,2010s,2017,Live Oak,30.303793,-97.771435,Public,Yes,<Null>,<Null>
+1775,,5771,11/13/17,2010s,2017,Live Oak,30.303788,-97.771427,Municipal - ROW,Yes,<Null>,<Null>
+1776,,5829,11/13/17,2010s,2017,Live Oak,30.251309,-97.778046,Public,Yes,<Null>,<Null>
+1777,,5829,11/13/17,2010s,2017,Live Oak,30.251303,-97.778039,Municipal - ROW,Yes,<Null>,<Null>
+1778,,14534,11/13/17,2010s,2017,Live Oak,30.200871,-97.815403,Private,Yes,<Null>,<Null>
+1779,,14534,11/13/17,2010s,2017,Live Oak,30.200879,-97.815468,Municipal - ROW,Yes,<Null>,<Null>
+1780,,14534,11/13/17,2010s,2017,Live Oak,30.200866,-97.815395,Private,Yes,<Null>,<Null>
+1781,,14598,11/13/17,2010s,2017,Live Oak,30.4503,-97.805385,Private,Yes,<Null>,<Null>
+1782,,14598,11/13/17,2010s,2017,Live Oak,30.450294,-97.805377,Private,Yes,<Null>,<Null>
+1783,,14598,11/30/17,2010s,2017,Live Oak,30.45069,-97.804891,Private,Yes,<Null>,<Null>
+1784,,14598,11/30/17,2010s,2017,Live Oak,30.450685,-97.804883,Private,Yes,<Null>,<Null>
+1785,,14643,12/6/17,2010s,2017,Live Oak,30.201586,-97.82956,Private,Yes,<Null>,Yes
+1786,,5710,12/12/17,2010s,2017,Live Oak,30.426271,-97.769142,Private,Yes,<Null>,<Null>
+1787,,5710,12/12/17,2010s,2017,Live Oak,30.42562,-97.770068,Private,Yes,<Null>,<Null>
+1788,,5771,12/13/17,2010s,2017,Live Oak,30.301924,-97.776602,Private,Yes,Yes,<Null>
+1789,,5771,12/13/17,2010s,2017,Live Oak,30.301784,-97.776056,Unknown,Yes,Yes,<Null>
+1790,,5752,1/8/18,2010s,2018,Live Oak,30.281694,-97.778157,Private,Yes,<Null>,<Null>
+1791,,16676,4/6/18,2010s,2018,Live Oak,30.210631,-97.799781,Public,Yes,<Null>,<Null>
+1792,,16676,4/6/18,2010s,2018,Live Oak,30.211998,-97.79871,Municipal - Parkland,Yes,<Null>,<Null>
+1793,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1794,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1795,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1796,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1797,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1798,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1799,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1800,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1801,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1802,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1803,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1804,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1805,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1806,,16676,4/6/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1807,,16676,4/6/18,2010s,2018,Live Oak,30.211063,-97.799525,Municipal - Parkland,Yes,<Null>,<Null>
+1808,,5778,4/10/18,2010s,2018,Live Oak,30.192374,-97.801498,Public,Yes,<Null>,<Null>
+1809,,5778,4/11/18,2010s,2018,Live Oak,30.192995,-97.80228,Public,Yes,<Null>,<Null>
+1810,,5806,4/12/18,2010s,2018,Live Oak,30.229169,-97.848697,Public,Yes,<Null>,<Null>
+1811,,5806,4/12/18,2010s,2018,Live Oak,30.229163,-97.848689,Municipal - ROW,Yes,<Null>,<Null>
+1812,,16846,4/13/18,2010s,2018,Live Oak,30.181999,-97.912287,Public,Yes,<Null>,<Null>
+1813,,16846,4/13/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1814,,16676,4/16/18,2010s,2018,Live Oak,30.212086,-97.798696,Municipal - Parkland,Yes,<Null>,<Null>
+1815,,16846,4/16/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1816,,16846,4/16/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1817,,16846,4/18/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1818,,16846,4/18/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1819,,16846,4/18/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1820,,16846,4/18/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1821,,16846,4/18/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1822,,16846,4/18/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1823,,16846,4/20/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1824,,16846,4/20/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1825,,16846,4/20/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1826,,16846,4/20/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1827,,16846,4/20/18,2010s,2018,Live Oak,30.181994,-97.91228,Municipal - Parkland,Yes,<Null>,<Null>
+1828,,5668,4/30/18,2010s,2018,<Null>,30.423519,-97.729672,Private,Yes,<Null>,<Null>
+1829,,5771,4/30/18,2010s,2018,Live Oak,30.304787,-97.771013,Public,No,<Null>,<Null>
+1830,,5783,4/30/18,2010s,2018,Live Oak,30.23319,-97.783654,Public,Yes,<Null>,<Null>
+1831,,5806,4/30/18,2010s,2018,Live Oak,30.229068,-97.84847,Private,Yes,<Null>,<Null>
+1832,,5806,4/30/18,2010s,2018,Live Oak,30.229136,-97.848259,Private,Yes,<Null>,<Null>
+1833,,16676,4/30/18,2010s,2018,<Null>,30.210236,-97.803032,Public,Yes,<Null>,<Null>
+1834,,14534,5/8/18,2010s,2018,Live Oak,30.202272,-97.812555,Private,Yes,<Null>,<Null>
+1835,,16676,5/8/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1836,,16676,5/8/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1837,,16676,5/8/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1838,,16676,5/8/18,2010s,2018,Live Oak,30.210626,-97.799773,Municipal - Parkland,Yes,<Null>,<Null>
+1839,,5762,5/9/18,2010s,2018,Live Oak,30.340927,-97.780509,Private,Yes,Yes,<Null>
+1840,,5762,5/9/18,2010s,2018,Live Oak,30.340857,-97.78031,Private,Yes,Yes,<Null>
+1841,,5762,5/9/18,2010s,2018,"Live Oak, Red Oak",30.34023,-97.780314,Private,Undetermined,No,<Null>
+1842,,5778,5/9/18,2010s,2018,<Null>,30.193068,-97.802442,Public,No,<Null>,<Null>
+1843,,5778,5/9/18,2010s,2018,<Null>,30.193068,-97.802442,Public,No,<Null>,<Null>
+1844,,16676,5/9/18,2010s,2018,Live Oak,30.210257,-97.798912,Municipal - Parkland,Yes,<Null>,<Null>
+1845,,16676,5/9/18,2010s,2018,Live Oak,30.210489,-97.798752,Municipal - Parkland,Yes,<Null>,<Null>
+1846,,16676,5/9/18,2010s,2018,Live Oak,30.210609,-97.798796,Municipal - Parkland,Yes,<Null>,<Null>
+1847,,16676,5/9/18,2010s,2018,Live Oak,30.210688,-97.798653,Municipal - Parkland,Yes,<Null>,<Null>
+1848,,16676,5/9/18,2010s,2018,Live Oak,30.210812,-97.798767,Municipal - Parkland,Yes,<Null>,<Null>
+1849,,16676,5/9/18,2010s,2018,Live Oak,30.21067,-97.798711,Municipal - Parkland,Yes,<Null>,<Null>
+1850,,5829,5/15/18,2010s,2018,Live Oak,30.249075,-97.779638,Private,Yes,Yes,Yes
+1851,,5829,5/15/18,2010s,2018,Live Oak,30.249563,-97.779758,Public,Yes,<Null>,<Null>
+1852,,5829,5/15/18,2010s,2018,Live Oak,30.249656,-97.779879,Public,Yes,<Null>,<Null>
+1853,,5829,5/15/18,2010s,2018,<Null>,30.250273,-97.78034,Public,Yes,<Null>,<Null>
+1854,,<Null>,5/15/18,2010s,2018,Live Oak,30.148031,-97.821073,<Null>,Maybe,<Null>,<Null>
+1855,,14538,6/1/18,2010s,2018,Live Oak,30.199084,-97.850124,Private,Undetermined,<Null>,<Null>
+1856,,5806,6/8/18,2010s,2018,Live Oak,30.229353,-97.848629,Private,Yes,<Null>,<Null>
+1857,,8445,6/13/18,2010s,2018,Live Oak,30.347052,-97.758352,Private,Yes,Yes,Yes
+1858,,8445,6/13/18,2010s,2018,Live Oak,30.34682,-97.758631,Private,Yes,Yes,Yes
+1859,,8445,6/13/18,2010s,2018,Live Oak,30.346887,-97.757903,Private,Yes,Yes,Yes
+1860,,14549,6/13/18,2010s,2018,Live Oak,30.490206,-97.76763,Private,Yes,<Null>,<Null>
+1861,,14549,6/13/18,2010s,2018,Live Oak,30.489791,-97.767433,Private,Yes,Yes,Yes
+1862,,14549,6/13/18,2010s,2018,Live Oak,30.488875,-97.768171,Private,Yes,<Null>,<Null>
+1863,,14549,6/13/18,2010s,2018,Live Oak,30.489213,-97.766263,Private,No,<Null>,<Null>
+1864,,14576,6/13/18,2010s,2018,Live Oak,30.487008,-97.764675,Private,Yes,Yes,Yes
+1865,,14576,6/13/18,2010s,2018,Live Oak,30.486823,-97.76462,Private,Yes,Yes,Yes
+1866,,14549,6/13/18,2010s,2018,Live Oak,30.49132,-97.767139,Private,Yes,<Null>,Yes
+1867,,8445,6/13/18,2010s,2018,Live Oak,30.347457,-97.758375,Private,Yes,Yes,Yes
+1868,,5781,7/3/18,2010s,2018,Live Oak,30.232195,-97.757568,Private,Yes,<Null>,Yes
+1869,,5781,7/3/18,2010s,2018,Live Oak,30.231902,-97.757506,Private,Yes,<Null>,Yes
+1870,,5781,7/3/18,2010s,2018,Live Oak,30.231746,-97.757441,Private,Yes,<Null>,Yes
+1871,,5781,7/3/18,2010s,2018,Live Oak,30.231928,-97.757948,Private,Yes,<Null>,Yes
+1872,,5781,7/3/18,2010s,2018,Live Oak,30.231563,-97.758057,Private,Undetermined,<Null>,Yes
+1873,,5781,7/3/18,2010s,2018,Live Oak,30.231491,-97.758022,Private,Undetermined,<Null>,<Null>
+1874,,5781,7/3/18,2010s,2018,Live Oak,30.231377,-97.758042,Private,Undetermined,<Null>,<Null>
+1875,,5781,7/3/18,2010s,2018,Live Oak,30.230912,-97.756609,Private,Yes,<Null>,Yes
+1876,,5781,7/3/18,2010s,2018,Live Oak,30.230894,-97.75556,Private,Yes,<Null>,<Null>
+1877,,5781,7/3/18,2010s,2018,Live Oak,30.231361,-97.75498,Private,Yes,<Null>,Yes
+1878,,5781,7/3/18,2010s,2018,Live Oak,30.231667,-97.755959,Private,Yes,<Null>,Yes
+1879,,5781,7/3/18,2010s,2018,Live Oak,30.231588,-97.755869,Private,Yes,<Null>,Yes
+1880,,5781,7/3/18,2010s,2018,Live Oak,30.231755,-97.756366,Private,Yes,<Null>,Yes
+1881,,5781,7/3/18,2010s,2018,Live Oak,30.231757,-97.756313,Private,Yes,<Null>,Yes
+1882,,5781,7/3/18,2010s,2018,Live Oak,30.231801,-97.756183,Private,Yes,<Null>,Yes
+1883,,5781,7/3/18,2010s,2018,Live Oak,30.231831,-97.755974,Private,Yes,<Null>,Yes
+1884,,5781,7/3/18,2010s,2018,Live Oak,30.23177,-97.755804,Private,Yes,<Null>,Yes
+1885,,5781,7/3/18,2010s,2018,Live Oak,30.231669,-97.755744,Private,Yes,<Null>,Yes
+1886,,5781,7/3/18,2010s,2018,Live Oak,30.231708,-97.757496,Private,Yes,<Null>,Yes
+1887,,5781,7/3/18,2010s,2018,Live Oak,30.231532,-97.756166,Private,Yes,<Null>,Yes
+1888,,14592,7/10/18,2010s,2018,Live Oak,30.207087,-97.884396,Private,Yes,<Null>,Yes
+1889,,<Null>,9/21/18,2010s,2018,Live Oak,30.288403,-97.823104,<Null>,Maybe,<Null>,<Null>
+1890,,5668,10/1/18,2010s,2018,<Null>,30.423514,-97.729664,Private,Yes,<Null>,<Null>
+1891,,5771,10/1/18,2010s,2018,Live Oak,30.304782,-97.771005,Municipal - Parkland,No,<Null>,<Null>
+1892,,5771,10/1/18,2010s,2018,Live Oak,30.304795,-97.770939,Municipal - Parkland,No,<Null>,<Null>
+1893,,5771,10/1/18,2010s,2018,Live Oak,30.304787,-97.770977,Municipal - Parkland,No,<Null>,<Null>
+1894,,5783,10/1/18,2010s,2018,Live Oak,30.233184,-97.783646,Municipal - ROW,Yes,<Null>,<Null>
+1895,,5783,10/1/18,2010s,2018,Live Oak,30.233208,-97.783633,Municipal - ROW,Yes,<Null>,<Null>
+1896,,5806,10/1/18,2010s,2018,Live Oak,30.229131,-97.848252,Private,Yes,<Null>,<Null>
+1897,,5806,10/1/18,2010s,2018,Live Oak,30.229063,-97.848462,Private,Yes,<Null>,<Null>
+1898,,5806,10/1/18,2010s,2018,Live Oak,30.229067,-97.848426,Private,Yes,<Null>,<Null>
+1899,,5829,10/1/18,2010s,2018,<Null>,30.249467,-97.779526,Private,Yes,<Null>,<Null>
+1900,,16676,10/1/18,2010s,2018,Live Oak,30.210625,-97.799219,Municipal - Parkland,Yes,<Null>,<Null>
+1901,,16676,10/1/18,2010s,2018,Live Oak,30.210903,-97.799854,Municipal - Parkland,Yes,<Null>,<Null>
+1902,,16676,10/1/18,2010s,2018,<Null>,30.210231,-97.803024,Municipal - ROW,Yes,<Null>,<Null>
+1903,,16676,10/1/18,2010s,2018,Live Oak,30.211289,-97.799294,Municipal - Parkland,Yes,<Null>,<Null>
+1904,,16676,10/1/18,2010s,2018,Live Oak,30.211357,-97.799185,Municipal - Parkland,Yes,<Null>,<Null>
+1905,,16676,10/1/18,2010s,2018,Live Oak,30.210495,-97.799067,Municipal - Parkland,Yes,<Null>,<Null>
+1906,,16676,10/1/18,2010s,2018,Live Oak,30.210355,-97.799351,Municipal - Parkland,Yes,<Null>,<Null>
+1907,,16676,10/1/18,2010s,2018,Live Oak,30.210291,-97.799378,Municipal - Parkland,Yes,<Null>,<Null>
+1908,,16676,10/1/18,2010s,2018,Live Oak,30.211167,-97.799265,Municipal - Parkland,Yes,<Null>,<Null>
+1909,,16676,10/1/18,2010s,2018,Live Oak,30.210956,-97.798985,Municipal - Parkland,Yes,<Null>,<Null>
+1910,,16676,10/1/18,2010s,2018,Live Oak,30.21082,-97.798889,Municipal - Parkland,Yes,<Null>,<Null>
+1911,,16676,10/1/18,2010s,2018,Live Oak,30.210686,-97.798533,Municipal - Parkland,Yes,<Null>,<Null>
+1912,,16676,10/1/18,2010s,2018,Live Oak,30.211492,-97.799105,Municipal - Parkland,Yes,<Null>,<Null>
+1913,,16676,10/1/18,2010s,2018,Live Oak,30.211507,-97.799089,Municipal - Parkland,Yes,<Null>,<Null>
+1914,,16676,10/1/18,2010s,2018,Live Oak,30.211534,-97.799076,Municipal - Parkland,Yes,<Null>,<Null>
+1915,,16676,10/1/18,2010s,2018,Live Oak,30.211585,-97.799207,Municipal - Parkland,Yes,<Null>,<Null>
+1916,,16676,10/1/18,2010s,2018,Live Oak,30.211607,-97.799201,Municipal - Parkland,Yes,<Null>,<Null>
+1917,,16676,10/1/18,2010s,2018,Live Oak,30.211624,-97.799287,Municipal - Parkland,Yes,<Null>,<Null>
+1918,,<Null>,10/23/18,2010s,2018,Live Oak,30.436561,-97.912741,<Null>,Maybe,<Null>,<Null>
+1919,,5702,3/29/19,2010s,2019,Live Oak,30.249495,-97.745149,<Null>,Yes,<Null>,<Null>
+1920,,14549,4/5/19,2010s,2019,Live Oak,30.491443,-97.767209,Private,Yes,<Null>,Yes
+1921,,11549,4/12/19,2010s,2019,Live Oak,30.462358,-97.809476,<Null>,Yes,<Null>,<Null>
+1922,,16676,4/15/19,2010s,2019,Live Oak,30.211728,-97.798393,Municipal - Parkland,Yes,<Null>,<Null>
+1923,,16676,4/15/19,2010s,2019,Live Oak,30.211739,-97.798372,Municipal - Parkland,Yes,<Null>,<Null>
+1924,,16676,4/15/19,2010s,2019,Live Oak,30.211443,-97.798505,Municipal - Parkland,Yes,<Null>,<Null>
+1925,,16676,4/15/19,2010s,2019,Live Oak,30.21152,-97.798503,Municipal - Parkland,Yes,<Null>,<Null>
+1926,,16676,4/15/19,2010s,2019,Live Oak,30.211546,-97.798578,Municipal - Parkland,Yes,<Null>,<Null>
+1927,,16676,4/15/19,2010s,2019,Live Oak,30.211561,-97.798584,Municipal - Parkland,Yes,<Null>,<Null>
+1928,,16676,4/15/19,2010s,2019,Live Oak,30.211667,-97.798594,Municipal - Parkland,Yes,<Null>,<Null>
+1929,,16676,4/16/19,2010s,2019,Live Oak,30.211803,-97.798321,Municipal - Parkland,Yes,<Null>,<Null>
+1930,,16676,4/16/19,2010s,2019,Live Oak,30.211884,-97.798347,Municipal - Parkland,Yes,<Null>,<Null>
+1931,,16676,4/16/19,2010s,2019,Live Oak,30.211953,-97.798218,Municipal - Parkland,Yes,<Null>,<Null>
+1932,,16676,4/16/19,2010s,2019,Live Oak,30.211951,-97.798457,Municipal - Parkland,Yes,<Null>,<Null>
+1933,,16676,4/22/19,2010s,2019,Live Oak,30.211985,-97.798449,Municipal - Parkland,Yes,<Null>,<Null>
+1934,,16676,4/22/19,2010s,2019,Live Oak,30.211988,-97.79844,Municipal - Parkland,Yes,<Null>,<Null>
+1935,,16676,4/23/19,2010s,2019,Live Oak,30.211534,-97.798023,Municipal - Parkland,Yes,<Null>,<Null>
+1936,,5788,4/24/19,2010s,2019,Live Oak,30.212029,-97.801787,<Null>,Yes,<Null>,<Null>
+1937,,16676,5/22/19,2010s,2019,Live Oak,30.21036,-97.799358,Municipal - Parkland,Yes,<Null>,<Null>
+1938,,16676,5/22/19,2010s,2019,Live Oak,30.210296,-97.799386,Municipal - Parkland,Yes,<Null>,<Null>
+1939,,16676,5/22/19,2010s,2019,Live Oak,30.210242,-97.798509,Municipal - Parkland,Yes,<Null>,<Null>
+1940,,16676,5/22/19,2010s,2019,Live Oak,30.210237,-97.798521,Municipal - Parkland,Yes,<Null>,<Null>
+1941,,16676,5/22/19,2010s,2019,Live Oak,30.211545,-97.79811,Municipal - Parkland,Yes,<Null>,<Null>
+1942,,16676,5/22/19,2010s,2019,Live Oak,30.211082,-97.798268,Municipal - Parkland,Yes,<Null>,<Null>
+1943,,16676,5/22/19,2010s,2019,Live Oak,30.211005,-97.798436,Municipal - Parkland,Yes,<Null>,<Null>
+1944,,16676,5/23/19,2010s,2019,Live Oak,30.211593,-97.797739,Municipal - Parkland,Yes,<Null>,<Null>
+1945,,16676,5/23/19,2010s,2019,Live Oak,30.21153,-97.79764,Municipal - Parkland,Yes,<Null>,<Null>
+1946,,16676,5/23/19,2010s,2019,Live Oak,30.211516,-97.797614,Municipal - Parkland,Yes,<Null>,<Null>
+1947,,16676,5/23/19,2010s,2019,Live Oak,30.211475,-97.797637,Municipal - Parkland,Yes,<Null>,<Null>
+1948,,16676,5/23/19,2010s,2019,Live Oak,30.211507,-97.797633,Municipal - Parkland,Yes,<Null>,<Null>
+1949,,16676,5/23/19,2010s,2019,Live Oak,30.211616,-97.797437,Municipal - Parkland,Yes,<Null>,<Null>
+1950,,16676,5/23/19,2010s,2019,Live Oak,30.211688,-97.797593,Municipal - Parkland,Yes,<Null>,<Null>
+1951,,16676,5/23/19,2010s,2019,Live Oak,30.211629,-97.797658,Municipal - Parkland,Yes,<Null>,<Null>
+1952,,16676,5/25/19,2010s,2019,Live Oak,30.210223,-97.799106,Municipal - Parkland,Yes,<Null>,<Null>
+1953,,5778,5/31/19,2010s,2019,Live Oak,30.192835,-97.802058,Municipal - ROW,Yes,<Null>,<Null>
+1954,,5778,5/31/19,2010s,2019,Live Oak,30.19265,-97.801795,Municipal - ROW,Yes,<Null>,<Null>
+1955,,16676,5/31/19,2010s,2019,Live Oak,30.211719,-97.798006,Municipal - Parkland,Yes,<Null>,<Null>
+1956,,16676,5/31/19,2010s,2019,Live Oak,30.211698,-97.797992,Municipal - Parkland,Yes,<Null>,<Null>
+1957,,16676,5/31/19,2010s,2019,Live Oak,30.211386,-97.7984,Municipal - Parkland,Yes,<Null>,<Null>
+1958,,16676,5/31/19,2010s,2019,Live Oak,30.211374,-97.798373,Municipal - Parkland,Yes,<Null>,<Null>
+1959,,16782,5/31/19,2010s,2019,Live Oak,30.400362,-97.683815,Municipal - Parkland,Yes,<Null>,<Null>
+1960,,16676,6/4/19,2010s,2019,Live Oak,30.211786,-97.798002,Municipal - Parkland,Yes,<Null>,<Null>
+1961,,16676,6/4/19,2010s,2019,Live Oak,30.21162,-97.797876,Municipal - Parkland,Yes,<Null>,<Null>
+1962,,16709,6/5/19,2010s,2019,Live Oak,30.22395,-97.868733,Public,Yes,<Null>,<Null>
+1963,,16709,6/5/19,2010s,2019,Live Oak,30.224001,-97.868372,Private,Yes,Yes,Yes
+1964,,14544,6/5/19,2010s,2019,Live Oak,30.224155,-97.868253,Private,Yes,Yes,Yes
+1965,,14544,6/5/19,2010s,2019,Live Oak,30.224648,-97.868468,Public,Yes,Yes,Yes
+1966,,16709,6/5/19,2010s,2019,<Null>,30.224424,-97.86856,Unknown,Yes,Yes,Yes
+1967,,14544,6/5/19,2010s,2019,Live Oak,30.224118,-97.867658,Public,No,<Null>,<Null>
+1968,,14544,6/5/19,2010s,2019,Live Oak,30.224249,-97.86753,Public,Yes,No,<Null>
+1969,,14544,6/6/19,2010s,2019,Live Oak,30.224795,-97.868274,<Null>,Yes,<Null>,<Null>
+1970,,16676,6/7/19,2010s,2019,Live Oak,30.211685,-97.797778,Municipal - Parkland,Yes,<Null>,<Null>
+1971,,16676,6/7/19,2010s,2019,Live Oak,30.211751,-97.79771,Municipal - Parkland,Yes,<Null>,<Null>
+1972,,16676,6/7/19,2010s,2019,Live Oak,30.211758,-97.797712,Municipal - Parkland,Yes,<Null>,<Null>
+1973,,16676,6/7/19,2010s,2019,Live Oak,30.211757,-97.797724,Municipal - Parkland,Yes,<Null>,<Null>
+1974,,16676,6/7/19,2010s,2019,Live Oak,30.211368,-97.797507,Municipal - Parkland,Yes,<Null>,<Null>
+1975,,5771,7/2/19,2010s,2019,Live Oak,30.299095,-97.773093,<Null>,Yes,<Null>,<Null>
+1976,,5788,7/19/19,2010s,2019,Live Oak,30.211928,-97.804448,<Null>,Yes,<Null>,<Null>
+1977,,14561,7/25/19,2010s,2019,Live Oak,30.267272,-97.806128,<Null>,Yes,<Null>,<Null>
+1978,,5829,7/26/19,2010s,2019,Live Oak,30.249491,-97.779854,Public,Yes,No,No
+1979,,5829,7/26/19,2010s,2019,Live Oak,30.249389,-97.780534,Unknown,No,No,No
+1980,,5778,7/26/19,2010s,2019,Live Oak,30.190898,-97.8018,Public,No,No,<Null>
+1981,,5778,7/26/19,2010s,2019,Live Oak,30.192762,-97.804372,Municipal - ROW,Yes,<Null>,<Null>
+1982,,14609,8/21/19,2010s,2019,Live Oak,30.209167,-97.828669,Municipal - Parkland,Yes,Yes,Yes
+1983,,5736,10/1/19,2010s,2019,Live Oak,30.190474,-97.869373,Private,Yes,<Null>,<Null>
+1984,,16709,10/1/19,2010s,2019,Live Oak,30.224665,-97.868813,Private,Yes,<Null>,<Null>
+1985,,16709,10/1/19,2010s,2019,Live Oak,30.224811,-97.868697,Private,Yes,<Null>,<Null>
+1986,,5681,10/9/19,2010s,2019,Live Oak,30.416488,-97.682494,Public,Yes,<Null>,<Null>
+1987,,5673,11/12/19,2010s,2019,Live Oak,30.417179,-97.727201,<Null>,Yes,<Null>,<Null>
+1988,,5771,12/23/19,2010s,2019,Live Oak,30.304247,-97.770202,Municipal - Parkland,Yes,Yes,Yes
+1989,,<Null>,4/17/20,2020s,2020,Live Oak,30.189374,-97.820251,<Null>,Yes,<Null>,<Null>
+1990,,14539,5/8/20,2020s,2020,Live Oak,30.187275,-97.887965,Private,Yes,Yes,Nearby trees have been injected
+1991,,14539,5/8/20,2020s,2020,Live Oak,30.187171,-97.887893,Private,Yes,Yes,Nearby trees have been injected
+1992,,14539,5/8/20,2020s,2020,Live Oak,30.18713,-97.88736,Private,Undetermined,Yes,Undetermined
+1993,,14539,5/8/20,2020s,2020,Live Oak,30.18704,-97.887529,Private,Yes,Yes,Nearby trees have been injected
+1994,,14539,5/8/20,2020s,2020,Live Oak,30.186776,-97.887714,Private,Yes,Yes,Yes
+1995,,5778,6/19/20,2020s,2020,Live Oak,30.192949,-97.800519,Municipal - ROW,Nearby,No,Yes
+1996,,<Null>,7/6/20,2020s,2020,Live Oak,30.136158,-97.79588,<Null>,Maybe,<Null>,<Null>
+1997,,<Null>,7/15/20,2020s,2020,Live Oak,30.246161,-97.980707,<Null>,Yes,<Null>,<Null>
+1998,,14538,9/11/20,2020s,2020,Live Oak,30.19883,-97.846927,Public,Yes,Yes,Yes
+1999,,5734,10/1/20,2020s,2020,Live Oak,30.181828,-97.828898,Private,Yes,Yes,<Null>
+2000,,14616,10/1/20,2020s,2020,<Null>,30.156746,-97.862485,Unknown,Yes,<Null>,<Null>
+2001,,14616,10/1/20,2020s,2020,Live Oak,30.157188,-97.864038,Private,Yes,Yes,Moving fast
+2002,,14625,10/1/20,2020s,2020,Live Oak,30.196876,-97.904325,Private,Yes,<Null>,<Null>
+2003,,14633,10/1/20,2020s,2020,Live Oak,30.18273,-97.889263,Private,Yes,<Null>,<Null>
+2004,,<Null>,6/9/21,2020s,2021,Live Oak,30.273445,-97.818677,<Null>,Yes,<Null>,<Null>
+2005,,5689,10/1/21,2000s,2000,Live Oaks,30.384903,-97.689617,Unknown,Yes,Yes,Yes
+2006,,14625,10/1/21,2020s,2021,<Null>,30.198202,-97.902281,Private,Yes,Yes,<Null>
+2007,,16834,10/1/21,2020s,2021,<Null>,30.273293,-97.818839,Unknown,Yes,Yes,<Null>
+2008,,16834,10/1/21,2020s,2021,<Null>,30.273063,-97.818841,Unknown,Yes,Yes,<Null>
+2009,,16860,10/1/21,2020s,2021,<Null>,30.326101,-97.709627,Public,Maybe,<Null>,<Null>
+2010,,14544,11/1/21,2020s,2021,Live Oak,30.225136,-97.868501,Private,Yes,Yes,Yes
+2011,,<Null>,12/14/21,2020s,2021,Live Oak,30.285298,-97.875938,<Null>,Yes,<Null>,<Null>
+2012,,5781,1/5/22,2020s,2022,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2013,,5781,1/5/22,2020s,2022,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2014,,5781,1/7/22,2020s,2022,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2015,,5781,1/7/22,2020s,2022,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2016,,5781,1/10/22,2020s,2022,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2017,,<Null>,1/21/22,2020s,2022,Live Oak,30.339078,-97.884978,Public,Yes,<Null>,<Null>
+2018,,5781,3/1/22,2020s,2022,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2019,,5781,3/1/22,2020s,2022,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2020,,5781,3/1/22,2020s,2022,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2021,,<Null>,3/7/22,2020s,2022,Live Oak,30.169813,-97.844327,Private,Yes,<Null>,<Null>
+2022,,<Null>,3/8/22,2020s,2022,Live Oak,30.248739,-97.779971,Private,Yes,<Null>,<Null>
+2023,,<Null>,3/24/22,2020s,2022,Live Oak,30.267504,-97.80437,Private,Yes,<Null>,<Null>
+2024,,<Null>,4/14/22,2020s,2022,Live Oak,30.210585,-97.882336,Private,Yes,<Null>,<Null>
+2025,,<Null>,4/29/22,2020s,2022,Live Oak,30.293051,-97.88333,<Null>,Yes,<Null>,<Null>
+2026,,<Null>,5/2/22,2020s,2022,Live Oak,30.28682,-97.823694,<Null>,Yes,<Null>,<Null>
+2027,,<Null>,5/10/22,2020s,2022,Live Oak,30.248392,-97.780212,Public,Yes,<Null>,<Null>
+2028,,<Null>,6/16/22,2020s,2022,Live Oak,30.463349,-97.885452,<Null>,Yes,<Null>,<Null>
+2029,,<Null>,6/30/22,2020s,2022,Red Oak,30.320491,-97.850684,<Null>,Yes,<Null>,<Null>
+2030,,<Null>,7/18/22,2020s,2022,Live Oak,30.20336,-97.815317,Private,Yes,<Null>,<Null>
+2031,,<Null>,8/24/22,2020s,2022,Live Oak,30.22393,-97.869091,Private,Yes,<Null>,<Null>
+2032,,<Null>,9/13/22,2020s,2022,Live Oak,30.344675,-97.870804,<Null>,Yes,<Null>,<Null>
+2033,,<Null>,9/21/22,2020s,2022,Live Oak,30.269754,-97.810749,<Null>,Maybe,<Null>,<Null>
+2034,,16744,10/1/22,2010s,2018,Live Oak,30.135783,-97.795635,Public,Maybe,<Null>,<Null>
+2035,,16834,10/1/22,2020s,2021,<Null>,30.273586,-97.818884,Private,Yes,Yes,<Null>
+2036,,<Null>,10/1/22,2020s,2022,<Null>,30.344675,-97.870804,<Null>,Yes,<Null>,<Null>
+2037,,<Null>,10/1/22,2020s,2022,<Null>,30.288403,-97.823104,<Null>,Maybe,<Null>,<Null>
+2038,,<Null>,10/1/22,2020s,2022,<Null>,30.320491,-97.850684,<Null>,Yes,<Null>,<Null>
+2039,,<Null>,10/1/22,2020s,2022,<Null>,30.246161,-97.980707,<Null>,Yes,<Null>,<Null>
+2040,,<Null>,10/1/22,2020s,2022,<Null>,30.136158,-97.79588,<Null>,Maybe,<Null>,<Null>
+2041,,<Null>,10/1/22,2020s,2022,<Null>,30.148031,-97.821073,<Null>,Maybe,<Null>,<Null>
+2042,,<Null>,10/1/22,2020s,2022,<Null>,30.285298,-97.875938,<Null>,Yes,<Null>,<Null>
+2043,,<Null>,10/1/22,2020s,2022,<Null>,30.269754,-97.810749,<Null>,Maybe,<Null>,<Null>
+2044,,<Null>,10/1/22,2020s,2022,<Null>,30.293051,-97.88333,<Null>,Yes,<Null>,<Null>
+2045,,<Null>,10/1/22,2020s,2022,<Null>,30.28682,-97.823694,<Null>,Yes,<Null>,<Null>
+2046,,<Null>,10/1/22,2020s,2022,<Null>,30.189374,-97.820251,<Null>,Yes,<Null>,<Null>
+2047,,<Null>,10/1/22,2020s,2022,<Null>,30.273445,-97.818677,<Null>,Yes,<Null>,<Null>
+2048,,<Null>,10/1/22,2020s,2022,<Null>,30.463349,-97.885452,<Null>,Yes,<Null>,<Null>
+2049,,MansfieldDam19-1,10/1/22,2020s,2022,<Null>,30.436561,-97.912741,<Null>,Maybe,<Null>,<Null>
+2050,,<Null>,12/6/22,2020s,2022,Live Oak,30.225243,-97.86857,Private,Yes,<Null>,<Null>
+2051,,<Null>,12/6/22,2020s,2022,Live Oak,30.225243,-97.86857,Private,Yes,<Null>,<Null>
+2052,,5670,12/7/22,2020s,2022,Live Oak,30.422756,-97.727634,Private,Yes,<Null>,<Null>
+2053,,<Null>,12/7/22,2020s,2022,Live Oak,30.300777,-97.775526,Private,Yes,<Null>,<Null>
+2054,,<Null>,12/12/22,2020s,2022,Live Oak,30.339053,-97.884126,Public,Yes,<Null>,<Null>
+2055,,<Null>,12/19/22,2020s,2022,Live Oak,30.225243,-97.86857,Private,Yes,<Null>,<Null>
+2056,,<Null>,12/20/22,2020s,2022,<Null>,30.194608,-97.861523,<Null>,Yes,<Null>,<Null>
+2057,,<Null>,12/20/22,2020s,2022,Live Oak,30.194608,-97.861523,<Null>,Yes,<Null>,<Null>
+2058,,<Null>,1/25/23,2020s,2023,Live Oak,30.189865,-97.884117,<Null>,Yes,<Null>,<Null>
+2059,,<Null>,1/25/23,2020s,2023,<Null>,30.189865,-97.884117,<Null>,Yes,<Null>,<Null>
+2060,,<Null>,2/17/23,2020s,2023,Live Oak,30.26302,-97.80807,Public,Yes,<Null>,<Null>
+2061,,5769,4/6/23,2020s,2023,Live Oak,30.357018,-97.766125,Private,Yes,<Null>,<Null>
+2062,,5829,5/1/23,2020s,2023,Live Oak,30.251973,-97.779414,Private,Yes,<Null>,<Null>
+2063,,14561,5/4/23,2020s,2023,Live Oak,30.265005,-97.806795,Private,Yes,<Null>,<Null>
+2064,,<Null>,5/23/23,2020s,2023,Live Oak,30.251384,-97.787793,Private,Yes,<Null>,<Null>
+2065,,<Null>,5/23/23,2020s,2023,Live Oak,30.25127,-97.78802,Private,Yes,<Null>,<Null>
+2066,,<Null>,6/5/23,2020s,2023,Live Oak,30.441935,-97.815577,Public,Yes,<Null>,<Null>
+2067,,<Null>,7/6/23,2020s,2023,Live Oak,30.191693,-97.811258,Private,Yes,<Null>,<Null>
+2068,,<Null>,7/6/23,2020s,2023,Live Oak,30.191693,-97.811258,Private,Yes,<Null>,<Null>
+2069,,<Null>,7/6/23,2020s,2023,Live Oak,30.191693,-97.811258,Private,Yes,<Null>,<Null>
+2070,,<Null>,7/14/23,2020s,2023,Live Oak,30.261721,-97.802734,Private,Yes,<Null>,<Null>
+2071,,<Null>,8/3/23,2020s,2023,Live Oak,30.400572,-97.652867,Private,Yes,<Null>,<Null>
+2072,,<Null>,9/14/23,2020s,2023,Live Oak,30.149799,-97.807962,Private,Yes,<Null>,<Null>
+2073,,<Null>,9/14/23,2020s,2023,Live Oak,30.212695,-97.80152,Public,Yes,<Null>,<Null>
+2074,,<Null>,9/14/23,2020s,2023,Live Oak,30.212695,-97.80152,Public,Yes,<Null>,<Null>
+2075,,<Null>,10/30/23,2020s,2023,Live Oak,30.183437,-97.858614,Public,Yes,<Null>,<Null>
+2076,,<Null>,10/30/23,2020s,2023,Live Oak,30.224182,-97.867729,Public,Yes,<Null>,<Null>
+2077,,<Null>,11/6/23,2020s,2023,Live Oak,30.251507,-97.781967,Private,Yes,<Null>,<Null>
+2078,,<Null>,12/20/23,2020s,2023,Live Oak,30.339078,-97.884978,Public,Yes,<Null>,<Null>
+2079,,<Null>,2/5/24,2020s,2024,Live Oak,30.196189,-97.811881,Private,Yes,<Null>,<Null>
+2080,,<Null>,3/13/24,2020s,2024,Live Oak,30.424241,-97.761444,Private,Yes,<Null>,<Null>
+2081,,<Null>,5/14/24,2020s,2024,Live Oak,30.206296,-97.879835,Private,Yes,<Null>,<Null>
+2082,,5807,5/29/24,2020s,2024,Live Oak,30.222814,-97.849193,Private,Yes,<Null>,<Null>
+2083,,<Null>,6/5/24,2020s,2024,Live Oak,30.327947,-97.749058,Public,Yes,<Null>,<Null>
+2084,,6281,7/11/24,2020s,2024,Live Oak,30.204716,-97.856191,Private,Yes,<Null>,<Null>
+2085,,<Null>,7/12/24,2020s,2024,Live Oak,30.149592,-97.808176,Private,Yes,<Null>,<Null>
+2086,,5781,7/24/24,2020s,2024,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2087,,5781,7/24/24,2020s,2024,Live Oak,30.232093,-97.757131,Private,Yes,<Null>,<Null>
+2088,,<Null>,7/24/24,2020s,2024,Live Oak,30.355093,-97.767242,Private,Yes,<Null>,<Null>
+2089,,5723,8/30/24,2020s,2024,Live Oak,30.263367,-97.803622,Private,Yes,<Null>,<Null>
+2090,,<Null>,9/17/24,2020s,2024,Live Oak,30.209209,-97.87973,Public,Yes,<Null>,<Null>
+2091,,5892,10/4/24,2020s,2024,Live Oak,30.225473,-97.790848,Private,Yes,<Null>,<Null>
