@@ -1,39 +1,60 @@
 {
   "metadata": {
-    "generated_date": "2025-11-17T02:47:10.581865",
-    "total_cases": 1672,
+    "generated_at": "2025-11-16T20:47:10.553405",
+    "source_file": "../data/data_cleaned.csv",
+    "total_confirmed_cases": 1672,
     "clustered_cases": 620,
-    "noise_cases": 1052,
-    "num_clusters": 79,
-    "clustering_parameters": {
-      "selected_eps_m": 80.0,
-      "selected_temporal_scale_m": 20.0,
-      "min_samples": 3,
-      "min_unique_years": 2
-    }
+    "cluster_count": 79
   },
+  "parameters": {
+    "selected_eps_m": 80.0,
+    "selected_temporal_scale_m": 20.0,
+    "min_samples": 3,
+    "min_unique_years": 2
+  },
+  "cluster_features_columns": [
+    "cluster_id",
+    "original_label",
+    "point_count",
+    "unique_years",
+    "start_year",
+    "end_year",
+    "year_span",
+    "annual_counts",
+    "centroid_lat",
+    "centroid_lon",
+    "radius_km",
+    "mean_distance_km",
+    "std_distance_km",
+    "area_km2",
+    "point_density_per_km2",
+    "spread_rate_km_per_year",
+    "dominant_species",
+    "dominant_landowner",
+    "eps_m",
+    "temporal_scale_m",
+    "min_samples",
+    "min_unique_years"
+  ],
   "clusters": [
     {
       "cluster_id": 1,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.296167000163774,
-          "longitude": -97.77728766666667
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1989,
-          "year_end": 1990,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 1989,
+      "end_year": 1990,
+      "radius_km": 0.033329590444485704,
+      "centroid": {
+        "lat": 30.296167000163774,
+        "lon": -97.77728766666667
       },
+      "annual_counts": {
+        "1989": 1,
+        "1990": 2
+      },
+      "spread_rate_km_per_year": 0.033329590444485704,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -66,25 +87,22 @@
     },
     {
       "cluster_id": 2,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.252686333334278,
-          "longitude": -97.79104433333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1992,
-          "year_end": 1994,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak, Red Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 1992,
+      "end_year": 1994,
+      "radius_km": 0.0029000928466610633,
+      "centroid": {
+        "lat": 30.252686333334278,
+        "lon": -97.79104433333333
       },
+      "annual_counts": {
+        "1992": 1,
+        "1994": 2
+      },
+      "spread_rate_km_per_year": 0.0014500464233305316,
+      "dominant_species": "Live Oak, Red Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -117,25 +135,25 @@
     },
     {
       "cluster_id": 3,
-      "statistics": {
-        "total_cases": 6,
-        "geographic_center": {
-          "latitude": 30.245314833525182,
-          "longitude": -97.8255835
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1992,
-          "year_end": 1999,
-          "year_span": 7
-        },
-        "species_distribution": {
-          "Live Oak": 6
-        },
-        "landowner_distribution": {
-          "Unknown": 6
-        }
+      "point_count": 6,
+      "unique_years": 5,
+      "start_year": 1992,
+      "end_year": 1999,
+      "radius_km": 0.058129818196422045,
+      "centroid": {
+        "lat": 30.245314833525182,
+        "lon": -97.8255835
       },
+      "annual_counts": {
+        "1992": 1,
+        "1993": 1,
+        "1995": 2,
+        "1997": 1,
+        "1999": 1
+      },
+      "spread_rate_km_per_year": 0.008304259742346007,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -195,25 +213,24 @@
     },
     {
       "cluster_id": 4,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.253691500032744,
-          "longitude": -97.79035725
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1992,
-          "year_end": 1999,
-          "year_span": 7
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 4,
+      "start_year": 1992,
+      "end_year": 1999,
+      "radius_km": 0.051372980409062116,
+      "centroid": {
+        "lat": 30.253691500032744,
+        "lon": -97.79035725
       },
+      "annual_counts": {
+        "1992": 1,
+        "1994": 1,
+        "1997": 1,
+        "1999": 1
+      },
+      "spread_rate_km_per_year": 0.007338997201294588,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -255,25 +272,22 @@
     },
     {
       "cluster_id": 5,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.42032333336624,
-          "longitude": -97.73031966666666
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1994,
-          "year_end": 1995,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 1994,
+      "end_year": 1995,
+      "radius_km": 0.014653055657094642,
+      "centroid": {
+        "lat": 30.42032333336624,
+        "lon": -97.73031966666666
       },
+      "annual_counts": {
+        "1994": 1,
+        "1995": 2
+      },
+      "spread_rate_km_per_year": 0.014653055657094642,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -306,25 +320,22 @@
     },
     {
       "cluster_id": 6,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.391899750077197,
-          "longitude": -97.76287874999998
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1995,
-          "year_end": 1998,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 2,
+      "start_year": 1995,
+      "end_year": 1998,
+      "radius_km": 0.032344903565109495,
+      "centroid": {
+        "lat": 30.391899750077197,
+        "lon": -97.76287874999998
       },
+      "annual_counts": {
+        "1995": 3,
+        "1998": 1
+      },
+      "spread_rate_km_per_year": 0.010781634521703165,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -366,25 +377,24 @@
     },
     {
       "cluster_id": 7,
-      "statistics": {
-        "total_cases": 6,
-        "geographic_center": {
-          "latitude": 30.424712333451424,
-          "longitude": -97.73119166666666
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1996,
-          "year_end": 2001,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 6
-        },
-        "landowner_distribution": {
-          "Unknown": 6
-        }
+      "point_count": 6,
+      "unique_years": 4,
+      "start_year": 1996,
+      "end_year": 2001,
+      "radius_km": 0.029596389710838302,
+      "centroid": {
+        "lat": 30.424712333451424,
+        "lon": -97.73119166666666
       },
+      "annual_counts": {
+        "1996": 1,
+        "1997": 1,
+        "2000": 2,
+        "2001": 2
+      },
+      "spread_rate_km_per_year": 0.00591927794216766,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -444,25 +454,26 @@
     },
     {
       "cluster_id": 8,
-      "statistics": {
-        "total_cases": 9,
-        "geographic_center": {
-          "latitude": 30.23969344500791,
-          "longitude": -97.85253177777777
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1996,
-          "year_end": 2001,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 9
-        },
-        "landowner_distribution": {
-          "Unknown": 9
-        }
+      "point_count": 9,
+      "unique_years": 6,
+      "start_year": 1996,
+      "end_year": 2001,
+      "radius_km": 0.07840510157784865,
+      "centroid": {
+        "lat": 30.23969344500791,
+        "lon": -97.85253177777777
       },
+      "annual_counts": {
+        "1996": 3,
+        "1997": 1,
+        "1998": 1,
+        "1999": 1,
+        "2000": 1,
+        "2001": 2
+      },
+      "spread_rate_km_per_year": 0.01568102031556973,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -549,25 +560,23 @@
     },
     {
       "cluster_id": 9,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.284765000186184,
-          "longitude": -97.77063366666667
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1993,
-          "year_end": 1998,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 1993,
+      "end_year": 1998,
+      "radius_km": 0.043009073534231904,
+      "centroid": {
+        "lat": 30.284765000186184,
+        "lon": -97.77063366666667
       },
+      "annual_counts": {
+        "1993": 1,
+        "1996": 1,
+        "1998": 1
+      },
+      "spread_rate_km_per_year": 0.008601814706846381,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -600,25 +609,24 @@
     },
     {
       "cluster_id": 10,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.251426250334962,
-          "longitude": -97.74419449999998
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1995,
-          "year_end": 2001,
-          "year_span": 6
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 4,
+      "start_year": 1995,
+      "end_year": 2001,
+      "radius_km": 0.05379306311770121,
+      "centroid": {
+        "lat": 30.251426250334962,
+        "lon": -97.74419449999998
       },
+      "annual_counts": {
+        "1995": 1,
+        "1997": 1,
+        "2000": 1,
+        "2001": 1
+      },
+      "spread_rate_km_per_year": 0.008965510519616868,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -660,25 +668,23 @@
     },
     {
       "cluster_id": 11,
-      "statistics": {
-        "total_cases": 5,
-        "geographic_center": {
-          "latitude": 30.24670520021623,
-          "longitude": -97.7841528
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1997,
-          "year_end": 2001,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oak": 5
-        },
-        "landowner_distribution": {
-          "Unknown": 5
-        }
+      "point_count": 5,
+      "unique_years": 3,
+      "start_year": 1997,
+      "end_year": 2001,
+      "radius_km": 0.05056810812749019,
+      "centroid": {
+        "lat": 30.24670520021623,
+        "lon": -97.7841528
       },
+      "annual_counts": {
+        "1997": 1,
+        "1999": 2,
+        "2001": 2
+      },
+      "spread_rate_km_per_year": 0.012642027031872548,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -729,25 +735,22 @@
     },
     {
       "cluster_id": 12,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.237588333349343,
-          "longitude": -97.80641033333332
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1997,
-          "year_end": 1999,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oaks": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 1997,
+      "end_year": 1999,
+      "radius_km": 0.018022054573746813,
+      "centroid": {
+        "lat": 30.237588333349343,
+        "lon": -97.80641033333332
       },
+      "annual_counts": {
+        "1997": 1,
+        "1999": 2
+      },
+      "spread_rate_km_per_year": 0.009011027286873407,
+      "dominant_species": "Live Oaks",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -780,25 +783,23 @@
     },
     {
       "cluster_id": 13,
-      "statistics": {
-        "total_cases": 5,
-        "geographic_center": {
-          "latitude": 30.226345400165016,
-          "longitude": -97.86339619999998
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1997,
-          "year_end": 2000,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oaks": 5
-        },
-        "landowner_distribution": {
-          "Unknown": 5
-        }
+      "point_count": 5,
+      "unique_years": 3,
+      "start_year": 1997,
+      "end_year": 2000,
+      "radius_km": 0.046983766233446474,
+      "centroid": {
+        "lat": 30.226345400165016,
+        "lon": -97.86339619999998
       },
+      "annual_counts": {
+        "1997": 1,
+        "1999": 3,
+        "2000": 1
+      },
+      "spread_rate_km_per_year": 0.015661255411148826,
+      "dominant_species": "Live Oaks",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -849,25 +850,22 @@
     },
     {
       "cluster_id": 14,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.193197000017914,
-          "longitude": -97.80579133333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1998,
-          "year_end": 2000,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 1998,
+      "end_year": 2000,
+      "radius_km": 0.04467023747821429,
+      "centroid": {
+        "lat": 30.193197000017914,
+        "lon": -97.80579133333333
       },
+      "annual_counts": {
+        "1998": 1,
+        "2000": 2
+      },
+      "spread_rate_km_per_year": 0.022335118739107145,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -900,25 +898,24 @@
     },
     {
       "cluster_id": 15,
-      "statistics": {
-        "total_cases": 6,
-        "geographic_center": {
-          "latitude": 30.202744333532646,
-          "longitude": -97.81590733333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1998,
-          "year_end": 2001,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 6
-        },
-        "landowner_distribution": {
-          "Unknown": 6
-        }
+      "point_count": 6,
+      "unique_years": 4,
+      "start_year": 1998,
+      "end_year": 2001,
+      "radius_km": 0.052943805629714694,
+      "centroid": {
+        "lat": 30.202744333532646,
+        "lon": -97.81590733333333
       },
+      "annual_counts": {
+        "1998": 2,
+        "1999": 1,
+        "2000": 2,
+        "2001": 1
+      },
+      "spread_rate_km_per_year": 0.0176479352099049,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -978,25 +975,23 @@
     },
     {
       "cluster_id": 16,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.178303750181353,
-          "longitude": -97.84385425
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1998,
-          "year_end": 2001,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 1998,
+      "end_year": 2001,
+      "radius_km": 0.04678519405002598,
+      "centroid": {
+        "lat": 30.178303750181353,
+        "lon": -97.84385425
       },
+      "annual_counts": {
+        "1998": 1,
+        "2000": 2,
+        "2001": 1
+      },
+      "spread_rate_km_per_year": 0.015595064683341993,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1038,25 +1033,23 @@
     },
     {
       "cluster_id": 17,
-      "statistics": {
-        "total_cases": 5,
-        "geographic_center": {
-          "latitude": 30.35530180012114,
-          "longitude": -97.76610919999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1999,
-          "year_end": 2001,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 5
-        },
-        "landowner_distribution": {
-          "Unknown": 5
-        }
+      "point_count": 5,
+      "unique_years": 3,
+      "start_year": 1999,
+      "end_year": 2001,
+      "radius_km": 0.06738580843418937,
+      "centroid": {
+        "lat": 30.35530180012114,
+        "lon": -97.76610919999999
       },
+      "annual_counts": {
+        "1999": 2,
+        "2000": 1,
+        "2001": 2
+      },
+      "spread_rate_km_per_year": 0.033692904217094685,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1107,25 +1100,23 @@
     },
     {
       "cluster_id": 18,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.237620000006874,
-          "longitude": -97.80743666666666
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1995,
-          "year_end": 2000,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 1995,
+      "end_year": 2000,
+      "radius_km": 0.015477480533471961,
+      "centroid": {
+        "lat": 30.237620000006874,
+        "lon": -97.80743666666666
       },
+      "annual_counts": {
+        "1995": 1,
+        "1999": 1,
+        "2000": 1
+      },
+      "spread_rate_km_per_year": 0.003095496106694392,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1158,25 +1149,23 @@
     },
     {
       "cluster_id": 19,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.20770775051266,
-          "longitude": -97.88045124999998
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1999,
-          "year_end": 2001,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 1999,
+      "end_year": 2001,
+      "radius_km": 0.060322200045213326,
+      "centroid": {
+        "lat": 30.20770775051266,
+        "lon": -97.88045124999998
       },
+      "annual_counts": {
+        "1999": 1,
+        "2000": 1,
+        "2001": 2
+      },
+      "spread_rate_km_per_year": 0.030161100022606663,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1218,25 +1207,22 @@
     },
     {
       "cluster_id": 20,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.22758566688629,
-          "longitude": -97.864813
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 1999,
-          "year_end": 2000,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oaks": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 1999,
+      "end_year": 2000,
+      "radius_km": 0.04654059257055576,
+      "centroid": {
+        "lat": 30.22758566688629,
+        "lon": -97.864813
       },
+      "annual_counts": {
+        "1999": 2,
+        "2000": 1
+      },
+      "spread_rate_km_per_year": 0.04654059257055576,
+      "dominant_species": "Live Oaks",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1269,25 +1255,23 @@
     },
     {
       "cluster_id": 21,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.242377000726627,
-          "longitude": -97.73435599999998
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2006,
-          "year_end": 2008,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 2006,
+      "end_year": 2008,
+      "radius_km": 0.07526175198828061,
+      "centroid": {
+        "lat": 30.242377000726627,
+        "lon": -97.73435599999998
       },
+      "annual_counts": {
+        "2006": 1,
+        "2007": 1,
+        "2008": 2
+      },
+      "spread_rate_km_per_year": 0.037630875994140306,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1329,25 +1313,22 @@
     },
     {
       "cluster_id": 22,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.42675366670692,
-          "longitude": -97.76935233333334
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2006,
-          "year_end": 2010,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oaks": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2006,
+      "end_year": 2010,
+      "radius_km": 0.01686316821760456,
+      "centroid": {
+        "lat": 30.42675366670692,
+        "lon": -97.76935233333334
       },
+      "annual_counts": {
+        "2006": 2,
+        "2010": 1
+      },
+      "spread_rate_km_per_year": 0.00421579205440114,
+      "dominant_species": "Live Oaks",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1380,25 +1361,23 @@
     },
     {
       "cluster_id": 23,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.24331400005572,
-          "longitude": -97.83188933333331
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2006,
-          "year_end": 2009,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2006,
+      "end_year": 2009,
+      "radius_km": 0.03306708626422411,
+      "centroid": {
+        "lat": 30.24331400005572,
+        "lon": -97.83188933333331
       },
+      "annual_counts": {
+        "2006": 1,
+        "2008": 1,
+        "2009": 1
+      },
+      "spread_rate_km_per_year": 0.011022362088074703,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1431,25 +1410,23 @@
     },
     {
       "cluster_id": 24,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.423012500607157,
-          "longitude": -97.73426975
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2006,
-          "year_end": 2008,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Private": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 2006,
+      "end_year": 2008,
+      "radius_km": 0.07771892128279077,
+      "centroid": {
+        "lat": 30.423012500607157,
+        "lon": -97.73426975
       },
+      "annual_counts": {
+        "2006": 1,
+        "2007": 1,
+        "2008": 2
+      },
+      "spread_rate_km_per_year": 0.03885946064139539,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -1491,25 +1468,26 @@
     },
     {
       "cluster_id": 25,
-      "statistics": {
-        "total_cases": 8,
-        "geographic_center": {
-          "latitude": 30.207040250888813,
-          "longitude": -97.84457099999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2006,
-          "year_end": 2014,
-          "year_span": 8
-        },
-        "species_distribution": {
-          "Live Oak": 8
-        },
-        "landowner_distribution": {
-          "Unknown": 8
-        }
+      "point_count": 8,
+      "unique_years": 6,
+      "start_year": 2006,
+      "end_year": 2014,
+      "radius_km": 0.08579227653800162,
+      "centroid": {
+        "lat": 30.207040250888813,
+        "lon": -97.84457099999999
       },
+      "annual_counts": {
+        "2006": 1,
+        "2007": 2,
+        "2008": 1,
+        "2010": 1,
+        "2011": 2,
+        "2014": 1
+      },
+      "spread_rate_km_per_year": 0.010724034567250202,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1587,25 +1565,24 @@
     },
     {
       "cluster_id": 26,
-      "statistics": {
-        "total_cases": 6,
-        "geographic_center": {
-          "latitude": 30.426468000143963,
-          "longitude": -97.7210775
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2006,
-          "year_end": 2011,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 6
-        },
-        "landowner_distribution": {
-          "Unknown": 6
-        }
+      "point_count": 6,
+      "unique_years": 4,
+      "start_year": 2006,
+      "end_year": 2011,
+      "radius_km": 0.06757256624604235,
+      "centroid": {
+        "lat": 30.426468000143963,
+        "lon": -97.7210775
       },
+      "annual_counts": {
+        "2006": 1,
+        "2007": 2,
+        "2010": 1,
+        "2011": 2
+      },
+      "spread_rate_km_per_year": 0.01351451324920847,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1665,25 +1642,25 @@
     },
     {
       "cluster_id": 27,
-      "statistics": {
-        "total_cases": 11,
-        "geographic_center": {
-          "latitude": 30.42289491028894,
-          "longitude": -97.73269327272727
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2012,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 11
-        },
-        "landowner_distribution": {
-          "Unknown": 11
-        }
+      "point_count": 11,
+      "unique_years": 5,
+      "start_year": 2007,
+      "end_year": 2012,
+      "radius_km": 0.12629885675789063,
+      "centroid": {
+        "lat": 30.42289491028894,
+        "lon": -97.73269327272727
       },
+      "annual_counts": {
+        "2007": 2,
+        "2009": 3,
+        "2010": 3,
+        "2011": 2,
+        "2012": 1
+      },
+      "spread_rate_km_per_year": 0.025259771351578125,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1788,25 +1765,22 @@
     },
     {
       "cluster_id": 28,
-      "statistics": {
-        "total_cases": 5,
-        "geographic_center": {
-          "latitude": 30.263611200095053,
-          "longitude": -97.8052606
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2008,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 5
-        },
-        "landowner_distribution": {
-          "Unknown": 5
-        }
+      "point_count": 5,
+      "unique_years": 2,
+      "start_year": 2007,
+      "end_year": 2008,
+      "radius_km": 0.035569106037316923,
+      "centroid": {
+        "lat": 30.263611200095053,
+        "lon": -97.8052606
       },
+      "annual_counts": {
+        "2007": 2,
+        "2008": 3
+      },
+      "spread_rate_km_per_year": 0.035569106037316923,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1857,25 +1831,23 @@
     },
     {
       "cluster_id": 29,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.42267050006948,
-          "longitude": -97.72838125
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2010,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 2007,
+      "end_year": 2010,
+      "radius_km": 0.02385148995009004,
+      "centroid": {
+        "lat": 30.42267050006948,
+        "lon": -97.72838125
       },
+      "annual_counts": {
+        "2007": 2,
+        "2009": 1,
+        "2010": 1
+      },
+      "spread_rate_km_per_year": 0.007950496650030014,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1917,25 +1889,25 @@
     },
     {
       "cluster_id": 30,
-      "statistics": {
-        "total_cases": 6,
-        "geographic_center": {
-          "latitude": 30.35468950001409,
-          "longitude": -97.765067
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2014,
-          "year_span": 7
-        },
-        "species_distribution": {
-          "Live Oak": 6
-        },
-        "landowner_distribution": {
-          "Unknown": 6
-        }
+      "point_count": 6,
+      "unique_years": 5,
+      "start_year": 2007,
+      "end_year": 2014,
+      "radius_km": 0.020099736169201327,
+      "centroid": {
+        "lat": 30.35468950001409,
+        "lon": -97.765067
       },
+      "annual_counts": {
+        "2007": 1,
+        "2009": 1,
+        "2010": 2,
+        "2011": 1,
+        "2014": 1
+      },
+      "spread_rate_km_per_year": 0.002871390881314475,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -1995,25 +1967,24 @@
     },
     {
       "cluster_id": 31,
-      "statistics": {
-        "total_cases": 5,
-        "geographic_center": {
-          "latitude": 30.42639220029831,
-          "longitude": -97.71918080000002
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2011,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oak": 5
-        },
-        "landowner_distribution": {
-          "Unknown": 5
-        }
+      "point_count": 5,
+      "unique_years": 4,
+      "start_year": 2007,
+      "end_year": 2011,
+      "radius_km": 0.059453991887328646,
+      "centroid": {
+        "lat": 30.42639220029831,
+        "lon": -97.71918080000002
       },
+      "annual_counts": {
+        "2007": 2,
+        "2008": 1,
+        "2010": 1,
+        "2011": 1
+      },
+      "spread_rate_km_per_year": 0.014863497971832161,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2064,25 +2035,22 @@
     },
     {
       "cluster_id": 32,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.251123333387746,
-          "longitude": -97.792152
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2009,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak, Red Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2007,
+      "end_year": 2009,
+      "radius_km": 0.03936162844516703,
+      "centroid": {
+        "lat": 30.251123333387746,
+        "lon": -97.792152
       },
+      "annual_counts": {
+        "2007": 2,
+        "2009": 1
+      },
+      "spread_rate_km_per_year": 0.019680814222583515,
+      "dominant_species": "Live Oak, Red Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2115,25 +2083,23 @@
     },
     {
       "cluster_id": 33,
-      "statistics": {
-        "total_cases": 6,
-        "geographic_center": {
-          "latitude": 30.2515765003359,
-          "longitude": -97.77830783333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2011,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oak": 6
-        },
-        "landowner_distribution": {
-          "Unknown": 6
-        }
+      "point_count": 6,
+      "unique_years": 3,
+      "start_year": 2007,
+      "end_year": 2011,
+      "radius_km": 0.0467619493429847,
+      "centroid": {
+        "lat": 30.2515765003359,
+        "lon": -97.77830783333333
       },
+      "annual_counts": {
+        "2007": 1,
+        "2008": 1,
+        "2011": 4
+      },
+      "spread_rate_km_per_year": 0.011690487335746175,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2193,25 +2159,23 @@
     },
     {
       "cluster_id": 34,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.248172000004065,
-          "longitude": -97.74572599999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2008,
-          "year_end": 2010,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2008,
+      "end_year": 2010,
+      "radius_km": 0.030934018695203052,
+      "centroid": {
+        "lat": 30.248172000004065,
+        "lon": -97.74572599999999
       },
+      "annual_counts": {
+        "2008": 1,
+        "2009": 1,
+        "2010": 1
+      },
+      "spread_rate_km_per_year": 0.015467009347601526,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2244,25 +2208,22 @@
     },
     {
       "cluster_id": 35,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.414630000022026,
-          "longitude": -97.68227233333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2008,
-          "year_end": 2009,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Private": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2008,
+      "end_year": 2009,
+      "radius_km": 0.026613752473934656,
+      "centroid": {
+        "lat": 30.414630000022026,
+        "lon": -97.68227233333333
       },
+      "annual_counts": {
+        "2008": 2,
+        "2009": 1
+      },
+      "spread_rate_km_per_year": 0.026613752473934656,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -2295,25 +2256,22 @@
     },
     {
       "cluster_id": 36,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.244401000017945,
-          "longitude": -97.82677166666667
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2008,
-          "year_end": 2009,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak, Red Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2008,
+      "end_year": 2009,
+      "radius_km": 0.0177759944555078,
+      "centroid": {
+        "lat": 30.244401000017945,
+        "lon": -97.82677166666667
       },
+      "annual_counts": {
+        "2008": 1,
+        "2009": 2
+      },
+      "spread_rate_km_per_year": 0.0177759944555078,
+      "dominant_species": "Live Oak, Red Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2346,25 +2304,23 @@
     },
     {
       "cluster_id": 37,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.209670333597664,
-          "longitude": -97.88569033333332
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2009,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2007,
+      "end_year": 2009,
+      "radius_km": 0.05244540140131255,
+      "centroid": {
+        "lat": 30.209670333597664,
+        "lon": -97.88569033333332
       },
+      "annual_counts": {
+        "2007": 1,
+        "2008": 1,
+        "2009": 1
+      },
+      "spread_rate_km_per_year": 0.026222700700656274,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2397,25 +2353,22 @@
     },
     {
       "cluster_id": 38,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.248874333573077,
-          "longitude": -97.79268299999998
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2008,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2007,
+      "end_year": 2008,
+      "radius_km": 0.04461550354221297,
+      "centroid": {
+        "lat": 30.248874333573077,
+        "lon": -97.79268299999998
       },
+      "annual_counts": {
+        "2007": 2,
+        "2008": 1
+      },
+      "spread_rate_km_per_year": 0.04461550354221297,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2448,25 +2401,23 @@
     },
     {
       "cluster_id": 39,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.369050667286775,
-          "longitude": -97.664379
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2008,
-          "year_end": 2011,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2008,
+      "end_year": 2011,
+      "radius_km": 0.06320674803320815,
+      "centroid": {
+        "lat": 30.369050667286775,
+        "lon": -97.664379
       },
+      "annual_counts": {
+        "2008": 1,
+        "2009": 1,
+        "2011": 1
+      },
+      "spread_rate_km_per_year": 0.021068916011069385,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2499,25 +2450,23 @@
     },
     {
       "cluster_id": 40,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.226264000001024,
-          "longitude": -97.86342833333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2008,
-          "year_end": 2012,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2008,
+      "end_year": 2012,
+      "radius_km": 0.03278234345314753,
+      "centroid": {
+        "lat": 30.226264000001024,
+        "lon": -97.86342833333333
       },
+      "annual_counts": {
+        "2008": 1,
+        "2009": 1,
+        "2012": 1
+      },
+      "spread_rate_km_per_year": 0.008195585863286883,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2550,25 +2499,24 @@
     },
     {
       "cluster_id": 41,
-      "statistics": {
-        "total_cases": 9,
-        "geographic_center": {
-          "latitude": 30.30365722248648,
-          "longitude": -97.77109833333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2009,
-          "year_end": 2017,
-          "year_span": 8
-        },
-        "species_distribution": {
-          "Live Oak": 9
-        },
-        "landowner_distribution": {
-          "Unknown": 9
-        }
+      "point_count": 9,
+      "unique_years": 4,
+      "start_year": 2009,
+      "end_year": 2017,
+      "radius_km": 0.08363072992989999,
+      "centroid": {
+        "lat": 30.30365722248648,
+        "lon": -97.77109833333333
       },
+      "annual_counts": {
+        "2009": 3,
+        "2010": 2,
+        "2013": 2,
+        "2017": 2
+      },
+      "spread_rate_km_per_year": 0.010453841241237499,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2655,25 +2603,23 @@
     },
     {
       "cluster_id": 42,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.200288000041173,
-          "longitude": -97.82080533333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2007,
-          "year_end": 2010,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2007,
+      "end_year": 2010,
+      "radius_km": 0.049752135399617606,
+      "centroid": {
+        "lat": 30.200288000041173,
+        "lon": -97.82080533333333
       },
+      "annual_counts": {
+        "2007": 1,
+        "2008": 1,
+        "2010": 1
+      },
+      "spread_rate_km_per_year": 0.01658404513320587,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2706,25 +2652,22 @@
     },
     {
       "cluster_id": 43,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.254895333397414,
-          "longitude": -97.78097533333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2010,
-          "year_end": 2013,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2010,
+      "end_year": 2013,
+      "radius_km": 0.02117248362753945,
+      "centroid": {
+        "lat": 30.254895333397414,
+        "lon": -97.78097533333333
       },
+      "annual_counts": {
+        "2010": 2,
+        "2013": 1
+      },
+      "spread_rate_km_per_year": 0.00705749454251315,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2757,25 +2700,23 @@
     },
     {
       "cluster_id": 44,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.251440000000002,
-          "longitude": -97.78091799999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2010,
-          "year_end": 2014,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2010,
+      "end_year": 2014,
+      "radius_km": 0.0,
+      "centroid": {
+        "lat": 30.251440000000002,
+        "lon": -97.78091799999999
       },
+      "annual_counts": {
+        "2010": 1,
+        "2011": 1,
+        "2014": 1
+      },
+      "spread_rate_km_per_year": 0.0,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2808,25 +2749,22 @@
     },
     {
       "cluster_id": 45,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.229613666713234,
-          "longitude": -97.84993066666667
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2011,
-          "year_end": 2012,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2011,
+      "end_year": 2012,
+      "radius_km": 0.02535277095724216,
+      "centroid": {
+        "lat": 30.229613666713234,
+        "lon": -97.84993066666667
       },
+      "annual_counts": {
+        "2011": 1,
+        "2012": 2
+      },
+      "spread_rate_km_per_year": 0.02535277095724216,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -2859,25 +2797,24 @@
     },
     {
       "cluster_id": 46,
-      "statistics": {
-        "total_cases": 8,
-        "geographic_center": {
-          "latitude": 30.304280250009576,
-          "longitude": -97.770002875
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2011,
-          "year_end": 2019,
-          "year_span": 8
-        },
-        "species_distribution": {
-          "Live Oak": 8
-        },
-        "landowner_distribution": {
-          "Municipal - ROW": 8
-        }
+      "point_count": 8,
+      "unique_years": 4,
+      "start_year": 2011,
+      "end_year": 2019,
+      "radius_km": 0.0788792971027071,
+      "centroid": {
+        "lat": 30.304280250009576,
+        "lon": -97.770002875
       },
+      "annual_counts": {
+        "2011": 3,
+        "2015": 2,
+        "2017": 2,
+        "2019": 1
+      },
+      "spread_rate_km_per_year": 0.009859912137838387,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Municipal - ROW",
       "cases": [
         {
           "inspection_id": null,
@@ -2955,25 +2892,22 @@
     },
     {
       "cluster_id": 47,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.408691250127667,
-          "longitude": -97.75957625
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2011,
-          "year_end": 2013,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 2,
+      "start_year": 2011,
+      "end_year": 2013,
+      "radius_km": 0.05297128772669757,
+      "centroid": {
+        "lat": 30.408691250127667,
+        "lon": -97.75957625
       },
+      "annual_counts": {
+        "2011": 3,
+        "2013": 1
+      },
+      "spread_rate_km_per_year": 0.026485643863348785,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -3015,25 +2949,24 @@
     },
     {
       "cluster_id": 48,
-      "statistics": {
-        "total_cases": 12,
-        "geographic_center": {
-          "latitude": 30.450663333616838,
-          "longitude": -97.80490125
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2011,
-          "year_end": 2017,
-          "year_span": 6
-        },
-        "species_distribution": {
-          "Live Oak": 12
-        },
-        "landowner_distribution": {
-          "Private": 12
-        }
+      "point_count": 12,
+      "unique_years": 4,
+      "start_year": 2011,
+      "end_year": 2017,
+      "radius_km": 0.08497545467106363,
+      "centroid": {
+        "lat": 30.450663333616838,
+        "lon": -97.80490125
       },
+      "annual_counts": {
+        "2011": 4,
+        "2014": 1,
+        "2016": 1,
+        "2017": 6
+      },
+      "spread_rate_km_per_year": 0.014162575778510605,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -3147,25 +3080,22 @@
     },
     {
       "cluster_id": 49,
-      "statistics": {
-        "total_cases": 5,
-        "geographic_center": {
-          "latitude": 30.427846400116046,
-          "longitude": -97.76819780000001
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2011,
-          "year_end": 2012,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 5
-        },
-        "landowner_distribution": {
-          "Unknown": 5
-        }
+      "point_count": 5,
+      "unique_years": 2,
+      "start_year": 2011,
+      "end_year": 2012,
+      "radius_km": 0.041253057091184694,
+      "centroid": {
+        "lat": 30.427846400116046,
+        "lon": -97.76819780000001
       },
+      "annual_counts": {
+        "2011": 4,
+        "2012": 1
+      },
+      "spread_rate_km_per_year": 0.041253057091184694,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -3216,25 +3146,23 @@
     },
     {
       "cluster_id": 50,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.385097250035738,
-          "longitude": -97.67796625
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2011,
-          "year_end": 2015,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 2011,
+      "end_year": 2015,
+      "radius_km": 0.019923141631757808,
+      "centroid": {
+        "lat": 30.385097250035738,
+        "lon": -97.67796625
       },
+      "annual_counts": {
+        "2011": 1,
+        "2013": 1,
+        "2015": 2
+      },
+      "spread_rate_km_per_year": 0.004980785407939452,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -3276,25 +3204,23 @@
     },
     {
       "cluster_id": 51,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.200908000000002,
-          "longitude": -97.86697199999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2008,
-          "year_end": 2016,
-          "year_span": 8
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2008,
+      "end_year": 2016,
+      "radius_km": 4.656612873077393e-13,
+      "centroid": {
+        "lat": 30.200908000000002,
+        "lon": -97.86697199999999
       },
+      "annual_counts": {
+        "2008": 1,
+        "2012": 1,
+        "2016": 1
+      },
+      "spread_rate_km_per_year": 5.820766091346741e-14,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -3327,25 +3253,23 @@
     },
     {
       "cluster_id": 52,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.34567550009622,
-          "longitude": -97.7578965
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2012,
-          "year_end": 2014,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 2012,
+      "end_year": 2014,
+      "radius_km": 0.0732984510192237,
+      "centroid": {
+        "lat": 30.34567550009622,
+        "lon": -97.7578965
       },
+      "annual_counts": {
+        "2012": 1,
+        "2013": 2,
+        "2014": 1
+      },
+      "spread_rate_km_per_year": 0.03664922550961185,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -3387,25 +3311,22 @@
     },
     {
       "cluster_id": 53,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.26202633339395,
-          "longitude": -97.803592
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2011,
-          "year_end": 2012,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2011,
+      "end_year": 2012,
+      "radius_km": 0.04962806354415717,
+      "centroid": {
+        "lat": 30.26202633339395,
+        "lon": -97.803592
       },
+      "annual_counts": {
+        "2011": 1,
+        "2012": 2
+      },
+      "spread_rate_km_per_year": 0.04962806354415717,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -3438,25 +3359,24 @@
     },
     {
       "cluster_id": 54,
-      "statistics": {
-        "total_cases": 42,
-        "geographic_center": {
-          "latitude": 30.41380445378116,
-          "longitude": -97.68228585714286
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2012,
-          "year_end": 2017,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 42
-        },
-        "landowner_distribution": {
-          "Municipal - ROW": 42
-        }
+      "point_count": 42,
+      "unique_years": 4,
+      "start_year": 2012,
+      "end_year": 2017,
+      "radius_km": 0.12807435661027128,
+      "centroid": {
+        "lat": 30.41380445378116,
+        "lon": -97.68228585714286
       },
+      "annual_counts": {
+        "2012": 1,
+        "2015": 18,
+        "2016": 2,
+        "2017": 21
+      },
+      "spread_rate_km_per_year": 0.025614871322054256,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Municipal - ROW",
       "cases": [
         {
           "inspection_id": null,
@@ -3840,25 +3760,25 @@
     },
     {
       "cluster_id": 55,
-      "statistics": {
-        "total_cases": 9,
-        "geographic_center": {
-          "latitude": 30.23200233372699,
-          "longitude": -97.75788311111111
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2012,
-          "year_end": 2018,
-          "year_span": 6
-        },
-        "species_distribution": {
-          "Live Oak": 9
-        },
-        "landowner_distribution": {
-          "Private": 9
-        }
+      "point_count": 9,
+      "unique_years": 5,
+      "start_year": 2012,
+      "end_year": 2018,
+      "radius_km": 0.06755436684256023,
+      "centroid": {
+        "lat": 30.23200233372699,
+        "lon": -97.75788311111111
       },
+      "annual_counts": {
+        "2012": 1,
+        "2013": 1,
+        "2016": 1,
+        "2017": 1,
+        "2018": 5
+      },
+      "spread_rate_km_per_year": 0.011259061140426706,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -3945,25 +3865,22 @@
     },
     {
       "cluster_id": 56,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.1843156668236,
-          "longitude": -97.82708733333334
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2013,
-          "year_end": 2014,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak, Red Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2013,
+      "end_year": 2014,
+      "radius_km": 0.03464101860628292,
+      "centroid": {
+        "lat": 30.1843156668236,
+        "lon": -97.82708733333334
       },
+      "annual_counts": {
+        "2013": 2,
+        "2014": 1
+      },
+      "spread_rate_km_per_year": 0.03464101860628292,
+      "dominant_species": "Live Oak, Red Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -3996,25 +3913,22 @@
     },
     {
       "cluster_id": 57,
-      "statistics": {
-        "total_cases": 5,
-        "geographic_center": {
-          "latitude": 30.26152500033785,
-          "longitude": -97.80685779999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2013,
-          "year_end": 2016,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 5
-        },
-        "landowner_distribution": {
-          "Unknown": 5
-        }
+      "point_count": 5,
+      "unique_years": 2,
+      "start_year": 2013,
+      "end_year": 2016,
+      "radius_km": 0.045813881159773216,
+      "centroid": {
+        "lat": 30.26152500033785,
+        "lon": -97.80685779999999
       },
+      "annual_counts": {
+        "2013": 4,
+        "2016": 1
+      },
+      "spread_rate_km_per_year": 0.015271293719924405,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -4065,25 +3979,23 @@
     },
     {
       "cluster_id": 58,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.191839250132375,
-          "longitude": -97.80249175
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2012,
-          "year_end": 2014,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 2012,
+      "end_year": 2014,
+      "radius_km": 0.04658536782847758,
+      "centroid": {
+        "lat": 30.191839250132375,
+        "lon": -97.80249175
       },
+      "annual_counts": {
+        "2012": 1,
+        "2013": 2,
+        "2014": 1
+      },
+      "spread_rate_km_per_year": 0.02329268391423879,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -4125,25 +4037,26 @@
     },
     {
       "cluster_id": 59,
-      "statistics": {
-        "total_cases": 32,
-        "geographic_center": {
-          "latitude": 30.24966071966443,
-          "longitude": -97.78005896875
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2014,
-          "year_end": 2019,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 32
-        },
-        "landowner_distribution": {
-          "Private": 32
-        }
+      "point_count": 32,
+      "unique_years": 6,
+      "start_year": 2014,
+      "end_year": 2019,
+      "radius_km": 0.1265858200123759,
+      "centroid": {
+        "lat": 30.24966071966443,
+        "lon": -97.78005896875
       },
+      "annual_counts": {
+        "2014": 6,
+        "2015": 4,
+        "2016": 4,
+        "2017": 14,
+        "2018": 3,
+        "2019": 1
+      },
+      "spread_rate_km_per_year": 0.02531716400247518,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -4437,25 +4350,24 @@
     },
     {
       "cluster_id": 60,
-      "statistics": {
-        "total_cases": 17,
-        "geographic_center": {
-          "latitude": 30.200827647321894,
-          "longitude": -97.81519747058823
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2014,
-          "year_end": 2017,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 17
-        },
-        "landowner_distribution": {
-          "Private": 17
-        }
+      "point_count": 17,
+      "unique_years": 4,
+      "start_year": 2014,
+      "end_year": 2017,
+      "radius_km": 0.10799696401923224,
+      "centroid": {
+        "lat": 30.200827647321894,
+        "lon": -97.81519747058823
       },
+      "annual_counts": {
+        "2014": 1,
+        "2015": 10,
+        "2016": 1,
+        "2017": 5
+      },
+      "spread_rate_km_per_year": 0.03599898800641075,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -4614,25 +4526,22 @@
     },
     {
       "cluster_id": 61,
-      "statistics": {
-        "total_cases": 12,
-        "geographic_center": {
-          "latitude": 30.386145916732385,
-          "longitude": -97.67755199999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2014,
-          "year_end": 2016,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 12
-        },
-        "landowner_distribution": {
-          "Municipal - ROW": 12
-        }
+      "point_count": 12,
+      "unique_years": 2,
+      "start_year": 2014,
+      "end_year": 2016,
+      "radius_km": 0.04151631251102233,
+      "centroid": {
+        "lat": 30.386145916732385,
+        "lon": -97.67755199999999
       },
+      "annual_counts": {
+        "2014": 4,
+        "2016": 8
+      },
+      "spread_rate_km_per_year": 0.020758156255511164,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Municipal - ROW",
       "cases": [
         {
           "inspection_id": null,
@@ -4746,25 +4655,25 @@
     },
     {
       "cluster_id": 62,
-      "statistics": {
-        "total_cases": 12,
-        "geographic_center": {
-          "latitude": 30.266596417102832,
-          "longitude": -97.80549958333332
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2014,
-          "year_end": 2019,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 12
-        },
-        "landowner_distribution": {
-          "Municipal - ROW": 12
-        }
+      "point_count": 12,
+      "unique_years": 5,
+      "start_year": 2014,
+      "end_year": 2019,
+      "radius_km": 0.11169497805144828,
+      "centroid": {
+        "lat": 30.266596417102832,
+        "lon": -97.80549958333332
       },
+      "annual_counts": {
+        "2014": 2,
+        "2015": 1,
+        "2016": 2,
+        "2017": 6,
+        "2019": 1
+      },
+      "spread_rate_km_per_year": 0.022338995610289656,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Municipal - ROW",
       "cases": [
         {
           "inspection_id": null,
@@ -4878,25 +4787,23 @@
     },
     {
       "cluster_id": 63,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.198240666802917,
-          "longitude": -97.85237466666668
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2012,
-          "year_end": 2017,
-          "year_span": 5
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2012,
+      "end_year": 2017,
+      "radius_km": 0.02985723153846437,
+      "centroid": {
+        "lat": 30.198240666802917,
+        "lon": -97.85237466666668
       },
+      "annual_counts": {
+        "2012": 1,
+        "2014": 1,
+        "2017": 1
+      },
+      "spread_rate_km_per_year": 0.005971446307692874,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -4929,25 +4836,22 @@
     },
     {
       "cluster_id": 64,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.202903750019722,
-          "longitude": -97.82104874999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2014,
-          "year_end": 2017,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Private": 4
-        }
+      "point_count": 4,
+      "unique_years": 2,
+      "start_year": 2014,
+      "end_year": 2017,
+      "radius_km": 0.0341465043118429,
+      "centroid": {
+        "lat": 30.202903750019722,
+        "lon": -97.82104874999999
       },
+      "annual_counts": {
+        "2014": 2,
+        "2017": 2
+      },
+      "spread_rate_km_per_year": 0.011382168103947633,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -4989,25 +4893,23 @@
     },
     {
       "cluster_id": 65,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.425602666671626,
-          "longitude": -97.76983666666666
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2013,
-          "year_end": 2017,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 3,
+      "start_year": 2013,
+      "end_year": 2017,
+      "radius_km": 0.047055970781787755,
+      "centroid": {
+        "lat": 30.425602666671626,
+        "lon": -97.76983666666666
       },
+      "annual_counts": {
+        "2013": 1,
+        "2015": 1,
+        "2017": 1
+      },
+      "spread_rate_km_per_year": 0.011763992695446939,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -5040,25 +4942,22 @@
     },
     {
       "cluster_id": 66,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.3823756667748,
-          "longitude": -97.67812933333333
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2015,
-          "year_end": 2017,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Unknown": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2015,
+      "end_year": 2017,
+      "radius_km": 0.03158781977127469,
+      "centroid": {
+        "lat": 30.3823756667748,
+        "lon": -97.67812933333333
       },
+      "annual_counts": {
+        "2015": 1,
+        "2017": 2
+      },
+      "spread_rate_km_per_year": 0.015793909885637347,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -5091,25 +4990,24 @@
     },
     {
       "cluster_id": 67,
-      "statistics": {
-        "total_cases": 7,
-        "geographic_center": {
-          "latitude": 30.416740714565808,
-          "longitude": -97.72674257142857
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2015,
-          "year_end": 2019,
-          "year_span": 4
-        },
-        "species_distribution": {
-          "Live Oak": 7
-        },
-        "landowner_distribution": {
-          "Unknown": 7
-        }
+      "point_count": 7,
+      "unique_years": 4,
+      "start_year": 2015,
+      "end_year": 2019,
+      "radius_km": 0.07916651601965205,
+      "centroid": {
+        "lat": 30.416740714565808,
+        "lon": -97.72674257142857
       },
+      "annual_counts": {
+        "2015": 1,
+        "2016": 4,
+        "2017": 1,
+        "2019": 1
+      },
+      "spread_rate_km_per_year": 0.019791629004913013,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -5178,25 +5076,23 @@
     },
     {
       "cluster_id": 68,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.422620750062023,
-          "longitude": -97.73137899999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2015,
-          "year_end": 2017,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Unknown": 4
-        }
+      "point_count": 4,
+      "unique_years": 3,
+      "start_year": 2015,
+      "end_year": 2017,
+      "radius_km": 0.03198465733825879,
+      "centroid": {
+        "lat": 30.422620750062023,
+        "lon": -97.73137899999999
       },
+      "annual_counts": {
+        "2015": 1,
+        "2016": 2,
+        "2017": 1
+      },
+      "spread_rate_km_per_year": 0.015992328669129394,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -5238,25 +5134,25 @@
     },
     {
       "cluster_id": 69,
-      "statistics": {
-        "total_cases": 15,
-        "geographic_center": {
-          "latitude": 30.34666413428478,
-          "longitude": -97.75805166666666
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2012,
-          "year_end": 2018,
-          "year_span": 6
-        },
-        "species_distribution": {
-          "Live Oak": 15
-        },
-        "landowner_distribution": {
-          "Private": 15
-        }
+      "point_count": 15,
+      "unique_years": 5,
+      "start_year": 2012,
+      "end_year": 2018,
+      "radius_km": 0.13301239782640573,
+      "centroid": {
+        "lat": 30.34666413428478,
+        "lon": -97.75805166666666
       },
+      "annual_counts": {
+        "2012": 1,
+        "2015": 1,
+        "2016": 1,
+        "2017": 8,
+        "2018": 4
+      },
+      "spread_rate_km_per_year": 0.022168732971067622,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -5397,25 +5293,22 @@
     },
     {
       "cluster_id": 70,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.452150333423926,
-          "longitude": -97.80276933333332
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2016,
-          "year_end": 2017,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Private": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2016,
+      "end_year": 2017,
+      "radius_km": 0.024848444534326726,
+      "centroid": {
+        "lat": 30.452150333423926,
+        "lon": -97.80276933333332
       },
+      "annual_counts": {
+        "2016": 1,
+        "2017": 2
+      },
+      "spread_rate_km_per_year": 0.024848444534326726,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -5448,25 +5341,22 @@
     },
     {
       "cluster_id": 71,
-      "statistics": {
-        "total_cases": 3,
-        "geographic_center": {
-          "latitude": 30.327237000002462,
-          "longitude": -97.768276
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2016,
-          "year_end": 2017,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 3
-        },
-        "landowner_distribution": {
-          "Private": 3
-        }
+      "point_count": 3,
+      "unique_years": 2,
+      "start_year": 2016,
+      "end_year": 2017,
+      "radius_km": 0.0042460787469584755,
+      "centroid": {
+        "lat": 30.327237000002462,
+        "lon": -97.768276
       },
+      "annual_counts": {
+        "2016": 1,
+        "2017": 2
+      },
+      "spread_rate_km_per_year": 0.0042460787469584755,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -5499,25 +5389,23 @@
     },
     {
       "cluster_id": 72,
-      "statistics": {
-        "total_cases": 23,
-        "geographic_center": {
-          "latitude": 30.229225826239002,
-          "longitude": -97.84846221739129
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2016,
-          "year_end": 2018,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 23
-        },
-        "landowner_distribution": {
-          "Private": 23
-        }
+      "point_count": 23,
+      "unique_years": 3,
+      "start_year": 2016,
+      "end_year": 2018,
+      "radius_km": 0.09318053123734119,
+      "centroid": {
+        "lat": 30.229225826239002,
+        "lon": -97.84846221739129
       },
+      "annual_counts": {
+        "2016": 11,
+        "2017": 4,
+        "2018": 8
+      },
+      "spread_rate_km_per_year": 0.04659026561867059,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -5730,25 +5618,22 @@
     },
     {
       "cluster_id": 73,
-      "statistics": {
-        "total_cases": 26,
-        "geographic_center": {
-          "latitude": 30.182207423708803,
-          "longitude": -97.9121918076923
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2017,
-          "year_end": 2018,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 26
-        },
-        "landowner_distribution": {
-          "Municipal - Parkland": 26
-        }
+      "point_count": 26,
+      "unique_years": 2,
+      "start_year": 2017,
+      "end_year": 2018,
+      "radius_km": 0.10067325911137673,
+      "centroid": {
+        "lat": 30.182207423708803,
+        "lon": -97.9121918076923
       },
+      "annual_counts": {
+        "2017": 11,
+        "2018": 15
+      },
+      "spread_rate_km_per_year": 0.10067325911137673,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Municipal - Parkland",
       "cases": [
         {
           "inspection_id": null,
@@ -5988,25 +5873,23 @@
     },
     {
       "cluster_id": 74,
-      "statistics": {
-        "total_cases": 110,
-        "geographic_center": {
-          "latitude": 30.21106576501416,
-          "longitude": -97.79894108181817
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2017,
-          "year_end": 2019,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 110
-        },
-        "landowner_distribution": {
-          "Municipal - Parkland": 110
-        }
+      "point_count": 110,
+      "unique_years": 3,
+      "start_year": 2017,
+      "end_year": 2019,
+      "radius_km": 0.18181818104062447,
+      "centroid": {
+        "lat": 30.21106576501416,
+        "lon": -97.79894108181817
       },
+      "annual_counts": {
+        "2017": 24,
+        "2018": 45,
+        "2019": 41
+      },
+      "spread_rate_km_per_year": 0.09090909052031224,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Municipal - Parkland",
       "cases": [
         {
           "inspection_id": null,
@@ -7002,25 +6885,22 @@
     },
     {
       "cluster_id": 75,
-      "statistics": {
-        "total_cases": 10,
-        "geographic_center": {
-          "latitude": 30.231774200243027,
-          "longitude": -97.75605239999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2017,
-          "year_end": 2018,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 10
-        },
-        "landowner_distribution": {
-          "Private": 10
-        }
+      "point_count": 10,
+      "unique_years": 2,
+      "start_year": 2017,
+      "end_year": 2018,
+      "radius_km": 0.07772390946236564,
+      "centroid": {
+        "lat": 30.231774200243027,
+        "lon": -97.75605239999999
       },
+      "annual_counts": {
+        "2017": 1,
+        "2018": 9
+      },
+      "spread_rate_km_per_year": 0.07772390946236564,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -7116,25 +6996,23 @@
     },
     {
       "cluster_id": 76,
-      "statistics": {
-        "total_cases": 5,
-        "geographic_center": {
-          "latitude": 30.340800400189664,
-          "longitude": -97.7798102
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2016,
-          "year_end": 2018,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 5
-        },
-        "landowner_distribution": {
-          "Unknown": 5
-        }
+      "point_count": 5,
+      "unique_years": 3,
+      "start_year": 2016,
+      "end_year": 2018,
+      "radius_km": 0.09490678794432258,
+      "centroid": {
+        "lat": 30.340800400189664,
+        "lon": -97.7798102
       },
+      "annual_counts": {
+        "2016": 1,
+        "2017": 2,
+        "2018": 2
+      },
+      "spread_rate_km_per_year": 0.04745339397216129,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Unknown",
       "cases": [
         {
           "inspection_id": null,
@@ -7185,25 +7063,22 @@
     },
     {
       "cluster_id": 77,
-      "statistics": {
-        "total_cases": 4,
-        "geographic_center": {
-          "latitude": 30.192713500270752,
-          "longitude": -97.80190774999998
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2018,
-          "year_end": 2019,
-          "year_span": 1
-        },
-        "species_distribution": {
-          "Live Oak": 4
-        },
-        "landowner_distribution": {
-          "Municipal - ROW": 4
-        }
+      "point_count": 4,
+      "unique_years": 2,
+      "start_year": 2018,
+      "end_year": 2019,
+      "radius_km": 0.06318550263003297,
+      "centroid": {
+        "lat": 30.192713500270752,
+        "lon": -97.80190774999998
       },
+      "annual_counts": {
+        "2018": 2,
+        "2019": 2
+      },
+      "spread_rate_km_per_year": 0.06318550263003297,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Municipal - ROW",
       "cases": [
         {
           "inspection_id": null,
@@ -7245,25 +7120,23 @@
     },
     {
       "cluster_id": 78,
-      "statistics": {
-        "total_cases": 12,
-        "geographic_center": {
-          "latitude": 30.224651667943153,
-          "longitude": -97.868576
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2019,
-          "year_end": 2022,
-          "year_span": 3
-        },
-        "species_distribution": {
-          "Live Oak": 12
-        },
-        "landowner_distribution": {
-          "Private": 12
-        }
+      "point_count": 12,
+      "unique_years": 3,
+      "start_year": 2019,
+      "end_year": 2022,
+      "radius_km": 0.10922883758603963,
+      "centroid": {
+        "lat": 30.224651667943153,
+        "lon": -97.868576
       },
+      "annual_counts": {
+        "2019": 7,
+        "2021": 1,
+        "2022": 4
+      },
+      "spread_rate_km_per_year": 0.03640961252867988,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
@@ -7377,25 +7250,22 @@
     },
     {
       "cluster_id": 79,
-      "statistics": {
-        "total_cases": 10,
-        "geographic_center": {
-          "latitude": 30.232093000000003,
-          "longitude": -97.75713099999999
-        },
-        "geographic_bounds": {},
-        "temporal_range": {
-          "year_start": 2022,
-          "year_end": 2024,
-          "year_span": 2
-        },
-        "species_distribution": {
-          "Live Oak": 10
-        },
-        "landowner_distribution": {
-          "Private": 10
-        }
+      "point_count": 10,
+      "unique_years": 2,
+      "start_year": 2022,
+      "end_year": 2024,
+      "radius_km": 4.656612873077393e-13,
+      "centroid": {
+        "lat": 30.232093000000003,
+        "lon": -97.75713099999999
       },
+      "annual_counts": {
+        "2022": 8,
+        "2024": 2
+      },
+      "spread_rate_km_per_year": 2.3283064365386963e-13,
+      "dominant_species": "Live Oak",
+      "dominant_landowner": "Private",
       "cases": [
         {
           "inspection_id": null,
