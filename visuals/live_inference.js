@@ -134,6 +134,7 @@ async function loadScenario() {
                 lon: c.lon,
                 type: 'healthy', // Reset to healthy for simulation
                 real_future: c.is_future_infection, // Hidden truth
+                infection_date: c.infection_date, // <--- CRITICAL FIX: Pass date through
                 marker: m
             });
         });
@@ -167,7 +168,8 @@ async function runAnalysis() {
 
         if (mode === 'network' || mode === 'historical') {
             url = '/api/network_simulation';
-            const months = mode === 'network' ? parseInt(document.getElementById('net-months').value) : 12;
+            // Use 24 months (2 years) for historical validation to capture more ground truth data
+            const months = mode === 'network' ? parseInt(document.getElementById('net-months').value) : 24;
             
             // For historical, we use the scenario date, else today
             const startC = mode === 'historical' ? scenarioData.cutoff_date : new Date().toISOString().split('T')[0];
@@ -275,37 +277,64 @@ function processResults(data) {
         let truePositives = 0;
         let falsePositives = 0;
         let missed = 0;
+        let outOfScope = 0;
 
         // Get all IDs predicted to be infected
         const allPredictedIds = new Set();
         timelineEvents.forEach(e => e.new_cases.forEach(id => allPredictedIds.add(id)));
+        
+        // Simulation Time Window
+        // We only "fail" the model if it misses a tree that got infected WITHIN the simulation period (12 months).
+        // If the tree got infected 2 years later, the model was correct to say "safe for now".
+        const simStartDate = new Date(scenarioData.cutoff_date);
+        const simEndDate = new Date(simStartDate);
+        simEndDate.setMonth(simEndDate.getMonth() + totalMonths);
 
         markers.forEach(m => {
             if (m.real_future) {
-                if (allPredictedIds.has(m.id)) truePositives++;
-                else missed++;
+                // Check if this future infection actually falls within our 1-year window
+                const infDate = new Date(m.infection_date);
+                const isRelevant = infDate <= simEndDate;
+
+                if (isRelevant) {
+                    if (allPredictedIds.has(m.id)) truePositives++;
+                    else missed++;
+                } else {
+                    outOfScope++;
+                }
             } else {
                 if (allPredictedIds.has(m.id) && m.type === 'healthy') falsePositives++;
             }
         });
 
+        // Dynamic Label for Years
+        const scopeYears = (totalMonths / 12).toFixed(1).replace('.0', '');
+
         html += `
             <div style="margin-top:10px; padding:10px; background:#f8f9fa; border-radius:6px;">
                 <div class="metric-row"><span>✅ Captured Infections:</span> <strong>${truePositives}</strong></div>
                 <div class="metric-row" title="Safe areas flagged as risky (Safety Buffer)"><span>🛡️ High Pressure Zones:</span> <strong>${falsePositives}</strong></div>
-                <div class="metric-row" title="Actual infected trees we missed"><span>⚠️ Unpredicted Infections:</span> <strong>${missed}</strong></div>
+                <div class="metric-row" title="Actual infected trees we missed (within ${scopeYears} yr window)"><span>⚠️ Unpredicted Infections:</span> <strong>${missed}</strong></div>
+                <div class="metric-row" style="color:#7f8c8d; font-size:0.9em"><span>📅 Out of Scope (>${scopeYears} yrs):</span> <strong>${outOfScope}</strong></div>
             </div>
             <p style="font-size:0.8rem; color:#666; margin-top:5px;">
                 * Comparison of "Gravity Model" prediction vs. Reality.
             </p>
         `;
         
-        // Show Ground Truth immediately as hollow yellow circles
+        // Show Ground Truth 
         markers.forEach(m => {
             if (m.real_future) {
+                const infDate = new Date(m.infection_date);
+                const isRelevant = infDate <= simEndDate;
+                
+                // Yellow for Near Future (In Scope), Grey for Far Future (Out of Scope)
+                const color = isRelevant ? '#f1c40f' : '#95a5a6';
+                const style = isRelevant ? 'solid' : 'dotted';
+                
                 L.circleMarker([m.lat, m.lon], {
-                   radius: 8, color: '#f1c40f', fill: false, weight: 2 
-                }).addTo(layers);
+                   radius: 8, color: color, fill: false, weight: 2, dashArray: isRelevant ? null : '4,4'
+                }).addTo(layers).bindPopup(`Infected: ${m.infection_date} (${isRelevant ? 'In Scope' : 'Future'})`);
             }
         });
     }

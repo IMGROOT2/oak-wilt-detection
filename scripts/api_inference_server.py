@@ -32,7 +32,7 @@ class NetworkInput(BaseModel):
 class SimulationRequest(BaseModel):
     trees: List[TreePoint]
     start_date: str
-    months: int = 12
+    months: int = 24
 
 class WeatherInput(BaseModel):
     lat: float
@@ -180,7 +180,8 @@ def get_historical_scenario():
             "lat": row['LATITUDE'],
             "lon": row['LONGITUDE'],
             "type": "healthy", # Masked as healthy
-            "is_future_infection": True
+            "is_future_infection": True,
+            "infection_date": row['date'].strftime('%Y-%m-%d')
         })
         
     # B. Distractors (ground truth negatives)
