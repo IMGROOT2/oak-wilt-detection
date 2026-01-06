@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oak Wilt Risk Dashboard</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2c5f2d; /* Forest Green */
+            --primary-dark: #1e4220;
+            --accent: #d35400; /* Burnt Orange */
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #c0392b;
+            --bg: #f0f2f5;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+            --text-light: #7f8c8d;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-hover: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        h1 { margin: 0; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.5px; }
+        .subtitle { font-size: 0.8rem; opacity: 0.9; font-weight: 300; }
+
+        #container {
+            display: flex;
+            flex: 1;
+            /* height: calc(100vh - 60px); Removed to prevent overflow issues */
+            position: relative;
+            overflow: hidden;
+        }
+
+        #sidebar {
+            width: 360px;
+            background: var(--bg);
+            border-right: 1px solid #e1e4e8;
+            display: flex;
+            flex-direction: column;
+            z-index: 900;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+        }
+
+        #model-stats {
+            padding: 1.2rem;
+            background: white;
+            margin-bottom: 1px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        
+        .stat-row { display: flex; justify-content: space-between; margin-bottom: 8px; align-items: center; }
+        .stat-key { color: var(--text-light); font-size: 0.85rem; }
+        .stat-val-sm { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+
+        #search-container {
+            padding: 1rem;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        #search {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+        #search:focus { outline: none; border-color: var(--primary); }
+
+        #cluster-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            margin: 0;
+            list-style: none;
+        }
+
+        .cluster-item {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .cluster-item:hover { 
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            border-color: #e1e4e8;
+        }
+        
+        .cluster-item.active { 
+            border-left: 4px solid var(--primary);
+            background-color: #f8fff9;
+        }
+
+        .cluster-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; align-items: center; }
+        .cluster-id { font-weight: 700; color: var(--primary); font-size: 1rem; }
+        
+        .cluster-stats { font-size: 0.8rem; color: var(--text-light); display: flex; gap: 12px; }
+        .cluster-stats span { display: flex; align-items: center; gap: 4px; }
+
+        #map {
+            flex: 1;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #details-panel {
+            width: 360px;
+            background: var(--bg);
+            border-left: 1px solid #e1e4e8;
+            display: none;
+            z-index: 900;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.05);
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+
+        .panel-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 1.5rem; 
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 1rem; 
+        }
+        
+        .panel-header h2 { font-size: 1.2rem; color: var(--primary); }
+        .close-btn { 
+            cursor: pointer; 
+            font-size: 1.5rem; 
+            color: #bdc3c7; 
+            transition: color 0.2s;
+            line-height: 1;
+        }
+        .close-btn:hover { color: var(--danger); }
+        
+        .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.5rem; }
+        .stat-box { 
+            background: #f8f9fa; 
+            padding: 12px; 
+            border-radius: 8px; 
+            text-align: center; 
+            border: 1px solid #eee;
+        }
+        .stat-val { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+        .stat-label { 
+            font-size: 0.65rem; 
+            color: var(--text-light); 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+            font-weight: 600; 
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .section-title { 
+            font-size: 0.85rem; 
+            font-weight: 700; 
+            margin: 1.5rem 0 0.8rem; 
+            color: var(--text); 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background: var(--accent);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        .prediction-row {
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 0.9rem; 
+            margin-bottom: 8px;
+            padding: 6px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .prediction-row:last-child { border-bottom: none; }
+        
+        .pred-label { font-weight: 500; }
+        .pred-val { font-weight: 700; font-family: 'Courier New', monospace; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Oak Wilt Risk Dashboard</h1>
+    </div>
+    <div style="font-size: 0.75rem; text-align: right; opacity: 0.9;">
+        Generated: <span id="gen-date"></span><br>
+        Model: Gradient Boosting (CQR) + Conformal Prediction
+    </div>
+</header>
+
+<div id="container">
+    <div id="sidebar">
+        <div id="model-stats">
+            <div style="font-weight: 700; margin-bottom: 1rem; color: var(--primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">Model Performance</div>
+            <div class="stat-row">
+                <span class="stat-key">Cone Coverage (10-90%)</span>
+                <span class="stat-val-sm" id="global-coverage">-</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-key">Mean Abs Error (MAE)</span>
+                <span class="stat-val-sm" id="global-mae">-</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-key">Severe Outliers (>90%)</span>
+                <span class="stat-val-sm" id="global-outlier">-</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-key">Avg Actual Spread</span>
+                <span class="stat-val-sm" id="global-avg">-</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-key">Avg Spread Rate</span>
+                <span class="stat-val-sm" id="global-rate">-</span>
+            </div>
+        </div>
+
+        <div id="search-container">
+            <input type="text" id="search" placeholder="Search Cluster ID...">
+        </div>
+        <ul id="cluster-list">
+            <!-- List items injected by JS -->
+        </ul>
+    </div>
+    
+    <div id="map"></div>
+    
+    <div id="details-panel">
+        <div class="panel-header">
+            <h2>Cluster <span id="detail-id">#</span></h2>
+            <span class="close-btn" onclick="closePanel()">&times;</span>
+        </div>
+        
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-val" id="detail-cases">-</div>
+                <div class="stat-label">Total Cases</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-val" id="detail-duration">-</div>
+                <div class="stat-label">Duration (Days)</div>
+            </div>
+        </div>
+
+        <div class="section-title">Environmental Factors</div>
+        <div class="stat-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+            <div class="stat-box">
+                <div class="stat-val" id="detail-precip">-</div>
+                <div class="stat-label">Precip (in)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-val" id="detail-humid">-</div>
+                <div class="stat-label">Humidity (%)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-val" id="detail-wind">-</div>
+                <div class="stat-label">Wind (m/s)</div>
+            </div>
+        </div>
+
+        <div class="section-title">Risk Cone Prediction</div>
+        <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 15px; line-height: 1.4;">
+            Predicted spread radius based on environmental conditions.
+        </p>
+        
+        <div style="background: white; padding: 10px; border-radius: 8px; border: 1px solid #eee; margin-bottom: 20px;">
+            <div class="prediction-row">
+                <span class="pred-label" style="color:var(--success)">Conservative (10%)</span>
+                <span class="pred-val" id="pred-10">- ft</span>
+            </div>
+            <div class="prediction-row">
+                <span class="pred-label" style="color:var(--warning)">Expected (50%)</span>
+                <span class="pred-val" id="pred-50">- ft</span>
+            </div>
+            <div class="prediction-row">
+                <span class="pred-label" style="color:var(--danger)">Severe (90%)</span>
+                <span class="pred-val" id="pred-90">- ft</span>
+            </div>
+            <div class="prediction-row" style="border-top: 2px dashed #eee; margin-top: 5px; padding-top: 10px;">
+                <span class="pred-label">Actual Radius</span>
+                <span class="pred-val" id="detail-actual">- ft</span>
+            </div>
+        </div>
+
+        <canvas id="riskChart" width="280" height="180"></canvas>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard_data.js"></script>
+
+<script>
+    // Initialize Map
+    const map = L.map('map').setView([30.2672, -97.7431], 10); // Austin TX default
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+
+    // State
+    let activeClusterId = null;
+    let clusterLayers = {};
+    let coneLayers = [];
+    let caseLayers = [];
+
+    // Load Data
+    if (typeof dashboardData === 'undefined') {
+        alert("Error: dashboard_data.js not loaded. Please run the generation script.");
+    } else {
+        initDashboard(dashboardData);
+    }
+
+    function initDashboard(data) {
+        document.getElementById('gen-date').textContent = new Date(data.metadata.generated_date).toLocaleDateString();
+        
+        calculateStats(data.clusters);
+
+        const listEl = document.getElementById('cluster-list');
+        const clusters = data.clusters.sort((a, b) => b.statistics.total_cases - a.statistics.total_cases);
+
+        clusters.forEach(cluster => {
+            // Add to List
+            const li = document.createElement('li');
+            li.className = 'cluster-item';
+            li.onclick = () => selectCluster(cluster);
+            li.id = `list-item-${cluster.cluster_id}`;
+            
+            li.innerHTML = `
+                <div class="cluster-header">
+                    <span class="cluster-id">Cluster ${cluster.cluster_id}</span>
+                </div>
+                <div class="cluster-stats">
+                    <span><i class="cases-icon"></i> ${cluster.statistics.total_cases} Cases</span>
+                    <span>${cluster.metrics ? cluster.metrics.duration_days : '?'} Days</span>
+                </div>
+            `;
+            listEl.appendChild(li);
+
+            // Add to Map
+            const center = [cluster.statistics.geographic_center.latitude, cluster.statistics.geographic_center.longitude];
+            const marker = L.circleMarker(center, {
+                radius: 6,
+                fillColor: '#2c3e50',
+                color: "#fff",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            }).addTo(map);
+            
+            marker.on('click', () => selectCluster(cluster));
+            clusterLayers[cluster.cluster_id] = marker;
+        });
+    }
+
+    function calculateStats(clusters) {
+        let total = 0;
+        let insideCone = 0;
+        let outsideSevere = 0;
+        let totalError = 0;
+        let totalRadius = 0;
+        let totalSpreadRate = 0;
+        let spreadRateCount = 0;
+
+        clusters.forEach(c => {
+            if (c.predictions && 
+                typeof c.predictions.actual_radius === 'number' && !isNaN(c.predictions.actual_radius) &&
+                typeof c.predictions.radius_50_expected === 'number' && !isNaN(c.predictions.radius_50_expected)) {
+                
+                total++;
+                const p = c.predictions;
+                const actual = p.actual_radius;
+                
+                // Coverage: Between 10% and 90%
+                if (actual >= p.radius_10_conservative && actual <= p.radius_90_severe) {
+                    insideCone++;
+                }
+                
+                // Outlier: > 90%
+                if (actual > p.radius_90_severe) {
+                    outsideSevere++;
+                }
+
+                // Error (Difference from Expected)
+                totalError += Math.abs(actual - p.radius_50_expected);
+                totalRadius += actual;
+
+                // Spread Rate Calculation
+                if (c.metrics && c.metrics.duration_days > 30) {
+                    const years = c.metrics.duration_days / 365.0;
+                    totalSpreadRate += (actual / years);
+                    spreadRateCount++;
+                }
+            }
+        });
+
+        if (total > 0) {
+            const accuracy = Math.round((insideCone / total) * 100);
+            const avgError = Math.round(totalError / total);
+            const avgRadius = Math.round(totalRadius / total);
+            const avgSpreadRate = spreadRateCount > 0 ? Math.round(totalSpreadRate / spreadRateCount) : 0;
+
+            document.getElementById('global-coverage').textContent = accuracy + '%';
+            document.getElementById('global-mae').textContent = avgError + ' ft';
+            document.getElementById('global-outlier').textContent = outsideSevere;
+            document.getElementById('global-avg').textContent = avgRadius + ' ft';
+            document.getElementById('global-rate').textContent = avgSpreadRate + ' ft/yr';
+        }
+    }
+
+    function selectCluster(cluster) {
+        if (activeClusterId) {
+            document.getElementById(`list-item-${activeClusterId}`).classList.remove('active');
+        }
+        activeClusterId = cluster.cluster_id;
+        document.getElementById(`list-item-${activeClusterId}`).classList.add('active');
+
+        // Map Focus
+        const center = [cluster.statistics.geographic_center.latitude, cluster.statistics.geographic_center.longitude];
+        map.flyTo(center, 16);
+
+        // Clear old cones and cases
+        coneLayers.forEach(l => map.removeLayer(l));
+        coneLayers = [];
+        caseLayers.forEach(l => map.removeLayer(l));
+        caseLayers = [];
+
+        // Draw Cases
+        if (cluster.cases) {
+            cluster.cases.forEach(c => {
+                const caseMarker = L.circleMarker([c.latitude, c.longitude], {
+                    radius: 4,
+                    fillColor: '#ffffff',
+                    color: '#2c3e50',
+                    weight: 1.5,
+                    opacity: 1,
+                    fillOpacity: 1
+                }).addTo(map);
+                caseLayers.push(caseMarker);
+            });
+        }
+
+        // Draw Cones (if predictions exist)
+        if (cluster.predictions) {
+            const p = cluster.predictions;
+            
+            // Use Patient Zero as center if available, otherwise fallback to geometric center
+            let coneCenter = center;
+            if (cluster.patient_zero) {
+                coneCenter = [cluster.patient_zero.latitude, cluster.patient_zero.longitude];
+                
+                // Add Patient Zero Marker
+                const pzMarker = L.marker(coneCenter, {
+                    title: "Patient Zero",
+                    zIndexOffset: 1000
+                }).addTo(map);
+                coneLayers.push(pzMarker);
+            }
+
+            // 90% (Severe)
+            const c90 = L.circle(coneCenter, { 
+                radius: p.radius_90_severe * 0.3048, 
+                color: '#c0392b', 
+                fill: true,
+                fillColor: '#c0392b',
+                fillOpacity: 0.05,
+                weight: 1, 
+                dashArray: '5, 5' 
+            }).addTo(map);
+            
+            // 50% (Expected)
+            const c50 = L.circle(coneCenter, { 
+                radius: p.radius_50_expected * 0.3048, 
+                color: '#f39c12', 
+                fill: true,
+                fillColor: '#f39c12',
+                fillOpacity: 0.1,
+                weight: 2 
+            }).addTo(map);
+            
+            // 10% (Conservative)
+            const c10 = L.circle(coneCenter, { 
+                radius: p.radius_10_conservative * 0.3048, 
+                color: '#27ae60', 
+                fill: true, 
+                fillColor: '#27ae60', 
+                fillOpacity: 0.2, 
+                weight: 1 
+            }).addTo(map);
+            
+            coneLayers.push(c90, c50, c10);
+        }
+
+        // Update Panel
+        document.getElementById('detail-id').textContent = cluster.cluster_id;
+        document.getElementById('detail-cases').textContent = cluster.statistics.total_cases;
+        document.getElementById('detail-duration').textContent = cluster.metrics ? cluster.metrics.duration_days : '?';
+        
+        if (cluster.environment) {
+            document.getElementById('detail-precip').textContent = parseFloat(cluster.environment.avg_precip).toFixed(2);
+            document.getElementById('detail-humid').textContent = parseFloat(cluster.environment.avg_humidity).toFixed(1);
+            document.getElementById('detail-wind').textContent = parseFloat(cluster.environment.avg_wind).toFixed(2);
+        }
+        
+        if (cluster.predictions) {
+            document.getElementById('pred-10').textContent = cluster.predictions.radius_10_conservative + ' ft';
+            document.getElementById('pred-50').textContent = cluster.predictions.radius_50_expected + ' ft';
+            document.getElementById('pred-90').textContent = cluster.predictions.radius_90_severe + ' ft';
+            document.getElementById('detail-actual').textContent = cluster.predictions.actual_radius + ' ft';
+            
+            updateChart(cluster.predictions);
+        }
+
+        document.getElementById('details-panel').style.display = 'block';
+    }
+
+    function closePanel() {
+        document.getElementById('details-panel').style.display = 'none';
+        coneLayers.forEach(l => map.removeLayer(l));
+        coneLayers = [];
+        caseLayers.forEach(l => map.removeLayer(l));
+        caseLayers = [];
+        if (activeClusterId) {
+            document.getElementById(`list-item-${activeClusterId}`).classList.remove('active');
+            activeClusterId = null;
+        }
+        map.setView([30.2672, -97.7431], 10);
+    }
+
+    // Chart.js
+    let riskChart = null;
+    function updateChart(preds) {
+        const ctx = document.getElementById('riskChart').getContext('2d');
+        
+        if (riskChart) riskChart.destroy();
+
+        riskChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Conservative', 'Expected', 'Severe', 'Actual'],
+                datasets: [{
+                    label: 'Radius (ft)',
+                    data: [preds.radius_10_conservative, preds.radius_50_expected, preds.radius_90_severe, preds.actual_radius],
+                    backgroundColor: [
+                        'rgba(39, 174, 96, 0.6)',
+                        'rgba(243, 156, 18, 0.6)',
+                        'rgba(192, 57, 43, 0.6)',
+                        'rgba(52, 73, 94, 0.8)'
+                    ],
+                    borderColor: [
+                        '#27ae60',
+                        '#f39c12',
+                        '#c0392b',
+                        '#2c3e50'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Radius (ft)' } }
+                }
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
