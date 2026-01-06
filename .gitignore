@@ -27,3 +27,4 @@ Thumbs.db
 # Project specific
 *.pyc
 .pytest_cache/
+legacy_archive/
