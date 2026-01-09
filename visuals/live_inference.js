@@ -203,7 +203,7 @@ async function loadScenario() {
     } catch (e) {
         alert("Failed to load: " + e.message);
     } finally {
-        btn.innerText = "🎲 Load New Scenario";
+        btn.innerText = "Load New Scenario";
         btn.disabled = false;
     }
 }
@@ -356,7 +356,7 @@ function processResults(data) {
             </span>
         </div>
         <div class="metric-row" title="Projects the radial growth of the infection center to a full year">
-            <span>📉 Est. Spread Rate:</span>
+            <span>Est. Spread Rate:</span>
             <span class="metric-val">${Math.round(yearlyRate)} ft/yr</span>
         </div>
     `;
@@ -402,10 +402,10 @@ function processResults(data) {
 
         html += `
             <div style="margin-top:10px; padding:10px; background:#f8f9fa; border-radius:6px;">
-                <div class="metric-row"><span>✅ Captured Infections:</span> <strong>${truePositives}</strong></div>
-                <div class="metric-row" title="Safe areas flagged as risky (Safety Buffer)"><span>🛡️ High Pressure Zones:</span> <strong>${falsePositives}</strong></div>
-                <div class="metric-row" title="Actual infected trees we missed (within ${scopeYears} yr window)"><span>⚠️ Unpredicted Infections:</span> <strong>${missed}</strong></div>
-                <div class="metric-row" style="color:#7f8c8d; font-size:0.9em"><span>📅 Out of Scope (>${scopeYears} yrs):</span> <strong>${outOfScope}</strong></div>
+                <div class="metric-row"><span>Captured Infections:</span> <strong>${truePositives}</strong></div>
+                <div class="metric-row" title="Safe areas flagged as risky (Safety Buffer)"><span>High Pressure Zones:</span> <strong>${falsePositives}</strong></div>
+                <div class="metric-row" title="Actual infected trees we missed (within ${scopeYears} yr window)"><span>Unpredicted Infections:</span> <strong>${missed}</strong></div>
+                <div class="metric-row" style="color:#7f8c8d; font-size:0.9em"><span>Out of Scope (>${scopeYears} yrs):</span> <strong>${outOfScope}</strong></div>
             </div>
             <p style="font-size:0.8rem; color:#666; margin-top:5px;">
                 * Comparison of "Gravity Model" prediction vs. Reality.
