@@ -7,6 +7,9 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, roc_auc_score
 
+# Set random seed for reproducibility in synthetic data generation
+np.random.seed(42)
+
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / 'data'
