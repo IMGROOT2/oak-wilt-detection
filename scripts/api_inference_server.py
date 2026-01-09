@@ -5,12 +5,13 @@ import uvicorn
 import httpx
 import math
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from pathlib import Path
 from datetime import datetime, timedelta
-from typing import List
+from typing import List, Optional
 
 # --- Schemas ---
 class ForecastInput(BaseModel):
@@ -33,6 +34,10 @@ class SimulationRequest(BaseModel):
     trees: List[TreePoint]
     start_date: str
     months: int = 24
+    custom_temp: Optional[float] = None
+    custom_precip: Optional[float] = None
+    custom_humidity: Optional[float] = None
+    custom_wind_speed: Optional[float] = None
 
 class WeatherInput(BaseModel):
     lat: float
@@ -41,6 +46,15 @@ class WeatherInput(BaseModel):
     end_date: str
 
 app = FastAPI(title="Oak Wilt Risk API")
+
+# Enable CORS for local development (frontend on file:// or diff port)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # --- Paths ---
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -120,6 +134,68 @@ async def fetch_recent_weather(lat, lon, end_date_str, days=60):
         'recent_temp_60d': temp
     }
 
+
+async def fetch_real_nasa_weather(lat, lon, start_date):
+    """
+    Fetch weather data from NASA POWER API (Async).
+    Returns averaged weather for the 30 days leading up to start_date.
+    Parameters: T2M (Temp), PRECTOTCORR (Precip), RH2M (Humidity), WS2M (Wind Speed)
+    """
+    try:
+        # Calculate date range (previous 30 days)
+        # NASA Power typically has a few days lag, so let's go back from 5 days ago to 35 days ago to be safe
+        # Or just try asking for the month prior to the simulation.
+        
+        sim_start = datetime.strptime(start_date, '%Y-%m-%d')
+        end_dt = sim_start - timedelta(days=5)
+        start_dt = end_dt - timedelta(days=30)
+        
+        start_str = start_dt.strftime('%Y%m%d')
+        end_str = end_dt.strftime('%Y%m%d')
+        
+        params = {
+            'parameters': 'T2M,PRECTOTCORR,RH2M,WS2M',
+            'community': 'AG',
+            'longitude': lon,
+            'latitude': lat,
+            'start': start_str,
+            'end': end_str,
+            'format': 'JSON'
+        }
+        
+        url = "https://power.larc.nasa.gov/api/temporal/daily/point"
+        
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            resp = await client.get(url, params=params)
+            resp.raise_for_status()
+            data = resp.json()
+            
+        properties = data.get('properties', {}).get('parameter', {})
+        t2m = properties.get('T2M', {})
+        precip = properties.get('PRECTOTCORR', {})
+        rh2m = properties.get('RH2M', {})
+        ws2m = properties.get('WS2M', {})
+        
+        # Filter valid
+        def get_avg(d):
+            vals = [v for v in d.values() if v != -999]
+            return sum(vals)/len(vals) if vals else None
+
+        avg_temp = get_avg(t2m)
+        avg_precip = get_avg(precip)
+        avg_humid = get_avg(rh2m)
+        avg_wind = get_avg(ws2m)
+        
+        return {
+            "temp": avg_temp,
+            "precip": avg_precip, # mm/day avg
+            "humidity": avg_humid,
+            "wind": avg_wind
+        }
+        
+    except Exception as e:
+        print(f"NASA API Fetch failed: {e}")
+        return None
 
 # --- Endpoints ---
 
@@ -215,6 +291,55 @@ async def run_network_simulation(data: SimulationRequest):
     
     # Setup State
     current_date = datetime.strptime(data.start_date, '%Y-%m-%d')
+    
+    # --- Auto-Fill Weather Logic ---
+    # If any user value is missing, fetch from NASA API
+    user_overrides = {
+        "temp": data.custom_temp,
+        "precip": data.custom_precip,
+        "humidity": data.custom_humidity,
+        "wind": data.custom_wind_speed
+    }
+    
+    # Check if we need to fetch
+    if None in user_overrides.values():
+        print("Missing weather inputs detected. Fetching from NASA POWER API...")
+        
+        # Calculate Centroid
+        if data.trees:
+             lats = [t.lat for t in data.trees]
+             lons = [t.lon for t in data.trees]
+             c_lat = sum(lats) / len(lats)
+             c_lon = sum(lons) / len(lons)
+             
+             nasa_data = await fetch_real_nasa_weather(c_lat, c_lon, data.start_date)
+             
+             if nasa_data:
+                 print(f"NASA Data Fetched: {nasa_data}")
+                 if user_overrides['temp'] is None and nasa_data['temp']: 
+                     user_overrides['temp'] = round(nasa_data['temp'], 1)
+                 if user_overrides['precip'] is None and nasa_data['precip']: 
+                     user_overrides['precip'] = round(nasa_data['precip'] * 30, 1) # Monthly Est (mm/day * 30)
+                 if user_overrides['humidity'] is None and nasa_data['humidity']: 
+                     user_overrides['humidity'] = round(nasa_data['humidity'], 1)
+                 if user_overrides['wind'] is None and nasa_data['wind']: 
+                     user_overrides['wind'] = round(nasa_data['wind'], 1)
+
+    # Initialize weather variables with defaults or overrides
+    # Defaults in Metric (C, mm/month, %, m/s)
+    c_temp = user_overrides['temp'] if user_overrides['temp'] is not None else 25.0
+    c_precip = user_overrides['precip'] if user_overrides['precip'] is not None else 50.0 # Monthly total mm
+    c_humidity = user_overrides['humidity'] if user_overrides['humidity'] is not None else 65.0
+    c_wind = user_overrides['wind'] if user_overrides['wind'] is not None else 3.0
+    
+    print(f"Simulation Weather Context: T={c_temp}C, P={c_precip}mm, H={c_humidity}%, W={c_wind}m/s")
+    
+    # Check for overrides (Logging only validation)
+    if data.custom_temp is not None or data.custom_precip is not None:
+        print(f"Network Simulation using User Overrides: Temp={data.custom_temp}, Precip={data.custom_precip}")
+        # Note: Current Graph Model (v1) relies on Gravity & Seasonality. 
+        # Future v2 models will incorporate these weather features directly.
+    
     forest = []
     for i, t in enumerate(data.trees):
         forest.append({
@@ -288,13 +413,19 @@ async def run_network_simulation(data: SimulationRequest):
                 continue # Skip prediction, too far for root transmission.
 
             # Feature Vector
-            # Spatio-Temporal Features
+            # Spatio-Temporal Features + Weather
+            # c_humidity & c_wind defined at function scope
+            
             feats = pd.DataFrame([{
                 'log_pressure': np.log1p(pressure),
                 'log_min_dist': np.log1p(min_dist),
                 'local_density': nearby_count,
                 'month_sin': m_sin,
-                'month_cos': m_cos
+                'month_cos': m_cos,
+                'avg_temp': c_temp,
+                'avg_precip': c_precip / 30.0, # Convert Monthly Total to Daily Average for model
+                'avg_humidity': c_humidity,
+                'avg_wind': c_wind
             }])
             
             # Predict
@@ -326,8 +457,18 @@ async def run_network_simulation(data: SimulationRequest):
             
     return {
         "timeline": timeline_events,
-        "total_months": data.months
+        "total_months": data.months,
+        "environment": {
+            "temp": c_temp, 
+            "precip": c_precip, 
+            "humidity": c_humidity, 
+            "wind": c_wind 
+        }
     }
+
+@app.get("/health")
+def health_check():
+    return {"status": "online"}
 
 @app.post("/api/forecast")
 async def get_forecast(data: ForecastInput):

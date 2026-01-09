@@ -6,13 +6,39 @@ let mode = 'network';
 let activeTool = 'healthy';
 let scenarioData = null; // For historical
 
+// Config: Use localhost if on file://, otherwise relative path
+const API_BASE_URL = window.location.protocol === 'file:' ? 'http://localhost:8000' : '';
+
 // Animation State
 let timelineEvents = []; // [{month: 1, new_cases: [id, id]}]
+
+// --- Status Check ---
+async function checkServerStatus() {
+    const dot = document.getElementById('status-dot');
+    const txt = document.getElementById('status-text');
+    if (!dot || !txt) return;
+
+    try {
+        const res = await fetch(`${API_BASE_URL}/health`);
+        if (res.ok) {
+            dot.style.background = '#2ecc71'; // Green
+            txt.innerText = "Online";
+        } else {
+            throw new Error();
+        }
+    } catch (e) {
+        dot.style.background = '#e74c3c'; // Red
+        txt.innerText = "Offline";
+    }
+}
+setInterval(checkServerStatus, 5000); // Check every five s
+
 let currentAnimFrame = 0;
 let animInterval = null;
 let totalMonths = 12;
 
 document.addEventListener('DOMContentLoaded', () => {
+    checkServerStatus(); // Initial check
     initMap();
     selectMode('network');
 });
@@ -40,21 +66,38 @@ function clearMap() {
 
 // --- Navigation ---
 function nextStep(step) {
-    document.querySelectorAll('.content').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.content').forEach(el => el.classList.add('hidden')); // Keep this, I'll add .content class to sections
+    // Or just target IDs which is safer
+    document.getElementById('step-1').classList.add('hidden');
+    document.getElementById('step-2').classList.add('hidden');
+    document.getElementById('step-3').classList.add('hidden');
     document.getElementById(`step-${step}`).classList.remove('hidden');
     
-    document.querySelectorAll('.step').forEach((el, i) => {
-        if (i + 1 === step) el.classList.add('active');
-        else el.classList.remove('active');
+    // Reset all steps
+    [1, 2, 3].forEach(i => {
+        const el = document.getElementById(`step-ind-${i}`);
+        el.classList.remove('border-slate-800', 'text-slate-900');
+        el.classList.add('border-transparent', 'text-slate-400');
     });
+    
+    // Activate current
+    const active = document.getElementById(`step-ind-${step}`);
+    active.classList.remove('border-transparent', 'text-slate-400');
+    active.classList.add('border-slate-800', 'text-slate-900');
 
     if (step === 2) setupConfig();
 }
 
 function selectMode(m) {
     mode = m;
-    document.querySelectorAll('.card').forEach(el => el.classList.remove('selected'));
-    document.getElementById(`mode-${m}`).classList.add('selected');
+    // Reset styles
+    ['network', 'historical'].forEach(t => {
+        const el = document.getElementById(`mode-${t}`);
+        el.classList.remove('ring-1', 'ring-slate-800', 'bg-slate-50');
+    });
+    
+    // Apply Active
+    document.getElementById(`mode-${m}`).classList.add('ring-1', 'ring-slate-800', 'bg-slate-50');
 }
 
 function setupConfig() {
@@ -70,12 +113,21 @@ function setupConfig() {
 // --- Tooling ---
 function setTool(t) {
     activeTool = t;
-    document.querySelectorAll('.tool').forEach(el => el.classList.remove('active'));
-    document.getElementById(`tool-${t}`).classList.add('active');
+    ['healthy', 'infected'].forEach(tool => {
+        const el = document.getElementById(`tool-${tool}`);
+        // Reset to inactive: bg-white text-slate-600 border-slate-200
+        el.classList.remove('bg-slate-800', 'text-white', 'border-slate-800');
+        el.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+    });
+    
+    // Active: bg-slate-800 text-white border-slate-800
+    const active = document.getElementById(`tool-${t}`);
+    active.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+    active.classList.add('bg-slate-800', 'text-white', 'border-slate-800');
 }
 
 function addManualTree(latlng) {
-    const color = activeTool === 'healthy' ? '#27ae60' : '#e74c3c';
+    const color = activeTool === 'healthy' ? '#27ae60' : '#4B0082'; // Dark Purple
     const m = L.circleMarker(latlng, {
         color: color, fillColor: color, fillOpacity: 0.8, radius: 6
     }).addTo(layers);
@@ -106,7 +158,7 @@ async function loadScenario() {
     
     try {
         clearMap();
-        const res = await fetch('/api/historical_scenario');
+        const res = await fetch(`${API_BASE_URL}/api/historical_scenario`);
         if (!res.ok) throw new Error("API Error");
         const data = await res.json();
         
@@ -115,8 +167,9 @@ async function loadScenario() {
         // Render Map
         // 1. Past Infections (Known)
         data.past_infection.forEach(p => {
+            // Dark purple for existing infections
             L.circleMarker([p.lat, p.lon], {
-                color: '#e74c3c', fillColor: '#e74c3c', fillOpacity:0.6, radius:5
+                color: '#4B0082', fillColor: '#4B0082', fillOpacity:0.6, radius:5
             }).addTo(layers).bindPopup("Existing Infection");
             // Treat as infected input
             markers.push({id: markers.length, lat: p.lat, lon: p.lon, type: 'infected', marker: null}); 
@@ -167,17 +220,39 @@ async function runAnalysis() {
         let url = '';
 
         if (mode === 'network' || mode === 'historical') {
-            url = '/api/network_simulation';
+            url = `${API_BASE_URL}/api/network_simulation`;
             // Use 24 months (2 years) for historical validation to capture more ground truth data
             const months = mode === 'network' ? parseInt(document.getElementById('net-months').value) : 24;
             
             // For historical, we use the scenario date, else today
             const startC = mode === 'historical' ? scenarioData.cutoff_date : new Date().toISOString().split('T')[0];
             
+            // Check for overrides (Network mode only)
+            let customTemp = null;
+            let customPrecip = null;
+            let customHumidity = null;
+            let customWind = null;
+
+            if (mode === 'network') {
+                const tempVal = document.getElementById('custom-temp').value;
+                const precipVal = document.getElementById('custom-precip').value;
+                const humidVal = document.getElementById('custom-humidity').value;
+                const windVal = document.getElementById('custom-wind').value;
+                
+                if (tempVal !== "") customTemp = parseFloat(tempVal);
+                if (precipVal !== "") customPrecip = parseFloat(precipVal);
+                if (humidVal !== "") customHumidity = parseFloat(humidVal);
+                if (windVal !== "") customWind = parseFloat(windVal);
+            }
+
             payload = {
                 trees: markers.map(m => ({lat: m.lat, lon: m.lon, type: m.type})),
                 start_date: startC,
-                months: months
+                months: months,
+                custom_temp: customTemp,
+                custom_precip: customPrecip,
+                custom_humidity: customHumidity,
+                custom_wind_speed: customWind
             };
         }
 
@@ -191,6 +266,22 @@ async function runAnalysis() {
         const data = await res.json();
         
         processResults(data);
+        
+        // Populate overrides if they were empty
+        if (data.environment && mode === 'network') {
+            const tempInput = document.getElementById('custom-temp');
+            if (tempInput.value === "") tempInput.value = data.environment.temp || "";
+            
+            const precipInput = document.getElementById('custom-precip');
+            if (precipInput.value === "") precipInput.value = data.environment.precip || "";
+
+            const humidInput = document.getElementById('custom-humidity');
+            if (humidInput.value === "") humidInput.value = data.environment.humidity || "";
+
+            const windInput = document.getElementById('custom-wind');
+            if (windInput.value === "") windInput.value = data.environment.wind || "";
+        }
+
         nextStep(3);
 
     } catch(e) {
@@ -211,7 +302,6 @@ function processResults(data) {
     const totalInfected = timelineEvents.reduce((acc, ev) => acc + ev.new_cases.length, 0);
     
     // --- Calc Expansion Rate (Robust) ---
-    // We use the 90th percentile distance to exclude outliers (satellite infections)
     // and provide a more representative "Frontline" expansion rate.
     let yearlyRate = 0;
     const originInfected = markers.filter(m => m.type === 'infected');
@@ -222,8 +312,8 @@ function processResults(data) {
         const cLon = originInfected.reduce((sum, m) => sum + m.lon, 0) / originInfected.length;
         const centroid = L.latLng(cLat, cLon);
         
-        // Helper: Get Robust "Frontline" Radius (75th Percentile)
-        // We use the 75th percentile (Upper Quartile) to track the main infection front
+        // Helper: Get Robust "Frontline" Radius (seven five) Percentile)
+        // We use the seventyfifth percentile (Upper Quartile) to track the main infection front
         // while ignoring stochastic "spark" outliers that inflate the spread rate logic.
         function getEffectiveRadius(idList) {
             if (idList.length === 0) return 0;
@@ -232,7 +322,7 @@ function processResults(data) {
                 return m ? centroid.distanceTo(L.latLng(m.lat, m.lon)) : 0;
             }).sort((a, b) => a - b);
             
-            // 75th Percentile index (Upper Quartile)
+            // seventyfifth Percentile index (Upper Quartile)
             const k = Math.floor(dists.length * 0.75);
             return dists[k];
         }
@@ -328,13 +418,25 @@ function processResults(data) {
                 const infDate = new Date(m.infection_date);
                 const isRelevant = infDate <= simEndDate;
                 
-                // Yellow for Near Future (In Scope), Grey for Far Future (Out of Scope)
-                const color = isRelevant ? '#f1c40f' : '#95a5a6';
-                const style = isRelevant ? 'solid' : 'dotted';
+                // USER REQUEST 3: Just don't show out of scope cases at all
+                // Only render if relevant (in scope)
                 
-                L.circleMarker([m.lat, m.lon], {
-                   radius: 8, color: color, fill: false, weight: 2, dashArray: isRelevant ? null : '4,4'
-                }).addTo(layers).bindPopup(`Infected: ${m.infection_date} (${isRelevant ? 'In Scope' : 'Future'})`);
+                if (isRelevant) {
+                    const color = '#f1c40f'; // Yellow for future "truth" to compare
+                    const style = 'solid';
+                    
+                    // USER REQUEST 4: Don't show yellow circle for original infections...
+                    // "markers" loop includes healthy candidates which have real_future=true.
+                    // Original infections were pushed as type='infected' and usually don't have real_future set?
+                    // Let's check init logic. 
+                    // Past infections: type='infected', marker:null.
+                    // Candidates: type='healthy', real_future=true/false.
+                    // So this loop only affects candidates.
+                    
+                    L.circleMarker([m.lat, m.lon], {
+                       radius: 8, color: color, fill: false, weight: 2
+                    }).addTo(layers).bindPopup(`Infected: ${m.infection_date} (In Scope)`);
+                }
             }
         });
     }
@@ -362,18 +464,26 @@ function showFrame(monthIndex) {
         if (!m.marker) return;
 
         // Check if this marker was infected by this month
-        let isInfected = false;
+        let infectionMonth = -1;
         for (let t of timelineEvents) {
-            if (t.month <= monthIndex && t.new_cases.includes(m.id)) {
-                isInfected = true;
+            if (t.new_cases.includes(m.id)) {
+                infectionMonth = t.month;
                 break;
             }
         }
         
         const el = m.marker.getElement();
+        const wasInfected = infectionMonth !== -1 && infectionMonth <= monthIndex;
         
-        if (isInfected) {
-            m.marker.setStyle({ color: '#e74c3c', fillColor: '#e74c3c', radius: 8, fillOpacity: 0.9 });
+        if (wasInfected) {
+            // USER REQUEST 3: 
+            // - If newly infected (THIS month), turn Orange.
+            // - If infected previously (BEFORE this month), turn Red.
+            
+            const isNew = infectionMonth === monthIndex;
+            const color = isNew ? '#FF8C00' : '#DC143C'; // Orange vs Crimson
+            
+            m.marker.setStyle({ color: color, fillColor: color, radius: 8, fillOpacity: 0.9 });
             if(el) el.classList.add('pulse-icon');
         } else {
             m.marker.setStyle({ color: '#bdc3c7', fillColor: '#bdc3c7', radius: 4, fillOpacity: 0.5 });

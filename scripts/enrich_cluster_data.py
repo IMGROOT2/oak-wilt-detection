@@ -39,7 +39,7 @@ def get_nasa_weather(lat, lon, start_date, end_date):
     end_str = end_date.strftime('%Y%m%d')
     
     params = {
-        'parameters': 'PRECTOTCORR,RH2M,WS2M',
+        'parameters': 'T2M,PRECTOTCORR,RH2M,WS2M',
         'community': 'AG',
         'longitude': lon,
         'latitude': lat,
@@ -55,17 +55,20 @@ def get_nasa_weather(lat, lon, start_date, end_date):
         
         # Extract values
         properties = data.get('properties', {}).get('parameter', {})
+        t2m = properties.get('T2M', {})
         precip = properties.get('PRECTOTCORR', {})
         humidity = properties.get('RH2M', {})
         wind = properties.get('WS2M', {})
         
         # Filter out fill values (-999)
+        temp_vals = [v for v in t2m.values() if v != -999]
         precip_vals = [v for v in precip.values() if v != -999]
         humidity_vals = [v for v in humidity.values() if v != -999]
         wind_vals = [v for v in wind.values() if v != -999]
         
         return {
-            'avg_precip': np.mean(precip_vals) if precip_vals else np.nan,
+            'avg_temp': np.mean(temp_vals) if temp_vals else np.nan,
+            'avg_precip': np.mean(precip_vals) if precip_vals else np.nan, # Daily avg mm
             'total_precip': np.sum(precip_vals) if precip_vals else np.nan,
             'avg_humidity': np.mean(humidity_vals) if humidity_vals else np.nan,
             'avg_wind': np.mean(wind_vals) if wind_vals else np.nan
@@ -143,6 +146,7 @@ def main():
                 'radius_ft': max_dist, # Calculated from Patient Zero
                 'point_count': cluster['point_count'],
                 'point_density': cluster['point_density_per_km2'],
+                'avg_temp': weather['avg_temp'],
                 'avg_precip': weather['avg_precip'],
                 'total_precip': weather['total_precip'],
                 'avg_humidity': weather['avg_humidity'],

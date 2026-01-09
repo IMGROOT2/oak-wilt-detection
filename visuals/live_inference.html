@@ -3,213 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oak Wilt Prevention Platform</title>
+    <title>Oak Wilt Inference System</title>
+    <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (V4 via CDN) -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+    <!-- Font Awesome -->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/8664419f7c.js" type="module"></script>
+
     <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #27ae60;
-            --danger: #e74c3c;
-            --gray: #f8f9fa;
-        }
-        body { margin: 0; font-family: 'Inter', sans-serif; height: 100vh; display: flex; overflow: hidden; }
+        body { font-family: 'Inter', sans-serif; }
         
-        /* Layout */
-        #sidebar {
-            width: 360px; background: white; border-right: 1px solid #e0e0e0;
-            display: flex; flex-direction: column; z-index: 1000; box-shadow: 2px 0 10px rgba(0,0,0,0.05);
-        }
-        #map { flex: 1; height: 100%; background: #eee; }
-
-        /* Components */
-        .header { padding: 20px; border-bottom: 1px solid #eee; background: var(--primary); color: white; }
-        .header h1 { margin: 0; font-size: 1.2rem; font-weight: 600; }
-        .header p { margin: 5px 0 0; opacity: 0.8; font-size: 0.85rem; }
-
-        .progress-bar { display: flex; padding: 0; background: #fff; border-bottom: 1px solid #eee; }
-        .step { 
-            flex: 1; padding: 12px; text-align: center; font-size: 0.8rem; 
-            border-bottom: 3px solid transparent; color: #999; cursor: default;
-        }
-        .step.active { border-color: var(--accent); color: var(--primary); font-weight: 600; }
-        
-        .content { flex: 1; overflow-y: auto; padding: 20px; }
-        .hidden { display: none !important; }
-
-        /* Cards */
-        .card { 
-            border: 1px solid #eee; border-radius: 8px; padding: 15px; margin-bottom: 15px; 
-            cursor: pointer; transition: all 0.2s; background: #fff;
-        }
-        .card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card.selected { border: 2px solid var(--accent); background: #f0fdf4; }
-        .card h3 { margin: 0 0 5px; color: var(--primary); font-size: 1rem; }
-        .card p { margin: 0; color: #666; font-size: 0.85rem; line-height: 1.4; }
-
-        /* Forms */
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 0.9rem; }
-        input, select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-        
-        .btn { 
-            width: 100%; padding: 10px; background: var(--accent); color: white; border: none; 
-            border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 0.95rem; margin-top: 10px;
-        }
-        .btn:hover { opacity: 0.9; }
-        .btn.secondary { background: white; color: var(--primary); border: 1px solid #ddd; }
-        .btn:disabled { background: #ccc; cursor: not-allowed; }
-
-        /* Drawing Tools */
-        .toolbar { display: flex; gap: 8px; margin-bottom: 15px; }
-        .tool { 
-            flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 4px; 
-            text-align: center; cursor: pointer; font-size: 0.85rem;
-        }
-        .tool.active { background: var(--primary); color: white; border-color: var(--primary); }
-        
-        /* Results */
-        .metric-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
-        .metric-val { font-weight: 600; }
-        .badge { 
-            padding: 4px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; 
-            background: #eee; color: #666; 
-        }
-
-        /* Timeline */
-        #media-controls { background: var(--gray); padding: 15px; border-radius: 8px; margin-top: 10px; }
-        .time-display { font-weight: 600; color: var(--accent); text-align: center; margin-bottom: 5px; }
-
-        /* Animation Effects */
+        /* Custom map markers pulse in Red */
         @keyframes pulse-red {
-            0% { 
-                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); 
-            }
-            70% { 
-                box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); 
-            }
-            100% { 
-                box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); 
-            }
+            0% { box-shadow: 0 0 0 0 rgba(220, 20, 60, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 20, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 20, 60, 0); }
         }
         .pulse-icon {
-            /* We apply pulse to the marker element carefully */
             animation: pulse-red 2s infinite;
-            border-radius: 50%; /* Ensure circular pulse even if square icon */
+            border-radius: 50%;
         }
-        /* Custom Leaflet Marker overrides if needed */
         .leaflet-grab { cursor: grab; }
         .leaflet-crosshair, .leaflet-crosshair .leaflet-interactive { cursor: crosshair; }
-
+        
+        /* Animations */
+        .fade-in { animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        /* Utility */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body>
+<body class="h-screen flex overflow-hidden bg-slate-50 text-slate-800 text-sm">
 
-<div id="sidebar">
-    <div class="header">
-        <h1>Oak Wilt Defense</h1>
-        <p>AI-Powered Prediction Platform</p>
+<!-- Sidebar -->
+<div id="sidebar" class="w-96 bg-white border-r border-slate-200 flex flex-col shadow-xl z-[1000] relative">
+    
+    <!-- Header -->
+    <div class="p-5 border-b border-slate-100 flex justify-between items-center bg-white sticky top-0 z-10">
+        <div>
+            <h1 class="font-semibold text-base text-slate-900 tracking-tight">Oak Wilt Inference System</h1>
+            <p class="text-xs text-slate-500 mt-0.5">Predictive Modeling Dashboard</p>
+        </div>
+        <div class="flex items-center gap-2 bg-slate-50 px-2 py-1 rounded-full border border-slate-100">
+            <span id="status-dot" class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+            <span id="status-text" class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Connecting</span>
+        </div>
+    </div>
+
+    <!-- Progress Steps -->
+    <div class="grid grid-cols-3 border-b border-slate-100">
+        <div id="step-ind-1" class="py-3 text-center text-xs font-medium text-slate-900 border-b-2 border-slate-800 transition-colors duration-300">
+            1. Mode
+        </div>
+        <div id="step-ind-2" class="py-3 text-center text-xs font-medium text-slate-400 border-b-2 border-transparent transition-colors duration-300">
+            2. Config
+        </div>
+        <div id="step-ind-3" class="py-3 text-center text-xs font-medium text-slate-400 border-b-2 border-transparent transition-colors duration-300">
+            3. Results
+        </div>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="flex-1 overflow-y-auto no-scrollbar p-6 relative">
+        
+        <!-- STEP 1: MODE SELECTION -->
+        <div id="step-1" class="space-y-4 fade-in">
+            <div class="mb-4">
+                <h2 class="text-base font-medium text-slate-900">Select Methodology</h2>
+                <p class="text-slate-500 mt-1 leading-relaxed">Choose the predictive framework for analysis.</p>
+            </div>
+
+            <div id="mode-network" onclick="selectMode('network')" 
+                 class="group border border-slate-200 rounded-lg p-4 cursor-pointer hover:border-slate-800 hover:shadow-sm transition-all duration-200 selected ring-1 ring-slate-800 bg-slate-50">
+                <div class="flex items-start gap-3">
+                    <div class="mt-1 text-slate-700"><i class="fa-solid fa-circle-nodes"></i></div>
+                    <div>
+                        <h3 class="font-medium text-slate-900 mb-1 group-hover:text-slate-900">Spatial Transmission Model</h3>
+                        <p class="text-slate-500 leading-normal">
+                            Simulate disease propagation using a gravity-based pressure model. Analyzes inter-tree transmission dynamics over time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mode-historical" onclick="selectMode('historical')" 
+                 class="group border border-slate-200 rounded-lg p-4 cursor-pointer hover:border-slate-800 hover:shadow-sm transition-all duration-200">
+                <div class="flex items-start gap-3">
+                    <div class="mt-1 text-slate-700"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <div>
+                        <h3 class="font-medium text-slate-900 mb-1 group-hover:text-slate-900">Historical Validation</h3>
+                        <p class="text-slate-500 leading-normal">
+                            Backtest the model against confirmed historical outbreak data to verify accuracy and recall metrics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4">
+                <button onclick="nextStep(2)" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm">
+                    <span>Initialize Configuration</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- STEP 2: CONFIGURATION -->
+        <div id="step-2" class="hidden space-y-6 fade-in">
+            <button onclick="nextStep(1)" class="text-slate-400 hover:text-slate-600 flex items-center gap-1.5 transition-colors text-xs font-medium cursor-pointer">
+                <i class="fa-solid fa-arrow-left"></i> Return to Mode Selection
+            </button>
+
+            <!-- NETWORK CONFIG -->
+            <div id="cfg-network" class="cfg-panel">
+                <div class="mb-6">
+                    <h2 class="text-base font-medium text-slate-900 mb-1">Topology Configuration</h2>
+                    <p class="text-slate-500">Define the initial forest state on the map.</p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 mb-6">
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Input Tools</span>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div id="tool-healthy" onclick="setTool('healthy')" class="active-tool cursor-pointer border border-slate-800 bg-slate-800 text-white rounded py-2 px-3 text-center transition-all shadow-sm">
+                            <i class="fa-solid fa-tree mr-1.5"></i> Healthy
+                        </div>
+                        <div id="tool-infected" onclick="setTool('infected')" class="cursor-pointer border border-slate-200 bg-white text-slate-600 hover:border-slate-300 rounded py-2 px-3 text-center transition-all shadow-sm">
+                            <i class="fa-solid fa-circle-exclamation mr-1.5 text-orange-600"></i> Infected
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center bg-white border border-slate-200 p-3 rounded-lg mb-6 shadow-sm">
+                    <div class="text-center w-1/2 border-r border-slate-100">
+                        <span class="block text-slate-400 text-xs uppercase tracking-wide">Healthy Sample</span>
+                        <span id="count-h" class="block text-lg font-semibold text-slate-700">0</span>
+                    </div>
+                    <div class="text-center w-1/2">
+                        <span class="block text-slate-400 text-xs uppercase tracking-wide">Infected Source</span>
+                        <span id="count-i" class="block text-lg font-semibold text-orange-600">0</span>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wide mb-2">Simulation Window</label>
+                        <div class="relative">
+                            <select id="net-months" class="w-full appearance-none bg-white border border-slate-300 text-slate-700 py-2.5 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-200 focus:border-slate-400 shadow-sm cursor-pointer">
+                                <option value="6">6 Months</option>
+                                <option value="12" selected>12 Months (1 Year)</option>
+                                <option value="24">24 Months (2 Years)</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-500">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-100 pt-4 mt-4">
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wide mb-3">Environmental Parameters <span class="text-slate-400 font-normal ml-1 normal-case">(Optional)</span></label>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-3">
+                            <div>
+                                <label class="block text-[11px] text-slate-500 mb-1">Avg Temp (°C)</label>
+                                <input type="number" id="custom-temp" placeholder="NASA: Auto" class="w-full bg-slate-50 border border-slate-200 text-slate-700 py-2 px-3 rounded focus:outline-none focus:border-slate-400 transition-colors placeholder:text-slate-300 text-xs">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-slate-500 mb-1">Precip (mm/mo)</label>
+                                <input type="number" id="custom-precip" placeholder="NASA: Auto" class="w-full bg-slate-50 border border-slate-200 text-slate-700 py-2 px-3 rounded focus:outline-none focus:border-slate-400 transition-colors placeholder:text-slate-300 text-xs">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-[11px] text-slate-500 mb-1">Humidity (%)</label>
+                                <input type="number" id="custom-humidity" placeholder="NASA: Auto" class="w-full bg-slate-50 border border-slate-200 text-slate-700 py-2 px-3 rounded focus:outline-none focus:border-slate-400 transition-colors placeholder:text-slate-300 text-xs">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-slate-500 mb-1">Wind (m/s)</label>
+                                <input type="number" id="custom-wind" placeholder="NASA: Auto" class="w-full bg-slate-50 border border-slate-200 text-slate-700 py-2 px-3 rounded focus:outline-none focus:border-slate-400 transition-colors placeholder:text-slate-300 text-xs">
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 italic">* Leave blank to auto-fetch valid historical weather for the location.</p>
+                    </div>
+                </div>
+
+                <div class="pt-6 flex gap-3">
+                    <button onclick="clearMap()" class="cursor-pointer flex-1 bg-white hover:bg-slate-50 text-slate-600 border border-slate-300 py-2 rounded-lg font-medium transition-colors text-xs shadow-sm">
+                        Clear Map
+                    </button>
+                    <button id="btn-run" onclick="runAnalysis()" class="cursor-pointer flex-[2] bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 rounded-lg transition-colors flex justify-center items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-play text-xs"></i> Run Model
+                    </button>
+                </div>
+            </div>
+
+            <!-- HISTORICAL CONFIG -->
+            <div id="cfg-historical" class="hidden cfg-panel space-y-4">
+                <style>
+                    /* Just to replicate the old hidden class behavior on dynamic elements if needed */
+                    .hidden { display: none !important; }
+                </style>
+                <div class="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                    <div class="flex gap-3">
+                        <div class="text-blue-600 mt-0.5"><i class="fa-solid fa-circle-info"></i></div>
+                        <p class="text-blue-800 leading-relaxed text-xs">
+                            The system will retrieve a random verified cluster from the training set. Recent infections will be redacted to test the model's ability to "rediscover" them.
+                        </p>
+                    </div>
+                </div>
+
+                <button id="btn-load-scenario" onclick="loadScenario()" class="w-full py-4 border-2 border-dashed border-slate-300 hover:border-slate-400 hover:bg-slate-50 text-slate-600 rounded-lg font-medium transition-all group cursor-pointer">
+                    <span class="block mb-1 text-center group-hover:scale-105 transition-transform"><i class="fa-solid fa-shuffle mr-2"></i> Load Random Cluster</span>
+                </button>
+
+                <div id="hist-meta" class="hidden bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-2 fade-in">
+                    <div class="flex justify-between items-center border-b border-slate-200 pb-2 mb-2">
+                        <span class="text-xs font-semibold uppercase text-slate-500 tracking-wide">Metadata</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-500">Cluster ID:</span>
+                        <span id="meta-id" class="font-mono text-slate-700 font-medium">-</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-500">Split Date:</span>
+                        <span id="meta-date" class="font-mono text-slate-700 font-medium">-</span>
+                    </div>
+                    <div class="flex justify-between text-xs">
+                        <span class="text-slate-500">Candidates:</span>
+                        <span id="meta-counts" class="font-mono text-slate-700 font-medium">-</span>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <button onclick="runAnalysis()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm">
+                        <i class="fa-solid fa-microscope text-xs"></i> Execute Validation
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 3: RESULTS -->
+        <div id="step-3" class="hidden space-y-6 fade-in">
+             <button onclick="nextStep(2)" class="text-slate-400 hover:text-slate-600 flex items-center gap-1.5 transition-colors text-xs font-medium cursor-pointer">
+                <i class="fa-solid fa-rotate-left"></i> Adjust Configuration
+            </button>
+            
+            <div class="space-y-4">
+                <h2 class="text-base font-medium text-slate-900">Analysis Metrics</h2>
+                
+                <!-- Results container will need nice styling injected by JS too, or we rely on basic HTML -->
+                <!-- The existing JS injects basic HTML with inline styles. I should check if I need to update JS styles too. -->
+                <!-- The JS generates divs with .metric-row. I can style .metric-row here in a <style> block to match the new look -->
+                <style>
+                    .metric-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.85rem; color: #475569; }
+                    .metric-val { font-weight: 600; color: #0f172a; }
+                    .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; display:inline-block; }
+                </style>
+                <div id="results-container" class="space-y-3">
+                    <!-- Javascript will inject content here -->
+                </div>
+            </div>
+
+            <!-- TIMELINE CONTROLS -->
+            <div id="media-controls" class="hidden bg-slate-50 border border-slate-200 rounded-lg p-4 mt-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-xs font-semibold uppercase text-slate-500 tracking-wide">Temporal Simulation</span>
+                    <span id="anim-label" class="bg-slate-200 text-slate-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide">Month 0</span>
+                </div>
+                
+                <div class="mb-4 px-1">
+                    <input type="range" id="anim-slider" min="0" max="1" value="0" step="1" 
+                           class="w-full h-1.5 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-slate-800">
+                </div>
+
+                <div class="flex gap-2">
+                    <button id="btn-play" onclick="togglePlay()" class="cursor-pointer flex-1 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 py-1.5 rounded font-medium text-xs transition-colors shadow-sm">
+                        <i class="fa-solid fa-play mr-1.5"></i> Play Sequence
+                    </button>
+                    <button onclick="resetAnim()" class="cursor-pointer w-10 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 py-1.5 rounded font-medium text-xs transition-colors shadow-sm flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
     
-    <div class="progress-bar">
-        <div class="step active" id="step-ind-1">1. Mode</div>
-        <div class="step" id="step-ind-2">2. Config</div>
-        <div class="step" id="step-ind-3">3. Results</div>
+    <!-- Footer -->
+    <div class="p-4 border-t border-slate-200 bg-slate-50">
+        <p class="text-[10px] text-slate-400 text-center font-medium">
+            System Logic v1.2 • Spatio-Temporal Gravity Model
+        </p>
     </div>
-
-    <!-- STEP 1: SELECT MODE -->
-    <div id="step-1" class="content">
-        <h2 style="font-size:1.1rem; margin-top:0;">Select Analysis Type</h2>
-        
-        <div class="card selected" onclick="selectMode('network')" id="mode-network">
-            <h3>🕸️ Network Simulation</h3>
-            <p>Model tree-to-tree transmission over time. Identify high-risk healthy trees based on proximity to infections.</p>
-        </div>
-        
-        <div class="card" onclick="selectMode('historical')" id="mode-historical">
-            <h3>📚 Historical Validation</h3>
-            <p>Load past outbreak data to test the AI's prediction accuracy against real-world ground truth.</p>
-        </div>
-        
-        <button class="btn" onclick="nextStep(2)">Continue &rarr;</button>
-    </div>
-
-    <!-- STEP 2: CONFIGURE -->
-    <div id="step-2" class="content hidden">
-        <button class="btn secondary" onclick="nextStep(1)" style="margin-bottom:15px; width:auto; padding:5px 10px; font-size:0.8rem;">&larr; Back</button>
-        <h2 style="font-size:1.1rem; margin:0 0 15px 0;">Configuration</h2>
-
-        <!-- NETWORK CONFIG -->
-        <div id="cfg-network" class="cfg-panel">
-            <p class="small" style="color:#666; font-size:0.85rem;">Click on the map to place trees.</p>
-            
-            <div class="toolbar">
-                <div class="tool active" id="tool-healthy" onclick="setTool('healthy')">Healthy Tree 🌳</div>
-                <div class="tool" id="tool-infected" onclick="setTool('infected')" style="color:var(--danger)">Infected 🍄</div>
-            </div>
-
-            <div class="metric-row">
-                <span>Healthy: <span id="count-h">0</span></span>
-                <span>Infected: <span id="count-i">0</span></span>
-            </div>
-
-            <div class="form-group" style="margin-top:20px;">
-                <label>Simulation Duration</label>
-                <select id="net-months">
-                    <option value="6">6 Months</option>
-                    <option value="12" selected>1 Year</option>
-                    <option value="24">2 Years</option>
-                </select>
-            </div>
-            
-            <button class="btn secondary" onclick="clearMap()">Clear Map</button>
-        </div>
-
-        <!-- HISTORICAL CONFIG -->
-        <div id="cfg-historical" class="cfg-panel hidden">
-            <p style="font-size:0.85rem; color:#666;">
-                The system will load a random cluster, hide the recent infections, and ask the AI to find them.
-            </p>
-            <button class="btn secondary" onclick="loadScenario()" id="btn-load-scenario">🎲 Load New Scenario</button>
-            
-            <div id="hist-meta" class="hidden" style="margin-top:20px; padding:10px; background:#f0fdf4; border-radius:6px; font-size:0.85rem;">
-                <div><strong>Cluster ID:</strong> <span id="meta-id">-</span></div>
-                <div><strong>Split Date:</strong> <span id="meta-date">-</span></div>
-                <div><strong>Testing Candidates:</strong> <span id="meta-counts">-</span></div>
-            </div>
-        </div>
-
-        <div style="margin-top:auto; padding-top:20px;">
-            <button class="btn" onclick="runAnalysis()" id="btn-run">Run Analysis</button>
-        </div>
-    </div>
-
-    <!-- STEP 3: RESULTS -->
-    <div id="step-3" class="content hidden">
-        <button class="btn secondary" onclick="nextStep(2)" style="margin-bottom:15px; width:auto; padding:5px 10px; font-size:0.8rem;">&larr; New Config</button>
-        <h2 style="font-size:1.1rem; margin:0 0 15px 0;">Analysis Results</h2>
-
-        <div id="results-container">
-            <!-- Dynamic Content -->
-        </div>
-
-        <!-- Animation Controls -->
-        <div id="media-controls" class="hidden">
-            <div class="time-display" id="anim-label">Start</div>
-            <input type="range" id="anim-slider" min="0" max="1" value="0" step="1" style="width:100%">
-            <div style="display:flex; gap:5px; margin-top:5px;">
-                <button class="btn secondary" onclick="togglePlay()" id="btn-play" style="margin:0; font-size:0.8rem;">▶ Play</button>
-                <button class="btn secondary" onclick="resetAnim()" style="margin:0; width:40px;">↺</button>
-            </div>
-        </div>
-    </div>
-
 </div>
 
-<div id="map"></div>
+<!-- Map Container -->
+<div id="map" class="flex-1 h-full z-0"></div>
 
-<!-- Logic -->
+<!-- JS Logic -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="live_inference.js"></script>
+
 </body>
 </html>

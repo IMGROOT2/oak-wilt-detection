@@ -12,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / 'data'
 MODELS_DIR = BASE_DIR / 'models'
 MEMBERS_FILE = DATA_DIR / 'oak_wilt_cluster_members.csv'
+ENRICHED_FILE = DATA_DIR / 'oak_wilt_cluster_enriched.csv'
 
 def haversine_vectorized(lat1, lon1, lat_arr, lon_arr):
     # Vectorized haversine for one point vs many points
@@ -29,6 +30,15 @@ def prepare_advanced_features():
     print("Loading data...")
     df = pd.read_csv(MEMBERS_FILE)
     df['date'] = pd.to_datetime(df['INSPECTION_DATE'])
+
+    # Load enriched weather data
+    if ENRICHED_FILE.exists():
+        weather_df = pd.read_csv(ENRICHED_FILE)
+        # Map weather from cluster ID
+        weather_map = weather_df.set_index('cluster_id')[['avg_temp', 'avg_precip', 'avg_humidity', 'avg_wind']].to_dict('index')
+    else:
+        print("Warning: Enriched weather data not found. Using defaults.")
+        weather_map = {}
     
     X_rows = []
     y_rows = []
@@ -40,6 +50,9 @@ def prepare_advanced_features():
         cluster = cluster.sort_values('date')
         if len(cluster) < 5: continue
         
+        # Get cluster weather
+        c_weather = weather_map.get(cid, {'avg_temp': 20.0, 'avg_precip': 0.0, 'avg_humidity': 50.0, 'avg_wind': 5.0})
+
         # We simulate the timeline
         # For each tree T at time t, what was the pressure from all trees existing before t?
         
@@ -49,18 +62,15 @@ def prepare_advanced_features():
             target = cluster.iloc[i]
             sources = cluster.iloc[:i] # Trees infected before target
             
-            # Simple time filter: only consider sources from last 3 years? 
-            # Oak wilt pressure is usually immediate neighbors, but let's use all for gravity.
-            
+            # Simple time filters
             dists = haversine_vectorized(
                 target['LATITUDE'], target['LONGITUDE'],
                 sources['LATITUDE'].values, sources['LONGITUDE'].values
             )
             
-            # Feature 1: Gravity Pressure (Sum of inverse squares)
-            # Avoid div by zero
+            # Feature 1: Gravity Pressure
             dists = np.maximum(dists, 1.0) 
-            pressure = np.sum(1000 / (dists ** 2)) # 1000 is scaling factor
+            pressure = np.sum(1000 / (dists ** 2))
             
             # Feature 2: Distance to nearest
             min_dist = np.min(dists)
@@ -76,20 +86,20 @@ def prepare_advanced_features():
                 'log_min_dist': np.log1p(min_dist),
                 'local_density': density,
                 'month_sin': np.sin(2 * np.pi * month / 12),
-                'month_cos': np.cos(2 * np.pi * month / 12)
+                'month_cos': np.cos(2 * np.pi * month / 12),
+                'avg_temp': c_weather['avg_temp'],
+                'avg_precip': c_weather['avg_precip'],
+                'avg_humidity': c_weather['avg_humidity'],
+                'avg_wind': c_weather['avg_wind']
             })
             y_rows.append(1) # Infected
             
         # 2. Negative Samples (Synthetic Healthy Trees)
-        # For every positive sample, generate N negatives in the vicinity that check "Pressure" but didn't get infected
-        # balancing classes 1:1 or 1:2
-        
         lat_min, lat_max = cluster['LATITUDE'].min(), cluster['LATITUDE'].max()
         lon_min, lon_max = cluster['LONGITUDE'].min(), cluster['LONGITUDE'].max()
         buff = 0.002
         
         for i in range(1, len(cluster)):
-            # Generate random points around the cluster at this time step
             for _ in range(2): # 2 negatives per positive
                 r_lat = np.random.uniform(lat_min-buff, lat_max+buff)
                 r_lon = np.random.uniform(lon_min-buff, lon_max+buff)
@@ -105,15 +115,7 @@ def prepare_advanced_features():
                 pressure = np.sum(1000 / (dists ** 2))
                 min_dist = np.min(dists)
                 
-                # Filter: Don't pick negatives that are extremely far (pressure ~ 0) 
-                # because they are too easy. Hard negatives only.
-                # EDIT: We MUST include some easy negatives, or the model won't learn 
-                # that "Far Away" == "Safe".
-                # if min_dist > 300: continue <--- This line caused the Over-Prediction Bias
-                
                 density = np.sum(dists < 100)
-                
-                # Use same month as the positive case we are mirroring
                 month = cluster.iloc[i]['date'].month
                 
                 X_rows.append({
@@ -121,7 +123,11 @@ def prepare_advanced_features():
                     'log_min_dist': np.log1p(min_dist),
                     'local_density': density,
                     'month_sin': np.sin(2 * np.pi * month / 12),
-                    'month_cos': np.cos(2 * np.pi * month / 12)
+                    'month_cos': np.cos(2 * np.pi * month / 12),
+                    'avg_temp': c_weather['avg_temp'],
+                    'avg_precip': c_weather['avg_precip'],
+                    'avg_humidity': c_weather['avg_humidity'],
+                    'avg_wind': c_weather['avg_wind']
                 })
                 y_rows.append(0) # Healthy
                 
