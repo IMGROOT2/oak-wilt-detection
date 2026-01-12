@@ -158,10 +158,116 @@ async function loadScenario() {
     
     try {
         clearMap();
-        const res = await fetch(`${API_BASE_URL}/api/historical_scenario`);
-        if (!res.ok) throw new Error("API Error");
-        const data = await res.json();
-        
+        // Try to pick an eligible cluster using precomputed simulated spread rates (simple: array of numeric IDs)
+        // Eligible: 20 <= spread_ft_per_yr <= 200
+        let scenario = null;
+        try {
+            // If API_BASE_URL is set (file://), fetch CSV via server; otherwise use relative path
+            const csvUrl = API_BASE_URL ? `${API_BASE_URL}/data/simulated_spread_rates.csv` : 'data/simulated_spread_rates.csv';
+            const csvRes = await fetch(csvUrl);
+            if (csvRes.ok) {
+                const text = await csvRes.text();
+                const lines = text.split(/\r?\n/).filter(l => l.trim() !== '');
+                // Expect header then rows: cluster_id,spread_ft_per_yr
+                const header = lines.shift().split(',').map(h => h.trim());
+                const idIdx = header.indexOf('cluster_id');
+                const valIdx = header.indexOf('spread_ft_per_yr');
+                if (idIdx !== -1 && valIdx !== -1) {
+                    const eligibleIds = [];
+                    const allIds = [];
+                    for (const l of lines) {
+                        const cols = l.split(',').map(c => c.trim());
+                        const id = Number(cols[idIdx]);
+                        const val = parseFloat(cols[valIdx]);
+                        if (!Number.isNaN(id)) allIds.push(id);
+                        if (!Number.isNaN(id) && !Number.isNaN(val) && val >= 20 && val <= 200) {
+                            eligibleIds.push(id);
+                        }
+                    }
+
+                    const excludedIds = allIds.filter(i => !eligibleIds.includes(i));
+                    console.log('simulated_spread_rates: eligible count=', eligibleIds.length, 'excluded count=', excludedIds.length);
+                    console.log('Eligible cluster IDs:', eligibleIds);
+                    console.log('Excluded cluster IDs:', excludedIds);
+
+                    if (eligibleIds.length > 0) {
+                        const pick = eligibleIds[Math.floor(Math.random() * eligibleIds.length)];
+                        console.log('Picked cluster ID from CSV:', pick);
+                        const res = await fetch(`${API_BASE_URL}/api/historical_scenario?cluster_id=${encodeURIComponent(pick)}`);
+                        if (res.ok) scenario = await res.json();
+                    } else {
+                        // Fallback: use cluster features if simulated CSV is missing or empty
+                        try {
+                            console.log('simulated_spread_rates empty — falling back to cluster features');
+                            const featuresUrl = API_BASE_URL ? `${API_BASE_URL}/data/oak_wilt_cluster_features.csv` : 'data/oak_wilt_cluster_features.csv';
+                            const fRes = await fetch(featuresUrl);
+                            if (fRes.ok) {
+                                const fText = await fRes.text();
+                                const fLines = fText.split(/\r?\n/).filter(l => l.trim() !== '');
+                                const fHeader = fLines.shift().split(',').map(h => h.trim());
+                                const fidIdx = fHeader.indexOf('cluster_id');
+                                const frateIdx = fHeader.indexOf('spread_rate_km_per_year');
+                                // Fallback parsing is brittle; prefer server endpoint if available
+                                try {
+                                    if (API_BASE_URL) {
+                                        const eligRes = await fetch(`${API_BASE_URL}/api/eligible_clusters`);
+                                        if (eligRes.ok) {
+                                            const elig = await eligRes.json();
+                                            console.log('Eligible clusters (server):', elig.eligible);
+                                            console.log('Excluded clusters (server):', elig.excluded);
+                                            if (elig.eligible && elig.eligible.length > 0) {
+                                                const pick2 = elig.eligible[Math.floor(Math.random() * elig.eligible.length)];
+                                                console.log('Picked cluster ID from eligible_clusters endpoint:', pick2);
+                                                const res2 = await fetch(`${API_BASE_URL}/api/historical_scenario?cluster_id=${encodeURIComponent(pick2)}`);
+                                                if (res2.ok) scenario = await res2.json();
+                                            }
+                                        }
+                                    } else {
+                                        // legacy CSV-based fallback (best effort)
+                                        const fallbackIds = [];
+                                        if (fidIdx !== -1 && frateIdx !== -1) {
+                                            for (const l2 of fLines) {
+                                                const cols2 = l2.split(',').map(c => c.trim());
+                                                const id2 = Number(cols2[fidIdx]);
+                                                const rateKm = parseFloat(cols2[frateIdx]);
+                                                if (!Number.isNaN(id2) && !Number.isNaN(rateKm)) {
+                                                    const rateFtPerYr = rateKm * 3280.84; // km/yr -> ft/yr
+                                                    if (rateFtPerYr >= 20 && rateFtPerYr <= 200) fallbackIds.push(id2);
+                                                }
+                                            }
+                                        }
+                                        console.log('Fallback eligible count=', fallbackIds.length, 'IDs=', fallbackIds);
+                                        if (fallbackIds.length > 0) {
+                                            const pick2 = fallbackIds[Math.floor(Math.random() * fallbackIds.length)];
+                                            console.log('Picked cluster ID from features fallback:', pick2);
+                                            const res2 = await fetch(`${API_BASE_URL}/api/historical_scenario?cluster_id=${encodeURIComponent(pick2)}`);
+                                            if (res2.ok) scenario = await res2.json();
+                                        }
+                                    }
+                                } catch (fe) {
+                                    console.warn('Features fallback failed', fe);
+                                }
+                            }
+                        } catch (fe) {
+                            console.warn('Features fallback failed', fe);
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            console.warn('Failed to load simulated_spread_rates.csv or pick eligible cluster — falling back', e);
+        }
+
+        // If CSV-based selection didn't yield a valid scenario, fall back to server random scenario
+
+        // Fallback: request a random historical scenario from the API
+        if (!scenario) {
+            const res = await fetch(`${API_BASE_URL}/api/historical_scenario`);
+            if (!res.ok) throw new Error("API Error");
+            scenario = await res.json();
+        }
+
+        const data = scenario;
         scenarioData = data;
         
         // Render Map
@@ -323,7 +429,8 @@ function processResults(data) {
             }).sort((a, b) => a - b);
             
             // seventyfifth Percentile index (Upper Quartile)
-            const k = Math.floor(dists.length * 0.75);
+            console.log("dists length:", dists.length);
+            const k = Math.floor(dists.length * 0.9);
             return dists[k];
         }
 

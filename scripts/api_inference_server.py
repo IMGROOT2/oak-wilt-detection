@@ -200,7 +200,7 @@ async def fetch_real_nasa_weather(lat, lon, start_date):
 # --- Endpoints ---
 
 @app.get("/api/historical_scenario")
-def get_historical_scenario():
+def get_historical_scenario(cluster_id: Optional[int] = None):
     global cluster_features_df, cluster_members_df
     
     if cluster_features_df.empty or cluster_members_df.empty:
@@ -215,8 +215,16 @@ def get_historical_scenario():
     if candidates.empty:
          candidates = cluster_features_df # fallback
 
-    # 2. Select Random
-    selected = candidates.sample(1).iloc[0]
+    # 2. Select specific if requested, otherwise random
+    if cluster_id is not None:
+        # Try to find the requested cluster in the candidates set
+        match = candidates[candidates['cluster_id'] == cluster_id]
+        if match.empty:
+            # If the requested cluster is not eligible, return 404 so the client can retry
+            raise HTTPException(status_code=404, detail=f"Cluster {cluster_id} not available for historical scenario")
+        selected = match.iloc[0]
+    else:
+        selected = candidates.sample(1).iloc[0]
     cid = selected['cluster_id']
     
     # 3. Get Members
@@ -275,6 +283,56 @@ def get_historical_scenario():
         "past_infection": past[['LATITUDE', 'LONGITUDE']].rename(columns={'LATITUDE': 'lat', 'LONGITUDE': 'lon'}).to_dict('records'),
         "candidates": candidates_list,
         "center": { "lat": selected['centroid_lat'], "lon": selected['centroid_lon'] }
+    }
+
+
+@app.get("/api/eligible_clusters")
+def get_eligible_clusters():
+    """Return eligible cluster IDs filtered to 20-200 ft/yr.
+    Priority: use data/simulated_spread_rates.csv if present and non-empty,
+    otherwise compute from cluster_features_df using spread_rate_km_per_year.
+    """
+    sim_path = DATA_DIR / 'simulated_spread_rates.csv'
+    eligible = []
+    excluded = []
+    source = None
+
+    try:
+        if sim_path.exists():
+            df = pd.read_csv(sim_path)
+            # Expect columns: cluster_id, spread_ft_per_yr
+            if 'cluster_id' in df.columns and 'spread_ft_per_yr' in df.columns and not df.empty:
+                source = 'simulated'
+                df['cluster_id'] = pd.to_numeric(df['cluster_id'], errors='coerce')
+                df['spread_ft_per_yr'] = pd.to_numeric(df['spread_ft_per_yr'], errors='coerce')
+                df = df.dropna(subset=['cluster_id', 'spread_ft_per_yr'])
+                eligible_df = df[(df['spread_ft_per_yr'] >= 20) & (df['spread_ft_per_yr'] <= 200)]
+                eligible = [int(x) for x in eligible_df['cluster_id'].tolist()]
+                excluded = [int(x) for x in df[~df.index.isin(eligible_df.index)]['cluster_id'].tolist()]
+
+        # If simulated not available or empty, fallback to cluster_features_df
+        if not eligible:
+            if cluster_features_df is None or cluster_features_df.empty:
+                raise HTTPException(status_code=503, detail='Cluster features not available')
+            source = source or 'features'
+            df2 = cluster_features_df.copy()
+            if 'cluster_id' in df2.columns and 'spread_rate_km_per_year' in df2.columns:
+                df2['cluster_id'] = pd.to_numeric(df2['cluster_id'], errors='coerce')
+                df2['spread_rate_km_per_year'] = pd.to_numeric(df2['spread_rate_km_per_year'], errors='coerce')
+                df2 = df2.dropna(subset=['cluster_id', 'spread_rate_km_per_year'])
+                # convert km/yr to ft/yr (1 km = 3280.84 ft)
+                df2['spread_ft_per_yr'] = df2['spread_rate_km_per_year'] * 3280.84
+                eligible_df2 = df2[(df2['spread_ft_per_yr'] >= 20) & (df2['spread_ft_per_yr'] <= 200)]
+                eligible = [int(x) for x in eligible_df2['cluster_id'].tolist()]
+                excluded = [int(x) for x in df2[~df2.index.isin(eligible_df2.index)]['cluster_id'].tolist()]
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to compute eligible clusters: {e}")
+
+    return {
+        'source': source,
+        'eligible': eligible,
+        'excluded': excluded
     }
 
 
@@ -499,6 +557,8 @@ async def get_forecast(data: ForecastInput):
 
 # Static Files
 app.mount("/visuals", StaticFiles(directory=VISUALS_DIR), name="visuals")
+# Serve data files over HTTP so file:// frontend can fetch via localhost
+app.mount("/data", StaticFiles(directory=DATA_DIR), name="data")
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
