@@ -1,18 +1,16 @@
-// Global State
+// Global state
 let map;
 let layers = new L.LayerGroup();
-let markers = []; // {lat, lon, type, id, markerObj}
+let markers = [];
 let mode = 'network';
 let activeTool = 'healthy';
-let scenarioData = null; // For historical
+let scenarioData = null;
 
-// Config: Use localhost if on file://, otherwise relative path
 const API_BASE_URL = window.location.protocol === 'file:' ? 'http://localhost:8000' : '';
 
-// Animation State
-let timelineEvents = []; // [{month: 1, new_cases: [id, id]}]
+let timelineEvents = [];
 
-// --- Status Check ---
+// Server health check
 async function checkServerStatus() {
     const dot = document.getElementById('status-dot');
     const txt = document.getElementById('status-text');
@@ -31,7 +29,7 @@ async function checkServerStatus() {
         txt.innerText = "Offline";
     }
 }
-setInterval(checkServerStatus, 5000); // Check every five s
+setInterval(checkServerStatus, 5000);
 
 let currentAnimFrame = 0;
 let animInterval = null;
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selectMode('network');
 });
 
-// --- Map ---
+// Map initialization
 function initMap() {
     map = L.map('map', { maxZoom: 19 }).setView([30.2672, -97.7431], 13);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
@@ -64,10 +62,9 @@ function clearMap() {
     updateCounts();
 }
 
-// --- Navigation ---
+// Navigation
 function nextStep(step) {
-    document.querySelectorAll('.content').forEach(el => el.classList.add('hidden')); // Keep this, I'll add .content class to sections
-    // Or just target IDs which is safer
+    document.querySelectorAll('.content').forEach(el => el.classList.add('hidden'));
     document.getElementById('step-1').classList.add('hidden');
     document.getElementById('step-2').classList.add('hidden');
     document.getElementById('step-3').classList.add('hidden');
@@ -110,7 +107,7 @@ function setupConfig() {
     }
 }
 
-// --- Tooling ---
+// Active tool selection
 function setTool(t) {
     activeTool = t;
     ['healthy', 'infected'].forEach(tool => {
@@ -127,7 +124,7 @@ function setTool(t) {
 }
 
 function addManualTree(latlng) {
-    const color = activeTool === 'healthy' ? '#27ae60' : '#4B0082'; // Dark Purple
+    const color = activeTool === 'healthy' ? '#27ae60' : '#4B0082';
     const m = L.circleMarker(latlng, {
         color: color, fillColor: color, fillOpacity: 0.8, radius: 6
     }).addTo(layers);
@@ -150,7 +147,7 @@ function updateCounts() {
 }
 
 
-// --- Historical Mode ---
+// Historical scenario loading
 async function loadScenario() {
     const btn = document.getElementById('btn-load-scenario');
     btn.innerText = "Loading...";
@@ -158,17 +155,13 @@ async function loadScenario() {
     
     try {
         clearMap();
-        // Try to pick an eligible cluster using precomputed simulated spread rates (simple: array of numeric IDs)
-        // Eligible: 20 <= spread_ft_per_yr <= 200
         let scenario = null;
         try {
-            // If API_BASE_URL is set (file://), fetch CSV via server; otherwise use relative path
             const csvUrl = API_BASE_URL ? `${API_BASE_URL}/data/simulated_spread_rates.csv` : 'data/simulated_spread_rates.csv';
             const csvRes = await fetch(csvUrl);
             if (csvRes.ok) {
                 const text = await csvRes.text();
                 const lines = text.split(/\r?\n/).filter(l => l.trim() !== '');
-                // Expect header then rows: cluster_id,spread_ft_per_yr
                 const header = lines.shift().split(',').map(h => h.trim());
                 const idIdx = header.indexOf('cluster_id');
                 const valIdx = header.indexOf('spread_ft_per_yr');
@@ -186,19 +179,13 @@ async function loadScenario() {
                     }
 
                     const excludedIds = allIds.filter(i => !eligibleIds.includes(i));
-                    console.log('simulated_spread_rates: eligible count=', eligibleIds.length, 'excluded count=', excludedIds.length);
-                    console.log('Eligible cluster IDs:', eligibleIds);
-                    console.log('Excluded cluster IDs:', excludedIds);
 
                     if (eligibleIds.length > 0) {
                         const pick = eligibleIds[Math.floor(Math.random() * eligibleIds.length)];
-                        console.log('Picked cluster ID from CSV:', pick);
                         const res = await fetch(`${API_BASE_URL}/api/historical_scenario?cluster_id=${encodeURIComponent(pick)}`);
                         if (res.ok) scenario = await res.json();
                     } else {
-                        // Fallback: use cluster features if simulated CSV is missing or empty
                         try {
-                            console.log('simulated_spread_rates empty — falling back to cluster features');
                             const featuresUrl = API_BASE_URL ? `${API_BASE_URL}/data/oak_wilt_cluster_features.csv` : 'data/oak_wilt_cluster_features.csv';
                             const fRes = await fetch(featuresUrl);
                             if (fRes.ok) {
@@ -207,23 +194,19 @@ async function loadScenario() {
                                 const fHeader = fLines.shift().split(',').map(h => h.trim());
                                 const fidIdx = fHeader.indexOf('cluster_id');
                                 const frateIdx = fHeader.indexOf('spread_rate_km_per_year');
-                                // Fallback parsing is brittle; prefer server endpoint if available
                                 try {
                                     if (API_BASE_URL) {
                                         const eligRes = await fetch(`${API_BASE_URL}/api/eligible_clusters`);
                                         if (eligRes.ok) {
                                             const elig = await eligRes.json();
-                                            console.log('Eligible clusters (server):', elig.eligible);
-                                            console.log('Excluded clusters (server):', elig.excluded);
                                             if (elig.eligible && elig.eligible.length > 0) {
                                                 const pick2 = elig.eligible[Math.floor(Math.random() * elig.eligible.length)];
-                                                console.log('Picked cluster ID from eligible_clusters endpoint:', pick2);
                                                 const res2 = await fetch(`${API_BASE_URL}/api/historical_scenario?cluster_id=${encodeURIComponent(pick2)}`);
                                                 if (res2.ok) scenario = await res2.json();
                                             }
                                         }
                                     } else {
-                                        // legacy CSV-based fallback (best effort)
+                                        // CSV-based fallback
                                         const fallbackIds = [];
                                         if (fidIdx !== -1 && frateIdx !== -1) {
                                             for (const l2 of fLines) {
@@ -236,10 +219,8 @@ async function loadScenario() {
                                                 }
                                             }
                                         }
-                                        console.log('Fallback eligible count=', fallbackIds.length, 'IDs=', fallbackIds);
                                         if (fallbackIds.length > 0) {
                                             const pick2 = fallbackIds[Math.floor(Math.random() * fallbackIds.length)];
-                                            console.log('Picked cluster ID from features fallback:', pick2);
                                             const res2 = await fetch(`${API_BASE_URL}/api/historical_scenario?cluster_id=${encodeURIComponent(pick2)}`);
                                             if (res2.ok) scenario = await res2.json();
                                         }
@@ -258,9 +239,7 @@ async function loadScenario() {
             console.warn('Failed to load simulated_spread_rates.csv or pick eligible cluster — falling back', e);
         }
 
-        // If CSV-based selection didn't yield a valid scenario, fall back to server random scenario
-
-        // Fallback: request a random historical scenario from the API
+        // fall back to a random scenario from the API if CSV selection failed
         if (!scenario) {
             const res = await fetch(`${API_BASE_URL}/api/historical_scenario`);
             if (!res.ok) throw new Error("API Error");
@@ -270,18 +249,15 @@ async function loadScenario() {
         const data = scenario;
         scenarioData = data;
         
-        // Render Map
-        // 1. Past Infections (Known)
+        // render past infections on the map
         data.past_infection.forEach(p => {
-            // Dark purple for existing infections
             L.circleMarker([p.lat, p.lon], {
                 color: '#4B0082', fillColor: '#4B0082', fillOpacity:0.6, radius:5
-            }).addTo(layers).bindPopup("Existing Infection");
-            // Treat as infected input
-            markers.push({id: markers.length, lat: p.lat, lon: p.lon, type: 'infected', marker: null}); 
+            }).addTo(layers);
+            markers.push({id: markers.length, lat: p.lat, lon: p.lon, type: 'infected', marker: null});
         });
 
-        // 2. Candidates (Healthy Input + Future Hidden)
+        // candidate trees
         data.candidates.forEach(c => {
              const m = L.circleMarker([c.lat, c.lon], {
                 color: '#bdc3c7', fillColor: '#bdc3c7', fillOpacity:0.5, radius:4 
@@ -291,9 +267,9 @@ async function loadScenario() {
                 id: markers.length,
                 lat: c.lat,
                 lon: c.lon,
-                type: 'healthy', // Reset to healthy for simulation
-                real_future: c.is_future_infection, // Hidden truth
-                infection_date: c.infection_date, // <--- CRITICAL FIX: Pass date through
+                type: 'healthy',
+                real_future: c.is_future_infection,
+                infection_date: c.infection_date,
                 marker: m
             });
         });
@@ -315,7 +291,7 @@ async function loadScenario() {
 }
 
 
-// --- Execution ---
+// Run analysis
 async function runAnalysis() {
     const btn = document.getElementById('btn-run');
     btn.innerText = "Simulating...";
@@ -327,13 +303,10 @@ async function runAnalysis() {
 
         if (mode === 'network' || mode === 'historical') {
             url = `${API_BASE_URL}/api/network_simulation`;
-            // Use 24 months (2 years) for historical validation to capture more ground truth data
+            // for historical mode, use 24 months and the scenario date
             const months = mode === 'network' ? parseInt(document.getElementById('net-months').value) : 24;
-            
-            // For historical, we use the scenario date, else today
             const startC = mode === 'historical' ? scenarioData.cutoff_date : new Date().toISOString().split('T')[0];
             
-            // Check for overrides (Network mode only)
             let customTemp = null;
             let customPrecip = null;
             let customHumidity = null;
@@ -373,7 +346,7 @@ async function runAnalysis() {
         
         processResults(data);
         
-        // Populate overrides if they were empty
+        // backfill weather fields if they were left blank
         if (data.environment && mode === 'network') {
             const tempInput = document.getElementById('custom-temp');
             if (tempInput.value === "") tempInput.value = data.environment.temp || "";
@@ -407,20 +380,16 @@ function processResults(data) {
     // UI Update
     const totalInfected = timelineEvents.reduce((acc, ev) => acc + ev.new_cases.length, 0);
     
-    // --- Calc Expansion Rate (Robust) ---
-    // and provide a more representative "Frontline" expansion rate.
+    // spread rate calculation via 90th-percentile radius expansion
     let yearlyRate = 0;
     const originInfected = markers.filter(m => m.type === 'infected');
     
     if (originInfected.length > 0) {
-        // Centroid of original infection
         const cLat = originInfected.reduce((sum, m) => sum + m.lat, 0) / originInfected.length;
         const cLon = originInfected.reduce((sum, m) => sum + m.lon, 0) / originInfected.length;
         const centroid = L.latLng(cLat, cLon);
         
-        // Helper: Get Robust "Frontline" Radius (seven five) Percentile)
-        // We use the seventyfifth percentile (Upper Quartile) to track the main infection front
-        // while ignoring stochastic "spark" outliers that inflate the spread rate logic.
+        // 90th percentile radius
         function getEffectiveRadius(idList) {
             if (idList.length === 0) return 0;
             const dists = idList.map(id => {
@@ -428,8 +397,6 @@ function processResults(data) {
                 return m ? centroid.distanceTo(L.latLng(m.lat, m.lon)) : 0;
             }).sort((a, b) => a - b);
             
-            // seventyfifth Percentile index (Upper Quartile)
-            console.log("dists length:", dists.length);
             const k = Math.floor(dists.length * 0.9);
             return dists[k];
         }
@@ -438,14 +405,13 @@ function processResults(data) {
         const initialIds = originInfected.map(m => m.id);
         const r0 = getEffectiveRadius(initialIds);
         
-        // Final Set IDs (Initial + All New)
+        // Final Set IDs (initial + all newly predicted)
         const finalIds = [...initialIds];
         timelineEvents.forEach(ev => ev.new_cases.forEach(id => finalIds.push(id)));
         const r1 = getEffectiveRadius(finalIds);
         
-        // Rate Calculation
-        // If simulation is short, we project to yearly
-        const deltaMonths = Math.max(1, totalMonths); // Avoid div/0
+        // annualized rate
+        const deltaMonths = Math.max(1, totalMonths);
         const growthFt = (r1 - r0) * 3.28084; // meters to feet
         
         if (growthFt > 0) {
@@ -469,20 +435,16 @@ function processResults(data) {
     `;
 
     if (mode === 'historical') {
-        // Validation Logic
-        // Calculate accuracy against 'real_future' markers
         let truePositives = 0;
         let falsePositives = 0;
         let missed = 0;
         let outOfScope = 0;
 
-        // Get all IDs predicted to be infected
+        // predicted infection IDs
         const allPredictedIds = new Set();
         timelineEvents.forEach(e => e.new_cases.forEach(id => allPredictedIds.add(id)));
         
-        // Simulation Time Window
-        // We only "fail" the model if it misses a tree that got infected WITHIN the simulation period (12 months).
-        // If the tree got infected 2 years later, the model was correct to say "safe for now".
+        // only count misses for infections within the simulated time window
         const simStartDate = new Date(scenarioData.cutoff_date);
         const simEndDate = new Date(simStartDate);
         simEndDate.setMonth(simEndDate.getMonth() + totalMonths);
@@ -504,7 +466,7 @@ function processResults(data) {
             }
         });
 
-        // Dynamic Label for Years
+        // Dynamic label for scope
         const scopeYears = (totalMonths / 12).toFixed(1).replace('.0', '');
 
         html += `
@@ -519,26 +481,13 @@ function processResults(data) {
             </p>
         `;
         
-        // Show Ground Truth 
+        // overlay ground truth markers for in-scope future infections
         markers.forEach(m => {
             if (m.real_future) {
                 const infDate = new Date(m.infection_date);
                 const isRelevant = infDate <= simEndDate;
-                
-                // USER REQUEST 3: Just don't show out of scope cases at all
-                // Only render if relevant (in scope)
-                
                 if (isRelevant) {
-                    const color = '#f1c40f'; // Yellow for future "truth" to compare
-                    const style = 'solid';
-                    
-                    // USER REQUEST 4: Don't show yellow circle for original infections...
-                    // "markers" loop includes healthy candidates which have real_future=true.
-                    // Original infections were pushed as type='infected' and usually don't have real_future set?
-                    // Let's check init logic. 
-                    // Past infections: type='infected', marker:null.
-                    // Candidates: type='healthy', real_future=true/false.
-                    // So this loop only affects candidates.
+                    const color = '#f1c40f';
                     
                     L.circleMarker([m.lat, m.lon], {
                        radius: 8, color: color, fill: false, weight: 2
@@ -550,24 +499,22 @@ function processResults(data) {
 
     document.getElementById('results-container').innerHTML = html;
     
-    // Setup Animation
+    // Setup animation controls
     document.getElementById('media-controls').classList.remove('hidden');
     const slider = document.getElementById('anim-slider');
     slider.max = totalMonths;
     slider.value = 0;
     slider.oninput = (e) => showFrame(parseInt(e.target.value));
-    
-    // Start animation automatically
     if (!animInterval) togglePlay();
 }
 
-// --- Animation ---
+// Animation playback
 function showFrame(monthIndex) {
     document.getElementById('anim-label').innerText = monthIndex === 0 ? "Start" : `Month ${monthIndex}`;
     
-    // Reset all predicted to base state
+    // Reset all markers to base state, then color infected ones
     markers.forEach(m => {
-        if (m.type === 'infected' && m.marker) return; // Originally infected stays red
+        if (m.type === 'infected' && m.marker) return;
         if (!m.marker) return;
 
         // Check if this marker was infected by this month
@@ -583,12 +530,8 @@ function showFrame(monthIndex) {
         const wasInfected = infectionMonth !== -1 && infectionMonth <= monthIndex;
         
         if (wasInfected) {
-            // USER REQUEST 3: 
-            // - If newly infected (THIS month), turn Orange.
-            // - If infected previously (BEFORE this month), turn Red.
-            
             const isNew = infectionMonth === monthIndex;
-            const color = isNew ? '#FF8C00' : '#DC143C'; // Orange vs Crimson
+            const color = isNew ? '#FF8C00' : '#DC143C';
             
             m.marker.setStyle({ color: color, fillColor: color, radius: 8, fillOpacity: 0.9 });
             if(el) el.classList.add('pulse-icon');
@@ -608,11 +551,11 @@ function togglePlay() {
         document.getElementById('btn-play').innerText = "⏸ Pause";
         animInterval = setInterval(() => {
             let val = parseInt(document.getElementById('anim-slider').value);
-            if (val >= totalMonths) val = -1; // Loop
+            if (val >= totalMonths) val = -1;
             val++;
             document.getElementById('anim-slider').value = val;
             showFrame(val);
-        }, 500); // 500ms per month
+        }, 500);
     }
 }
 

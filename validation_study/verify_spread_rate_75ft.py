@@ -7,12 +7,12 @@ sim_path = DATA_DIR / 'simulated_spread_rates.csv'
 feat_path = DATA_DIR / 'oak_wilt_cluster_features.csv'
 
 def calculate_averages():
-    # --- 1. Current Simulation (With Weather) ---
+    # 1. Simulation-based rates (with weather + gravity model)
     if sim_path.exists():
         try:
             df = pd.read_csv(sim_path)
             if 'spread_ft_per_yr' in df.columns:
-                print("--- Current Simulation (Weather + Gravity) ---")
+                print("--- Current Simulation ---")
                 
                 # All
                 all_avg = df['spread_ft_per_yr'].mean()
@@ -31,7 +31,7 @@ def calculate_averages():
 
     print("") 
 
-    # --- 2. Baseline / Historical (Static Data, No Weather) ---
+    # 2. Static cluster geometry rates (baseline, no simulation)
     if feat_path.exists():
         try:
             df_feat = pd.read_csv(feat_path)
@@ -39,7 +39,7 @@ def calculate_averages():
                 # Convert km/yr to ft/yr
                 df_feat['spread_ft_per_yr'] = df_feat['spread_rate_km_per_year'] * 3280.84
                 
-                print("--- Historical Baseline (Static Data, No Simulation) ---")
+                print("--- Historical Baseline ---")
                 
                 # All
                 all_avg_h = df_feat['spread_ft_per_yr'].mean()
