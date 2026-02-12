@@ -4,16 +4,15 @@ import math
 from pathlib import Path
 from datetime import datetime, timedelta
 
-# Constants
 DATA_DIR = Path('data')
 MEMBERS_FILE = DATA_DIR / 'oak_wilt_cluster_members.csv'
 OUTPUT_FILE = DATA_DIR / 'oak_wilt_graph_data.csv'
 
-# Configuration
-NEGATIVE_SAMPLE_RATIO = 2  # Generate 2 phantom healthy trees for every real infected tree
-MAX_INFLUENCE_DIST_FT = 300 # Don't consider trees further than this as "parents"
+NEGATIVE_SAMPLE_RATIO = 2
+MAX_INFLUENCE_DIST_FT = 300
 
 def haversine_distance_ft(lat1, lon1, lat2, lon2):
+    """Great-circle distance between two lat/lon points, in feet."""
     lon1, lat1, lon2, lat2 = map(math.radians, [lon1, lat1, lon2, lat2])
     dlon = lon2 - lon1 
     dlat = lat2 - lat1 
@@ -23,17 +22,7 @@ def haversine_distance_ft(lat1, lon1, lat2, lon2):
     return c * r * 5280
 
 def generate_phantom_point(center_lat, center_lon, radius_ft):
-    # Random angle
-    theta = np.random.uniform(0, 2 * math.pi)
-    # Random radius (square root to distribute evenly in circle)
-    r_ft = math.sqrt(np.random.uniform(0, 1)) * radius_ft
-    
-    # Approx conversion ft to degrees
-    r_deg = r_ft / 364000.0 # Rough approx
-    
-    new_lat = center_lat + r_deg * math.cos(theta)
-    new_lon = center_lon + r_deg * math.sin(theta)
-    return new_lat, new_lon
+    """Sample a random point within a given radius (ft) of a center coordinate."""
 
 def main():
     print("Loading cluster members...")
@@ -51,24 +40,17 @@ def main():
     
     for cluster_id, group in clusters:
         group = group.sort_values('INSPECTION_DATE')
-        
-        # We start looking after the first few trees have established a core
         if len(group) < 3:
             continue
             
         points = group.to_dict('records')
         
-        # Iterate through the timeline of the cluster
-        # Start from index 1 (the second tree)
         for i in range(1, len(points)):
             current_tree = points[i]
             event_date = current_tree['INSPECTION_DATE']
-            
-            # The "Past" is everyone before this index
             prior_trees = points[:i]
             
-            # 1. POSITIVE SAMPLE (The tree that actually got infected)
-            # Find closest infected neighbor (most likely parent)
+            # positive sample: find nearest infected neighbor
             min_dist = float('inf')
             nearby_count = 0
             
@@ -83,35 +65,31 @@ def main():
                     nearby_count += 1
             
             graph_data.append({
-                'label': 1, # Infected
+                'label': 1,
                 'dist_to_nearest_infected': min_dist,
                 'nearby_infection_count': nearby_count,
                 'month': event_date.month
             })
             
-            # 2. Negative Samples (Healthy trees near the boundary)
-            # Generate points around the current cluster centroid
+            # negative samples: phantom healthy trees near the cluster boundary
             lats = [p['LATITUDE'] for p in prior_trees]
 
             lons = [p['LONGITUDE'] for p in prior_trees]
             cent_lat = sum(lats) / len(lats)
             cent_lon = sum(lons) / len(lons)
-
-            # Let's generate them within [MinDist, MaxDist] of the cluster center
-            # Find max extent of current cluster
             current_max_radius = 0
             for p in prior_trees:
                 d = haversine_distance_ft(cent_lat, cent_lon, p['LATITUDE'], p['LONGITUDE'])
                 if d > current_max_radius:
                     current_max_radius = d
             
-            # Generate phantoms just outside the current radius (The "Front")
-            search_radius = max(current_max_radius + 50, 100) # At least 100ft
+            # place phantoms just beyond the current cluster extent
+            search_radius = max(current_max_radius + 50, 100)
             
             for _ in range(NEGATIVE_SAMPLE_RATIO):
                 phant_lat, phant_lon = generate_phantom_point(cent_lat, cent_lon, search_radius)
                 
-                # Calculate features for phantom
+                # compute features for phantom point
                 p_min_dist = float('inf')
                 p_nearby_count = 0
                 for parent in prior_trees:
@@ -125,7 +103,7 @@ def main():
                         p_nearby_count += 1
                 
                 graph_data.append({
-                    'label': 0, # Healthy
+                    'label': 0,
                     'dist_to_nearest_infected': p_min_dist,
                     'nearby_infection_count': p_nearby_count,
                     'month': event_date.month

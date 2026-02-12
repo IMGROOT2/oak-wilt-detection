@@ -21,13 +21,13 @@ except Exception:
     LOCAL_API = False
     import requests
 
-# Load cluster members (tree locations per cluster)
 def load_cluster_members(path):
+    """Load cluster member tree locations from CSV."""
     clusters = {}
     with open(path, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            # Support both 'lat'/'lon' and 'LATITUDE'/'LONGITUDE'
+            # support both naming conventions
             lat_val = row.get('lat') or row.get('LATITUDE')
             lon_val = row.get('lon') or row.get('LONGITUDE')
             try:
@@ -50,8 +50,8 @@ def load_cluster_members(path):
             })
     return clusters
 
-# Get scenario for a cluster from the backend
 def get_scenario(cluster_id):
+    """Fetch a historical scenario for the given cluster."""
     if LOCAL_API:
         # call the server function directly
         return _get_historical_scenario(cluster_id)
@@ -60,8 +60,8 @@ def get_scenario(cluster_id):
         resp.raise_for_status()
         return resp.json()
 
-# Run simulation for a cluster
 def run_simulation(scenario):
+    """Run the spread simulation on a scenario's trees."""
     trees = []
     for t in scenario['past_infection']:
         trees.append({
@@ -78,7 +78,7 @@ def run_simulation(scenario):
     payload = {
         'trees': trees,
         'start_date': scenario['cutoff_date'],
-        'months': 24,  # match frontend logic
+        'months': 24,
         'custom_temp': None,
         'custom_precip': None,
         'custom_humidity': None,
@@ -93,25 +93,22 @@ def run_simulation(scenario):
         resp.raise_for_status()
         return resp.json()
 
-# Calculate centroid
 def centroid(coords):
     lat = np.mean([c[0] for c in coords])
     lon = np.mean([c[1] for c in coords])
     return (lat, lon)
 
-# Calculate 90th percentile distance from centroid
 def effective_radius(centroid, coords):
+    """90th percentile distance from centroid."""
     if not coords:
         return 0
     dists = [geodesic(centroid, c).meters for c in coords]
     dists.sort()
-    # JS logic: k = Math.floor(length * 0.9), clamp to length-1
     k = int(np.floor(len(dists) * 0.9))
     if k >= len(dists):
         k = len(dists) - 1
     return dists[k]
 
-# Main logic
 def main():
     clusters = load_cluster_members("data/oak_wilt_cluster_members.csv")
     results = []
@@ -127,7 +124,7 @@ def main():
             def get_lon(t):
                 return float(t.get('lon') or t.get('LONGITUDE'))
 
-            # 1. Centroid from original infections only
+            # 1. Centroid from original infections
             origin = scenario['past_infection']
             origin_coords = [(get_lat(t), get_lon(t)) for t in origin]
             if not origin_coords:
@@ -135,12 +132,12 @@ def main():
                 continue
             c = centroid(origin_coords)
 
-            # 2. Initial indices (original infections are first in the payload)
+            # 2. Initial indices are the original infections
             all_trees = scenario['past_infection'] + scenario['candidates']
             origin_count = len(origin)
             initial_indices = set(range(origin_count))
 
-            # 3. Final indices (initial + new_cases indices returned by simulation)
+            # 3. Final indices = initial + newly predicted infections
             final_indices = set(initial_indices)
             for ev in sim.get('timeline', []):
                 for nc in ev.get('new_cases', []):
@@ -160,18 +157,18 @@ def main():
                     print(f"  first timeline event new_cases (sample): {sim['timeline'][0].get('new_cases')[:10]}")
                 print(f"  first 5 candidate coords: {[ (get_lat(t), get_lon(t)) for t in scenario['candidates'][:5]]}")
 
-            # 4. Get coordinates for initial and final sets by index
+            # 4. Get coordinates for initial and final sets
             initial_coords = [ (float(t.get('lat') or t.get('LATITUDE')), float(t.get('lon') or t.get('LONGITUDE'))) for i, t in enumerate(all_trees) if i in initial_indices ]
             final_coords = [ (float(t.get('lat') or t.get('LATITUDE')), float(t.get('lon') or t.get('LONGITUDE'))) for i, t in enumerate(all_trees) if i in final_indices and i < len(all_trees) ]
 
-            # 5. Calculate effective radii (90th percentile)
+            # 5. Compute effective radii
             r0 = effective_radius(c, initial_coords)
             r1 = effective_radius(c, final_coords)
 
-            # 6. Calculate growth in feet and annualize
+            # 6. Annualized spread rate in ft/yr
             growth_ft = (r1 - r0) * 3.28084
             months = sim.get('total_months', 24)
-            deltaMonths = max(1, months)  # Avoid div/0
+            deltaMonths = max(1, months)
             if growth_ft > 0:
                 yearly_rate = (growth_ft / deltaMonths) * 12
             else:
@@ -197,7 +194,7 @@ def main():
     except Exception as e:
         print(f"Failed to write CSV: {e}")
 
-    # Print average spread rate
+    # Print average
     if results:
         avg = sum(r for _, r in results) / len(results)
         print(f"Average spread rate: {avg:.2f} ft/yr")
