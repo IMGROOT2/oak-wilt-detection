@@ -6,6 +6,15 @@ let mode = 'network';
 let activeTool = 'healthy';
 let scenarioData = null;
 
+// Tile layers
+let baseTile = null;
+let satelliteTile = null;
+let isSatellite = false;
+
+// 200ft radius guide circle for infected trees
+let radiusGuide = null;
+const RADIUS_200FT = 60.96; // 200 feet in meters
+
 const API_BASE_URL = window.location.protocol === 'file:' ? 'http://localhost:8000' : '';
 
 let timelineEvents = [];
@@ -44,10 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // Map initialization
 function initMap() {
     map = L.map('map', { maxZoom: 19 }).setView([30.2672, -97.7431], 13);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    baseTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
         attribution: '© OpenStreetMap, © CARTO',
         maxZoom: 20
     }).addTo(map);
+    satelliteTile = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '© Esri, Maxar, Earthstar Geographics',
+        maxZoom: 20
+    });
     layers.addTo(map);
     
     map.on('click', (e) => {
@@ -56,9 +69,22 @@ function initMap() {
     });
 }
 
+// Satellite toggle
+function toggleSatellite(enabled) {
+    isSatellite = enabled;
+    if (enabled) {
+        map.removeLayer(baseTile);
+        satelliteTile.addTo(map);
+    } else {
+        map.removeLayer(satelliteTile);
+        baseTile.addTo(map);
+    }
+}
+
 function clearMap() {
     layers.clearLayers();
     markers = [];
+    radiusGuide = null;
     updateCounts();
 }
 
@@ -137,6 +163,26 @@ function addManualTree(latlng) {
         marker: m
     });
     updateCounts();
+    if (activeTool === 'infected') updateRadiusGuide();
+}
+
+// Update 200ft radius guide circle around infected tree centroid
+function updateRadiusGuide() {
+    if (radiusGuide) { layers.removeLayer(radiusGuide); radiusGuide = null; }
+    const infected = markers.filter(m => m.type === 'infected');
+    if (infected.length === 0) return;
+    const cLat = infected.reduce((s, m) => s + m.lat, 0) / infected.length;
+    const cLon = infected.reduce((s, m) => s + m.lon, 0) / infected.length;
+    radiusGuide = L.circle([cLat, cLon], {
+        radius: RADIUS_200FT,
+        color: '#1f2937',
+        weight: 3,
+        dashArray: '12, 8',
+        fill: true,
+        fillColor: '#4b5563',
+        fillOpacity: 0.25,
+        interactive: false
+    }).addTo(layers);
 }
 
 function updateCounts() {

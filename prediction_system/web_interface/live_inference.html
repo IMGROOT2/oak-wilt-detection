@@ -39,6 +39,14 @@
         /* Utility */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Satellite Toggle Switch */
+        .toggle-switch { position: relative; display: inline-block; width: 32px; height: 18px; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .toggle-slider { position: absolute; cursor: pointer; inset: 0; background: #cbd5e1; border-radius: 18px; transition: 0.25s; }
+        .toggle-slider::before { content: ''; position: absolute; width: 14px; height: 14px; left: 2px; bottom: 2px; background: white; border-radius: 50%; transition: 0.25s; box-shadow: 0 1px 2px rgba(0,0,0,.15); }
+        .toggle-switch input:checked + .toggle-slider { background: #334155; }
+        .toggle-switch input:checked + .toggle-slider::before { transform: translateX(14px); }
     </style>
 </head>
 <body class="h-screen flex overflow-hidden bg-slate-50 text-slate-800 text-sm">
@@ -56,6 +64,18 @@
             <span id="status-dot" class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
             <span id="status-text" class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Connecting</span>
         </div>
+    </div>
+
+    <!-- Satellite Toggle -->
+    <div class="px-5 py-2.5 border-b border-slate-100 flex items-center justify-between bg-white">
+        <div class="flex items-center gap-2">
+            <i class="fa-solid fa-satellite text-slate-400 text-[11px]"></i>
+            <span class="text-xs text-slate-500 font-medium">Satellite View</span>
+        </div>
+        <label class="toggle-switch">
+            <input type="checkbox" id="satellite-toggle" onchange="toggleSatellite(this.checked)">
+            <span class="toggle-slider"></span>
+        </label>
     </div>
 
     <!-- Progress Steps -->
