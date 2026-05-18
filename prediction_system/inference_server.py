@@ -13,7 +13,6 @@ from pathlib import Path
 from datetime import datetime, timedelta
 from typing import List, Optional
 
-# Schemas
 class ForecastInput(BaseModel):
     current_radius_ft: float
     current_points: int
@@ -55,34 +54,29 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 MODELS_DIR = BASE_DIR / 'models'
 VISUALS_DIR = BASE_DIR / 'prediction_system' / 'web_interface'
 DATA_DIR = BASE_DIR / 'data'
 CLUSTER_MEMBERS_PATH = DATA_DIR / 'oak_wilt_cluster_members.csv'
 
-# Load resources on startup
 models = {}
 cluster_members_df = pd.DataFrame()
 cluster_features_df = pd.DataFrame()
 
 print("Initializing server...")
 
-# 1. Load model
 try:
     if (MODELS_DIR / 'graph_transmission_model_pressure.pkl').exists():
         models['graph'] = joblib.load(MODELS_DIR / 'graph_transmission_model_pressure.pkl')
-        models['type'] = 'pressure' 
+        models['type'] = 'pressure'
         print("Loaded infection pressure model.")
     else:
         raise FileNotFoundError("Infection pressure model not found.")
-        
 except Exception as e:
     print(f"Model load error: {e}")
 
 
-# 2. Load data
 if CLUSTER_MEMBERS_PATH.exists():
     cluster_members_df = pd.read_csv(CLUSTER_MEMBERS_PATH)
     cluster_members_df['date'] = pd.to_datetime(cluster_members_df['INSPECTION_DATE'])
@@ -100,16 +94,15 @@ else:
     print(f"Warning: {features_path} not found.")
 
 
-# Helpers
 def haversine_dist(lat1, lon1, lat2, lon2):
     """Great-circle distance in feet."""
-    R = 3959 * 5280
+    earth_radius_ft = 3959 * 5280
     phi1, phi2 = math.radians(lat1), math.radians(lat2)
     dphi = math.radians(lat2 - lat1)
     dlambda = math.radians(lon2 - lon1)
     a = math.sin(dphi/2)**2 + math.cos(phi1)*math.cos(phi2)*math.sin(dlambda/2)**2
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-    return R * c
+    return earth_radius_ft * c
 
 async def fetch_recent_weather(lat, lon, end_date_str, days=60):
     """Seasonal weather defaults for Austin (fallback)."""
@@ -131,7 +124,7 @@ async def fetch_recent_weather(lat, lon, end_date_str, days=60):
 async def fetch_real_nasa_weather(lat, lon, start_date):
     """Fetch 30-day averaged weather from NASA POWER (async)."""
     try:
-        # look back 35 days from simulation start (5-day lag buffer)
+        # NASA POWER has a ~5-day reporting lag, so the 30-day window ends 5 days before sim start.
         sim_start = datetime.strptime(start_date, '%Y-%m-%d')
         end_dt = sim_start - timedelta(days=5)
         start_dt = end_dt - timedelta(days=30)
@@ -161,9 +154,9 @@ async def fetch_real_nasa_weather(lat, lon, start_date):
         precip = properties.get('PRECTOTCORR', {})
         rh2m = properties.get('RH2M', {})
         ws2m = properties.get('WS2M', {})
-        
-        # average valid values
+
         def get_avg(d):
+            # NASA POWER uses -999 to mark missing/invalid daily values.
             vals = [v for v in d.values() if v != -999]
             return sum(vals)/len(vals) if vals else None
 
@@ -183,57 +176,55 @@ async def fetch_real_nasa_weather(lat, lon, start_date):
         print(f"NASA API fetch failed: {e}")
         return None
 
-# Endpoints
-
 @app.get("/api/historical_scenario")
 def get_historical_scenario(cluster_id: Optional[int] = None):
+    """Return a cluster's pre-midpoint infections and post-midpoint candidates for backtesting."""
     global cluster_features_df, cluster_members_df
-    
+
     if cluster_features_df.empty or cluster_members_df.empty:
         raise HTTPException(status_code=503, detail="Historical data not loaded on server.")
 
-    # filter clusters with enough data for a meaningful scenario
+    # Restrict to clusters with at least one year of activity and 10+ trees, which is the minimum
+    # needed for a meaningful past/future split.
     candidates = cluster_features_df[
-        (cluster_features_df['year_span'] >= 1) & 
+        (cluster_features_df['year_span'] >= 1) &
         (cluster_features_df['point_count'] >= 10)
     ]
-    
+
     if candidates.empty:
-         candidates = cluster_features_df
+        candidates = cluster_features_df
 
     if cluster_id is not None:
         match = candidates[candidates['cluster_id'] == cluster_id]
         if match.empty:
-            # If the requested cluster is not eligible, return 404 so the client can retry
             raise HTTPException(status_code=404, detail=f"Cluster {cluster_id} not available for historical scenario")
         selected = match.iloc[0]
     else:
         selected = candidates.sample(1).iloc[0]
     cid = selected['cluster_id']
-    
-    # get cluster members and split at the midpoint
+
     members = cluster_members_df[cluster_members_df['cluster_id'] == cid].sort_values('date')
-    
+
     start = members['date'].min()
     end = members['date'].max()
     midpoint = start + (end - start) / 2
     past = members[members['date'] <= midpoint]
     future = members[members['date'] > midpoint]
-    
-    # re-split if the initial split doesn't leave enough future data
-    if len(future) < 3: 
+
+    # If the time-based midpoint left too few future cases (clusters are not evenly spaced in time),
+    # fall back to the 60th-percentile point so the model has something to predict against.
+    if len(future) < 3:
         midpoint = members.iloc[int(len(members)*0.6)]['date']
         past = members[members['date'] <= midpoint]
         future = members[members['date'] > midpoint]
 
-    # build candidate list: future infections (masked as healthy) + distractors
     lat_min, lat_max = members['LATITUDE'].min(), members['LATITUDE'].max()
     lon_min, lon_max = members['LONGITUDE'].min(), members['LONGITUDE'].max()
     buff = 0.002
-    
+
     candidates_list = []
-    
-    # actual future infections, masked as healthy for backtest
+
+    # Real future infections, presented as "healthy" so the model has to rediscover them.
     for _, row in future.iterrows():
         candidates_list.append({
             "lat": row['LATITUDE'],
@@ -242,8 +233,8 @@ def get_historical_scenario(cluster_id: Optional[int] = None):
             "is_future_infection": True,
             "infection_date": row['date'].strftime('%Y-%m-%d')
         })
-        
-    # distractor points (true negatives)
+
+    # Distractor points inside the cluster bounding box; these stay healthy across the simulation.
     for _ in range(50):
         candidates_list.append({
             "lat": np.random.uniform(lat_min-buff, lat_max+buff),
@@ -272,7 +263,6 @@ def get_eligible_clusters():
     try:
         if sim_path.exists():
             df = pd.read_csv(sim_path)
-            # Expect columns: cluster_id, spread_ft_per_yr
             if 'cluster_id' in df.columns and 'spread_ft_per_yr' in df.columns and not df.empty:
                 source = 'simulated'
                 df['cluster_id'] = pd.to_numeric(df['cluster_id'], errors='coerce')
@@ -282,7 +272,7 @@ def get_eligible_clusters():
                 eligible = [int(x) for x in eligible_df['cluster_id'].tolist()]
                 excluded = [int(x) for x in df[~df.index.isin(eligible_df.index)]['cluster_id'].tolist()]
 
-        # If simulated not available or empty, fallback to cluster_features_df
+        # Fall back to static cluster geometry if no simulation results are on disk yet.
         if not eligible:
             if cluster_features_df is None or cluster_features_df.empty:
                 raise HTTPException(status_code=503, detail='Cluster features not available')
@@ -315,47 +305,44 @@ async def run_network_simulation(data: SimulationRequest):
 
     model = models['graph']
     current_date = datetime.strptime(data.start_date, '%Y-%m-%d')
-    
-    # fill in any missing weather values from NASA POWER
+
+    # User-supplied overrides take precedence; missing fields are filled from NASA POWER.
     user_overrides = {
         "temp": data.custom_temp,
         "precip": data.custom_precip,
         "humidity": data.custom_humidity,
         "wind": data.custom_wind_speed
     }
-    
+
     if None in user_overrides.values():
         print("Fetching missing weather data from NASA POWER...")
-        
         if data.trees:
-             lats = [t.lat for t in data.trees]
-             lons = [t.lon for t in data.trees]
-             c_lat = sum(lats) / len(lats)
-             c_lon = sum(lons) / len(lons)
-             
-             nasa_data = await fetch_real_nasa_weather(c_lat, c_lon, data.start_date)
-             
-             if nasa_data:
-                 print(f"NASA Data Fetched: {nasa_data}")
-                 if user_overrides['temp'] is None and nasa_data['temp']: 
-                     user_overrides['temp'] = round(nasa_data['temp'], 1)
-                 if user_overrides['precip'] is None and nasa_data['precip']: 
-                     user_overrides['precip'] = round(nasa_data['precip'] * 30, 1) # Monthly Est (mm/day * 30)
-                 if user_overrides['humidity'] is None and nasa_data['humidity']: 
-                     user_overrides['humidity'] = round(nasa_data['humidity'], 1)
-                 if user_overrides['wind'] is None and nasa_data['wind']: 
-                     user_overrides['wind'] = round(nasa_data['wind'], 1)
+            lats = [t.lat for t in data.trees]
+            lons = [t.lon for t in data.trees]
+            c_lat = sum(lats) / len(lats)
+            c_lon = sum(lons) / len(lons)
 
-    # weather defaults (metric: C, mm/month, %, m/s)
+            nasa_data = await fetch_real_nasa_weather(c_lat, c_lon, data.start_date)
+
+            if nasa_data:
+                print(f"NASA Data Fetched: {nasa_data}")
+                if user_overrides['temp'] is None and nasa_data['temp']:
+                    user_overrides['temp'] = round(nasa_data['temp'], 1)
+                if user_overrides['precip'] is None and nasa_data['precip']:
+                    # NASA returns mm/day; scale up to a monthly estimate for the model.
+                    user_overrides['precip'] = round(nasa_data['precip'] * 30, 1)
+                if user_overrides['humidity'] is None and nasa_data['humidity']:
+                    user_overrides['humidity'] = round(nasa_data['humidity'], 1)
+                if user_overrides['wind'] is None and nasa_data['wind']:
+                    user_overrides['wind'] = round(nasa_data['wind'], 1)
+
+    # Defaults are seasonal averages for Austin (C, mm/month, %, m/s).
     c_temp = user_overrides['temp'] if user_overrides['temp'] is not None else 25.0
     c_precip = user_overrides['precip'] if user_overrides['precip'] is not None else 50.0
     c_humidity = user_overrides['humidity'] if user_overrides['humidity'] is not None else 65.0
     c_wind = user_overrides['wind'] if user_overrides['wind'] is not None else 3.0
-    
+
     print(f"Weather context: T={c_temp}C, P={c_precip}mm, H={c_humidity}%, W={c_wind}m/s")
-    
-    if data.custom_temp is not None or data.custom_precip is not None:
-        print(f"Using user overrides: Temp={data.custom_temp}, Precip={data.custom_precip}")
     
     forest = []
     for i, t in enumerate(data.trees):
@@ -369,53 +356,53 @@ async def run_network_simulation(data: SimulationRequest):
         })
         
     timeline_events = []
-    
-    # month-by-month simulation loop
+
     for month in range(1, data.months + 1):
         step_date = current_date + timedelta(days=30 * month)
         m_sin = np.sin(2 * np.pi * step_date.month / 12)
         m_cos = np.cos(2 * np.pi * step_date.month / 12)
-        
-        # 3-month incubation: newly infected trees do not transmit immediately
+
+        # A newly infected tree needs 3 months of incubation before it can transmit.
         infectious_indices = [
-            idx for idx, t in enumerate(forest) 
+            idx for idx, t in enumerate(forest)
             if t['status'] == 'infected' and (t['infection_month'] == 0 or (month - t['infection_month']) >= 3)
         ]
-        
+
         healthy_indices = [idx for idx, t in enumerate(forest) if t['status'] == 'healthy']
-        
+
         newly_infected = []
-        
+
         if not infectious_indices:
             total_infected = len([t for t in forest if t['status'] == 'infected'])
             if total_infected == 0:
-                break 
+                break
             continue
-            
-        # Check every healthy tree against disease pressure
+
+        # Pressure field: for each healthy tree, aggregate inverse-square contributions from every
+        # currently infectious tree. The 1000 / d^2 scaling matches train_model.py so feature
+        # magnitudes line up with what the GBM was trained on.
         for h_idx in healthy_indices:
             h_tree = forest[h_idx]
-            
+
             min_dist = float('inf')
             pressure = 0.0
             nearby_count = 0
-            
+
             for i_idx in infectious_indices:
                 i_tree = forest[i_idx]
                 d = haversine_dist(h_tree['lat'], h_tree['lon'], i_tree['lat'], i_tree['lon'])
-                
-                # inverse-square pressure model
+
+                # Clamp to 1 ft so colocated trees do not blow up the inverse-square term.
                 d_safe = max(d, 1.0)
                 pressure += 1000.0 / (d_safe ** 2)
-                
+
                 if d < min_dist: min_dist = d
                 if d < 100: nearby_count += 1
-                
-            # root graft transmission caps out around 150ft
+
+            # Root graft transmission rarely reaches beyond ~150 ft; skip distant healthy trees.
             if min_dist > 150:
                 continue
 
-            # build feature vector
             feats = pd.DataFrame([{
                 'log_pressure': np.log1p(pressure),
                 'log_min_dist': np.log1p(min_dist),
@@ -428,18 +415,16 @@ async def run_network_simulation(data: SimulationRequest):
                 'avg_wind': c_wind
             }])
             
-            # Predict
             prob = model.predict_proba(feats)[0][1]
             if prob > 0.1:
                 print(f"Tree {h_idx}: Dist={min_dist:.1f}ft, Pressure={pressure:.1f}, Prob={prob:.4f}")
 
             forest[h_idx]['prob_history'].append(float(prob))
-            
-            # threshold at 0.50 for deterministic predictions
-            if prob > 0.50: 
+
+            # 0.50 gives roughly balanced precision/recall on the training distribution.
+            if prob > 0.50:
                 newly_infected.append(h_idx)
-        
-        # Apply updates
+
         if newly_infected:
             for idx in newly_infected:
                 forest[idx]['status'] = 'infected'
@@ -468,7 +453,7 @@ def health_check():
 
 @app.post("/api/forecast")
 async def get_forecast(data: ForecastInput):
-    """Legacy growth model endpoint."""
+    """Legacy growth-rate endpoint, kept for backward compatibility with older clients."""
     if 'main' not in models: return {}
     
     weather = await fetch_recent_weather(data.lat, data.lon, data.date)
@@ -491,7 +476,6 @@ async def get_forecast(data: ForecastInput):
         "weather_context": weather
     }
 
-# Static file serving
 app.mount("/visuals", StaticFiles(directory=VISUALS_DIR), name="visuals")
 app.mount("/data", StaticFiles(directory=DATA_DIR), name="data")
 

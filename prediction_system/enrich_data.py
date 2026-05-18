@@ -14,15 +14,13 @@ NASA_POWER_URL = "https://power.larc.nasa.gov/api/temporal/daily/point"
 
 def haversine_distance_ft(lat1, lon1, lat2, lon2):
     """Great-circle distance between two lat/lon points, in feet."""
-    # Convert to radians
     lon1, lat1, lon2, lat2 = map(math.radians, [lon1, lat1, lon2, lat2])
-
-    dlon = lon2 - lon1 
-    dlat = lat2 - lat1 
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
     a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
-    c = 2 * math.asin(math.sqrt(a)) 
-    r = 3956
-    return c * r * 5280
+    c = 2 * math.asin(math.sqrt(a))
+    earth_radius_miles = 3956
+    return c * earth_radius_miles * 5280
 
 def get_nasa_weather(lat, lon, start_date, end_date):
     """Fetch temperature, precipitation, humidity, and wind from NASA POWER."""
@@ -50,7 +48,7 @@ def get_nasa_weather(lat, lon, start_date, end_date):
         humidity = properties.get('RH2M', {})
         wind = properties.get('WS2M', {})
         
-        # filter out NASA fill values (-999)
+        # NASA POWER uses -999 to mark missing or invalid daily values.
         temp_vals = [v for v in t2m.values() if v != -999]
         precip_vals = [v for v in precip.values() if v != -999]
         humidity_vals = [v for v in humidity.values() if v != -999]
@@ -89,7 +87,6 @@ def main():
         if members.empty:
             continue
 
-        # earliest inspection = patient zero
         members = members.sort_values('INSPECTION_DATE')
         patient_zero = members.iloc[0]
         
@@ -105,8 +102,7 @@ def main():
             last_date = datetime(int(members.iloc[-1]['INSPECTION_YEAR']), 12, 31)
 
         print(f"Cluster {cid}: Fetching weather from {pz_date.date()} to {last_date.date()}...")
-        
-        # max radial extent from patient zero
+
         max_dist = 0
         for _, member in members.iterrows():
             dist = haversine_distance_ft(pz_lat, pz_lon, member['LATITUDE'], member['LONGITUDE'])
@@ -132,13 +128,13 @@ def main():
                 'avg_wind': weather['avg_wind']
             }
             enriched_data.append(record)
-        
-        # rate-limit the API
+
+        # NASA POWER rate-limits unauthenticated clients; 0.5s spacing keeps us under the cap.
         time.sleep(0.5)
-        
+
     df_enriched = pd.DataFrame(enriched_data)
     df_enriched.to_csv(OUTPUT_FILE, index=False)
-    print(f"✓ Saved enriched data to {OUTPUT_FILE}")
+    print(f"Saved enriched data to {OUTPUT_FILE}")
     print(df_enriched.head())
 
 if __name__ == "__main__":

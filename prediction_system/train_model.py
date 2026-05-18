@@ -17,15 +17,14 @@ ENRICHED_FILE = DATA_DIR / 'oak_wilt_cluster_enriched.csv'
 
 def haversine_vectorized(lat1, lon1, lat_arr, lon_arr):
     """Vectorized haversine returning distances in feet."""
-    R = 3959 * 5280
+    earth_radius_ft = 3959 * 5280
     phi1 = np.radians(lat1)
     phi2 = np.radians(lat_arr)
     dphi = np.radians(lat_arr - lat1)
     dlambda = np.radians(lon_arr - lon1)
-    
     a = np.sin(dphi/2)**2 + np.cos(phi1) * np.cos(phi2) * np.sin(dlambda/2)**2
     c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1 - a))
-    return R * c
+    return earth_radius_ft * c
 
 def prepare_advanced_features():
     print("Loading data...")
@@ -50,7 +49,9 @@ def prepare_advanced_features():
         
         c_weather = weather_map.get(cid, {'avg_temp': 20.0, 'avg_precip': 0.0, 'avg_humidity': 50.0, 'avg_wind': 5.0})
 
-        # positive samples: real infections with pressure from prior trees
+        # Positive samples: each real infection at index i is paired with the prior infections (sources).
+        # Features capture: aggregated inverse-square pressure (1000 / d^2 sum), nearest-source distance,
+        # local density within 100 ft, sinusoidal seasonality, and cluster-level weather averages.
         for i in range(1, len(cluster)):
             target = cluster.iloc[i]
             sources = cluster.iloc[:i]
@@ -59,13 +60,14 @@ def prepare_advanced_features():
                 target['LATITUDE'], target['LONGITUDE'],
                 sources['LATITUDE'].values, sources['LONGITUDE'].values
             )
-            
-            dists = np.maximum(dists, 1.0) 
+
+            # Clamp to 1 ft so colocated points do not blow up the inverse-square term.
+            dists = np.maximum(dists, 1.0)
             pressure = np.sum(1000 / (dists ** 2))
             min_dist = np.min(dists)
             density = np.sum(dists < 100)
             month = target['date'].month
-            
+
             X_rows.append({
                 'log_pressure': np.log1p(pressure),
                 'log_min_dist': np.log1p(min_dist),
@@ -78,28 +80,28 @@ def prepare_advanced_features():
                 'avg_wind': c_weather['avg_wind']
             })
             y_rows.append(1)
-            
-        # negative samples: synthetic healthy trees around the cluster
+
+        # Negative samples: two phantom uninfected trees per positive, placed randomly inside the
+        # cluster bounding box plus a 0.002 deg (about 600 ft) buffer. This trains the model to
+        # distinguish "nearby but uninfected" geometry from real infection sites.
         lat_min, lat_max = cluster['LATITUDE'].min(), cluster['LATITUDE'].max()
         lon_min, lon_max = cluster['LONGITUDE'].min(), cluster['LONGITUDE'].max()
         buff = 0.002
-        
+
         for i in range(1, len(cluster)):
             for _ in range(2):
                 r_lat = np.random.uniform(lat_min-buff, lat_max+buff)
                 r_lon = np.random.uniform(lon_min-buff, lon_max+buff)
-                
-                # features against current sources
+
                 sources = cluster.iloc[:i]
                 dists = haversine_vectorized(
                     r_lat, r_lon,
                     sources['LATITUDE'].values, sources['LONGITUDE'].values
                 )
-                
+
                 dists = np.maximum(dists, 1.0)
                 pressure = np.sum(1000 / (dists ** 2))
                 min_dist = np.min(dists)
-                
                 density = np.sum(dists < 100)
                 month = cluster.iloc[i]['date'].month
                 

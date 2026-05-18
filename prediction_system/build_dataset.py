@@ -14,12 +14,12 @@ MAX_INFLUENCE_DIST_FT = 300
 def haversine_distance_ft(lat1, lon1, lat2, lon2):
     """Great-circle distance between two lat/lon points, in feet."""
     lon1, lat1, lon2, lat2 = map(math.radians, [lon1, lat1, lon2, lat2])
-    dlon = lon2 - lon1 
-    dlat = lat2 - lat1 
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
     a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
-    c = 2 * math.asin(math.sqrt(a)) 
-    r = 3956 
-    return c * r * 5280
+    c = 2 * math.asin(math.sqrt(a))
+    earth_radius_miles = 3956
+    return c * earth_radius_miles * 5280
 
 def generate_phantom_point(center_lat, center_lon, radius_ft):
     """Sample a random point within a given radius (ft) of a center coordinate."""
@@ -49,11 +49,11 @@ def main():
             current_tree = points[i]
             event_date = current_tree['INSPECTION_DATE']
             prior_trees = points[:i]
-            
-            # positive sample: find nearest infected neighbor
+
+            # Positive sample: real infection. Features describe its relationship to prior infections.
             min_dist = float('inf')
             nearby_count = 0
-            
+
             for parent in prior_trees:
                 dist = haversine_distance_ft(
                     current_tree['LATITUDE'], current_tree['LONGITUDE'],
@@ -61,7 +61,8 @@ def main():
                 )
                 if dist < min_dist:
                     min_dist = dist
-                if dist < 100: # Density within 100ft
+                # 100 ft matches the typical root-graft transmission range.
+                if dist < 100:
                     nearby_count += 1
             
             graph_data.append({
@@ -71,9 +72,10 @@ def main():
                 'month': event_date.month
             })
             
-            # negative samples: phantom healthy trees near the cluster boundary
+            # Negative samples: phantom uninfected trees placed just beyond the cluster boundary.
+            # Each positive gets NEGATIVE_SAMPLE_RATIO phantoms, giving the classifier a sense of
+            # what nearby-but-uninfected geometry looks like.
             lats = [p['LATITUDE'] for p in prior_trees]
-
             lons = [p['LONGITUDE'] for p in prior_trees]
             cent_lat = sum(lats) / len(lats)
             cent_lon = sum(lons) / len(lons)
@@ -82,14 +84,12 @@ def main():
                 d = haversine_distance_ft(cent_lat, cent_lon, p['LATITUDE'], p['LONGITUDE'])
                 if d > current_max_radius:
                     current_max_radius = d
-            
-            # place phantoms just beyond the current cluster extent
+
             search_radius = max(current_max_radius + 50, 100)
-            
+
             for _ in range(NEGATIVE_SAMPLE_RATIO):
                 phant_lat, phant_lon = generate_phantom_point(cent_lat, cent_lon, search_radius)
-                
-                # compute features for phantom point
+
                 p_min_dist = float('inf')
                 p_nearby_count = 0
                 for parent in prior_trees:
@@ -109,7 +109,6 @@ def main():
                     'month': event_date.month
                 })
 
-    # Save
     out_df = pd.DataFrame(graph_data)
     out_df.to_csv(OUTPUT_FILE, index=False)
     print(f"Graph dataset saved to {OUTPUT_FILE} with {len(out_df)} samples.")

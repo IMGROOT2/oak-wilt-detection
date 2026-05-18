@@ -29,3 +29,12 @@ Thumbs.db
 .pytest_cache/
 server.log
 myenv
+
+# Generated figures
+visuals/output/
+*.png
+*.pdf
+!visuals/README.md
+
+# Node
+node_modules/

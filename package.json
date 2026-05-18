@@ -1,0 +1,11 @@
+{
+  "name": "wiltcast",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Oak wilt prediction system for Austin, TX. Run npm run backend and npm run frontend.",
+  "scripts": {
+    "backend": "python prediction_system/inference_server.py",
+    "frontend": "python -m http.server 8080 --directory prediction_system/web_interface"
+  },
+  "license": "MIT"
+}
