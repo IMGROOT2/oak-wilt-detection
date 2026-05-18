@@ -816,7 +816,7 @@ def fig_confusion():
     cm = confusion_matrix(y_data, PREDS)
 
     fig, ax = plt.subplots(figsize=(4, 3.5))
-    im = ax.imshow(cm, cmap='Blues', interpolation='nearest')
+    im = ax.imshow(cm, cmap='Greens', interpolation='nearest')
     for i in range(2):
         for j in range(2):
             color = 'white' if cm[i, j] > cm.max()/2 else 'black'
