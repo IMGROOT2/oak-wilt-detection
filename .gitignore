@@ -38,3 +38,15 @@ visuals/output/
 
 # Node
 node_modules/
+
+# --- Excluded from the public cloud repo (kept locally) ---
+# City of Austin inspection records + derived clusters (contain private GPS
+# locations) and Texas A&M detection polygons
+/data/
+# Figure-generation code/outputs and longitudinal validation notebooks
+/visuals/
+/validation_study/
+/figures/
+# Only the production model is published; other artifacts stay local
+/models/*
+!/models/graph_transmission_model_pressure.pkl
