@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oak Wilt Inference System</title>
+
+    <!-- Inline leaf mark, so the site does not 404 on /favicon.ico -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Cpath d='M23 8c0 8-5 13-11 13-1 0-2-.2-3-.6C10 13 15 9 23 8z' fill='%2327ae60'/%3E%3Cpath d='M8 25c3-6 7-10 13-13' stroke='%23e2e8f0' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
@@ -323,6 +327,9 @@
 
 <!-- JS Logic -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="config.js"></script>
+<script src="gbm.js"></script>
+<script src="simulation.js"></script>
 <script src="live_inference.js"></script>
 
 </body>

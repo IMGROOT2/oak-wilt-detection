@@ -15,45 +15,109 @@ let isSatellite = false;
 let radiusGuide = null;
 const RADIUS_200FT = 60.96; // 200 feet in meters
 
-const API_BASE_URL = window.location.protocol === 'file:' ? 'http://localhost:8000' : '';
+// In static mode there is no backend: the GBM is scored in the browser and Historical
+// Validation is unavailable, because backtesting needs the private inspection records.
+const CONFIG = window.WILTCAST_CONFIG || { mode: 'server', modelUrl: 'model/gbm_pressure.json' };
+const IS_STATIC = CONFIG.mode === 'static';
+
+const API_BASE_URL = IS_STATIC
+    ? ''
+    : (CONFIG.apiBaseUrl != null
+        ? CONFIG.apiBaseUrl
+        // Fallback for older setups: same origin, unless opened straight off disk.
+        : (window.location.protocol === 'file:' ? 'http://localhost:8000' : ''));
+
+let modelPromise = null;
+let modelReady = false;
+let modelLoadError = null;
 
 let timelineEvents = [];
 
-// Server health check
+// Load the exported model once, on first use, so the page paints before the ~380 KB fetch.
+function ensureLocalModel() {
+    if (!modelPromise) {
+        modelPromise = GBMModel.load(CONFIG.modelUrl).then(
+            m => { modelReady = true; return m; },
+            e => {
+                // Reset so a later attempt can retry a transient network failure.
+                modelPromise = null;
+                modelLoadError = e;
+                throw e;
+            }
+        );
+    }
+    return modelPromise;
+}
+
+// Status indicator: backend reachability in server mode, model readiness in static mode.
 async function checkServerStatus() {
     const dot = document.getElementById('status-dot');
     const txt = document.getElementById('status-text');
     if (!dot || !txt) return;
 
+    const setState = (ok, label) => {
+        dot.style.background = ok ? '#2ecc71' : '#e74c3c';
+        txt.innerText = label;
+    };
+
+    if (IS_STATIC) {
+        if (modelLoadError) return setState(false, "Model Error");
+        try {
+            await ensureLocalModel();
+            setState(true, "Model Ready");
+        } catch (e) {
+            setState(false, "Model Error");
+        }
+        return;
+    }
+
     try {
         const res = await fetch(`${API_BASE_URL}/health`);
-        if (res.ok) {
-            dot.style.background = '#2ecc71'; // Green
-            txt.innerText = "Online";
-        } else {
-            throw new Error();
-        }
+        if (!res.ok) throw new Error();
+        setState(true, "Online");
     } catch (e) {
-        dot.style.background = '#e74c3c'; // Red
-        txt.innerText = "Offline";
+        setState(false, "Offline");
     }
 }
-setInterval(checkServerStatus, 5000);
+
+// Static mode has nothing to poll for once the model has loaded; server mode keeps checking.
+const statusPoll = setInterval(() => {
+    if (IS_STATIC && modelReady) {
+        clearInterval(statusPoll);
+        return;
+    }
+    checkServerStatus();
+}, 5000);
 
 let currentAnimFrame = 0;
 let animInterval = null;
 let totalMonths = 12;
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (IS_STATIC) {
+        // Backtesting replays confirmed City of Austin inspection records, which are not
+        // published with the static site, so the mode is removed rather than left to fail.
+        ['mode-historical', 'cfg-historical'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.remove();
+        });
+        ensureLocalModel().catch(() => {});
+    }
     checkServerStatus(); // Initial check
     initMap();
     selectMode('network');
 });
 
+// TEMP: anonymized basemap for demo videos. Flip DEMO_ANONYMIZED back to false to restore street names.
+const DEMO_ANONYMIZED = true;
+const VOYAGER_TILE_URL = DEMO_ANONYMIZED
+    ? 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png'
+    : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+
 // Map initialization
 function initMap() {
     map = L.map('map', { maxZoom: 19 }).setView([30.2672, -97.7431], 13);
-    baseTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    baseTile = L.tileLayer(VOYAGER_TILE_URL, {
         attribution: '© OpenStreetMap, © CARTO',
         maxZoom: 20
     }).addTo(map);
@@ -113,14 +177,15 @@ function nextStep(step) {
 
 function selectMode(m) {
     mode = m;
-    // Reset styles
+    // Reset styles. The historical card is absent in static builds, hence the guard.
     ['network', 'historical'].forEach(t => {
         const el = document.getElementById(`mode-${t}`);
-        el.classList.remove('ring-1', 'ring-slate-800', 'bg-slate-50');
+        if (el) el.classList.remove('ring-1', 'ring-slate-800', 'bg-slate-50');
     });
-    
+
     // Apply Active
-    document.getElementById(`mode-${m}`).classList.add('ring-1', 'ring-slate-800', 'bg-slate-50');
+    const active = document.getElementById(`mode-${m}`);
+    if (active) active.classList.add('ring-1', 'ring-slate-800', 'bg-slate-50');
 }
 
 function setupConfig() {
@@ -381,15 +446,20 @@ async function runAnalysis() {
             };
         }
 
-        const res = await fetch(url, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(payload)
-        });
+        let data;
+        if (IS_STATIC) {
+            const model = await ensureLocalModel();
+            data = await WiltcastSim.runNetworkSimulation(model, payload);
+        } else {
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(payload)
+            });
+            if (!res.ok) throw new Error("Simulation Failed");
+            data = await res.json();
+        }
 
-        if (!res.ok) throw new Error("Simulation Failed");
-        const data = await res.json();
-        
         processResults(data);
         
         // backfill weather fields if they were left blank

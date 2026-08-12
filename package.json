@@ -5,7 +5,11 @@
   "description": "Oak wilt prediction system for Austin, TX. Run npm run backend and npm run frontend.",
   "scripts": {
     "backend": "python prediction_system/inference_server.py",
-    "frontend": "python -m http.server 8080 --directory prediction_system/web_interface"
+    "frontend": "python -m http.server 8080 --directory prediction_system/web_interface",
+    "export-model": "python prediction_system/export_model_json.py",
+    "build": "node scripts/build.mjs",
+    "preview": "npm run build && python -m http.server 8080 --directory dist",
+    "parity": "python scripts/parity_check.py"
   },
   "license": "MIT"
 }
